@@ -1,0 +1,8 @@
+Who are your partners? What’s their name, title, and email?
+1. Are they your primary contact (e.g., developer you are working 
+with and meeting regularly) or secondary contact (e.g., executive 
+director who you met once)
+Engineers Without Borders
+
+ii. Who is your TA and what’s their email?
+Sinclair Hudson; sinclair.hudson@mail.utoronto.ca

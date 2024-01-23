@@ -16,6 +16,7 @@
  * Focus on *what* your product does, and avoid discussing *how* you're going to implement it.      
    For example: This is not the time or the place to talk about which programming language and/or framework you are planning to use.
  * **Feel free (and very much encouraged) to include useful diagrams, mock-ups and/or links**.
+   
 An iOS/Android game exploring issues around global food production and supply, developed in partnership with Engineers Without Borders. In the game, the player takes on the role of a farmer who must make choices that affect food production using new and existing technology. External factors such as weather will also affect the food production's performance. The player will also be able to choose budgets, supplies, and funds in order to see what affect they have on their harvest.
 
 #### Q2: Who are your target users?
@@ -31,6 +32,7 @@ Middle, high school, and university students wanting to learn more about global 
     * Provide users with more accurate and/or informative data (what kind of data? Why is it useful to them?)
     * Does this application exist in another form? If so, how does your differ and provide value to the users?
     * How does this align with your partner's organization's values/mission/mandate?
+
 The traditional way of learning about issues surrounding global food supply and production require research, which is quite boring for middle school users and time consuming for high school/university students. Framing it as a game makes it fun and entertaining, and conveys EWB's vision to engineer a more sustainable future in a more engaging and interactive way. It will also help to reinforce EWB's reputation as one of the top leaders in education about international equity issues.
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?

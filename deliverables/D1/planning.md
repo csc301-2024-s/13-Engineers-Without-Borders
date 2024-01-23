@@ -72,11 +72,14 @@ Briefly describe which option you have agreed to.
 ## Teamwork Details
 
 #### Q6: Have you met with your team?
+As an ice breaker, we each sent a fact about ourselves in our Discord group chat.
 
-Do a team-building activity in-person or online. This can be playing an online game, meeting for bubble tea, lunch, or any other activity you all enjoy.
-* Get to know each other on a more personal level.
-* Provide a few sentences on what you did and share a picture or other evidence of your team building activity.
-* Share at least three fun facts from members of you team (total not 3 for each member).
+Facts:
+- One of us is a roller coaster enthusiast
+- One of us plays League of Legends a lot
+- One of us plays Dota a lot
+
+![image](https://github.com/csc301-2024-s/deliverable-1-13-mr-cyborg/assets/46545759/14034455-c4ce-4d27-827f-ee2bda2e73eb)
 
 
 #### Q7: What are the roles & responsibilities on the team?

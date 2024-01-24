@@ -44,9 +44,9 @@ The traditional way of learning about issues surrounding global food supply and 
 
 1) As a student, I want to simulate budget choices in order to learn about the struggles of farmers in third world countries. Given budget choices, when I choose a budget, then I see what farming tools I can afford.
 2) As a student, I want to choose what technology I use in order to learn its benefits/downsides. Given choice of tools/technology, when I choose one, then I see how it affects my crop yield.
-3) As a student, I want to choose what time I plant crop in order to learn how weather affects my crops. Given choice of time, when I choose a time to plant, I can see how that affects my crop yield.
-4) As a student, I want to choose where I plant my crops in order to learn how climate affects my crops. Given multiple locations, when I choose a location to plant, I can see how the climate and weather affect my harvest.
-5) As a player, I want to replay the game in order to come up with a different strategy. Given the ending of one game, when I see the replay button, I can see my score for that game and can press the replay button to play again.
+3) As a student, I want to experience random climate/weather events in order to learn how weather affects my crops. Given the beginning of the simulation year, when I continue the game, I see what weather event is selected and see how that affects my crops.
+4) As a player, I want to replay the game in order to come up with a different strategy. Given the ending of one game, when I see the replay button, I can press it to play again.
+5) As a player, I want to get the best score so I can win the game. Given the amount of crops I can grow/sell, when I finish the game, I can see my score in relation to others, if there are any.
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
 

@@ -34,7 +34,7 @@ This product also serves as a digitized version of EWB's "Green Revolution" work
 
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
-We are planning on using the Unity game engine, so that will involve coding in C#. Unity has an option to export to iOS and Android, so we're planning on using that (and EWB's app/play store account) to deploy the game. Development in Unity is strongly component-based, so patterns such as dependency injection, strategy, and composition will be very useful. Most likely will not use an 3rd party APIs, unless we decide to implement multiplayer later on.
+We are planning on using the Unity game engine, so that will involve coding in C#. Unity has an option to export to iOS and Android, so we're planning on using that (and EWB's app/play store account) to deploy the game. Development in Unity is strongly component-based, so patterns such as dependency injection, strategy, and composition will be very useful. We will most likely not use any 3rd party APIs, unless we decide to implement multiplayer later on.
 
 For example, here is a simplified schema for a button in Unity that performs some action when clicked:
 ![image](https://github.com/csc301-2024-s/deliverable-1-13-mr-cyborg/assets/46545759/66ce9b52-4b63-434d-a239-8c936c6fcc35)

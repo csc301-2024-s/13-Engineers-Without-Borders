@@ -47,6 +47,8 @@ The traditional way of learning about issues surrounding global food supply and 
 3) As a student, I want to experience random climate/weather events in order to learn how weather affects my crops. Given the beginning of the simulation year, when I continue the game, I see what weather event is selected and see how that affects my crops.
 4) As a player, I want to replay the game in order to come up with a different strategy. Given the ending of one game, when I see the replay button, I can press it to play again.
 5) As a player, I want to get the best score so I can win the game. Given the amount of crops I can grow/sell, when I finish the game, I can see my score in relation to others, if there are any.
+![image](https://github.com/csc301-2024-s/deliverable-1-13-mr-cyborg/assets/46545759/9623a1fe-6ec8-4507-9e1d-3575cc322793)
+
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
 

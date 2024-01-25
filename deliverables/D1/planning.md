@@ -38,7 +38,8 @@ We are planning on using the Unity game engine, so that will involve coding in C
 
 For example, here is a simplified schema for a button in Unity that performs some action when clicked:
 ![image](https://github.com/csc301-2024-s/deliverable-1-13-mr-cyborg/assets/46545759/66ce9b52-4b63-434d-a239-8c936c6fcc35)
-A clickable button should be composed with a Button component (as well as other Unity components which are omitted for sake of discussion). In the editor, there is a field to add callbacks to the Button's clicked event, so the Button can easily be configured to call MyComponent's DoAction method upon click. As an example of dependency injection, notice how MyComponent has a field for AudioClips. In the editor, you can easily drag and drop (or "inject") AudioClips into this field to customize what sound MyComponent should use. The Strategy pattern can be performed similarly, only with custom scripts instead of Unity components.
+
+A clickable button should be composed of a Button component (as well as other Unity components which are omitted for sake of discussion). In the editor, there is a field to add callbacks to the Button's clicked event, so the Button can easily be configured to call MyComponent's DoAction method upon click. As an example of dependency injection, notice how MyComponent has a field for AudioClips. In the editor, you can easily drag and drop (or "inject") AudioClips into this field to customize what sound MyComponent should use. The Strategy pattern can be performed similarly, only with custom scripts instead of Unity components.
 
 ----
 ## Intellectual Property Confidentiality Agreement 

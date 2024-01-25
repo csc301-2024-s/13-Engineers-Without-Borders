@@ -34,13 +34,10 @@ This product also serves as a digitized version of EWB's "Green Revolution" work
 
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
-
 We are planning on using the Unity game engine, so that will involve coding in C#. Unity has an option to export to iOS and Android, so we're planning on using that (and EWB's app/play store account) to deploy the game. Development in Unity is strongly component-based, so patterns such as dependency injection and composition will be very useful. Most likely will not use an 3rd party APIs, unless we decide to implement multiplayer.
 
 ----
 ## Intellectual Property Confidentiality Agreement 
-> Note this section is **not marked** but must be completed briefly if you have a partner. If you have any questions, please ask on Piazza.
->  
 **By default, you own any work that you do as part of your coursework.** However, some partners may want you to keep the project confidential after the course is complete. As part of your first deliverable, you should discuss and agree upon an option with your partner. Examples include:
 1. You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.
 2. You can upload the code to GitHub or other similar publicly available domains.
@@ -50,7 +47,7 @@ We are planning on using the Unity game engine, so that will involve coding in C
 
 **Your partner cannot ask you to sign any legal agreements or documents pertaining to non-disclosure, confidentiality, IP ownership, etc.**
 
-Briefly describe which option you have agreed to. TBD!!!
+Our partner decided to go with option #2.
 
 ----
 

@@ -4,36 +4,19 @@
 ## Product Details
  
 #### Q1: What is the product?
-
- > Short (1 - 2 min' read)
- * Start with a single sentence, high-level description of the product.
- * Be clear - Describe the problem you are solving in simple terms.
- * Specify if you have a partner and who they are.
- * Be concrete. For example:
-    * What are you planning to build? Is it a website, mobile app, browser extension, command-line app, etc.?      
-    * When describing the problem/need, give concrete examples of common use cases.
-    * Assume your the reader knows nothing about the partner or the problem domain and provide the necessary context. 
- * Focus on *what* your product does, and avoid discussing *how* you're going to implement it.      
-   For example: This is not the time or the place to talk about which programming language and/or framework you are planning to use.
- * **Feel free (and very much encouraged) to include useful diagrams, mock-ups and/or links**.
-   
 An iOS/Android game exploring issues around global food production and supply, developed in partnership with Engineers Without Borders. In the game, the player takes on the role of a farmer who must make choices that affect food production using new and existing technology. External factors such as weather will also affect the food production's performance. The player will also be able to choose budgets, supplies, and funds in order to see what affect they have on their harvest.
+
+At the start of the game, the player starts off with a randomized family that needs to be taken care of and a set amount of money. The game runs in phases - during each phase, the player makes choices to buy stuff and plant/sell crops. The player can advance to the next phase to see the outcome - how their crops are doing, what the weather is like, and other random events - and continue making decisions. Gameplay-wise it's similar to the mobile game "BitLife".
+
+The MVP will be single player, but there can be other (computer-ran) farmers that you can interact with.
 
 #### Q2: Who are your target users?
 Middle, high school, and university students wanting to learn more about global food supply and issues relating to it.
 
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
-
-> Short (1 - 2 min' read max)
- * We want you to "connect the dots" for us - Why does your product (as described in your answer to Q1) fits the needs of your users (as described in your answer to Q2)?
- * Explain the benefits of your product explicitly & clearly. For example:
-    * Save users time (how and how much?)
-    * Allow users to discover new information (which information? And, why couldn't they discover it before?)
-    * Provide users with more accurate and/or informative data (what kind of data? Why is it useful to them?)
-    * Does this application exist in another form? If so, how does your differ and provide value to the users?
-    * How does this align with your partner's organization's values/mission/mandate?
-
 The traditional way of learning about issues surrounding global food supply and production require research, which is quite boring for middle school users and time consuming for high school/university students. Framing it as a game makes it fun and entertaining, and conveys EWB's vision to engineer a more sustainable future in a more engaging and interactive way. It will also help to reinforce EWB's reputation as one of the top leaders in education about international equity issues.
+
+This product also serves as a digitized version of EWB's "Green Revolution" workshop. Originally it is done in person with different teams, and they'd have to keep track of their money and statistics with a spreadsheet. The product makes this process a lot easier by handling all the calculations and data for you, and also you don't need to meet up with other people in real life. This is a rather important option to give post-pandemic, afterall.
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
 
@@ -52,13 +35,7 @@ The traditional way of learning about issues surrounding global food supply and 
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
 
-> Short (1-2 min' read max)
- * What is the technology stack? Specify languages, frameworks, libraries, PaaS products or tools to be used or being considered. 
- * How will you deploy the application?
- * Describe the architecture - what are the high level components or patterns you will use? Diagrams are useful here. 
- * Will you be using third party applications or APIs? If so, what are they?
-
-We are planning on using the Unity game engine, so that will involve coding in C#. Unity has an option to export to iOS and Android, so we're planning on using that (and EWB's app/play store account) to deploy the game. Development in Unity is strongly component-based, so patterns such as dependency injection and composition will be very useful.
+We are planning on using the Unity game engine, so that will involve coding in C#. Unity has an option to export to iOS and Android, so we're planning on using that (and EWB's app/play store account) to deploy the game. Development in Unity is strongly component-based, so patterns such as dependency injection and composition will be very useful. Most likely will not use an 3rd party APIs, unless we decide to implement multiplayer.
 
 ----
 ## Intellectual Property Confidentiality Agreement 
@@ -73,7 +50,7 @@ We are planning on using the Unity game engine, so that will involve coding in C
 
 **Your partner cannot ask you to sign any legal agreements or documents pertaining to non-disclosure, confidentiality, IP ownership, etc.**
 
-Briefly describe which option you have agreed to.
+Briefly describe which option you have agreed to. TBD!!!
 
 ----
 
@@ -102,6 +79,7 @@ List each team member and:
  * A description of their role(s) and responsibilities including the components they'll work on and non-software related work
  * Why did you choose them to take that role? Specify if they are interested in learning that part, experienced in it, or any other reasons. Do no make things up. This part is not graded but may be reviewed later.
 
+Roles we have: Team Rep (liaison), Developer, UI/UX
 
 #### Q8: How will you work as a team?
 
@@ -111,7 +89,11 @@ Describe meetings (and other events) you are planning to have.
  * Other events could be coding sessions, code reviews, quick weekly sync meeting online, etc.
  * You should have 2 meetings with your project partner (if you have one) before D1 is due. Describe them here:
    * You must keep track of meeting minutes and add them to your repo under "deliverables/minutes" folder
-   * You must have a regular meeting schedule established for the rest of the term.  
+   * You must have a regular meeting schedule established for the rest of the term.
+
+As a team, we haven't really discussed regular meetings yet. We have a Discord server where we can communicate with each other any time we want and share our progress.
+
+For D1 we only had time to meet with our partner once. In this meeting we discussed the MVP and expectations for the game. Our tentative regular meeting schedule will be wednesday afternoons around the same time biweekly. These will be online.
   
 #### Q9: How will you organize your team?
 
@@ -124,15 +106,19 @@ List/describe the artifacts you will produce in order to organize your team.
    * How do tasks get assigned to team members?
    * How do you determine the status of work from inception to completion?
 
+We communicate via our Discord server. We are thinking of making a Trello board to prioritize and assign tasks.
+
 #### Q10: What are the rules regarding how your team works?
 
 **Communications:**
- * What is the expected frequency? What methods/channels will be used? 
- * If you have a partner project, what is your process for communicating with your partner?
+
+We are all using a Discord server, we expect everyone to talk in it at least once a day to report on their progress. We have a general channel and a documents channel.
+
+Partner communication is done via email and biweekly meetings.
  
-**Collaboration: (Share your responses to Q8 & Q9 from A1)**
- * How are people held accountable for attending meetings, completing action items? Is there a moderator or process?
- * How will you address the issue if one person doesn't contribute or is not responsive?
+**Collaboration:**
+
+Still mostly done on Discord. If someone isn't doing their assigned work or hasn't reported back yet, we simply ping them or directly message them asking about their progress.
 
 ## Organisation Details
 

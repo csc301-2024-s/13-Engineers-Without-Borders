@@ -111,13 +111,11 @@ We communicate via our Discord server. We are thinking of making a Trello board 
 #### Q10: What are the rules regarding how your team works?
 
 **Communications:**
-
 We are all using a Discord server, we expect everyone to talk in it at least once a day to report on their progress. We have a general channel and a documents channel.
 
 Partner communication is done via email and biweekly meetings.
  
 **Collaboration:**
-
 Still mostly done on Discord. If someone isn't doing their assigned work or hasn't reported back yet, we simply ping them or directly message them asking about their progress.
 
 ## Organisation Details

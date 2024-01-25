@@ -1,0 +1,9 @@
+First meeting with EWB, about 7:00pm - 7:30pm
+- Discussed preliminary questions about product
+- Reviewed (and approved) user stories making up MVP
+- Discussed product in more detail
+  - Essentially a digitized version of Green Revolution workshop
+  - We have lots of creative freedom in terms of looks
+  - The game essentially plays like BitLife, but as a farmer (explained more in planning.md)
+- Discussed IP agreement
+- Set up biweekly meeting schedule

@@ -6,7 +6,7 @@
 #### Q1: What is the product?
 An iOS/Android game exploring issues around global food production and supply, developed in partnership with Engineers Without Borders. In the game, the player takes on the role of a farmer who must make choices that affect food production using new and existing technology. External factors such as weather will also affect the food production's performance. The player will also be able to choose budgets, supplies, and funds in order to see what affect they have on their harvest.
 
-At the start of the game, the player starts off with a randomized family that needs to be taken care of and a set amount of money. The game runs in phases - during each phase, the player makes choices to buy stuff and plant/sell crops. The player can advance to the next phase to see the outcome - how their crops are doing, what the weather is like, and other random events - and continue making decisions. Gameplay-wise it's similar to the mobile game "BitLife".
+At the start of the game, the player starts off with a randomized family that needs to be taken care of and a set amount of money. The game runs in phases - during each phase, the player makes choices to buy stuff and plant/sell crops. The player can advance to the next phase to see the outcome - how their crops are doing, what the weather is like, and other random events - and continue making decisions. Gameplay-wise it's similar to the mobile game "BitLife."
 
 The MVP will be single player, but there can be other (computer-ran) farmers that you can interact with.
 

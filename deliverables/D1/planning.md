@@ -37,7 +37,7 @@ A clickable button should be composed of a Button component (as well as other Un
 
 ----
 ## Intellectual Property Confidentiality Agreement 
-**By default, you own any work that you do as part of your coursework.** However, some partners may want you to keep the project confidential after the course is complete. As part of your first deliverable, you should discuss and agree upon an option with your partner. Examples include:
+**By default, you own any work that you do as part of your coursework.** These are the options for the IP agreement:
 1. You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.
 2. You can upload the code to GitHub or other similar publicly available domains.
 3. You will only share the code under an open-source license with the partner but agree to not distribute it in any way to any other entity or individual. 

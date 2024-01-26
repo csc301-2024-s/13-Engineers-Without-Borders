@@ -78,16 +78,7 @@ List each team member and:
 Roles we have: Team Rep (liaison), Developer, UI/UX
 
 #### Q8: How will you work as a team?
-
-Describe meetings (and other events) you are planning to have. 
- * When and where? Recurring or ad hoc? In-person or online?
- * What's the purpose of each meeting?
- * Other events could be coding sessions, code reviews, quick weekly sync meeting online, etc.
- * You should have 2 meetings with your project partner (if you have one) before D1 is due. Describe them here:
-   * You must keep track of meeting minutes and add them to your repo under "deliverables/minutes" folder
-   * You must have a regular meeting schedule established for the rest of the term.
-
-As a team, we haven't really discussed regular meetings yet. We have a Discord server where we can communicate with each other any time we want and share our progress.
+As a team, we haven't really discussed regular meetings yet. We have a Discord server where we can communicate with each other any time we want and share our progress. Sometimes we'll have ad hoc meetings where we discuss deliverables and go over what we wrote (like for this deliverable!).
 
 For D1 we only had time to meet with our partner once. In this meeting we discussed the MVP and expectations for the game. Our tentative regular meeting schedule will be wednesday afternoons around the same time biweekly. These will be online.
   

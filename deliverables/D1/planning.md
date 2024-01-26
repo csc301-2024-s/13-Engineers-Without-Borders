@@ -82,7 +82,7 @@ Members:
 - Hoa Nguyen: Backend Programmer
   - Has experience developing some games before
 - Jacqueline Zhu: Frontend Programmer
-  - Took CSC309
+  - Took CSC309, has worked on a game before as a game asset designer
 - Andy Wang: Team Rep, Backend Programmer, Game Artist
   - Took CSC404, has experience in gameplay programming, has experience making game art
 

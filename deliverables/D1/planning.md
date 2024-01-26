@@ -117,11 +117,9 @@ Still mostly done on Discord. If someone isn't doing their assigned work or hasn
 ## Organisation Details
 
 #### Q11. How does your team fit within the overall team organisation of the partner?
-* Given the team structure of your partner, what role do you think your team will play?
-* Examples include product development that includes developing new features, or quality assurance that includes developing features that test the product reliability, or software maintenance that includes fixing crucial bugs in the product.
-* Provide examples of why you think you fit this role.
-  
-Our partner, EWB, is currently running workshops about green revolution. As a team, we are responsible for developing a software simulating the process of food production that the organisation will later use in their workshops. For this project, we are in charged of building all the features as well as maintaining and bug fixing the whole software.  
+Our partner, EWB, is currently running workshops about the Green Revolution, educating students about issues surrounding global food supply/production and the role that technology plays in it. In this workshop, there is a group activity where the students are organized into teams, and as teams they simulate being farmers. Given a starting budget they have to make decisions as to what technology to buy in order to maximize their crop yield and profits. Random weather events, decided by the roll of a die, also affect gameplay.
+
+As a team, we are responsible for developing a software (mobile game) simulating this workshop. We are in charged of building all the features as well as maintaining and debugging it. We will also perform quality assurance, which in this case is playtesting. We think we fit this role because some of us have previous experience in game design and game development.
 
 #### Q12. How does your project fit within the overall product from the partner?
 * Look at the big picture of the product and think about how your project fits into this product.

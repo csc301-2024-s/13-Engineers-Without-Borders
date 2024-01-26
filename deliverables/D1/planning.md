@@ -75,7 +75,12 @@ List each team member and:
  * A description of their role(s) and responsibilities including the components they'll work on and non-software related work
  * Why did you choose them to take that role? Specify if they are interested in learning that part, experienced in it, or any other reasons. Do no make things up. This part is not graded but may be reviewed later.
 
-Roles we have: Team Rep (liaison), Frontend Programmer, Backend Programmer
+Roles we have:
+- Team Rep (liaison)
+- Frontend Programmer
+- Backend Programmer
+- UI Designer
+- Game Artist
 
 #### Q8: How will you work as a team?
 As a team, we haven't really discussed regular meetings yet. We have a Discord server where we can communicate with each other any time we want and share our progress. Sometimes we'll have ad hoc meetings where we discuss deliverables and go over what we wrote (like for this deliverable!).

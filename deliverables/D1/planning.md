@@ -14,9 +14,9 @@ The MVP will be single player, but there can be other (computer-ran) farmers tha
 Middle, high school, and university students wanting to learn more about global food supply and issues relating to it.
 
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
-The traditional way of learning about issues surrounding global food supply and production require research, which is quite boring for middle school users and time consuming for high school/university students. Framing it as a game makes it fun and entertaining, and conveys EWB's vision to engineer a more sustainable future in a more engaging and interactive way. It will also help to reinforce EWB's reputation as one of the top leaders in education about international equity issues.
+The traditional way of learning about issues surrounding global food supply and production requires research, which is quite boring for middle school users and time consuming for high school/university students. Framing it as a game makes it fun and entertaining, and conveys EWB's vision to engineer a more sustainable future in a more engaging and interactive way. It will also help to reinforce EWB's reputation as one of the top leaders in education about international equity issues.
 
-This product also serves as a digitized version of EWB's "Green Revolution" workshop. Originally it is done in person with different teams, and they'd have to keep track of their money and statistics with a spreadsheet. The product makes this process a lot easier by handling all the calculations and data for you, and also you don't need to meet up with other people in real life. This is a rather important option to give post-pandemic, afterall.
+This product also serves as a digitized version of EWB's "Green Revolution" workshop. Originally, it is done in person with different teams, and they'd have to keep track of their money and statistics with a spreadsheet. The product makes this process a lot easier by handling all the calculations and data for you, and also you don't need to meet up with other people in real life. This is a rather important option to give post-pandemic, afterall.
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
 1) As a student, I want to simulate budget choices in order to learn about the struggles of farmers in third world countries. AC: Given budget choices, when I choose a budget, then I see what farming tools I can afford.
@@ -28,7 +28,8 @@ This product also serves as a digitized version of EWB's "Green Revolution" work
 
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
-We are planning on using the Unity game engine, so that will involve coding in C#. Unity has an option to export to iOS and Android, so we're planning on using that (and EWB's app/play store account) to deploy the game. Development in Unity is strongly component-based, so patterns such as dependency injection, strategy, and composition will be very useful. We will most likely not use any 3rd party APIs, unless we decide to implement multiplayer later on.
+We are planning on using the Unity game engine, so that will involve coding in C#. Unity has an option to export to iOS and Android, so we're planning on using that (and EWB's app/play store account) to deploy the game. Development in Unity is strongly component-based, so patterns such as dependency injection, strategy, and composition will be very useful. We will most likely not use any 3rd party APIs, unless we decide to implement multiplayer later on,
+or if we decide to have a login/account signup feature.
 
 For example, here is a simplified schema for a button in Unity that performs some action when clicked:
 ![image](https://github.com/csc301-2024-s/deliverable-1-13-mr-cyborg/assets/46545759/66ce9b52-4b63-434d-a239-8c936c6fcc35)
@@ -89,12 +90,12 @@ Members:
 #### Q8: How will you work as a team?
 As a team, we haven't really discussed regular meetings yet. We have a Discord server where we can communicate with each other any time we want and share our progress. Sometimes we'll have ad hoc meetings where we discuss deliverables and go over what we wrote (like for this deliverable!).
 
-For D1 we only had time to meet with our partner once. In this meeting we discussed the MVP and expectations for the game. Our tentative regular meeting schedule will be wednesday afternoons around the same time biweekly. These will be online.
+For D1 we only had time to meet with our partner once. In this meeting we discussed the MVP, user stories, and expectations for the game. Our biweekly meetings will be Thursday nights online.
   
 #### Q9: How will you organize your team?
 We communicate via our Discord server. We will make a Trello board to prioritize and assign tasks, and yes we will give our TA and partner access to it once we make it.
 
-Tasks get assigned based on their role in question 7. So GUI-based tasks go to the frontend programmers, for example. The status of work depends on if the work satisfies the requirements, or far away it is from satisfying them.
+Tasks get assigned based on their role in question 7. So GUI-based tasks go to the frontend programmers, for example. The status of work depends on if the work satisfies the requirements, or how far away it is from satisfying them.
 
 #### Q10: What are the rules regarding how your team works?
 **Communications:**
@@ -114,4 +115,4 @@ As a team, we are responsible for developing a software (mobile game) simulating
 #### Q12. How does your project fit within the overall product from the partner?
 The software we are developing is the whole product that is requested by our partner. The product is a step of the organisation's movement to educate people about global food supply. Our team will make it using Unity based on EWB's expectations and there is also room for creativity beyond them.
 
-Fidel Labit from EWB will provide us with more information, such as more information on their Green Revolution workshop and some basic mockups/flowcharts describing the "flow" of the app.
+Fidel Labit from EWB has provided us with more information, such as more details on their Green Revolution workshop and some basic mockups/flowcharts describing the "flow" of the app.

@@ -126,4 +126,4 @@ As a team, we are responsible for developing a software (mobile game) simulating
 * You should also provide details of who else is contributing to what parts of the product, if you have this information. This is more important if the project that you will be working on has strong coupling with parts that will be contributed to by members other than your team (e.g. from partner).
 * You can be creative for these questions and even use a graphical or pictorial representation to demonstrate the fit.
 
-  The software we are developing is the whole product that is requested by our partner. The product is a step of the organisation's movement to educate people about global food supply. Our team will make it from stratch based on EWB's expectations and there is also room for creativity beyond them.   
+  The software we are developing is the whole product that is requested by our partner. The product is a step of the organisation's movement to educate people about global food supply. Our team will make it from scratch based on EWB's expectations and there is also room for creativity beyond them.   

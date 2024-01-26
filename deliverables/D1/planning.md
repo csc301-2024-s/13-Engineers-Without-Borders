@@ -127,10 +127,12 @@ Still mostly done on Discord. If someone isn't doing their assigned work or hasn
 * Examples include product development that includes developing new features, or quality assurance that includes developing features that test the product reliability, or software maintenance that includes fixing crucial bugs in the product.
 * Provide examples of why you think you fit this role.
   
-Our partner, EWB, is currently running workshops about green revolution. As a team, we are responsible for developing a software simulating the process of food production that the organisation will later use in their workshops. We will build this project from scratch so we are in charged of building all the features as well as maintaining and bug fixing the whole software.  
+Our partner, EWB, is currently running workshops about green revolution. As a team, we are responsible for developing a software simulating the process of food production that the organisation will later use in their workshops. For this project, we are in charged of building all the features as well as maintaining and bug fixing the whole software.  
 
 #### Q12. How does your project fit within the overall product from the partner?
 * Look at the big picture of the product and think about how your project fits into this product.
 * Is your project the first step towards building this product? Is it the first prototype? Are you developing the frontend of a product whose backend is developed by the partner? Are you building the release pipelines for a product that is developed by the partner? Are you building a core feature set and take full ownership of these features?
 * You should also provide details of who else is contributing to what parts of the product, if you have this information. This is more important if the project that you will be working on has strong coupling with parts that will be contributed to by members other than your team (e.g. from partner).
 * You can be creative for these questions and even use a graphical or pictorial representation to demonstrate the fit.
+
+  The software we are developing is the whole product that is requested by our partner. The product is a step of the organisation's movement to educate people about global food supply. Our team will make it from stratch based on EWB's expectations and there is also room for creativity beyond them.   

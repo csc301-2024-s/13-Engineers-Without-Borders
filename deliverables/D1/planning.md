@@ -92,20 +92,11 @@ As a team, we haven't really discussed regular meetings yet. We have a Discord s
 For D1 we only had time to meet with our partner once. In this meeting we discussed the MVP and expectations for the game. Our tentative regular meeting schedule will be wednesday afternoons around the same time biweekly. These will be online.
   
 #### Q9: How will you organize your team?
+We communicate via our Discord server. We will make a Trello board to prioritize and assign tasks, and yes we will give our TA and partner access to it once we make it.
 
-List/describe the artifacts you will produce in order to organize your team.       
-
- * Artifacts can be To-Do lists, Task boards, schedule(s), meeting minutes, etc.
- * We want to understand:
-   * How do you keep track of what needs to get done? (You must grant your TA and partner access to systems you use to manage work)
-   * **How do you prioritize tasks?**
-   * How do tasks get assigned to team members?
-   * How do you determine the status of work from inception to completion?
-
-We communicate via our Discord server. We are thinking of making a Trello board to prioritize and assign tasks.
+Tasks get assigned based on their role in question 7. So GUI-based tasks go to the frontend programmers, for example. The status of work depends on if the work satisfies the requirements, or far away it is from satisfying them.
 
 #### Q10: What are the rules regarding how your team works?
-
 **Communications:**
 We are all using a Discord server, we expect everyone to talk in it at least once a day to report on their progress. We have a general channel and a documents channel.
 
@@ -115,16 +106,12 @@ Partner communication is done via email and biweekly meetings.
 Still mostly done on Discord. If someone isn't doing their assigned work or hasn't reported back yet, we simply ping them or directly message them asking about their progress.
 
 ## Organisation Details
-
 #### Q11. How does your team fit within the overall team organisation of the partner?
 Our partner, EWB, is currently running workshops about the Green Revolution, educating students about issues surrounding global food supply/production and the role that technology plays in it. In this workshop, there is a group activity where the students are organized into teams, and as teams they simulate being farmers. Given a starting budget they have to make decisions as to what technology to buy in order to maximize their crop yield and profits. Random weather events, decided by the roll of a die, also affect gameplay.
 
 As a team, we are responsible for developing a software (mobile game) simulating this workshop. We are in charged of building all the features as well as maintaining and debugging it. We will also perform quality assurance, which in this case is playtesting. We think we fit this role because some of us have previous experience in game design and game development.
 
 #### Q12. How does your project fit within the overall product from the partner?
-* Look at the big picture of the product and think about how your project fits into this product.
-* Is your project the first step towards building this product? Is it the first prototype? Are you developing the frontend of a product whose backend is developed by the partner? Are you building the release pipelines for a product that is developed by the partner? Are you building a core feature set and take full ownership of these features?
-* You should also provide details of who else is contributing to what parts of the product, if you have this information. This is more important if the project that you will be working on has strong coupling with parts that will be contributed to by members other than your team (e.g. from partner).
-* You can be creative for these questions and even use a graphical or pictorial representation to demonstrate the fit.
+The software we are developing is the whole product that is requested by our partner. The product is a step of the organisation's movement to educate people about global food supply. Our team will make it using Unity based on EWB's expectations and there is also room for creativity beyond them.
 
-  The software we are developing is the whole product that is requested by our partner. The product is a step of the organisation's movement to educate people about global food supply. Our team will make it from scratch based on EWB's expectations and there is also room for creativity beyond them.   
+Fidel Labit from EWB will provide us with more information, such as more information on their Green Revolution workshop and some basic mockups/flowcharts describing the "flow" of the app.

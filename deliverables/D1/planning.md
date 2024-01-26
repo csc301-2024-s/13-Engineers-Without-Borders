@@ -19,17 +19,11 @@ The traditional way of learning about issues surrounding global food supply and 
 This product also serves as a digitized version of EWB's "Green Revolution" workshop. Originally it is done in person with different teams, and they'd have to keep track of their money and statistics with a spreadsheet. The product makes this process a lot easier by handling all the calculations and data for you, and also you don't need to meet up with other people in real life. This is a rather important option to give post-pandemic, afterall.
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
-
- * At least 5 user stories concerning the main features of the application - note that this can broken down further
- * You must follow proper user story format (as taught in lecture) ```As a <user of the app>, I want to <do something in the app> in order to <accomplish some goal>```
- * User stories must contain acceptance criteria. Examples of user stories with different formats can be found here: https://www.justinmind.com/blog/user-story-examples/. **It is important that you provide a link to an artifact containing your user stories**.
- * If you have a partner, these must be reviewed and accepted by them. You need to include the evidence of partner approval (e.g., screenshot from email) or at least communication to the partner (e.g., email you sent)
-
-1) As a student, I want to simulate budget choices in order to learn about the struggles of farmers in third world countries. Given budget choices, when I choose a budget, then I see what farming tools I can afford.
-2) As a student, I want to choose what technology I use in order to learn its benefits/downsides. Given choice of tools/technology, when I choose one, then I see how it affects my crop yield.
-3) As a student, I want to experience random climate/weather events in order to learn how weather affects my crops. Given the beginning of the simulation year, when I continue the game, I see what weather event is selected and see how that affects my crops.
-4) As a player, I want to replay the game in order to come up with a different strategy. Given the ending of one game, when I see the replay button, I can press it to play again.
-5) As a player, I want to get the best score so I can win the game. Given the amount of crops I can grow/sell, when I finish the game, I can see my score in relation to others, if there are any.
+1) As a student, I want to simulate budget choices in order to learn about the struggles of farmers in third world countries. AC: Given budget choices, when I choose a budget, then I see what farming tools I can afford.
+2) As a student, I want to choose what technology I use in order to learn its benefits/downsides. AC: Given choice of tools/technology, when I choose one, then I see how it affects my crop yield.
+3) As a student, I want to experience random climate/weather events in order to learn how weather affects my crops. AC: Given the beginning of the simulation year, when I continue the game, I see what weather event is selected and see how that affects my crops.
+4) As a player, I want to replay the game in order to come up with a different strategy. AC: Given the ending of one game, when I see the replay button, I can press it to play again.
+5) As a player, I want to get the best score so I can win the game. AC: Given the amount of crops I can grow/sell, when I finish the game, I can see my score in relation to others, if there are any.
 ![image](https://github.com/csc301-2024-s/deliverable-1-13-mr-cyborg/assets/46545759/9623a1fe-6ec8-4507-9e1d-3575cc322793)
 
 

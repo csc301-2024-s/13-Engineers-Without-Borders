@@ -1,1 +1,3 @@
+The flowcharts were provided by EWB. They detail the general flow of the app, and what order the screens appear in.
 
+The Figma renders are rough and are subject to change throughout development.

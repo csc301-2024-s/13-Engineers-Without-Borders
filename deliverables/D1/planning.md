@@ -126,6 +126,7 @@ Still mostly done on Discord. If someone isn't doing their assigned work or hasn
 * Given the team structure of your partner, what role do you think your team will play?
 * Examples include product development that includes developing new features, or quality assurance that includes developing features that test the product reliability, or software maintenance that includes fixing crucial bugs in the product.
 * Provide examples of why you think you fit this role.
+  
 Our partner, EWB, is currently running workshops about green revolution. As a team, we are responsible for developing a software simulating the process of food production that the organisation will later use in their workshops. We will build this project from scratch so we are in charged of building all the features as well as maintaining and bug fixing the whole software.  
 
 #### Q12. How does your project fit within the overall product from the partner?

@@ -76,11 +76,14 @@ List each team member and:
  * Why did you choose them to take that role? Specify if they are interested in learning that part, experienced in it, or any other reasons. Do no make things up. This part is not graded but may be reviewed later.
 
 Roles we have:
-- Team Rep (liaison)
-- Frontend Programmer
-- Backend Programmer
-- UI Designer
-- Game Artist
+- Team Rep (liaison): self-explanatory, will meet with the partners to share our progress
+- Frontend Programmer: scripting the GUI of the game
+- Backend Programmer: scripting the background calculations (e.g. handling money, crops, weather)
+- UI Designer: designing the game's UI and UX, for the frontend programmers to implement
+- Game Artist: designing the game's sprites and icons
+
+Members:
+
 
 #### Q8: How will you work as a team?
 As a team, we haven't really discussed regular meetings yet. We have a Discord server where we can communicate with each other any time we want and share our progress. Sometimes we'll have ad hoc meetings where we discuss deliverables and go over what we wrote (like for this deliverable!).

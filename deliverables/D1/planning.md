@@ -75,15 +75,22 @@ List each team member and:
  * A description of their role(s) and responsibilities including the components they'll work on and non-software related work
  * Why did you choose them to take that role? Specify if they are interested in learning that part, experienced in it, or any other reasons. Do no make things up. This part is not graded but may be reviewed later.
 
-Roles we have:
+Roles we have and what components they'll work on:
 - Team Rep (liaison): self-explanatory, will meet with the partners to share our progress
 - Frontend Programmer: scripting the GUI of the game
-- Backend Programmer: scripting the background calculations (e.g. handling money, crops, weather)
+- Backend Programmer: scripting the background calculations (e.g. handling money, crops, weather) and core gameplay programming
 - UI Designer: designing the game's UI and UX, for the frontend programmers to implement
 - Game Artist: designing the game's sprites and icons
+These are subject to change!!
 
 Members:
-
+- Arick Liu: Frontend Programmer, UI Design
+  - Used to be a frontend web designer for the game shop of Sunny hobbies who have also designed UX and UI on different business websites. Similar experience in JavaScript and HTML
+- Yizhi Wu: UI Design, Frontend Programmer
+  - Prior experience of UI design with Figma and is now taking a game design course working with Unity Engine
+- Xiangnan Gui: Team Rep, Backend Programmer, UI Design
+  - Took csc318 so has experience working with UI/UX designs, also has experience working on the backend in previous projects and has worked with Unity on personals projects before
+ 
 
 #### Q8: How will you work as a team?
 As a team, we haven't really discussed regular meetings yet. We have a Discord server where we can communicate with each other any time we want and share our progress. Sometimes we'll have ad hoc meetings where we discuss deliverables and go over what we wrote (like for this deliverable!).

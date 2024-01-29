@@ -15,7 +15,7 @@ TBD throughout development of the project.
 TBD throughout development of the project.
  
 ## Development requirements
-TBD throughout development of the project. Uses Unity Engine, one of the LTS versions (haven't decided which one yet).
+TBD throughout development of the project. Uses Unity Engine, LTS version 2022.3.18f1.
  
 ## Deployment and Github Workflow
 ​TBD throughout development of the project.

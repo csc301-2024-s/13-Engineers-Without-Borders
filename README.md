@@ -15,7 +15,7 @@ TBD throughout development of the project.
 TBD throughout development of the project.
  
 ## Development requirements
-TBD throughout development of the project. Uses Unity Engine, LTS version 2022.3.18f1.
+TBD throughout development of the project. Uses Unity Engine, LTS version 2022.3.18f1, your local git branch should be configured to use Unity YAML merge.
  
 ## Deployment and Github Workflow
 ​TBD throughout development of the project.

@@ -5,7 +5,43 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Welcome.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/About App.unity
+    guid: 9f351bb1f26032a49a0efc028d36733f
+  - enabled: 1
+    path: Assets/Scenes/About GR.unity
+    guid: 34e62e03e34e51d4ea1b3f2f1fdfb0b7
+  - enabled: 1
+    path: Assets/Scenes/Positive Effects.unity
+    guid: 079fc0a697dabf34a9f2816c5a4e65ad
+  - enabled: 1
+    path: Assets/Scenes/Negative Effects.unity
+    guid: 04b5a5232ecceb54da21f3817cd9fa08
+  - enabled: 1
+    path: Assets/Scenes/About Simulation.unity
+    guid: d5ce958ec190128418b01592918d826e
+  - enabled: 1
+    path: Assets/Scenes/Simulation.unity
+    guid: 2b635c6619bb244448de4c27af7b98b7
+  - enabled: 1
+    path: Assets/Scenes/Results.unity
+    guid: cee7e5a07b2195e4f8ad16ef30b63eef
+  - enabled: 1
+    path: Assets/Scenes/Assessment 1.unity
+    guid: 36d96c99baca3d8479af2cb23116db4a
+  - enabled: 1
+    path: Assets/Scenes/Assessment 2.unity
+    guid: 4a8ecaa805c6e344cb1f6056d27f8581
+  - enabled: 1
+    path: Assets/Scenes/Assessment 3.unity
+    guid: 8d8837f4a82bb704798ff91af4302ac7
+  - enabled: 1
+    path: Assets/Scenes/Conclusion.unity
+    guid: 20ad26b77bd879e49b2178770d14564f
   m_configObjects: {}

@@ -18,11 +18,13 @@ TBD throughout development of the project.
 Unity Engine, LTS version 2022.3.18f1, your local git branch should be configured to use Unity YAML merge.
 
 Add this to your local git config file:
+```
 [merge]
     tool = unityyamlmerge
 [mergetool "unityyamlmerge"]
     trustExitCode = false
     cmd = "PUT PATH TO UnityYAMLMerge.exe HERE" merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+```
 
 On Windows at least, the path to the tool is "C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/UnityYAMLMerge.exe"
  

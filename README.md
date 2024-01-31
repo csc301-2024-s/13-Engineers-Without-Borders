@@ -15,10 +15,21 @@ TBD throughout development of the project.
 TBD throughout development of the project.
  
 ## Development requirements
-TBD throughout development of the project. Uses Unity Engine, LTS version 2022.3.18f1, your local git branch should be configured to use Unity YAML merge.
+Unity Engine, LTS version 2022.3.18f1, your local git branch should be configured to use Unity YAML merge.
+
+Add this to your local git config file:
+[merge]
+    tool = unityyamlmerge
+[mergetool "unityyamlmerge"]
+    trustExitCode = false
+    cmd = "PUT PATH TO UnityYAMLMerge.exe HERE" merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+
+On Windows at least, the path to the tool is "C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/UnityYAMLMerge.exe"
  
 ## Deployment and Github Workflow
 ​TBD throughout development of the project.
+
+Access our Trello here: https://trello.com/b/YwVbyUKp/green-revolution  (you may need to request permission).
 
  ## Coding Standards and Guidelines
 TBD throughout development of the project. Most likely we will use C# guidelines, since that's what Unity uses.

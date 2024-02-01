@@ -27,6 +27,8 @@ Add this to your local git config file:
 ```
 
 On Windows at least, the path to the tool is "C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/UnityYAMLMerge.exe"
+
+UML diagrams can be edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  
 ## Deployment and Github Workflow
 ​TBD throughout development of the project.

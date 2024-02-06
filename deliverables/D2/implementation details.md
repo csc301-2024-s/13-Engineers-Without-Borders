@@ -2,6 +2,8 @@
 
 # Notes
 - Excluding labour trading and irrigation for now
+- The scripts described below should go in *Assets/Backend*, and are *SHARED* among subteam branches
+- Assets/Components is for scripts that you write that get dragged and dropped onto Unity game objects. These can be individual among sub teams, or shared
 
 # SIMULATION START
 - Initialize `GameState` with player(s) in `GameState.Initialize`

@@ -6,6 +6,7 @@
 - Assets/Components is for scripts that you write that get dragged and dropped onto Unity game objects. These can be individual among sub teams, or shared.
 - For the purpose of this, "Backend" scripts refer to those in the UML diagram, that aren't dragged and dropped into Unity game objects. **These must go into Assets/Backend.** These are shared among all subteams for convenience.
 - **The implementations of the GameState.Advance functions** are what differs between each sub team's branch (as well as some Unity scenes/Component scripts).
+- When writing backend scripts and you have to refer to a type that hasn't been written yet, just ignore any errors your IDE might throw at you.
 
 # SIMULATION START
 - Initialize `GameState` with player(s) in `GameState.Initialize`
@@ -120,6 +121,6 @@
 - Since builds are isolated from each other, the player won't choose their own household. Instead choose a random one and use `GameState.Initialize` with it
     - **In the final product**, this phase should use existing `GameState` values instead of re-initializing
     - Initialize with a lot more money than normal
-- I'd expect this phase to use a lot more Components than Backend stuff
+- I'd expect this phase to use a lot more custom Components than Backend stuff
 - This should be implemented in two Unity scenes: one for the shop GUI, another for the plot management GUI
 

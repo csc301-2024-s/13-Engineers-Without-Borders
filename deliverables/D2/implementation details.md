@@ -13,6 +13,7 @@
         - The way these are stored is up to you, could be delegated to its own file, or loaded from JSON
         - Make these according to WorkshopSheets/Household Cards.pdf
         - Family members should be created with random first name (list of names could be a hardcoded array), and have family's last name
+            - Children have a random age below 12
         - Household `FarmPlot`s should all be initialized to have no HYC seeds and no fertilizer
             - Assign workers to `FarmPlot`s automatically using `Household`'s adults, with a ratio of one adult to two plots -- if there are any plots remaining with no workers, leave them be
         - Household `Inventory` should be empty
@@ -23,6 +24,7 @@
 
 # PHASE 1
 - Increment phase and year appropriately
+    - **On a new year (2+), increment the ages of every child in the game's data**. When they reach an age of 12, remove them from `Family.Children` and use their `ToAdult` method to convert them to an adult, and add it to `Family.Adults`
 - Set `GameState.s_WeatherIndex` to a random integer between 1 and 5
 - Set wheat price to random integer between 1 and 10
     - Tentativey, prices are stored in dictionary `Market.s_Prices`

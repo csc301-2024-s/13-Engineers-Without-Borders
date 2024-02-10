@@ -8,7 +8,9 @@
 - **The implementations of the GameState.Advance functions** are what differs between each sub team's branch (as well as some Unity scenes/Component scripts).
 - When writing backend scripts and you have to refer to a type that hasn't been written yet, just ignore any errors your IDE might throw at you.
 - **Write your name on the scripts you write!!!**
-- In Unity, when you create a C# script, it will automatically inherit from MonoBehavior. Keep it like this (unless you're inheriting from something different).
+- In Unity, when you create a C# script, it will automatically inherit from MonoBehavior. You should remove this.
+- Backend classes should be in the Backend namespace.
+- When you can, you should write unit tests for your Backend classes. Follow the `Inventory` example.
 
 # SIMULATION START
 - Initialize `GameState` with player(s) in `GameState.Initialize`

@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/*
+ * Author: Hoa Nguyen
+ * This class represents a family in the game.
+ */
+
 public class Family
 {
     public string familyName;
@@ -10,7 +15,8 @@ public class Family
     int numFarmPlots;
     private int numChildren;
     private int numAdults;
-
+    
+    //Constructor of the class
     public Family(string familyName, int numChildren, int numAdults, int numFarmPlots)
     {
         this.familyName = familyName;
@@ -31,6 +37,7 @@ public class Family
         this.numFarmPlots = numFarmPlots;
     }
 
+    //Add a new child to the family
     public void CreateChild()
     {
         //Temporary name
@@ -39,16 +46,17 @@ public class Family
         this.numChildren++;
     }
 
+    //Calculate family's total consumption after each year
     public int CalculateConsumption()
     {
         return this.numChildren * 5 + this.numAdults * 10;
     }
 
+    //Grow a child up 
     public void ChildGrowUp()
     {
         List<Child> children = this.FamilyMembers.OfType<Child>().ToList();
 
-        // Select a random Child object
         Child GrowingUpKid = children[0];
         Adult newAdult = GrowingUpKid.GrowUp();
         FamilyMembers.Remove(GrowingUpKid);

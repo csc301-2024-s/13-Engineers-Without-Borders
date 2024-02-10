@@ -7,6 +7,8 @@
 - For the purpose of this, "Backend" scripts refer to those in the UML diagram, that aren't dragged and dropped into Unity game objects. **These must go into Assets/Backend.** These are shared among all subteams for convenience.
 - **The implementations of the GameState.Advance functions** are what differs between each sub team's branch (as well as some Unity scenes/Component scripts).
 - When writing backend scripts and you have to refer to a type that hasn't been written yet, just ignore any errors your IDE might throw at you.
+- **Write your name on the scripts you write!!!**
+- In Unity, when you create a C# script, it will automatically inherit from MonoBehavior. Keep it like this (unless you're inheriting from something different).
 
 # SIMULATION START
 - Initialize `GameState` with player(s) in `GameState.Initialize`

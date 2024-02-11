@@ -17,23 +17,25 @@ public class Family
     private int _numAdults;
     
     //Constructor of the class
-    public Family(string familyName, int numChildren, int numAdults, int numFarmPlots)
+    public Family(string FamilyName, int NumChildren, int numAdults, int numFarmPlots)
     {
-        this.FamilyName = familyName;
-        for(int i = 0; i < numChildren; i++)
+        this.FamilyName = FamilyName;
+        for(int i = 0; i < NumChildren; i++)
         {
             //Temporary name
-            Child child = new Child("A", familyName);
+            int Age = Random.Range(0, 12);
+            Child child = new Child("A", FamilyName, Age);
             FamilyMembers.Add(child);
         }
         for (int i = 0; i < numAdults; i++)
         {
             //Temporary name
-            Adult adult = new Adult("B", familyName);
+            int Age = Random.Range(18, 81);
+            Adult adult = new Adult("B", FamilyName, Age);
             FamilyMembers.Add(adult);
         }
         this._numAdults = numAdults;
-        this._numChildren = numChildren;
+        this._numChildren = NumChildren;
         this.numFarmPlots = numFarmPlots;
     }
 
@@ -41,7 +43,7 @@ public class Family
     public void CreateChild()
     {
         //Temporary name
-        Child child = new Child("A", FamilyName);
+        Child child = new Child("A", FamilyName, 0);
         FamilyMembers.Add(child);
         this._numChildren++;
     }
@@ -55,19 +57,29 @@ public class Family
     //Grow a child up 
     public void ChildGrowUp()
     {
-        List<Child> children = this.FamilyMembers.OfType<Child>().ToList();
+        List<Child> Children = this.FamilyMembers.OfType<Child>().ToList();
 
-        Child GrowingUpKid = children[0];
-        Adult newAdult = GrowingUpKid.GrowUp();
+        Child GrowingUpKid = Children[0];
+        Adult NewAdult = GrowingUpKid.ToAdult();
         FamilyMembers.Remove(GrowingUpKid);
-        FamilyMembers.Add(newAdult);
+        FamilyMembers.Add(NewAdult);
+        this._numAdults++;
+        this._numChildren--;
+    }
+
+    public void AddAge()
+    {
+        for (int i = 0; i < this.FamilyMembers.Count; i++)
+        {
+            this.FamilyMembers[i].IncrementAge();
+        };
     }
 
     // Count the amount of adults
     public int GetAdultAmount()
     {
-        List<Adult> adult = this.FamilyMembers.OfType<Adult>().ToList();
-        return adult.Count();
+        List<Adult> Adult = this.FamilyMembers.OfType<Adult>().ToList();
+        return Adult.Count();
     }
 
     // Count the amount of children

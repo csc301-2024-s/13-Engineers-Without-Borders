@@ -36,14 +36,17 @@ Add this to your local git config file:
 
 On Windows at least, the path to the tool is `C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/UnityYAMLMerge.exe`
 
-Then, just open up the project in Unity, like any other normal Unity project.
+Then, just open up the project in Unity, like any other normal Unity project. The project is optimized for a 9:16 viewport ratio, so be sure to set that as your
+viewport's ratio when testing.
+
+It is recommended to edit scripts by clicking on them in the Unity editor, as that will give you the appropriate intellisense (assuming you've set that up correctly; https://code.visualstudio.com/docs/other/unity ).
 
 UML diagrams can be viewed in the browser, and edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  
 ## Deployment and Github Workflow
 Deployment is TBD. Maybe we'll set up an auto-building feature, or maybe not.
 
-Most of our communication is done on our Discord server. Ideally, we communicate what classes we're writing. If we're making a small bug fix or writing a new class, we can just push directly to main without causing issues. If it's a huge refactoring or another big change, we'll create a branch for it, and the writer of it will create a pull request. TBD reviews it and merges it.
+Most of our communication is done on our Discord server. Ideally, we communicate what classes we're writing. If we're making a small bug fix, we can just push directly to main. If it's a big change, like writing new classes, we'll create a branch for it, and the writer of it will create a pull request. Team lead reviews it and merges it.
 
 Access our Trello here: https://trello.com/b/YwVbyUKp/green-revolution  (you may need to request permission).
 

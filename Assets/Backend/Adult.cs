@@ -14,12 +14,13 @@ public class Adult : FamilyMember
     private bool _isAvailable;
 
     //Constructor of the class
-    public Adult(string first, string last)
+    public Adult(string First, string Last, int Age)
     {
-        this.FirstName = first;
-        this.LastName = last;
+        this.FirstName = First;
+        this.LastName = Last;
         this._isAvailable = true;
         this._hasOx = false;
+        this.age = Age;
     }
 
     //Assign an ox to the adult

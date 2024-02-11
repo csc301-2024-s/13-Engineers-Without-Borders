@@ -11,15 +11,16 @@ public class Child : FamilyMember
     const int ChildConsumption = 5;
 
     //Constructor of the class
-    public Child(string firstName, string lastName)
+    public Child(string FirstName, string LastName, int Age)
     {
-        this.FirstName = firstName;
-        this.LastName = lastName;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.age = Age;
     }
 
 
     //Transform the child into an adult
-    public Adult GrowUp()
+    public Adult ToAdult()
     {
         // Create a new Adult instance and copy attributes
         Adult adult = new Adult(FirstName, LastName);

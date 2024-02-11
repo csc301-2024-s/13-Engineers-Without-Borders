@@ -38,7 +38,7 @@ On Windows at least, the path to the tool is `C:/Program Files/Unity/Hub/Editor/
 
 Then, just open up the project in Unity, like any other normal Unity project.
 
-UML diagrams can be edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
+UML diagrams can be viewed in the browser, and edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  
 ## Deployment and Github Workflow
 Deployment is TBD. Maybe we'll set up an auto-building feature, or maybe not.
@@ -62,6 +62,8 @@ In particular:
         ...
     }
     ```
+
+As for comments, every class and method should be documented. Classes should have authors, and methods should have comments explaining their parameters and return values. These don't need to be in a specific format, as long as they explain the information.
 ​
  ## Licenses 
 Just a normal open source license, I guess. Will need to research what the formal term is.

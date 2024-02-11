@@ -47,7 +47,7 @@ public class Family
     }
 
     //Calculate family's total consumption after each year
-    public int CalculateConsumption()
+    public int GetTotalConsumption()
     {
         return this._numChildren * 5 + this._numAdults * 10;
     }

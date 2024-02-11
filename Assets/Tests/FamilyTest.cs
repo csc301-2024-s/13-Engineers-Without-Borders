@@ -38,6 +38,6 @@ public class FamilyTest
     public void TestTotalConsumption()
     {
         Family family = new Family("Rama", 4, 3, 4);
-        Assert.AreEqual(family.CalculateConsumption(), 50);
+        Assert.AreEqual(family.GetTotalConsumption(), 50);
     }
 }

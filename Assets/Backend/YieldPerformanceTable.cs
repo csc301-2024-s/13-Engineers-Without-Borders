@@ -13,7 +13,7 @@ namespace Backend
 
         static YieldPerformanceTable()
         {
-            _table = new Dictionary<(string, int), int>
+            _yield = new Dictionary<(int, int, int), int>
             {
                 {(5, 0, 0), 17}, {(4, 0, 0), 18}, {(3, 0, 0), 19}, {(2, 0, 0), 20}, {(1, 0, 0), 25}, 
                 {(5, 1, 0), 18}, {(4, 1, 0), 19}, {(3, 1, 0), 20}, {(2, 1, 0), 22}, {(1, 1, 0), 30},
@@ -28,13 +28,13 @@ namespace Backend
         // Accepts seed type, fertilizer amount, and weather index as integers and outputs a integer for expected yield
         public static int GetYield(FarmPlot plot)
         {   
-            var key = (plot.GetYieldWeather(), plot.GetFertilizer(), plot.GetSeedType());
+            var key = (plot.GetYieldWeather(), plot.GetFertilizerType(), plot.GetSeedType());
 
             if (_yield.TryGetValue(key, out int expectedYield)) {
                 return expectedYield;
-            } 
+            }
 
-            return 0 // returns 0 if for some reason the input values were invalid
+            return 0; // returns 0 if for some reason the input values were invalid
         }
     }
 }

@@ -13,7 +13,7 @@ public class InventoryTests
     [Test]
     public void TestAddItem()
     {
-        Inventory myInventory = new Inventory();
+        Inventory myInventory = new();
         myInventory.AddItem("Ox");
         Assert.AreEqual(myInventory.GetAmount("Ox"), 1);
         myInventory.AddItem("Ox");
@@ -23,7 +23,7 @@ public class InventoryTests
     [Test]
     public void TestRemoveItem()
     {
-        Inventory myInventory = new Inventory();
+        Inventory myInventory = new();
         myInventory.AddItem("Ox");
         myInventory.AddItem("Ox");
         myInventory.AddItem("Ox");

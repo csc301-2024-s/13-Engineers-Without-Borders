@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class Child : FamilyMember
 {
-    const int s_ChildConsumption = 5;
+    const int ChildConsumption = 5;
 
     //Constructor of the class
     public Child(string firstName, string lastName)

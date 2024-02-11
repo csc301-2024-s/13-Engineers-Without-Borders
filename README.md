@@ -50,23 +50,21 @@ Most of our communication is done on our Discord server. Ideally, we communicate
 
 Access our Trello here: https://trello.com/b/YwVbyUKp/green-revolution  (you may need to request permission).
 
- ## Coding Standards and Guidelines
- We won't be doing anything too strict, aside from some naming conventions.
-- Use properties instead of public variables (in normal cs classes)
+## Coding Standards and Guidelines
+We will be adapting https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions .
+
+But we will use our own naming conventions:
 - Static variables are prefixed with s_
     - Constants are already static but DO NOT take the s_ prefix
-- Private variables are prefixed with _
-    - Private static variables use the above rule instead of s_
-- Pascal case basically everywhere
-- Allman bracketting style:
-    ```
-    if ()
-    {
-        ...
-    }
-    ```
+- Private variables are prefixed with _ and are **camel case**
+    - Private static variables use this rule instead of s_
+- Pascal case if not specified otherwise (even fore methods)
+
+And we will ignore the note about four spaces instead of tabs.
 
 As for comments, every class and method should be documented. Classes should have authors, and methods should have comments explaining their parameters and return values. These don't need to be in a specific format, as long as they explain the information.
+
+**Always use `//` for comments**
 ​
- ## Licenses 
+## Licenses 
 Just a normal open source license, I guess. Will need to research what the formal term is.

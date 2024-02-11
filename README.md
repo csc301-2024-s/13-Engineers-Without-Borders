@@ -51,12 +51,12 @@ Most of our communication is done on our Discord server. Ideally, we communicate
 Access our Trello here: https://trello.com/b/YwVbyUKp/green-revolution  (you may need to request permission).
 
  ## Coding Standards and Guidelines
-Since we're using Unity, we'll be using C# naming and style conventions: https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
-
-In particular:
-- Properties are upper case
+ We won't be doing anything too strict, aside from some naming conventions.
+- Use properties instead of public variables (in normal cs classes)
 - Static variables are prefixed with s_
+    - Constants are already static but DO NOT take the s_ prefix
 - Private variables are prefixed with _
+    - Private static variables use the above rule instead of s_
 - Pascal case basically everywhere
 - Allman bracketting style:
     ```

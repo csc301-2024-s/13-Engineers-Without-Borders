@@ -46,7 +46,7 @@ UML diagrams can be viewed in the browser, and edited using Violet UML Editor (h
 ## Deployment and Github Workflow
 Deployment is TBD. Maybe we'll set up an auto-building feature, or maybe not.
 
-Most of our communication is done on our Discord server. Ideally, we communicate what classes we're writing. If we're making a small bug fix or writing a new class, we can just push directly to main without causing issues. If it's a huge refactoring or another big change, we'll create a branch for it, and the writer of it will create a pull request. TBD reviews it and merges it.
+Most of our communication is done on our Discord server. Ideally, we communicate what classes we're writing. If we're making a small bug fix, we can just push directly to main. If it's a big change, like writing new classes, we'll create a branch for it, and the writer of it will create a pull request. Team lead reviews it and merges it.
 
 Access our Trello here: https://trello.com/b/YwVbyUKp/green-revolution  (you may need to request permission).
 

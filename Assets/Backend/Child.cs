@@ -13,8 +13,8 @@ public class Child : FamilyMember
     //Constructor of the class
     public Child(string firstName, string lastName)
     {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.FirstName = firstName;
+        this.LastName = lastName;
     }
 
 
@@ -22,7 +22,7 @@ public class Child : FamilyMember
     public Adult GrowUp()
     {
         // Create a new Adult instance and copy attributes
-        Adult adult = new Adult(firstName, lastName);
+        Adult adult = new Adult(FirstName, LastName);
 
         return adult;
     }

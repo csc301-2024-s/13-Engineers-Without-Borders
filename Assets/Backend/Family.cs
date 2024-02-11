@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class Family
 {
-    public string familyName;
+    public string FamilyName;
     List<FamilyMember> FamilyMembers = new List<FamilyMember> ();
     int numFarmPlots;
     private int _numChildren;
@@ -19,7 +19,7 @@ public class Family
     //Constructor of the class
     public Family(string familyName, int numChildren, int numAdults, int numFarmPlots)
     {
-        this.familyName = familyName;
+        this.FamilyName = familyName;
         for(int i = 0; i < numChildren; i++)
         {
             //Temporary name
@@ -41,7 +41,7 @@ public class Family
     public void CreateChild()
     {
         //Temporary name
-        Child child = new Child("A", familyName);
+        Child child = new Child("A", FamilyName);
         FamilyMembers.Add(child);
         this._numChildren++;
     }

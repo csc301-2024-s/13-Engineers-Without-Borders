@@ -9,8 +9,8 @@ using UnityEngine;
 
 public class FamilyMember
 {
-    protected string firstName;
-    protected string lastName;
+    protected string FirstName;
+    protected string LastName;
 
 }
 

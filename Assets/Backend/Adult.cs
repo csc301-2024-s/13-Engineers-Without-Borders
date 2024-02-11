@@ -8,24 +8,24 @@ using UnityEngine;
 
 public class Adult : FamilyMember
 {
-    private const int consumption = 10;
-    private int maxLabour;
-    private bool HasOx;
-    private bool isAvailable;
+    const int s_AdultConsumption = 10;
+    int MaxAssignedPlots;
+    private bool _HasOx;
+    private bool _IsAvailable;
 
     //Constructor of the class
-    public Adult(string firstName, string lastName)
+    public Adult(string first, string last)
     {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.isAvailable = true;
-        this.HasOx = false;
+        this.FirstName = first;
+        this.LastName = last;
+        this._IsAvailable = true;
+        this._HasOx = false;
     }
 
     //Assign an ox to the adult
     public void BuyOx()
     {
-        this.HasOx = true;
+        this._HasOx = true;
         //modify maxLabour here
 
     }
@@ -33,7 +33,14 @@ public class Adult : FamilyMember
     //Handle the event that an adult must stay at home to look after the children
     public void LookAtferChild()
     {
-        this.isAvailable = false;
+        this._IsAvailable = false;
+    }
+
+    //Assign a farm plot to this adult
+    public bool AssignPlot(FarmPlot Plot)
+    {
+        //placeholder, will add the proper code after FarmPlot is implemented
+        return true;
     }
 
 }

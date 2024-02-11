@@ -13,8 +13,8 @@ public class Family
     public string familyName;
     List<FamilyMember> FamilyMembers = new List<FamilyMember> ();
     int numFarmPlots;
-    private int numChildren;
-    private int numAdults;
+    private int _numChildren;
+    private int _numAdults;
     
     //Constructor of the class
     public Family(string familyName, int numChildren, int numAdults, int numFarmPlots)
@@ -32,8 +32,8 @@ public class Family
             Child child = new Child("B", familyName);
             FamilyMembers.Add(child);
         }
-        this.numAdults = numAdults;
-        this.numChildren = numChildren;
+        this._numAdults = numAdults;
+        this._numChildren = numChildren;
         this.numFarmPlots = numFarmPlots;
     }
 
@@ -43,13 +43,13 @@ public class Family
         //Temporary name
         Child child = new Child("A", familyName);
         FamilyMembers.Add(child);
-        this.numChildren++;
+        this._numChildren++;
     }
 
     //Calculate family's total consumption after each year
     public int CalculateConsumption()
     {
-        return this.numChildren * 5 + this.numAdults * 10;
+        return this._numChildren * 5 + this._numAdults * 10;
     }
 
     //Grow a child up 

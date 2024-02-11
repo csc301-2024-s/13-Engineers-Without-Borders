@@ -10,6 +10,8 @@ At the start of the game, the player chooses a household with a set family, farm
 - Harvest season, where you harvest your wheat yield and sell it
 - Buying season, where you visit the market to buy seeds (native or HYC), fertilizer, and other technology
 
+After 7 years, the family that have the greatest assets win the game.
+
 ## Project Division
 Unlike other projects, which are websites or mobile apps, this is a mobile *game*. And furthermore, instead of being coded with a framework like React, it was made with the Unity game engine. This made it tricky to divide the project, as it's not as simple as "frontend vs. backend."
 

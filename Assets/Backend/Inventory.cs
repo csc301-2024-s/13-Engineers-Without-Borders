@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * Author: Andy Wang
- * This class represents a household's inventory of items in storage.
- */
+// Author: Andy Wang
+// This class represents a household's inventory of items in storage.
 namespace Backend
 {
     public class Inventory
@@ -14,7 +12,7 @@ namespace Backend
         // Create a new empty inventory
         public Inventory()
         {
-            _items = new Dictionary<string, int>();
+            _items = new();
         }
 
         // Adds <newItem> to the inventory. If it already exists, increment its count.

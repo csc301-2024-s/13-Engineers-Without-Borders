@@ -36,34 +36,35 @@ Add this to your local git config file:
 
 On Windows at least, the path to the tool is `C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/UnityYAMLMerge.exe`
 
-Then, just open up the project in Unity, like any other normal Unity project.
+Then, just open up the project in Unity, like any other normal Unity project. The project is optimized for a 9:16 viewport ratio, so be sure to set that as your
+viewport's ratio when testing.
+
+It is recommended to edit scripts by clicking on them in the Unity editor, as that will give you the appropriate intellisense (assuming you've set that up correctly; https://code.visualstudio.com/docs/other/unity ).
 
 UML diagrams can be viewed in the browser, and edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  
 ## Deployment and Github Workflow
 Deployment is TBD. Maybe we'll set up an auto-building feature, or maybe not.
 
-Most of our communication is done on our Discord server. Ideally, we communicate what classes we're writing. If we're making a small bug fix or writing a new class, we can just push directly to main without causing issues. If it's a huge refactoring or another big change, we'll create a branch for it, and the writer of it will create a pull request. TBD reviews it and merges it.
+Most of our communication is done on our Discord server. Ideally, we communicate what classes we're writing. If we're making a small bug fix, we can just push directly to main. If it's a big change, like writing new classes, we'll create a branch for it, and the writer of it will create a pull request. Team lead reviews it and merges it.
 
 Access our Trello here: https://trello.com/b/YwVbyUKp/green-revolution  (you may need to request permission).
 
- ## Coding Standards and Guidelines
-Since we're using Unity, we'll be using C# naming and style conventions: https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+## Coding Standards and Guidelines
+We will be adapting https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions .
 
-In particular:
-- Properties are upper case
+But we will use our own naming conventions:
 - Static variables are prefixed with s_
-- Private variables are prefixed with _
-- Pascal case basically everywhere
-- Allman bracketting style:
-    ```
-    if ()
-    {
-        ...
-    }
-    ```
+    - Constants are already static but DO NOT take the s_ prefix
+- Private variables are prefixed with _ and are **camel case**
+    - Private static variables use this rule instead of s_
+- Pascal case if not specified otherwise (even fore methods)
+
+And we will ignore the note about four spaces instead of tabs.
 
 As for comments, every class and method should be documented. Classes should have authors, and methods should have comments explaining their parameters and return values. These don't need to be in a specific format, as long as they explain the information.
+
+**Always use `//` for comments**
 ​
- ## Licenses 
+## Licenses 
 Just a normal open source license, I guess. Will need to research what the formal term is.

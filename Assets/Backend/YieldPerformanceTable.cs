@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,7 @@ namespace Backend
 {
     public static class YieldPerformanceTable
     {
-        private static Dictionary<(int, int, int), int> _yield;
-
-        static YieldPerformanceTable()
-        {
-            _yield = new Dictionary<(int, int, int), int>
+        private static Dictionary<(int, int, int), int> _table = new Dictionary<(int, int, int), int>
             {
                 {(5, 0, 0), 17}, {(4, 0, 0), 18}, {(3, 0, 0), 19}, {(2, 0, 0), 20}, {(1, 0, 0), 25}, 
                 {(5, 1, 0), 18}, {(4, 1, 0), 19}, {(3, 1, 0), 20}, {(2, 1, 0), 22}, {(1, 1, 0), 30},
@@ -23,14 +20,13 @@ namespace Backend
                 {(5, 2, 1), 15}, {(4, 2, 1), 20}, {(3, 2, 1), 28}, {(2, 2, 1), 40}, {(1, 2, 1), 80},
                   
             };
-        }
 
         // Accepts seed type, fertilizer amount, and weather index as integers and outputs a integer for expected yield
         public static int GetYield(FarmPlot plot)
         {   
-            var key = (plot.GetYieldWeather(), plot.GetFertilizerType(), plot.GetSeedType());
+            (int, int, int) key = (plot.GetYieldWeather(), plot.GetFertilizer(), plot.GetSeedType());
 
-            if (_yield.TryGetValue(key, out int expectedYield)) {
+            if (_table.TryGetValue(key, out int expectedYield)) {
                 return expectedYield;
             }
 

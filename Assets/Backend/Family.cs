@@ -29,8 +29,8 @@ public class Family
         for (int i = 0; i < numAdults; i++)
         {
             //Temporary name
-            Child child = new Child("B", familyName);
-            FamilyMembers.Add(child);
+            Adult adult = new Adult("B", familyName);
+            FamilyMembers.Add(adult);
         }
         this._numAdults = numAdults;
         this._numChildren = numChildren;
@@ -62,4 +62,19 @@ public class Family
         FamilyMembers.Remove(GrowingUpKid);
         FamilyMembers.Add(newAdult);
     }
+
+    // Count the amount of adults
+    public int GetAdultAmount()
+    {
+        List<Adult> adult = this.FamilyMembers.OfType<Adult>().ToList();
+        return adult.Count();
+    }
+
+    // Count the amount of children
+    public int GetChildrenAmount()
+    {
+        List<Child> children = this.FamilyMembers.OfType<Child>().ToList();
+        return children.Count();
+    }
+
 }

@@ -905,12 +905,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 656151685}
   - {fileID: 314866333}
   - {fileID: 213986350}
   - {fileID: 1132458004}
   - {fileID: 1948590100}
   - {fileID: 167335239}
-  - {fileID: 656151685}
   - {fileID: 2101185327}
   m_Father: {fileID: 1506398595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -955,23 +955,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 554770611415729112, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Name
-      value: Placeholder
+      value: Wheat
       objectReference: {fileID: 0}
     - target: {fileID: 3444150539798219304, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_text
-      value: Placeholder 1
+      value: Wheat
       objectReference: {fileID: 0}
     - target: {fileID: 7570074967044013494, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_text
-      value: $300
+      value: wheat price
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570074967044013494, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_fontSize
+      value: 36.4
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_text
-      value: nxjfhsdjkfhsdfhsdfahsfahfhfdshfkfhksafsa fgjkgdgdfjgdfgd
+      value: A wheat bushel for feeding your family.
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 29.75
+      value: 63.5
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x

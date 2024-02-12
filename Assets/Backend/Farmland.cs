@@ -12,6 +12,7 @@ namespace Backend
         public List<FarmPlot> Plots;
 
         // Initializes empty list to store FarmPlot objects 
+        // TODO: this needs to take in the number of plots
         public Farmland()
         {
             Plots = new List<FarmPlot>();

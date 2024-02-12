@@ -1,3 +1,4 @@
+using Backend;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,7 @@ public class Adult : FamilyMember
     public void AssignOx(bool assigned)
     {
         this._hasOx = assigned;
-        //modify maxLabour here
+        //modify maxAssignedPlot here
 
     }
 
@@ -36,11 +37,18 @@ public class Adult : FamilyMember
         this._isAvailable = false;
     }
 
-    //Assign a farm plot to this adult
+    //Assign a farm plot to this adult. Return true if success. Otherwise, return false
     public bool AssignPlot(FarmPlot Plot)
     {
-        //placeholder, will add the proper code after FarmPlot is implemented
-        return true;
+        if (Plot.Worker != null)
+        {
+            return false;
+        }
+        else
+        {
+            Plot.Worker = this;
+            return true;
+        }
     }
 
 }

@@ -9,15 +9,7 @@ using UnityEngine;
 
 public class FamilyMember
 {
-    protected string FirstName;
-    protected string LastName;
-    protected int age;
-
-    //Increment the age of a member
-    public void IncrementAge()
-    {
-        this.age++;
-    }
-
+    public string FirstName { get; protected set; }
+    public string LastName { get; protected set; }
 }
 

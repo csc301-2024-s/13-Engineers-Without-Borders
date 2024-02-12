@@ -8,31 +8,30 @@ using UnityEngine;
 
 public class Adult : FamilyMember
 {
-    const int AdultConsumption = 10;
-    int MaxAssignedPlots;
+    public const int Consumption = 10;
+    public int MaxAssignedPlots { get; private set; }
     private bool _hasOx;
     private bool _isAvailable;
 
     //Constructor of the class
-    public Adult(string First, string Last, int Age)
+    public Adult(string First, string Last)
     {
         this.FirstName = First;
         this.LastName = Last;
         this._isAvailable = true;
         this._hasOx = false;
-        this.age = Age;
     }
 
-    //Assign an ox to the adult
-    public void BuyOx()
+    //Assign or de-assign an ox to the adult
+    public void AssignOx(bool assigned)
     {
-        this._hasOx = true;
+        this._hasOx = assigned;
         //modify maxLabour here
 
     }
 
     //Handle the event that an adult must stay at home to look after the children
-    public void LookAtferChild()
+    public void LookAfterChild()
     {
         this._isAvailable = false;
     }

@@ -10,14 +10,15 @@ using UnityEngine;
 
 public class Family
 {
-    public string FamilyName;
+    public string FamilyName { get; }
+
+    // TODO: follow the UML diagram please, children and adults are separate
     List<FamilyMember> FamilyMembers = new List<FamilyMember> ();
-    int numFarmPlots;
     private int _numChildren;
     private int _numAdults;
     
     //Constructor of the class
-    public Family(string FamilyName, int NumChildren, int numAdults, int numFarmPlots)
+    public Family(string FamilyName, int NumChildren, int numAdults)
     {
         this.FamilyName = FamilyName;
         for(int i = 0; i < NumChildren; i++)
@@ -31,12 +32,11 @@ public class Family
         {
             //Temporary name
             int Age = Random.Range(18, 81);
-            Adult adult = new Adult("B", FamilyName, Age);
+            Adult adult = new Adult("B", FamilyName);
             FamilyMembers.Add(adult);
         }
-        this._numAdults = numAdults;
-        this._numChildren = NumChildren;
-        this.numFarmPlots = numFarmPlots;
+        _numAdults = numAdults;
+        _numChildren = NumChildren;
     }
 
     //Add a new child to the family
@@ -45,35 +45,37 @@ public class Family
         //Temporary name
         Child child = new Child("A", FamilyName, 0);
         FamilyMembers.Add(child);
-        this._numChildren++;
+        _numChildren++;
     }
 
     //Calculate family's total consumption after each year
     public int GetTotalConsumption()
     {
-        return this._numChildren * 5 + this._numAdults * 10;
+        return _numChildren * Child.Consumption + _numAdults * Adult.Consumption;
     }
 
+    // TODO: REWRITE THIS; it needs to know WHICH child to grow up
     //Grow a child up 
-    public void ChildGrowUp()
-    {
-        List<Child> Children = this.FamilyMembers.OfType<Child>().ToList();
+    // public void ChildGrowUp()
+    // {
+    //     List<Child> Children = this.FamilyMembers.OfType<Child>().ToList();
 
-        Child GrowingUpKid = Children[0];
-        Adult NewAdult = GrowingUpKid.ToAdult();
-        FamilyMembers.Remove(GrowingUpKid);
-        FamilyMembers.Add(NewAdult);
-        this._numAdults++;
-        this._numChildren--;
-    }
+    //     Child GrowingUpKid = Children[0];
+    //     Adult NewAdult = GrowingUpKid.ToAdult();
+    //     FamilyMembers.Remove(GrowingUpKid);
+    //     FamilyMembers.Add(NewAdult);
+    //     this._numAdults++;
+    //     this._numChildren--;
+    // }
 
-    public void AddAge()
-    {
-        for (int i = 0; i < this.FamilyMembers.Count; i++)
-        {
-            this.FamilyMembers[i].IncrementAge();
-        };
-    }
+    // TODO: REWRITE THIS
+    // public void AddAge()
+    // {
+    //     for (int i = 0; i < this.FamilyMembers.Count; i++)
+    //     {
+    //         this.FamilyMembers[i].IncrementAge();
+    //     };
+    // }
 
     // Count the amount of adults
     public int GetAdultAmount()

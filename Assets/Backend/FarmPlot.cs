@@ -13,7 +13,7 @@ namespace Backend
         Adult worker;
 
 
-        public FarmPlot(int seedType, int fertilizerType, Adult worker = null)
+        public FarmPlot(int seedType, FertilizerType fertilizerType, Adult worker = null)
         {
             this.seedType = seedType;
             this.fertilizerType = fertilizerType;
@@ -22,7 +22,7 @@ namespace Backend
 
 
         /// <summary>
-        /// Returns true if the seed planted on this farmplot is HYC, 1 if HYC, 0 if Land
+        /// Returns 1 if HYC, 0 if Land
         /// </summary>
         /// <returns></returns>
         public int GetSeedType()
@@ -42,12 +42,12 @@ namespace Backend
         }
 
         /// <summary>
-        /// Update the type of seed planted on this farm plot. 1 if HYC, 0 for land seed
+        /// Update the type of seed planted on this farm plot. 1 for HYC, 0 for land seed
         /// </summary>
         /// <param name="isHYC"></param>
-        public void UpdateSeedType(int newSeedType)
+        public void UpdateSeedType(int seedType)
         {
-            this.seedType = newSeedType;
+            this.seedType = seedType;
 
         }
 
@@ -55,9 +55,9 @@ namespace Backend
         /// Update the type of fertilizer used for this plot of land.
         /// </summary>
         /// <param name="newFertilizerType"></param>
-        public void UpdateFertilizerType(FertilizerType newFertilizerType)
+        public void UpdateFertilizerType(FertilizerType fertilizerType)
         {
-            this.fertilizerType = newFertilizerType;
+            this.fertilizerType = fertilizerType;
 
         }
 
@@ -77,9 +77,20 @@ namespace Backend
 
         }
 
+        /// <summary>
+        /// Returns the yield of this plot. Returns 0 if there is no worker assigned to this plot.
+        /// </summary>
+        /// <returns></returns>
         public int GetYield()
         {
-            return YieldPerformanceTable.GetYield(this);
+            if (this.worker != null)
+            {
+                return YieldPerformanceTable.GetYield(this);
+            }
+            else
+            {
+                return 0;
+            }
         }
 
     }

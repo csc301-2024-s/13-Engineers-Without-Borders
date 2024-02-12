@@ -24,12 +24,12 @@ namespace Backend
         // Accepts seed type, fertilizer amount, and weather index as integers and outputs a integer for expected yield
         public static int GetYield(FarmPlot plot)
         {   
-            (int, int, int) key = (plot.GetYieldWeather(), plot.GetFertilizer(), plot.GetSeedType());
+            (int, int, int) key = (plot.GetYieldWeather(), plot.GetFertilizerType(), plot.GetSeedType());
 
             if (_table.TryGetValue(key, out int expectedYield)) {
                 return expectedYield;
             }
-
+            
             return 0; // returns 0 if for some reason the input values were invalid
         }
     }

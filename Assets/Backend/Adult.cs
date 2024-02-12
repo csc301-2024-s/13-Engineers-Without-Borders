@@ -26,7 +26,7 @@ public class Adult : FamilyMember
     public void AssignOx(bool assigned)
     {
         this._hasOx = assigned;
-        //modify maxLabour here
+        //modify maxAssignedPlot here
 
     }
 

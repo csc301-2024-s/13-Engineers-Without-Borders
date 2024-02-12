@@ -34,6 +34,5 @@ public class Child : FamilyMember
     public void IncrementAge()
     {
         Age++;
-        // TODO: figure out how to remove child from family and replace with adult
     }
 }

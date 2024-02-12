@@ -35,6 +35,12 @@ namespace Backend
             return this.fertilizerType;
         }
 
+        // Returns either game's weather index or, if irrigated (implemented later), best weather
+        public int GetWeatherEffect()
+        {
+            return GameState.s_WeatherIndex;
+        }
+
         public Adult GetWorker()
         {
             return this.worker;

@@ -14,6 +14,7 @@ namespace Backend
         Family Family;
         Farmland Land;
 
+        // TODO: this needs more parameters, follow the UML diagram please
         //Constructor for this class
         public Household(Family Family, Farmland Land)
         {

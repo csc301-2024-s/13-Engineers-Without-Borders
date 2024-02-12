@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -8,73 +9,56 @@ namespace Backend
     // Author: Jacqueline Zhu
     public class FarmPlot : MonoBehaviour
     {
-        int seedType;
-        FertilizerType fertilizerType;
-        Adult worker;
+        private int _seedType;
+        private FertilizerType _fertilizerType;
+        private Adult _worker;
 
 
         public FarmPlot(int seedType, FertilizerType fertilizerType, Adult worker = null)
         {
-            this.seedType = seedType;
-            this.fertilizerType = fertilizerType;
-            this.worker = worker;
+            this._seedType = seedType;
+            this._fertilizerType = fertilizerType;
+            this._worker = worker;
         }
 
 
         /// <summary>
-        /// Returns 1 if HYC, 0 if Land
+        /// Get/update the seed type of this farm plot. 1 for HYC, 0 for Land. 
         /// </summary>
         /// <returns></returns>
-        public int GetSeedType()
-        {
-            return this.seedType;
-        }
-
-        public int GetFertilizerType()
-        {
-            return this.fertilizerType;
-        }
-
-        public Adult GetWorker()
-        {
-            return this.worker;
+        public int SeedType {
+            get { return this._seedType;}
+            set { this._seedType = value; }
 
         }
 
         /// <summary>
-        /// Update the type of seed planted on this farm plot. 1 for HYC, 0 for land seed
-        /// </summary>
-        /// <param name="isHYC"></param>
-        public void UpdateSeedType(int seedType)
-        {
-            this.seedType = seedType;
-
-        }
-
-        /// <summary>
-        /// Update the type of fertilizer used for this plot of land.
+        /// Get/Update the type of fertilizer used for this plot of land.
         /// </summary>
         /// <param name="newFertilizerType"></param>
-        public void UpdateFertilizerType(FertilizerType fertilizerType)
+        public FertilizerType FertilizerType
         {
-            this.fertilizerType = fertilizerType;
-
+            get { return this._fertilizerType; }
+            set { this._fertilizerType = value; }
         }
 
         /// <summary>
-        /// Set a new worker for this plot of land
+        /// Get/Update the worker assigned to this plot of land.
         /// </summary>
-        /// <param name="worker"></param>
-        public void UpdateWorker(Adult worker)
+        /// <param name="newFertilizerType"></param>
+        public Adult Worker
         {
-            this.worker = worker;
-
+            get { return this._worker; }
+            set { this._worker = value; }
         }
 
+
+        /// <summary>
+        /// Remove the worker assigned to this farm plot.
+        /// </summary>
         public void RemoveWorker()
         {
-            this.worker = null;
-
+            this._worker = null;
         }
 
         /// <summary>
@@ -83,7 +67,7 @@ namespace Backend
         /// <returns></returns>
         public int GetYield()
         {
-            if (this.worker != null)
+            if (this._worker != null)
             {
                 return YieldPerformanceTable.GetYield(this);
             }

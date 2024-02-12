@@ -54,7 +54,7 @@ public class Family
         return _numChildren * Child.Consumption + _numAdults * Adult.Consumption;
     }
 
-    //Grow a child up 
+    //Grow a child up if he or she reaches 12
     public void IncrementAge()
     {
         for (int i = 0; i < _numChildren; i++)

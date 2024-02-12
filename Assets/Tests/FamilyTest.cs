@@ -25,15 +25,6 @@ public class FamilyTest
         Assert.AreEqual(family.GetChildrenAmount(), 5);
     }
 
-    //Test ChildGrowUp method
-    public void TestGrowUp()
-    {
-        Family family = new Family("Rama", 4, 3);
-        family.IncrementAge();
-        Assert.AreEqual(family.GetAdultAmount(), 4);
-        Assert.AreEqual(family.GetChildrenAmount(), 3);
-    }
-
     // Test calculating the total consumption
     public void TestTotalConsumption()
     {

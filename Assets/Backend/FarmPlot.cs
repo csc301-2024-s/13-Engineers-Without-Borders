@@ -22,6 +22,13 @@ namespace Backend
         }
 
 
+
+         // Returns either game's weather index or, if irrigated (implemented later), best weather
+        public int GetWeatherEffect()
+        {
+            return GameState.s_WeatherIndex;
+        }
+        
         /// <summary>
         /// Get/update the seed type of this farm plot. 1 for HYC, 0 for Land. 
         /// </summary>

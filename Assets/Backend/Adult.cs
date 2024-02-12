@@ -8,33 +8,39 @@ using UnityEngine;
 
 public class Adult : FamilyMember
 {
-    private const int consumption = 10;
-    private int maxLabour;
-    private bool HasOx;
-    private bool isAvailable;
+    public const int Consumption = 10;
+    public int MaxAssignedPlots { get; private set; }
+    private bool _hasOx;
+    private bool _isAvailable;
 
     //Constructor of the class
-    public Adult(string firstName, string lastName, int age)
+    public Adult(string First, string Last)
     {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.isAvailable = true;
-        this.HasOx = false;
+        this.FirstName = First;
+        this.LastName = Last;
+        this._isAvailable = true;
+        this._hasOx = false;
     }
 
-    //Assign an ox to the adult
-    public void BuyOx()
+    //Assign or de-assign an ox to the adult
+    public void AssignOx(bool assigned)
     {
-        this.HasOx = true;
+        this._hasOx = assigned;
         //modify maxLabour here
 
     }
 
     //Handle the event that an adult must stay at home to look after the children
-    public void LookAtferChild()
+    public void LookAfterChild()
     {
-        this.isAvailable = false;
+        this._isAvailable = false;
+    }
+
+    //Assign a farm plot to this adult
+    public bool AssignPlot(FarmPlot Plot)
+    {
+        //placeholder, will add the proper code after FarmPlot is implemented
+        return true;
     }
 
 }

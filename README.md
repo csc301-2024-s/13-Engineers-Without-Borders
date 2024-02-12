@@ -58,7 +58,9 @@ But we will use our own naming conventions:
     - Constants are already static but DO NOT take the s_ prefix
 - Private variables are prefixed with _ and are **camel case**
     - Private static variables use this rule instead of s_
-- Pascal case if not specified otherwise (even fore methods)
+- Pascal case for properties and methods
+- Public variables are camel case, but they should really be properties instead
+    - Exception is public variables in custom components
 
 And we will ignore the note about four spaces instead of tabs.
 

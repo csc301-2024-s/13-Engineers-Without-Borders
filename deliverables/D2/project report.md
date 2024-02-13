@@ -22,17 +22,20 @@ Let's focus on just the simulation, then. Another way to split it up is to have 
 We ultimately decided to split our teams based on the three phases, since each phase has a specific gameplay/business logic associated with it (see `Assets/Backend/GameState.cs`). **Each subteam is responsible for their corresponding AdvanceToPhase method**, and their individual builds focus on their assigned phase. The backend was also partitioned roughly based on relevance to each phase. For convenience, we decided that **every backend script be pooled in `Assets/Backend` in the main branch**, since it just didn't make sense to isolate them from each other (of course we will specify which class each subteam wrote as per D2 guidelines). The corresponding tests are in `Assets/Tests`. The individual subteam branches differ in their own builds, and whatever custom components they needed to write for it. This also makes it more straight forward to put everything together in the next deliverable.
 
 ## Subteam responsibilities
-This is more detailed in `D2/implementation details.md`, but as a quick summary:
+Every subteam is responsible for writing the corresponding `AdvanceToPhase` method in `GameState.cs`, and to create UI to demonstrate their specific phase. We also partitioned the backend scripts roughly based on how relevant they are to each phase, and each subteam is responsible for writing their assigned classes. **These classes are all pooled in the main branch for convenience**.
+
+The specific partitioning of classes and expectations for each subteam are detailed in [`implementation details.md`](implementation%20details.md), but as a quick summary:
 
 **Sub team 1:**
-- Phase 1 logic and simulation initialization
-- Household choice at beginning
+- Simulation initialization, including player choice of household
+- Phase 1 logic and fate events/weather
+- Build includes household selection gui and a gui showing relevant information
 
 **Sub team 2:**
-- Phase 2 logic
-- Harvesting crops
+- Phase 2 logic and calculations
+- Crop harvesting logic
+- Build includes gui to show relevant calculations, and a gui to customize plots of land
 
 **Sub team 3:**
 - Phase 3 logic
-- Shop UI
-- UI to apply tools to your farm
+- Build includes shop UI for player to buy tools and technology, as well as a gui to manage farm and plant seeds/apply fertilizer/assign workers/assign oxen

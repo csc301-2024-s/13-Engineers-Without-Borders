@@ -10,16 +10,18 @@ namespace Backend
 {
     public class Household
     {
-        int Money;
-        Family Family;
-        Farmland Land;
+        public Farmland Land { get; }
+        public int Money { get; set; }
+        public Family Family { get; }
+        public Inventory Inventory { get; }
 
         //Constructor for this class
-        public Household(Family Family, Farmland Land)
+        public Household(int startMoney, string familyName, int numChildren, int numAdults, int numPlots)
         {
-            this.Money = 500;
-            this.Family = Family;
-            this.Land = Land;
+            Money = startMoney;
+            Inventory = new Inventory();
+            Family = new Family(familyName, numChildren, numAdults);
+            Land = new Farmland(numPlots);
         }
     }
 }

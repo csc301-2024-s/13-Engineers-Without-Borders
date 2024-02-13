@@ -12,9 +12,15 @@ namespace Backend
         public List<FarmPlot> Plots;
 
         // Initializes empty list to store FarmPlot objects 
-        public Farmland()
+        public Farmland(int numPlots)
         {
             Plots = new List<FarmPlot>();
+
+            for (var i = 0; i < numPlots; i++)
+            {
+                // TODO: wait for fertilizer type enum to be added
+                Plots.Add(new FarmPlot(0, fertilizerType.NONE));
+            }
         }
 
         // Gets the combined yield of every plot currently on this farmland

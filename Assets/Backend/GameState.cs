@@ -15,22 +15,22 @@ namespace Backend
         public static Household s_Player;
         public static Household[] s_Households;
 
-        static void Initialize(Household Player)
+        public static void Initialize(Household Player)
         {
 
         }
 
-        static void AdvanceToPhaseOne()
+        public static void AdvanceToPhaseOne()
         {
 
         }
 
-        static void AdvanceToPhaseTwo()
+        public static void AdvanceToPhaseTwo()
         {
 
         }
 
-        static void AdvanceToPhaseThree()
+        public static void AdvanceToPhaseThree()
         {
 
         }

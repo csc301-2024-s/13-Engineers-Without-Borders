@@ -23,6 +23,7 @@ namespace Backend
             Inventory = new Inventory();
             Family = new Family(familyName, numChildren, numAdults);
             Land = new Farmland(numPlots);
+            Wheat = 0;
         }   
 
         // Returns the net wheat yield of the family after consumption, could be negative.

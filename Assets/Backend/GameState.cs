@@ -27,7 +27,13 @@ namespace Backend
 
         static void AdvanceToPhaseTwo()
         {
+            foreach (Household household in s_Households) {
+                household.CalculateRemainingYield();
+                household.SellWheat();
+            }
 
+            s_Player.CalculateRemainingYield();
+            s_Player.SellWheat();
         }
 
         static void AdvanceToPhaseThree()

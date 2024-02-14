@@ -19,7 +19,7 @@ namespace Backend
             for (var i = 0; i < numPlots; i++)
             {
                 // TODO: wait for fertilizer type enum to be added
-                Plots.Add(new FarmPlot(0, fertilizerType.NONE));
+                Plots.Add(new FarmPlot(0, FertilizerType.NO_FERTILIZER));
             }
         }
 

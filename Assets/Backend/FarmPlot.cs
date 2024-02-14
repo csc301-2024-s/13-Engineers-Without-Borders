@@ -7,7 +7,7 @@ using UnityEngine.XR;
 namespace Backend
 {
     // Author: Jacqueline Zhu
-    public class FarmPlot : MonoBehaviour
+    public class FarmPlot
     {
         private int _seedType;
         private FertilizerType _fertilizerType;

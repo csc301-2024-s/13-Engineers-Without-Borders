@@ -29,6 +29,7 @@ namespace Backend
             foreach (FarmPlot plot in Plots) {
                 totalYield += plot.GetYield();
             }
+
             return totalYield;
 
         }

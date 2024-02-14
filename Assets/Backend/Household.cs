@@ -16,6 +16,16 @@ namespace Backend
         public Inventory Inventory { get; }
         public int Wheat { get; set; }
 
+        //Constructor for this class
+        public Household(int startMoney, string familyName, int numChildren, int numAdults, int numPlots)
+        {
+            Money = startMoney;
+            Inventory = new Inventory();
+            Family = new Family(familyName, numChildren, numAdults);
+            Land = new Farmland(numPlots);
+            Wheat = 0;
+        } 
+        
         /*
          * Calculates the net wheat yield of the household after consumption and updates the wheat value accordingly
          * Note that the wheat value can be negative, which will indicate starvation in phase 3

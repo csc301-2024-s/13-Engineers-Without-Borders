@@ -16,6 +16,6 @@ Andy Wang:
 - Wrote first draft of this report
 - Wrote Inventory.cs and corresponding unit tests
 - Contributed to `GameState.AdvanceToPhaseThree`
-- Wrote GameStateInitializer.cs
+- Wrote `GameStateInitializer.cs`, `PlayerMoneyDisplayer.cs`, `PlayerWheatDisplayer.cs`
 - Made the shop UI in the Market scene (`Assets/Scenes/Market.unity`)
 - Started on Farm Management scene (`Assets/Scenes/Manage Farm.unity`)

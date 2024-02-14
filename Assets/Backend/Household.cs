@@ -14,6 +14,7 @@ namespace Backend
         public int Money { get; set; }
         public Family Family { get; }
         public Inventory Inventory { get; }
+        public int Wheat { get; set; }
 
         //Constructor for this class
         public Household(int startMoney, string familyName, int numChildren, int numAdults, int numPlots)
@@ -22,6 +23,12 @@ namespace Backend
             Inventory = new Inventory();
             Family = new Family(familyName, numChildren, numAdults);
             Land = new Farmland(numPlots);
+            Wheat = 0;
+        }   
+
+        // Returns the net wheat yield of the family after consumption, could be negative.
+        public int GetRemainingYield() {
+            return Land.GetTotalYield() - Family.GetTotalConsumption();
         }
     }
 }

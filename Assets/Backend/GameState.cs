@@ -9,11 +9,11 @@ namespace Backend
 {
     public static class GameState
     {
-        static int s_Year;
-        static int s_Phase;
-        static int s_WeatherIndex;
-        static Household s_Player;
-        static Household[] s_Households;
+        public static int s_Year;
+        public static int s_Phase;
+        public static int s_WeatherIndex;
+        public static Household s_Player;
+        public static Household[] s_Households;
 
         static void Initalize(Household Player)
         {

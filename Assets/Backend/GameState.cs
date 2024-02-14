@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 /*
@@ -32,7 +33,8 @@ namespace Backend
 
         public static void AdvanceToPhaseThree()
         {
-
+            SceneUtils.LoadScene("Market");
+            // TODO: if player's wheat is negative, alert them
         }
     }
 }

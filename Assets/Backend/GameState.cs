@@ -15,7 +15,7 @@ namespace Backend
         public static Household s_Player;
         public static Household[] s_Households;
 
-        static void Initalize(Household Player)
+        static void Initialize(Household Player)
         {
 
         }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 /*
@@ -15,24 +16,25 @@ namespace Backend
         public static Household s_Player;
         public static Household[] s_Households;
 
-        static void Initalize(Household Player)
+        public static void Initialize(Household Player)
         {
 
         }
 
-        static void AdvanceToPhaseOne()
+        public static void AdvanceToPhaseOne()
         {
 
         }
 
-        static void AdvanceToPhaseTwo()
+        public static void AdvanceToPhaseTwo()
         {
 
         }
 
-        static void AdvanceToPhaseThree()
+        public static void AdvanceToPhaseThree()
         {
-
+            SceneUtils.LoadScene("Market");
+            // TODO: if player's wheat is negative, alert them
         }
     }
 }

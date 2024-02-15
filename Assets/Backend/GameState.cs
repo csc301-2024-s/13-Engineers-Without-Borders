@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using Random = System.Random;
 
@@ -29,9 +30,22 @@ namespace Backend
 
         }
 
+        // (Year 2+ only) Choose random village event and household event for each household
+        //Read WorkshopSheets/Fate Seeds and Tools Cards.pdf
+        //These can be implemented however you think makes sense; make sure it's scalable (easy to add new events), can affect GameState and other important variables, and Household events should be able to affect specific households
+        //Possible for there to be no village event, or for a household to have no event
         public static void AdvanceToPhaseOne()
         {
+            System.Random rand = new Random();
+            s_WeatherIndex = rand.Next(1, 6);
+            s_Phase = 1;
+            //Village event
 
+            foreach (Household household in s_Households)
+            {
+                
+                //Household event
+            }
         }
 
         public static void AdvanceToPhaseTwo()

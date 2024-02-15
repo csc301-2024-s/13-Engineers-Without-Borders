@@ -7,16 +7,17 @@ using UnityEngine;
 // This class represents the market where the player can buy products on phase 3.
 namespace Backend
 {
-    // a struct for all products in the market
-    public struct Product {
-        public string name;
-        public int price;
-        public bool buyable;
-        public string type;
-        public string description;
+    // a class for all products in the market
+    public class Product {
+        public string name{get; set;}
+        public int price{get; set;}
+        public bool buyable{get; set;}
+        public string type{get; set;}
+        public string description{get; set;}
     }
     public class Market
     {
+        public Household Household;
         private Dictionary<string, Product> _items;
         public Market()
         {
@@ -99,42 +100,42 @@ namespace Backend
             {
                 if (type == "seed")
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "fertilizer")
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "tubewell")
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "labour")
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "ox")
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "land")
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Land.Plots.Add(new FarmPlot(0, FertilizerType.NO_FERTILIZER));
                     }
@@ -162,7 +163,7 @@ namespace Backend
                 }
                 else
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.RemoveItem(name);
                     }
@@ -176,7 +177,7 @@ namespace Backend
                 }
                 else
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.RemoveItem(name);
                     }
@@ -190,7 +191,7 @@ namespace Backend
                 }
                 else
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.RemoveItem(name);
                     }
@@ -204,7 +205,7 @@ namespace Backend
                 }
                 else
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.RemoveItem(name);
                     }
@@ -218,7 +219,7 @@ namespace Backend
                 }
                 else
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Inventory.RemoveItem(name);
                     }
@@ -232,7 +233,7 @@ namespace Backend
                 }
                 else
                 {
-                    for (int i = 0; i < quantity, i++)
+                    for (int i = 0; i < quantity; i++)
                     {
                         Household.Land.Plots.RemoveAt(Household.Land.Plots.Count - 1);
                     }

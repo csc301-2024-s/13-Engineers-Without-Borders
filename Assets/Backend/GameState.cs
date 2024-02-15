@@ -15,28 +15,25 @@ namespace Backend
         public static Household s_Player;
         public static Household[] s_Households;
 
-        static void Initalize(Household Player)
+        public static void Initialize(Household Player)
+        {
+            
+
+        }
+
+        public static void AdvanceToPhaseOne()
         {
 
         }
 
-        static void AdvanceToPhaseOne()
-        {
-
-        }
-
-        static void AdvanceToPhaseTwo()
+        public static void AdvanceToPhaseTwo()
         {
             foreach (Household household in s_Households) {
-                household.CalculateRemainingYield();
-                household.SellWheat();
+                household.Land.canBeHarvested = true;
             }
-
-            s_Player.CalculateRemainingYield();
-            s_Player.SellWheat();
         }
 
-        static void AdvanceToPhaseThree()
+        public static void AdvanceToPhaseThree()
         {
 
         }

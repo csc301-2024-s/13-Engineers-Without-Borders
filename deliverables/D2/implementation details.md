@@ -44,6 +44,10 @@
 - Create a GUI to show relevant information to the player
     - Corresponding to the "Start of Year" section in WorkshopSheets/Spreadsheet.jpg
     - Must have a next button to Phase 2
+- In the future, if your wheat is negative, corresponding family members should starve to death and be removed from the family
+    - For example if you have -7 wheat, two children should die (if adults need 10 wheat and children need 5)
+    - If you have -10 wheat, one adult should die
+    - The game ends if there are no adults left
 
 **Backend Scripts**
 - GameState (all except AdvanceToPhaseTwo/Three)
@@ -65,15 +69,14 @@
     - `YieldPerformanceTable._yield`'s third dimension is type of seed (0 = native, 1 = HYC)
     - `YieldPerformanceTable._yield` should have shape (5, 3, 2)
     - If a plot has no worker, it gets no yield
-    - **In the final game, the player should be able to tap on farm plots to collect the yield.** This doesn't need to be implemented now, but keep this in mind.
 - Calculate total consumption for the player's `Family`
     - Child/adult consumption are constants in `FamilyMember`
-- Calculate remaining wheat yield
-- Calculate total wheat sold (for now, this is total income)
+- Calculate total wheat yield
 - Create a GUI to show relevant information to the player
     - Show # of family members, weather index, wheat price
     - Corresponding to the "Harvest season" section in WorkshopSheets/Spreadsheet.jpg, but without labour/land sales
     - Create a button to show the YieldPerformanceTable
+    - Create a button that, on click, harvests all the wheat that can be harvested
     - Must have a next button to Phase 3
 
 **Backend Scripts**

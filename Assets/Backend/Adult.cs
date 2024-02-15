@@ -11,6 +11,7 @@ public class Adult : FamilyMember
 {
     public const int Consumption = 10;
     public int MaxAssignedPlots { get; private set; }
+    public FarmPlot[] AssignedPlots;
     private bool _hasOx;
     private bool _isAvailable;
 
@@ -49,6 +50,12 @@ public class Adult : FamilyMember
             Plot.Worker = this;
             return true;
         }
+    }
+
+    // Check if the adult can be assigned to a farm plot
+    public bool CanBeAssignedTo()
+    {
+        return AssignedPlots.Length < MaxAssignedPlots;
     }
 
 }

@@ -50,7 +50,9 @@ namespace Backend
 
         public static void AdvanceToPhaseTwo()
         {
-
+            foreach (Household household in s_Households) {
+                household.Land.canBeHarvested = true;
+            }
         }
 
         public static void AdvanceToPhaseThree()

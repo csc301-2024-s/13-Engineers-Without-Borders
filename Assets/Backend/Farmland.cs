@@ -10,7 +10,7 @@ namespace Backend
     public class Farmland
     {
         public List<FarmPlot> Plots;
-        public bool canBeHarvested { get; set; };
+        public bool canBeHarvested { get; set; }
 
         // Initializes empty list to store FarmPlot objects 
         public Farmland(int numPlots)

@@ -29,7 +29,7 @@ namespace Backend
         static void AdvanceToPhaseTwo()
         {
             foreach (Household household in s_Households) {
-                household.canBeHarvested = true;
+                household.Land.canBeHarvested = true;
             }
         }
 

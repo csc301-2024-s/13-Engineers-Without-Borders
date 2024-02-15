@@ -25,7 +25,7 @@ namespace Backend
             Land = new Farmland(numPlots);
             Wheat = 0;
         } 
-        
+
         /*
          * Calculates the net wheat yield of the household after consumption and updates the wheat value accordingly
          * Note that the wheat value can be negative, which will indicate starvation in phase 3
@@ -42,6 +42,14 @@ namespace Backend
                 int income = Wheat * Market.GetPrices(); //Change if market is implemented differently
                 Money = Money + income;
                 Wheat = 0;
+            }
+        }
+
+        // If the farmland is harvestable, calculate net wheat yield and set canBeHarvested to false;
+        public void HarvestCrops() {
+            if (Land.canBeHarvested) {
+                CalculateRemainingYield();
+                Land.canBeHarvested = false;
             }
         }
     }

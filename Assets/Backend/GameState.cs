@@ -17,6 +17,7 @@ namespace Backend
 
         static void Initalize(Household Player)
         {
+            
 
         }
 
@@ -28,12 +29,8 @@ namespace Backend
         static void AdvanceToPhaseTwo()
         {
             foreach (Household household in s_Households) {
-                household.CalculateRemainingYield();
-                household.SellWheat();
+                household.canBeHarvested = true;
             }
-
-            s_Player.CalculateRemainingYield();
-            s_Player.SellWheat();
         }
 
         static void AdvanceToPhaseThree()

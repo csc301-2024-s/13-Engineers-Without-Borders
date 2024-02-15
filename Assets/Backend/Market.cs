@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 // Author: Kevin Wu
@@ -9,11 +10,12 @@ namespace Backend
 {
     // a class for all products in the market
     public class Product {
-        public string name{get; set;}
-        public int price{get; set;}
-        public bool buyable{get; set;}
-        public string type{get; set;}
-        public string description{get; set;}
+        public string Name{get; set;}
+        public int Price{get; set;}
+        public float PriceMultiplier{get; set;}
+        public bool Buyable{get; set;}
+        public string Type{get; set;}
+        public string Description{get; set;}
     }
     public class Market
     {
@@ -26,14 +28,15 @@ namespace Backend
 
         // add one product to the market
         // the function hasn't implemented exception check yet(prodcut already exists, price not a positve int)
-        public void AddProduct(string name, int price, string type, string description = "")
+        public void AddProduct(string name, int price, string type, float multiplier = 1f, string description = "")
         {
             _items[name] = new Product();
-            _items[name].name = name;
-            _items[name].price = price;
-            _items[name].buyable = true;
-            _items[name].type = type;
-            _items[name].description = description;
+            _items[name].Name = name;
+            _items[name].Price = price;
+            _items[name].PriceMultiplier = multiplier;
+            _items[name].Buyable = true;
+            _items[name].Type = type;
+            _items[name].Description = description;
         }
 
         // remove one product from the market
@@ -48,51 +51,51 @@ namespace Backend
         // the function hasn't implemented exception check yet(product doesn't exist)
         public int GetPrice(string name)
         {
-            return _items[name].price;
+            return (int)Math.Round(_items[name].Price * _items[name].PriceMultiplier);
         }
 
         // set the price based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist, price not a positve int)
         public void SetPrice(string name, int price)
         {
-            _items[name].price = price;
+            _items[name].Price = price;
         }
 
         // make the product able to be bought on the market
         // the function hasn't implemented exception check yet(product doesn't exist)
         public void ActivateProduct(string name)
         {
-            _items[name].buyable = true;
+            _items[name].Buyable = true;
         }
 
         // disable the product to be bought on the market
         // the function hasn't implemented exception check yet(product doesn't exist)
         public void DeactivateProduct(string name)
         {
-            _items[name].buyable = false;
+            _items[name].Buyable = false;
         }
 
         // check if the product is able to be bought
         // the function hasn't implemented exception check yet(product doesn't exist)
         public bool IsBuyable(string name)
         {
-            return _items[name].buyable;
+            return _items[name].Buyable;
         }
 
         // get the product description based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist)
         public string GetDescription(string name)
         {
-            return _items[name].description;
+            return _items[name].Description;
         }
 
-        // buy products based on the product name, quantity and the type of the product
+        // buy products based on the product name, quantity, the type of the product and the player represented by household(for future need if we add AI players)
         // return 0 if the transaction succeeds
         // return -1 if the player doesn't have enough money
         // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
-        public int Buy(string name, int quantity, string type)
+        public int Buy(string name, int quantity, string type, Household household)
         {
-            if (Household.Money < GetPrice(name) * quantity)
+            if (household.Money < GetPrice(name) * quantity)
             {
                 return -1;
             }
@@ -102,62 +105,62 @@ namespace Backend
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.AddItem(name);
+                        household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "fertilizer")
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.AddItem(name);
+                        household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "tubewell")
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.AddItem(name);
+                        household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "labour")
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.AddItem(name);
+                        household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "ox")
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.AddItem(name);
+                        household.Inventory.AddItem(name);
                     }
                 }
                 if (type == "land")
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Land.Plots.Add(new FarmPlot(0, FertilizerType.NO_FERTILIZER));
+                        household.Land.Plots.Add(new FarmPlot(0, FertilizerType.NO_FERTILIZER));
                     }
                 }
                 if (type == "Wheat")
                 {
-                    Household.Wheat += quantity;
+                    household.Wheat += quantity;
                 }
-                Household.Money -= GetPrice(name) * quantity;
+                household.Money -= GetPrice(name) * quantity;
                 return 0;
             }
         }
 
-        // sell products based on the product name, quantity and the type of the product
+        // sell products based on the product name, quantity, the type of the product and the player represented by household(for future need if we add AI players)
         // return 0 if the transaction succeeds
         // return -1 if the player doesn't have enough products to sell
         // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
-        public int Sell(string name, int quantity, string type)
+        public int Sell(string name, int quantity, string type, Household household)
         {
             if (type == "seed")
             {
-                if (Household.Inventory.GetAmount(name) < quantity)
+                if (household.Inventory.GetAmount(name) < quantity)
                 {
                     return -1;
                 }
@@ -165,13 +168,13 @@ namespace Backend
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.RemoveItem(name);
+                        household.Inventory.RemoveItem(name);
                     }
                 }
             }
             if (type == "fertilizer")
             {
-                if (Household.Inventory.GetAmount(name) < quantity)
+                if (household.Inventory.GetAmount(name) < quantity)
                 {
                     return -1;
                 }
@@ -179,13 +182,13 @@ namespace Backend
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.RemoveItem(name);
+                        household.Inventory.RemoveItem(name);
                     }
                 }
             }
             if (type == "tubewell")
             {
-                if (Household.Inventory.GetAmount(name) < quantity)
+                if (household.Inventory.GetAmount(name) < quantity)
                 {
                     return -1;
                 }
@@ -193,13 +196,13 @@ namespace Backend
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.RemoveItem(name);
+                        household.Inventory.RemoveItem(name);
                     }
                 }
             }
             if (type == "labour")
             {
-                if (Household.Inventory.GetAmount(name) < quantity)
+                if (household.Inventory.GetAmount(name) < quantity)
                 {
                     return -1;
                 }
@@ -207,13 +210,13 @@ namespace Backend
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.RemoveItem(name);
+                        household.Inventory.RemoveItem(name);
                     }
                 }
             }
             if (type == "ox")
             {
-                if (Household.Inventory.GetAmount(name) < quantity)
+                if (household.Inventory.GetAmount(name) < quantity)
                 {
                     return -1;
                 }
@@ -221,13 +224,13 @@ namespace Backend
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Inventory.RemoveItem(name);
+                        household.Inventory.RemoveItem(name);
                     }
                 }
             }
             if (type == "land")
             {
-                if (Household.Land.Plots.Count < quantity)
+                if (household.Land.Plots.Count < quantity)
                 {
                     return -1;
                 }
@@ -235,22 +238,22 @@ namespace Backend
                 {
                     for (int i = 0; i < quantity; i++)
                     {
-                        Household.Land.Plots.RemoveAt(Household.Land.Plots.Count - 1);
+                        household.Land.Plots.RemoveAt(household.Land.Plots.Count - 1);
                     }
                 }
             }
             if (type == "Wheat")
             {
-                if (Household.Wheat < quantity)
+                if (household.Wheat < quantity)
                 {
                     return -1;
                 }
                 else
                 {
-                    Household.Wheat -= quantity;
+                    household.Wheat -= quantity;
                 }
             }
-            Household.Money += GetPrice(name) * quantity;
+            household.Money += GetPrice(name) * quantity;
             return 0;
         }
     }

@@ -39,6 +39,7 @@ public class Family
         _numChildren = NumChildren;
     }
 
+    //Calculate the age of a child
     private int CalculateChildAge()
     {
         // Use the current year and month to calculate age

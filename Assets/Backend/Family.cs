@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,19 +25,32 @@ public class Family
         for(int i = 0; i < NumChildren; i++)
         {
             //Temporary name
-            int Age = Random.Range(0, 12);
+            int Age = CalculateChildAge();
             Child child = new Child("A", FamilyName, Age);
             Children.Add(child);
         }
         for (int i = 0; i < numAdults; i++)
         {
             //Temporary name
-            int Age = Random.Range(18, 81);
             Adult adult = new Adult("B", FamilyName);
             Adults.Add(adult);
         }
         _numAdults = numAdults;
         _numChildren = NumChildren;
+    }
+
+    private int CalculateChildAge()
+    {
+        // Use the current year and month to calculate age
+        DateTime currentTime = DateTime.Now;
+        int currentYear = currentTime.Year;
+        int currentMonth = currentTime.Month;
+
+        // Example: age is a function of the current year and month
+        int baseAge = 5; // Base age for all children
+        int age = baseAge + (currentYear % 10) - (currentMonth % 5);
+
+        return Mathf.Clamp(age, 0, 11); // Clamp age to a reasonable range (0-11)
     }
 
     //Add a new child to the family

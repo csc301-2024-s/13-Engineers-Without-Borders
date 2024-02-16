@@ -7,6 +7,9 @@ It's true that making GUI in Unity isn't done with code; it's just drag-and-drop
 
 For example, we needed to write a component for the buy buttons to interface with the Market class, and to show success or error messages when you can't buy a certain item. We also had to make sure the prices displayed were accurate, since they could be changed by village events. In the farm management scene, we needed to interface with the backend to display the player's inventory, and we needed to write the logic to allow the player to customize their farm.
 
+We also had a lot of trouble setting up a tool to help us with builds. Turns out Unity's Build Automation tool on the cloud goes by a "pay what you use" model
+which I (our team lead) really didn't want to bother with. We found [this tool](https://github.com/superunitybuild/buildtool) which was free, but couldn't figure out how to install it properly. It kept giving a "could not load icon" error which prevented it from working. So in the end we just had to stick with manually exporting our project as Android and Windows.
+
 **CODE CREDIT DISCLAIMER:**
 Not every backend script was written by this subteam. Look at [`implementation details`](implementation%20details.md) and the [`project report`](project%20report.md) for the full breakdown of backend scripts. Individual authors for each script should be commented in each script as well.
 

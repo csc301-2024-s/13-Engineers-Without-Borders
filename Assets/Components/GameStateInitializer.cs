@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Backend
+using Backend;
 
 public class GameStateInitializer : MonoBehaviour
 {   
@@ -14,5 +14,6 @@ public class GameStateInitializer : MonoBehaviour
         GameState.s_Year = 1;
         GameState.s_Phase = 2;
         GameState.s_WeatherIndex = 3;
+        
     }
 }

@@ -20,7 +20,9 @@ public class CloseYieldTable : MonoBehaviour
     void CloseTable()
     {
         Button btn = showYieldTableButton.GetComponent<Button>();
+        // on button click, show the Show Yield Table button
         btn.gameObject.SetActive(true);
+        // hide the yield table image
         yieldTable.enabled = false;
 
     }

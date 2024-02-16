@@ -17,18 +17,17 @@ namespace Backend
         public string Type{get; set;}
         public string Description{get; set;}
     }
-    public class Market
+    public static class Market
     {
-        public Household Household;
-        private Dictionary<string, Product> _items;
-        public Market()
+        private static Dictionary<string, Product> _items;
+        static Market()
         {
             _items = new Dictionary<string, Product>();
         }
 
         // add one product to the market
         // the function hasn't implemented exception check yet(prodcut already exists, price not a positve int)
-        public void AddProduct(string name, int price, string type, float multiplier = 1f, string description = "")
+        public static void AddProduct(string name, int price, string type, float multiplier = 1f, string description = "")
         {
             _items[name] = new Product();
             _items[name].Name = name;
@@ -42,49 +41,49 @@ namespace Backend
         // remove one product from the market
         // this function is not expected to use in the simulation, just in case it is needed
         // the function hasn't implemented exception check yet(product doesn't exist)
-        public void RemoveProduct(string name)
+        public static void RemoveProduct(string name)
         {
             _items.Remove(name);
         }
 
         // get the price based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist)
-        public int GetPrice(string name)
+        public static int GetPrice(string name)
         {
             return (int)Math.Round(_items[name].Price * _items[name].PriceMultiplier);
         }
 
         // set the price based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist, price not a positve int)
-        public void SetPrice(string name, int price)
+        public static void SetPrice(string name, int price)
         {
             _items[name].Price = price;
         }
 
         // make the product able to be bought on the market
         // the function hasn't implemented exception check yet(product doesn't exist)
-        public void ActivateProduct(string name)
+        public static void ActivateProduct(string name)
         {
             _items[name].Buyable = true;
         }
 
         // disable the product to be bought on the market
         // the function hasn't implemented exception check yet(product doesn't exist)
-        public void DeactivateProduct(string name)
+        public static void DeactivateProduct(string name)
         {
             _items[name].Buyable = false;
         }
 
         // check if the product is able to be bought
         // the function hasn't implemented exception check yet(product doesn't exist)
-        public bool IsBuyable(string name)
+        public static bool IsBuyable(string name)
         {
             return _items[name].Buyable;
         }
 
         // get the product description based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist)
-        public string GetDescription(string name)
+        public static string GetDescription(string name)
         {
             return _items[name].Description;
         }
@@ -93,7 +92,7 @@ namespace Backend
         // return 0 if the transaction succeeds
         // return -1 if the player doesn't have enough money
         // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
-        public int Buy(string name, int quantity, string type, Household household)
+        public static int Buy(string name, int quantity, string type, Household household)
         {
             if (household.Money < GetPrice(name) * quantity)
             {
@@ -156,7 +155,7 @@ namespace Backend
         // return 0 if the transaction succeeds
         // return -1 if the player doesn't have enough products to sell
         // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
-        public int Sell(string name, int quantity, string type, Household household)
+        public static int Sell(string name, int quantity, string type, Household household)
         {
             if (type == "seed")
             {

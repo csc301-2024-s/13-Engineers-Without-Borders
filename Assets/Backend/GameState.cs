@@ -17,6 +17,24 @@ namespace Backend
         public static int s_WeatherIndex;
         public static Household s_Player;
         public static Household[] s_Households;
+        public static Household[] s_PredefinedHouseholds = new Household[]
+        {
+            new Household(500, "Madhar", 3, 2, 3),
+            new Household(500, "Barlch", 4, 2, 3),
+            new Household(500, "Rama", 4, 3, 4),
+            new Household(500, "Dulai", 4, 5, 4),
+            new Household(500, "Grewal", 4, 6, 5),
+            new Household(500, "Kahlon", 3, 2, 4),
+            new Household(500, "Aujla", 4, 2, 2),
+            new Household(500, "Sandha", 4, 3, 6),
+            new Household(500, "Kohli", 0, 2, 1),
+            new Household(500, "Gill", 2, 4, 7),
+            new Household(500, "Dhillon", 1, 2, 2),
+            new Household(500, "Singh", 2, 3, 3),
+            new Household(500, "Kapoor", 3, 5, 5),
+            new Household(500, "Bhatia", 2, 2, 2),
+            new Household(500, "Gupta", 3, 5, 7)
+        };
 
         // Initialize the game
         public static void Initialize(Household Player)
@@ -50,7 +68,9 @@ namespace Backend
 
         public static void AdvanceToPhaseTwo()
         {
-
+            foreach (Household household in s_Households) {
+                household.Land.canBeHarvested = true;
+            }
         }
 
         public static void AdvanceToPhaseThree()

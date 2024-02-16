@@ -40,7 +40,7 @@ namespace Backend
         // Sells all the wheat in the househould and updates money 
         public void SellWheat() {
             if (Wheat > 0) {
-                int income = Wheat * Market.GetPrices(); //Change if market is implemented differently
+                int income = Wheat * Market.GetPrice("wheat"); //Change if market is implemented differently
                 Money = Money + income;
                 Wheat = 0;
             }

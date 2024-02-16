@@ -46,7 +46,7 @@ namespace Backend
             _items.Remove(name);
         }
 
-        // get the price based on the product name
+        // get the active price based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist)
         public static int GetPrice(string name)
         {

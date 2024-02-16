@@ -45,6 +45,7 @@ namespace Backend
             s_WeatherIndex = rand.Next(1, 6);
             s_Households = new Household[] { Player };
 
+            Market.Initialize();
         }
 
         // (Year 2+ only) Choose random village event and household event for each household

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class CollectAllWheat : MonoBehaviour
 {
     public Button collectAllButton;
+    public Button nextPhaseButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,12 @@ public class CollectAllWheat : MonoBehaviour
     // On button press, collect all wheat from farmland
     void CollectAll()
     {
-        Button btn = collectAllButton.GetComponent<Button>();
-        btn.onClick.RemoveListener(CollectAll);
-        btn.gameObject.SetActive(false);
+        Button collectButton = collectAllButton.GetComponent<Button>();
+        Button nextButton = nextPhaseButton.GetComponent<Button>();
+
+        collectButton.onClick.RemoveListener(CollectAll);
+        collectButton.gameObject.SetActive(false);
+        nextButton.gameObject.SetActive(true);
 
         GameState.s_Player.HarvestCrops();
         Debug.Log("Crops harvested");

@@ -10,8 +10,7 @@ public class PlayerFarmSizeDisplayer : MonoBehaviour
 {
     private TextMeshProUGUI _text;
 
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         _text = GetComponent<TextMeshProUGUI>();
         _text.text = GameState.s_Player.Land.Plots.Count.ToString();

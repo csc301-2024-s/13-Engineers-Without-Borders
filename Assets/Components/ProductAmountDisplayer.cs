@@ -11,8 +11,7 @@ public class ProductAmountDisplayer : MonoBehaviour
     [SerializeField] string productName;
     private TextMeshProUGUI _text;
 
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         _text = GetComponent<TextMeshProUGUI>();
         _text.text = GameState.s_Player.Inventory.GetAmount(productName).ToString();

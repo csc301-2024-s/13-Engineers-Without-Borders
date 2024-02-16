@@ -9,7 +9,7 @@ using TMPro;
  * Handle the logic of Household selection
  */
 
-public class LogicScript : MonoBehaviour
+public class HouseholdSelection: MonoBehaviour
 {
 
     public static Household[] s_PredefinedHouseholds = new Household[]

@@ -41,6 +41,11 @@ namespace Backend
             _products = new Dictionary<string, Product>();
             AddProduct("Wheat", 0, ProductType.Food, "Bushels of wheat that you can eat!");
             UpdateWheatPrice();
+            _products["Wheat"].BuyAction = (Household buyer) =>
+            {
+                buyer.Wheat++;
+            };  // Instead of adding to inventory, add wheat instead
+
             AddProduct("HYC Seed", 40, ProductType.Seed, "Engineered seeds that grow more in good weather, but less in bad weather.");
             AddProduct("Low Fertilizer", 40, ProductType.Seed, "Good fertilizer that boosts crop yield.");
             AddProduct("High Fertilizer", 100, ProductType.Seed, "Great fertilizer that boosts your crops a lot!");

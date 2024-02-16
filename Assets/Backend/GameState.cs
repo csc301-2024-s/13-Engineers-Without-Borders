@@ -16,19 +16,7 @@ namespace Backend
         public static int s_WeatherIndex;
         public static Household s_Player;
         public static Household[] s_Households;
-
-        // Initialize the game
-        public static void Initialize(Household Player)
-        {
-            s_Player = Player;
-            s_Year = 1;
-            s_Phase = 0;
-            System.Random rand = new Random();
-            s_WeatherIndex = rand.Next(1, 6);
-            s_Households = new Household[] { Player };
-
-            Market.Initialize();
-            public static Household[] s_PredefinedHouseholds = new Household[]
+        public static Household[] s_PredefinedHouseholds = new Household[]
         {
             new Household(500, "Madhar", 3, 2, 3),
             new Household(500, "Barlch", 4, 2, 3),
@@ -46,6 +34,19 @@ namespace Backend
             new Household(500, "Bhatia", 2, 2, 2),
             new Household(500, "Gupta", 3, 5, 7)
         };
+
+        // Initialize the game
+        public static void Initialize(Household Player)
+        {
+            s_Player = Player;
+            s_Year = 1;
+            s_Phase = 0;
+            System.Random rand = new Random();
+            s_WeatherIndex = rand.Next(1, 6);
+            s_Households = new Household[] { Player };
+
+            Market.Initialize();
+            
     }
 
         // (Year 2+ only) Choose random village event and household event for each household

@@ -13,6 +13,6 @@ public class PlayerFarmSizeDisplayer : MonoBehaviour
     void Update()
     {
         _text = GetComponent<TextMeshProUGUI>();
-        _text.text = GameState.s_Player.Land.Plots.Count.ToString();
+        _text.text = $"{GameState.s_Player.Land.Plots.Count} plots";
     }
 }

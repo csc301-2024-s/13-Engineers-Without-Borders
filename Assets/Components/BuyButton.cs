@@ -8,7 +8,7 @@ using UnityEngine.UI;
 // Put this component on a button to make it buy something from the market on click
 public class BuyButton : MonoBehaviour
 {
-    [SerializeField] string _productName;
+    [SerializeField] string productName;
     private Button _btn;
 
     void Start() {
@@ -18,10 +18,11 @@ public class BuyButton : MonoBehaviour
 
     // Grey out button if you can't buy it (other than money)
     void Update() {
-        //_btn.interactable
+        _btn.interactable = Market.CanBuyerBuy(GameState.s_Player, productName);
     }
 
     public void OnClick() {
-        string result = Market.Buy(_productName, GameState.s_Player);  // TODO: error message handling
+        Market.Buy(productName, GameState.s_Player);
+        // we probably don't need error message handling because the buy button can only be clicked if you can buy it
     }
 }

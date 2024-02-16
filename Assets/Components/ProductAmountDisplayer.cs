@@ -9,11 +9,12 @@ using UnityEngine;
 public class ProductAmountDisplayer : MonoBehaviour
 {
     [SerializeField] string productName;
+    [SerializeField] string formatString;
     private TextMeshProUGUI _text;
 
     void Update()
     {
         _text = GetComponent<TextMeshProUGUI>();
-        _text.text = GameState.s_Player.Inventory.GetAmount(productName).ToString();
+        _text.text = string.Format(formatString, GameState.s_Player.Inventory.GetAmount(productName));
     }
 }

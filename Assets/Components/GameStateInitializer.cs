@@ -8,20 +8,15 @@ using UnityEngine;
 public class GameStateInitializer : MonoBehaviour
 {
     void Awake() {
-        DontDestroyOnLoad(gameObject);  // for this deliverable, initializer should persist so it doesn't re-initialize when re-entering the shop
+        // do nothing if already initialized
+        if (GameState.s_Player != null) {
+            return;
+        }
 
-        // For now, create a placeholder household
-        Household player = new(10000, "Test", 2, 2, 4)
-        {
-            Wheat = 100
-        };
+        // For now, choose a random predefined household
+        Household player = GameState.s_PredefinedHouseholds[Random.Range(0, GameState.s_PredefinedHouseholds.Length - 1)];
+        player.Money = 10000;  // for this deliverable, give money cheats
 
-        // TODO: one the initialize method has been implemented, uncomment below
-        // GameState.Initialize(player);
-        GameState.s_Player = player;
-        GameState.s_Households = new Household[] { player };
-        GameState.s_Year = 1;
-        GameState.s_Phase = 3;
-        GameState.s_WeatherIndex = 1;
+        GameState.Initialize(player);
     }
 }

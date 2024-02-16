@@ -8,34 +8,53 @@ using System;
 // This class represents the market where the player can buy products on phase 3.
 namespace Backend
 {
+    // Products can be sorted into types
+    public enum ProductType {
+        Seed,
+        Fertilizer,
+        Tool,
+        Food,
+        Land
+    }
+    
     // a class for all products in the market
     public class Product {
         public string Name{get; set;}
         public int Price{get; set;}
         public float PriceMultiplier{get; set;}
         public bool Buyable{get; set;}
-        public string Type{get; set;}
+        public ProductType Type{get; set;}
         public string Description{get; set;}
     }
     public static class Market
     {
         private static Dictionary<string, Product> _items;
-        static Market()
+        
+        // Initialize the Market; should be called in GameState.Initialize
+        public static void Initialize()
         {
             _items = new Dictionary<string, Product>();
+            AddProduct("Wheat", UnityEngine.Random.Range(1, 10), ProductType.Food, "Bushels of wheat that you can eat!");
+            AddProduct("HYC Seed", 40, ProductType.Seed, "Engineered seeds that grow more in good weather, but less in bad weather.");
+            AddProduct("Low Fertilizer", 40, ProductType.Seed, "Good fertilizer that boosts crop yield.");
+            AddProduct("High Fertilizer", 100, ProductType.Seed, "Great fertilizer that boosts your crops a lot!");
+            AddProduct("Ox", 1000, ProductType.Tool, "Doubles the labour output of one adult.");
+            AddProduct("Land", 300, ProductType.Land, "One acre of farmland that you can plant stuff on.");
         }
 
         // add one product to the market
         // the function hasn't implemented exception check yet(prodcut already exists, price not a positve int)
-        public static void AddProduct(string name, int price, string type, float multiplier = 1f, string description = "")
+        public static void AddProduct(string name, int price, ProductType type, string description = "", float multiplier = 1f)
         {
-            _items[name] = new Product();
-            _items[name].Name = name;
-            _items[name].Price = price;
-            _items[name].PriceMultiplier = multiplier;
-            _items[name].Buyable = true;
-            _items[name].Type = type;
-            _items[name].Description = description;
+            _items[name] = new Product
+            {
+                Name = name,
+                Price = price,
+                PriceMultiplier = multiplier,
+                Buyable = true,
+                Type = type,
+                Description = description
+            };
         }
 
         // remove one product from the market

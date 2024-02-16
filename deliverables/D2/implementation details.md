@@ -35,7 +35,7 @@
     - Don't worry about ages of adults (for now, at least)
 - Set `GameState.s_WeatherIndex` to a random integer between 1 and 5
 - Set wheat price to random integer between 1 and 10
-    - Tentativey, prices are stored in dictionary `Market.s_Prices`
+    - Use `Market.UpdateWheatPrice`
 - (Year 2+ only) Choose random village event and household event for each household
     - Read WorkshopSheets/Fate Seeds and Tools Cards.pdf
     - These can be implemented however you think makes sense; make sure it's scalable (easy to add new events), can affect GameState and other important variables, and Household events should be able to affect specific households

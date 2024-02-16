@@ -57,6 +57,7 @@ namespace Backend
             System.Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Phase = 1;
+            Market.UpdateWheatPrice();
             //Village event
 
             foreach (Household household in s_Households)

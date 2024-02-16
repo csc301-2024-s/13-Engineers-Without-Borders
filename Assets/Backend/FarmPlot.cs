@@ -7,7 +7,7 @@ using UnityEngine.XR;
 namespace Backend
 {
     // Author: Jacqueline Zhu
-    public class FarmPlot : MonoBehaviour
+    public class FarmPlot
     {
         private int _seedType;
         private FertilizerType _fertilizerType;
@@ -42,7 +42,6 @@ namespace Backend
         /// <summary>
         /// Get/Update the type of fertilizer used for this plot of land.
         /// </summary>
-        /// <param name="newFertilizerType"></param>
         public FertilizerType FertilizerType
         {
             get { return this._fertilizerType; }
@@ -52,7 +51,6 @@ namespace Backend
         /// <summary>
         /// Get/Update the worker assigned to this plot of land.
         /// </summary>
-        /// <param name="newFertilizerType"></param>
         public Adult Worker
         {
             get { return this._worker; }

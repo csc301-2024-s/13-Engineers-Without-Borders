@@ -28,3 +28,11 @@ implemented Farmland.cs, FertilizerTypes.cs, YieldPerformanceTable.cs
 implemented GameStateInitializer.cs
 contributed to Household.cs, Gamestate.cs
 added unit tests for Farmland, FarmPlot, and YieldPerformanceTable
+
+3. All the details and instructions needed for your TA to see and verify your work. You need
+to provide enough documentation so your TA can confirm:
+a. Your software does what you say it does.
+b. You've done the work (i.e., it's something on your repo/servers, etc.).
+
+Check Github under Assets/Backend folder to see the corresponding backend files, and check Assets/Components to see the corresponding UI files. To run the application, check the READ ME and the D2/Builds folder.
+

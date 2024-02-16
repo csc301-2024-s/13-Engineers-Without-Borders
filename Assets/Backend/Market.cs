@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.PlayerLoop;
 
 
 // Author: Kevin Wu
@@ -9,37 +10,58 @@ using System;
 namespace Backend
 {
     // Products can be sorted into types
-    public enum ProductType {
+    public enum ProductType
+    {
         Seed,
         Fertilizer,
         Tool,
         Food,
         Land
     }
-    
+
     // a class for all products in the market
-    public class Product {
-        public string Name{get; set;}
-        public int Price{get; set;}
-        public float PriceMultiplier{get; set;}
-        public bool Buyable{get; set;}
-        public ProductType Type{get; set;}
-        public string Description{get; set;}
+    public class Product
+    {
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public float PriceMultiplier { get; set; }
+        public bool Buyable { get; set; }
+        public ProductType Type { get; set; }
+        public string Description { get; set; }
+        public Func<Household, bool> PurchaseCondition { get; set; }  // What condition must be met BEYOND just price checking?
+        public Action<Household> BuyAction { get; set; }  // What happens when buying? By default (in AddProduct) it adds to buyer's inventory
     }
     public static class Market
     {
         private static Dictionary<string, Product> _items;
-        
+
         // Initialize the Market; should be called in GameState.Initialize
         public static void Initialize()
         {
             _items = new Dictionary<string, Product>();
-            AddProduct("Wheat", UnityEngine.Random.Range(1, 10), ProductType.Food, "Bushels of wheat that you can eat!");
+            AddProduct("Wheat", 0, ProductType.Food, "Bushels of wheat that you can eat!");
+            UpdateWheatPrice();
             AddProduct("HYC Seed", 40, ProductType.Seed, "Engineered seeds that grow more in good weather, but less in bad weather.");
             AddProduct("Low Fertilizer", 40, ProductType.Seed, "Good fertilizer that boosts crop yield.");
             AddProduct("High Fertilizer", 100, ProductType.Seed, "Great fertilizer that boosts your crops a lot!");
+
             AddProduct("Ox", 1000, ProductType.Tool, "Doubles the labour output of one adult.");
+            _items["Ox"].PurchaseCondition = (Household buyer) =>
+            {
+                return buyer.Inventory.GetAmount("Ox") < buyer.Family.GetAdultAmount();
+            };  // Ox has upper limit
+
             AddProduct("Land", 300, ProductType.Land, "One acre of farmland that you can plant stuff on.");
+            _items["Land"].BuyAction = (Household buyer) =>
+            {
+                buyer.Land.AddPlot();
+            };  // Instead of adding to inventory, add plot of land instead (currently there is no limit)
+        }
+
+        // Change wheat price to random int in 1-10
+        public static void UpdateWheatPrice()
+        {
+            _items["Wheat"].Price = UnityEngine.Random.Range(1, 10);
         }
 
         // add one product to the market
@@ -53,7 +75,11 @@ namespace Backend
                 PriceMultiplier = multiplier,
                 Buyable = true,
                 Type = type,
-                Description = description
+                Description = description,
+
+                // Default buy actions:
+                PurchaseCondition = (Household buyer) => { return true; },
+                BuyAction = (Household buyer) => { buyer.Inventory.AddItem(name); }
             };
         }
 

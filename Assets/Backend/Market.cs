@@ -63,6 +63,42 @@ namespace Backend
             };  // Instead of adding to inventory, add plot of land instead (currently there is no limit)
         }
 
+        // <buyer> requests to purchase one product with name <name>
+        // return error message if failure, otherwise empty string
+        // Precondition: The buyer SHOULD satisfy the requested product's purchase condition because the buy button is only active if they do
+        // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
+        public static string Buy(string name, Household buyer)
+        {
+            if (buyer.Money < GetPrice(name))
+            {
+                return "Not enough money!";
+            }
+            else
+            {
+                Product product = _products[name];
+
+                // Does buyer meet purchase condition?
+                if (!product.PurchaseCondition(buyer))
+                {
+                    return "Purchase condition failed; did you hack the game?";
+                }
+
+                // Success
+                buyer.Money -= GetPrice(name);
+                product.BuyAction(buyer);
+                return "";
+            }
+        }
+
+        // <seller> sells <quantity> wheat
+        // Sells min(<quantity>, <seller.Wheat>) wheat; the sell button, on press, should do extra processing
+        public static void SellWheat(Household seller, int quantity)
+        {
+            int wheatToSell = Math.Min(quantity, seller.Wheat);
+            seller.Wheat -= wheatToSell;
+            seller.Money += GetPrice("Wheat") * wheatToSell;
+        }
+
         // Change wheat price to random int in 1-10
         public static void UpdateWheatPrice()
         {
@@ -94,6 +130,14 @@ namespace Backend
         public static void RemoveProduct(string name)
         {
             _products.Remove(name);
+        }
+
+        // Test if the given buyer can actually buy the requested product
+        public static bool CanBuyerBuy(Household buyer, string productName)
+        {
+            return buyer.Money >= GetPrice(productName) &&
+            _products[productName].PurchaseCondition(buyer) &&
+            IsBuyable(productName);
         }
 
         // get the active price based on the product name
@@ -136,41 +180,6 @@ namespace Backend
         public static string GetDescription(string name)
         {
             return _products[name].Description;
-        }
-
-        // <buyer> requests to purchase one product with name <name>
-        // return error message if failure, otherwise empty string
-        // Precondition: The buyer SHOULD satisfy the requested product's purchase condition because the buy button is only active if they do
-        // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
-        public static string Buy(string name, Household buyer)
-        {
-            if (buyer.Money < GetPrice(name))
-            {
-                return "Not enough money!";
-            }
-            else
-            {
-                Product product = _products[name];
-                
-                // Does buyer meet purchase condition?
-                if (!product.PurchaseCondition(buyer)) {
-                    return "Purchase condition failed; did you hack the game?";
-                }
-
-                // Success
-                buyer.Money -= GetPrice(name);
-                product.BuyAction(buyer);
-                return "";
-            }
-        }
-
-        // <seller> sells <quantity> wheat
-        // Sells min(<quantity>, <seller.Wheat>) wheat; the sell button, on press, should do extra processing
-        public static void SellWheat(Household seller, int quantity)
-        {
-            int wheatToSell = Math.Min(quantity, seller.Wheat);
-            seller.Wheat -= wheatToSell;
-            seller.Money += GetPrice("Wheat") * wheatToSell;
         }
     }
 }

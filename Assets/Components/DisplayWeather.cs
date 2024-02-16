@@ -5,9 +5,8 @@ using TMPro;
 using UnityEngine;
 
 // author: Jacqueline Zhu
-public class ShowFamilyMembers : MonoBehaviour
+public class DisplayWeather : MonoBehaviour
 {
-
     [SerializeField] string text;
     private TextMeshProUGUI _text;
 
@@ -20,6 +19,7 @@ public class ShowFamilyMembers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _text.text = "Family Members: " + string.Format(text, GameState.s_Player.Family.GetChildrenAmount() + GameState.s_Player.Family.GetAdultAmount());
+        _text.text = "Weather: " + string.Format(text, GameState.s_WeatherIndex);
     }
 }
+

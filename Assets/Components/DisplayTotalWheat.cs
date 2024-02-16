@@ -17,6 +17,6 @@ public class DisplayTotalWheat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _text.text = string.Format(text, GameState.s_Player.Wheat);
+        _text.text = "Total Wheat: " + string.Format(text, GameState.s_Player.Wheat);
     }
 }

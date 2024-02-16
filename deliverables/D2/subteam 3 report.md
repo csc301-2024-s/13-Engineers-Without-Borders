@@ -10,7 +10,7 @@ For example, we needed to write a component for the buy buttons to interface wit
 **CODE CREDIT DISCLAIMER:**
 Not every backend script was written by this subteam. Look at [`implementation details`](implementation%20details.md) and the [`project report`](project%20report.md) for the full breakdown of backend scripts. Individual authors for each script should be commented in each script as well.
 
-## RCONTRIBUTIONS
+## CONTRIBUTIONS
 Andy Wang:
 - Wrote first draft of main project report
 - Wrote first draft of this report
@@ -19,3 +19,5 @@ Andy Wang:
 - Wrote `GameStateInitializer.cs`, `PlayerMoneyDisplayer.cs`, `PlayerWheatDisplayer.cs`
 - Made the shop UI in the Market scene (`Assets/Scenes/Market.unity`)
 - Started on Farm Management scene (`Assets/Scenes/Manage Farm.unity`)
+
+Kevin:

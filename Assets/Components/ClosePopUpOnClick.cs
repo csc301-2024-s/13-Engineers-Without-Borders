@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Author: Kevin
 public class ClosePopUpOnClick : MonoBehaviour
 {
-    [SerializeField] private PopUp PopUpWindow;
+    [SerializeField] private GameObject PopUpWindow;
 
     void Start() {
         Button btn = GetComponent<Button>();
@@ -16,6 +17,6 @@ public class ClosePopUpOnClick : MonoBehaviour
     }
 
     public void OnClick() {
-        PopUpWindow.gameObject.SetActive(false);
+        PopUpWindow.SetActive(false);
     }
 }

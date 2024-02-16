@@ -15,12 +15,12 @@ Not every backend script was written by this subteam. Look at [`implementation d
 
 ## CONTRIBUTIONS
 Andy Wang:
-- Wrote first draft of main project report
+- Wrote first draft of main project report/implementation details
 - Wrote first draft of this report
 - Wrote Inventory.cs and corresponding unit tests
-- Contributed to `GameState.AdvanceToPhaseThree`
-- Wrote `GameStateInitializer.cs`, `PlayerMoneyDisplayer.cs`, `PlayerWheatDisplayer.cs`
+- Contributed to `GameState.AdvanceToPhaseThree` and `Market.cs`
+- Wrote component scripts (authors commented in files)
 - Made the shop UI in the Market scene (`Assets/Scenes/Market.unity`)
-- Started on Farm Management scene (`Assets/Scenes/Manage Farm.unity`)
+- Contributed to Farm Management scene (`Assets/Scenes/Manage Farm.unity`)
 
 Kevin:

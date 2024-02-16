@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Author: Andy Wang
 // Used to make a button load a scene on click
 public class LoadSceneOnClick : MonoBehaviour
 {

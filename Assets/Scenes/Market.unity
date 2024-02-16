@@ -306,6 +306,10 @@ PrefabInstance:
       value: Land
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Land
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: _productName
       value: Land
       objectReference: {fileID: 0}
@@ -493,6 +497,10 @@ PrefabInstance:
       value: Low Fertilizer
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Low Fertilizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: _productName
       value: Low Fertilizer
       objectReference: {fileID: 0}
@@ -660,6 +668,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: _itemName
+      value: HYC Seed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
       value: HYC Seed
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
@@ -1079,6 +1091,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 646969625}
     m_Modifications:
+    - target: {fileID: 116799629252584763, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 554770611415729112, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Name
       value: Wheat
@@ -1101,6 +1117,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: _itemName
+      value: Wheat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
       value: Wheat
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
@@ -1692,6 +1712,10 @@ PrefabInstance:
       value: High Fertilizer
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: High Fertilizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: _productName
       value: High Fertilizer
       objectReference: {fileID: 0}
@@ -2120,6 +2144,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: _itemName
+      value: Ox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
       value: Ox
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}

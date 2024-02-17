@@ -26,3 +26,5 @@ Andy Wang:
     - In particular, got it to generate farm plots in a grid automatically, and added functionality to toggle seeds and fertilizer
 
 Kevin:
+- Wrote `Market.cs` where Market class and Product class are implemented
+- Made the Farm Management scene (`Assets/Scenes/Manage Farm.unity`)

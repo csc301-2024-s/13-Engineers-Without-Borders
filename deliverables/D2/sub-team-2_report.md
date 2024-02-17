@@ -20,14 +20,15 @@ Currently the UI (The “Harvest” scene) displays the current weather level, t
 paragraph per person to highlight any work that is not captured in any of the repos.
 
 Jacqueline:
-Implemented FarmPlot.cs
-Implemented the UI, which includes the files CloseYieldTable, CollectAllWheat, DisplayTotalWheat, DisplayWeather, ShowFamilyMembers ShowWheatPrice, ShowYieldTable in the Components folder
+- Implemented FarmPlot.cs
+- Implemented the UI, which includes the files CloseYieldTable, CollectAllWheat, DisplayTotalWheat, DisplayWeather, ShowFamilyMembers ShowWheatPrice, ShowYieldTable in - the Components folder
+- Wrote the subteam report and readme file
 
 Bill:
-implemented Farmland.cs, FertilizerTypes.cs, YieldPerformanceTable.cs
-implemented GameStateInitializer.cs
-contributed to Household.cs, Gamestate.cs
-added unit tests for Farmland, FarmPlot, and YieldPerformanceTable
+- implemented Farmland.cs, FertilizerTypes.cs, YieldPerformanceTable.cs
+- implemented GameStateInitializer.cs
+- contributed to Household.cs, Gamestate.cs
+- added unit tests for Farmland, FarmPlot, and YieldPerformanceTable
 
 3. All the details and instructions needed for your TA to see and verify your work. You need
 to provide enough documentation so your TA can confirm:

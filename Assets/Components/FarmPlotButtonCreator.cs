@@ -17,13 +17,14 @@ public class FarmPlotButtonCreator : MonoBehaviour
     void Start()
     {
         RectTransform rt = farmGrid.GetComponent<RectTransform>();
+        farmGrid.transform.SetParent(farmGrid.transform.parent, false);
 
         for (var i = 0; i < GameState.s_Player.Land.Plots.Count; i++)
         {
             FarmPlot plot = GameState.s_Player.Land.Plots[i];
             GameObject btnClone = Instantiate(farmPlotBtnPrefab);
             SetUpFarmPlotManager(btnClone, plot);
-            btnClone.transform.SetParent(farmGrid.transform);
+            btnClone.transform.SetParent(farmGrid.transform, false);
 
             // Adjust grid size, but only every even loop since there are two rows
             if (i % 2 == 0)

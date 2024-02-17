@@ -24,3 +24,5 @@ Andy Wang:
 - Contributed to Farm Management scene (`Assets/Scenes/Manage Farm.unity`)
 
 Kevin:
+- Wrote `Market.cs` where Market class and Product class are implemented
+- Made the Farm Management scene (`Assets/Scenes/Manage Farm.unity`)

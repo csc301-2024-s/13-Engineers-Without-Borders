@@ -59,12 +59,13 @@ namespace Backend
             s_WeatherIndex = rand.Next(1, 6);
             s_Phase = 1;
             Market.UpdateWheatPrice();
-            //Village event
+            Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
+            Market.SetPriceMultiplier("Ox", 1);
+            //Market.SetPriceMultiplier("Tubewell", 1);
 
-            foreach (Household household in s_Households)
+            if (s_Year >= 2)
             {
-                
-                //Household event
+                Fate.TriggerYearlyEvents();
             }
         }
 

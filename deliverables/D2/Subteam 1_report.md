@@ -1,1 +1,3 @@
+We are responsible for implementing and testing the logic for Phase 1 as well as Game Initialization.
 
+Backend: In D2, we have implemented the required backend scripts for phase 1 and to initialize the game. This includes Family.cs, FamilyMember.cs, Adult.cs, Child.cs, Household.cs and GameState.cs. Also, we have made the unit tests for creating and interacting with Family and FamilyMember classes. In fact, FamilyMember is a parent class with two children: Adult and Child. This is because we realized that Children and Adult share some attributes and functionalities but they still have different roles in the game. 

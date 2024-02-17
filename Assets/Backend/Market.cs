@@ -91,7 +91,7 @@ namespace Backend
         }
 
         // <seller> sells <quantity> wheat
-        // Sells min(<quantity>, <seller.Wheat>) wheat; the sell button, on press, should do extra processing
+        // Sells min(<quantity>, <seller.Wheat>) wheat
         public static void SellWheat(Household seller, int quantity)
         {
             int wheatToSell = Math.Min(quantity, seller.Wheat);

@@ -11,17 +11,19 @@ We also had a lot of trouble setting up a tool to help us with builds. Turns out
 which I (our team lead) really didn't want to bother with. We found [this tool](https://github.com/superunitybuild/buildtool) which was free, but couldn't figure out how to install it properly. It kept giving a "could not load icon" error which prevented it from working. So in the end we just had to stick with manually exporting our project as Android and Windows.
 
 **CODE CREDIT DISCLAIMER:**
-Not every backend script was written by this subteam. Look at [`implementation details`](implementation%20details.md) and the [`project report`](project%20report.md) for the full breakdown of backend scripts. Individual authors for each script should be commented in each script as well.
+Not every backend script was written by this subteam. As mentioned in the report we pooled them all together. Look at [`implementation details`](implementation%20details.md) and the [`project report`](project%20report.md) for the full breakdown of backend scripts. Individual authors for each script should be commented in each script as well.
 
 ## CONTRIBUTIONS
 Andy Wang:
 - Wrote first draft of main project report/implementation details
 - Wrote first draft of this report
 - Wrote Inventory.cs and corresponding unit tests
-- Contributed to `GameState.AdvanceToPhaseThree` and `Market.cs`
+- Wrote `GameState.AdvanceToPhaseThree` (It's only a single line! The Unity scenes handle the rest of the logic) and `Market.cs`
+    - Wrote unit tests for Market
 - Wrote component scripts (authors commented in files)
 - Made the shop UI in the Market scene (`Assets/Scenes/Market.unity`)
 - Contributed to Farm Management scene (`Assets/Scenes/Manage Farm.unity`)
+    - In particular, got it to generate farm plots in a grid automatically, and added functionality to toggle seeds and fertilizer
 
 Kevin:
 - Wrote `Market.cs` where Market class and Product class are implemented

@@ -89,11 +89,8 @@
 **For D2**
 - Since builds are isolated from each other, the player won't choose their own household. Instead choose a random one and use `GameState.Initialize` with it
     - **In the final product**, this phase should use existing `GameState` values instead of re-initializing
-- Only for this deliverable, there should be a GUI to freely choose which plots of land are LR (native) or HYC
-    - Also choose which adults are assigned to which plots
-    - Mainly for testing purposes so the TA can play around with it
-    - **This will most likely be a placeholder solely for testing**, so don't put too much work into making it look pretty
-- This should be implemented in two Unity scenes: one for the plot GUI, another for the Phase 2 GUI
+- **This will most likely be a placeholder GUI**, so don't put too much work into making it look pretty
+- This should be implemented in a single scene
 
 # PHASE 3
 - Create a shop GUI where the player can buy stuff

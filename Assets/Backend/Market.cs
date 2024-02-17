@@ -147,11 +147,11 @@ namespace Backend
             return (int)Math.Round(_products[name].Price * _products[name].PriceMultiplier);
         }
 
-        // set the price based on the product name
+        // set the price multiplier based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist, price not a positve int)
-        public static void SetPrice(string name, int price)
+        public static void SetPriceMultiplier(string name, float mult)
         {
-            _products[name].Price = price;
+            _products[name].PriceMultiplier = mult;
         }
 
         // make the product able to be bought on the market

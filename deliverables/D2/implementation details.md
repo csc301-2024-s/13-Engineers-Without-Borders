@@ -109,9 +109,6 @@
     - When successfully bought, add the item to the buyer's inventory
 - Create a Farmland management GUI
     - Can place down HYC seeds/fertilizer in specific plots
-    - Can manage which plots adults work on
-        - Can give an ox to adults working on a plot
-        - When an adult with an ox is removed from work, place the ox back in your inventory
     - Can also rescind these items to put them back in inventory
     - Newly bought plots of land should appear here
     - Obviously, increment/decrement inventory amount of items as necessary

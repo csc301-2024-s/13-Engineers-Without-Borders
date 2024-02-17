@@ -50,4 +50,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Market.unity
     guid: 80aa7c21fca3e31449874146a8b579ac
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b1d4d93735aed1a4cba17a6b8c394fbd, type: 2}

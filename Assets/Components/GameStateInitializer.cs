@@ -18,5 +18,8 @@ public class GameStateInitializer : MonoBehaviour
         player.Money = 10000;  // for this deliverable, give money cheats
 
         GameState.Initialize(player);
+
+        // overwrite
+        GameState.s_Phase = 3;
     }
 }

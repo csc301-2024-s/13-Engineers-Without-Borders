@@ -1,1 +1,1 @@
-
+Please see the D2/Builds folder for the executable. Download the entire build folder. To run the application, run the "D2-1.exe" executable on windows. After running, to exit, press Alt + F4 on the keyboard. (The application is intentionally made for mobile devices so it can appear to be a bit small for PC or laptop screen).

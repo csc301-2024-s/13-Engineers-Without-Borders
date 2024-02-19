@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*
+ * Author: Hoa Nguyen
+ * This scence is used to display the information of the selected household
+ */
 
 public class DisplayInformation : MonoBehaviour
 {
@@ -8,10 +12,8 @@ public class DisplayInformation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Retrieve the selected household data from PlayerPrefs
         string selectedHousehold = PlayerPrefs.GetString("SelectedHousehold", "DefaultHousehold");
 
-        // Use the data to display information in your GUI
         DisplayHouseholdInformation(selectedHousehold);
     }
 

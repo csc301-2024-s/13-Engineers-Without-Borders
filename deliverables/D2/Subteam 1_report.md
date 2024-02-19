@@ -11,3 +11,5 @@ Hoa:
 - Added unit tests for the methods for Family, FamilyMember, Adult and Child.
 - Designed the Household Selection scence
 - Wrote the subteam report
+
+Please check Github under Assets/Backend folder to see the corresponding backend files, and check Assets/Components to see the corresponding UI files.

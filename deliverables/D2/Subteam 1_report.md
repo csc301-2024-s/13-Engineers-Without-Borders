@@ -5,6 +5,7 @@ Backend: In D2, we have implemented the required backend scripts for phase 1 and
 Frontend: Our first scence, Household Selection is where the players can choose the household that represent them. In the middle of the GUI, there are the name of the household alongside with the amount of adults, children and number of farm plots that the family own. The "Next" and "Back" button are used to change the household based on the player's preference. After choosing, players can click on the "Play" button at the bottom of the screen to call the GameState.Initialize method that will start the game. Next, a new scence that displays the player's information will appear.
 
 Individual Contribution.
+
 Hoa:
 - Implemented Family.cs, FamilyMember.cs, Adult.cs, Child.cs, Household.cs and contributed to GameState.cs
 - Added unit tests for the methods for Family, FamilyMember, Adult and Child.

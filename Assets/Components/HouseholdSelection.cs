@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Backend;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -55,7 +52,6 @@ public class LogicScript : MonoBehaviour
     {
         Household CurrentHousehold = s_PredefinedHouseholds[index];
         GameState.Initialize(CurrentHousehold);
-        string selectedHousehold = HouseholdInfo.text;
         PlayerPrefs.SetString("SelectedHousehold", "Number of Adults: " + CurrentHousehold.Family.GetAdultAmount() + 
             "\nNumber of Children: " + CurrentHousehold.Family.GetChildrenAmount() + "\nLand: " + CurrentHousehold.Land.Plots.Count);
         SceneManager.LoadScene("DisplayInformation");

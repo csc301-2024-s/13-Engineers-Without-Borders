@@ -38,8 +38,8 @@ public class LogicScript : MonoBehaviour
     {
         index = (index + 1) % s_PredefinedHouseholds.Length;
         Household CurrentHousehold = s_PredefinedHouseholds[index];
-        HouseholdInfo.text = CurrentHousehold.GetName() + " Family\n" + CurrentHousehold.Family.GetAdultAmount() + " adults\n" +
-            CurrentHousehold.Family.GetChildrenAmount() + " children\n" + CurrentHousehold.NumPlots + " arces of land";
+        HouseholdInfo.text = CurrentHousehold.Family.FamilyName + " Family\n" + CurrentHousehold.Family.GetAdultAmount() + " adults\n" +
+            CurrentHousehold.Family.GetChildrenAmount() + " children\n" + CurrentHousehold.Land.Plots.Count + " arces of land";
         
     }
 
@@ -47,8 +47,8 @@ public class LogicScript : MonoBehaviour
     {
         index = (index - 1 + s_PredefinedHouseholds.Length) % s_PredefinedHouseholds.Length;
         Household CurrentHousehold = s_PredefinedHouseholds[index];
-        HouseholdInfo.text = CurrentHousehold.GetName() + " Family\n" + CurrentHousehold.Family.GetAdultAmount() + " adults\n" +
-            CurrentHousehold.Family.GetChildrenAmount() + " children\n" + CurrentHousehold.NumPlots + " arces of land";
+        HouseholdInfo.text = CurrentHousehold.Family.FamilyName + " Family\n" + CurrentHousehold.Family.GetAdultAmount() + " adults\n" +
+            CurrentHousehold.Family.GetChildrenAmount() + " children\n" + CurrentHousehold.Land.Plots.Count + " arces of land";
     }
 
     public void OnStartButtonClick()
@@ -57,7 +57,7 @@ public class LogicScript : MonoBehaviour
         GameState.Initialize(CurrentHousehold);
         string selectedHousehold = HouseholdInfo.text;
         PlayerPrefs.SetString("SelectedHousehold", "Number of Adults: " + CurrentHousehold.Family.GetAdultAmount() + 
-            "\nNumber of Children: " + CurrentHousehold.Family.GetChildrenAmount() + "\nLand: " + CurrentHousehold.NumPlots);
+            "\nNumber of Children: " + CurrentHousehold.Family.GetChildrenAmount() + "\nLand: " + CurrentHousehold.Land.Plots.Count);
         SceneManager.LoadScene("DisplayInformation");
     }
 }

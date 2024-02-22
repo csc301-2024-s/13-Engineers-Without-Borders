@@ -1,29 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Backend;
+using UnityEngine;
 
+// Author: Andy Wang
+// For this build only, initialize the game state at the build's beginning since this is separate from Phase 1
 public class GameStateInitializer : MonoBehaviour
-{   
+{
     void Awake() {
-        Household player = new(5000, "Test", 1, 2, 5);
+        // do nothing if already initialized
+        if (GameState.s_Player != null) {
+            return;
+        }
+
+        // For now, choose a random predefined household
+        Household player = GameState.s_PredefinedHouseholds[Random.Range(0, GameState.s_PredefinedHouseholds.Length - 1)];
+        player.Money = 10000;  // for this deliverable, give money cheats
 
         GameState.Initialize(player);
-        GameState.s_Player = player;
-        GameState.s_Households = new Household[] { player };
-        GameState.s_Year = 1;
-        GameState.s_Phase = 2;
-        GameState.s_WeatherIndex = 3;
 
-        Adult worker = new("John", "Doe");
-        GameState.s_Player.Land.Plots[0].Worker = worker;
-        GameState.s_Player.Land.Plots[1].Worker = worker;
-        GameState.s_Player.Land.Plots[2].Worker = worker;
-        GameState.s_Player.Land.Plots[3].Worker = worker;
-        GameState.s_Player.Land.Plots[4].Worker = worker;
-
-        GameState.s_Player.Land.canBeHarvested = true;
-
-        Market.AddProduct("Wheat", 10, "Wheat");
+        // overwrite
+        GameState.s_Phase = 3;
     }
 }

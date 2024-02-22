@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
 
 namespace Backend
 {
@@ -41,6 +40,7 @@ namespace Backend
         /// <summary>
         /// Get/Update the type of fertilizer used for this plot of land.
         /// </summary>
+        /// <param name="newFertilizerType"></param>
         public FertilizerType FertilizerType
         {
             get { return this._fertilizerType; }
@@ -50,6 +50,7 @@ namespace Backend
         /// <summary>
         /// Get/Update the worker assigned to this plot of land.
         /// </summary>
+        /// <param name="newFertilizerType"></param>
         public Adult Worker
         {
             get { return this._worker; }

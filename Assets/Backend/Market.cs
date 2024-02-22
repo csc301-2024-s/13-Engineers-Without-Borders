@@ -2,40 +2,126 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.PlayerLoop;
 
 
 // Author: Kevin Wu
 // This class represents the market where the player can buy products on phase 3.
 namespace Backend
 {
+    // Products can be sorted into types
+    public enum ProductType
+    {
+        Seed,
+        Fertilizer,
+        Tool,
+        Food,
+        Land
+    }
+
     // a class for all products in the market
-    public class Product {
-        public string Name{get; set;}
-        public int Price{get; set;}
-        public float PriceMultiplier{get; set;}
-        public bool Buyable{get; set;}
-        public string Type{get; set;}
-        public string Description{get; set;}
+    public class Product
+    {
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public float PriceMultiplier { get; set; }
+        public bool Buyable { get; set; }
+        public ProductType Type { get; set; }
+        public string Description { get; set; }
+        public Func<Household, bool> PurchaseCondition { get; set; }  // What condition must be met BEYOND just price checking?
+        public Action<Household> BuyAction { get; set; }  // What happens when buying? By default (in AddProduct) it adds to buyer's inventory
     }
     public static class Market
     {
-        private static Dictionary<string, Product> _items;
-        static Market()
+        private static Dictionary<string, Product> _products;
+
+        // Initialize the Market; should be called in GameState.Initialize
+        public static void Initialize()
         {
-            _items = new Dictionary<string, Product>();
+            _products = new Dictionary<string, Product>();
+            AddProduct("Wheat", 0, ProductType.Food, "Bushels of wheat that you can eat!");
+            UpdateWheatPrice();
+            _products["Wheat"].BuyAction = (Household buyer) =>
+            {
+                buyer.Wheat++;
+            };  // Instead of adding to inventory, add wheat instead
+
+            AddProduct("HYC Seed", 40, ProductType.Seed, "Engineered seeds that grow more in good weather, but less in bad weather.");
+            AddProduct("Low Fertilizer", 40, ProductType.Seed, "Good fertilizer that boosts crop yield.");
+            AddProduct("High Fertilizer", 100, ProductType.Seed, "Great fertilizer that boosts your crops a lot!");
+
+            AddProduct("Ox", 1000, ProductType.Tool, "Doubles the labour output of one adult.");
+            _products["Ox"].PurchaseCondition = (Household buyer) =>
+            {
+                return buyer.Inventory.GetAmount("Ox") < buyer.Family.GetAdultAmount();
+            };  // Ox has upper limit
+
+            AddProduct("Land", 300, ProductType.Land, "One acre of farmland that you can plant stuff on.");
+            _products["Land"].BuyAction = (Household buyer) =>
+            {
+                buyer.Land.AddPlot();
+            };  // Instead of adding to inventory, add plot of land instead (currently there is no limit)
+        }
+
+        // <buyer> requests to purchase one product with name <name>
+        // return error message if failure, otherwise empty string
+        // Precondition: The buyer SHOULD satisfy the requested product's purchase condition because the buy button is only active if they do
+        // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
+        public static string Buy(string name, Household buyer)
+        {
+            if (buyer.Money < GetPrice(name))
+            {
+                return "Not enough money!";
+            }
+            else
+            {
+                Product product = _products[name];
+
+                // Does buyer meet purchase condition?
+                if (!product.PurchaseCondition(buyer))
+                {
+                    return "Purchase condition failed; did you hack the game?";
+                }
+
+                // Success
+                buyer.Money -= GetPrice(name);
+                product.BuyAction(buyer);
+                return "";
+            }
+        }
+
+        // <seller> sells <quantity> wheat
+        // Sells min(<quantity>, <seller.Wheat>) wheat
+        public static void SellWheat(Household seller, int quantity)
+        {
+            int wheatToSell = Math.Min(quantity, seller.Wheat);
+            seller.Wheat -= wheatToSell;
+            seller.Money += GetPrice("Wheat") * wheatToSell;
+        }
+
+        // Change wheat price to random int in 1-10
+        public static void UpdateWheatPrice()
+        {
+            _products["Wheat"].Price = UnityEngine.Random.Range(1, 10);
         }
 
         // add one product to the market
         // the function hasn't implemented exception check yet(prodcut already exists, price not a positve int)
-        public static void AddProduct(string name, int price, string type, float multiplier = 1f, string description = "")
+        public static void AddProduct(string name, int price, ProductType type, string description = "", float multiplier = 1f)
         {
-            _items[name] = new Product();
-            _items[name].Name = name;
-            _items[name].Price = price;
-            _items[name].PriceMultiplier = multiplier;
-            _items[name].Buyable = true;
-            _items[name].Type = type;
-            _items[name].Description = description;
+            _products[name] = new Product
+            {
+                Name = name,
+                Price = price,
+                PriceMultiplier = multiplier,
+                Buyable = true,
+                Type = type,
+                Description = description,
+
+                // Default buy actions:
+                PurchaseCondition = (Household buyer) => { return true; },
+                BuyAction = (Household buyer) => { buyer.Inventory.AddItem(name); }
+            };
         }
 
         // remove one product from the market
@@ -43,217 +129,57 @@ namespace Backend
         // the function hasn't implemented exception check yet(product doesn't exist)
         public static void RemoveProduct(string name)
         {
-            _items.Remove(name);
+            _products.Remove(name);
         }
 
-        // get the price based on the product name
+        // Test if the given buyer can actually buy the requested product
+        public static bool CanBuyerBuy(Household buyer, string productName)
+        {
+            return buyer.Money >= GetPrice(productName) &&
+            _products[productName].PurchaseCondition(buyer) &&
+            IsBuyable(productName);
+        }
+
+        // get the active price based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist)
         public static int GetPrice(string name)
         {
-            return (int)Math.Round(_items[name].Price * _items[name].PriceMultiplier);
+            return (int)Math.Round(_products[name].Price * _products[name].PriceMultiplier);
         }
 
-        // set the price based on the product name
+        // set the price multiplier based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist, price not a positve int)
-        public static void SetPrice(string name, int price)
+        public static void SetPriceMultiplier(string name, float mult)
         {
-            _items[name].Price = price;
+            _products[name].PriceMultiplier = mult;
         }
 
         // make the product able to be bought on the market
         // the function hasn't implemented exception check yet(product doesn't exist)
         public static void ActivateProduct(string name)
         {
-            _items[name].Buyable = true;
+            _products[name].Buyable = true;
         }
 
         // disable the product to be bought on the market
         // the function hasn't implemented exception check yet(product doesn't exist)
         public static void DeactivateProduct(string name)
         {
-            _items[name].Buyable = false;
+            _products[name].Buyable = false;
         }
 
         // check if the product is able to be bought
         // the function hasn't implemented exception check yet(product doesn't exist)
         public static bool IsBuyable(string name)
         {
-            return _items[name].Buyable;
+            return _products[name].Buyable;
         }
 
         // get the product description based on the product name
         // the function hasn't implemented exception check yet(product doesn't exist)
         public static string GetDescription(string name)
         {
-            return _items[name].Description;
-        }
-
-        // buy products based on the product name, quantity, the type of the product and the player represented by household(for future need if we add AI players)
-        // return 0 if the transaction succeeds
-        // return -1 if the player doesn't have enough money
-        // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
-        public static int Buy(string name, int quantity, string type, Household household)
-        {
-            if (household.Money < GetPrice(name) * quantity)
-            {
-                return -1;
-            }
-            else
-            {
-                if (type == "seed")
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.AddItem(name);
-                    }
-                }
-                if (type == "fertilizer")
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.AddItem(name);
-                    }
-                }
-                if (type == "tubewell")
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.AddItem(name);
-                    }
-                }
-                if (type == "labour")
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.AddItem(name);
-                    }
-                }
-                if (type == "ox")
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.AddItem(name);
-                    }
-                }
-                if (type == "land")
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Land.Plots.Add(new FarmPlot(0, FertilizerType.NO_FERTILIZER));
-                    }
-                }
-                if (type == "Wheat")
-                {
-                    household.Wheat += quantity;
-                }
-                household.Money -= GetPrice(name) * quantity;
-                return 0;
-            }
-        }
-
-        // sell products based on the product name, quantity, the type of the product and the player represented by household(for future need if we add AI players)
-        // return 0 if the transaction succeeds
-        // return -1 if the player doesn't have enough products to sell
-        // the function hasn't implemented exception check yet(product doesn't exist, type doesn't exist, quantity not a positve int)
-        public static int Sell(string name, int quantity, string type, Household household)
-        {
-            if (type == "seed")
-            {
-                if (household.Inventory.GetAmount(name) < quantity)
-                {
-                    return -1;
-                }
-                else
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.RemoveItem(name);
-                    }
-                }
-            }
-            if (type == "fertilizer")
-            {
-                if (household.Inventory.GetAmount(name) < quantity)
-                {
-                    return -1;
-                }
-                else
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.RemoveItem(name);
-                    }
-                }
-            }
-            if (type == "tubewell")
-            {
-                if (household.Inventory.GetAmount(name) < quantity)
-                {
-                    return -1;
-                }
-                else
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.RemoveItem(name);
-                    }
-                }
-            }
-            if (type == "labour")
-            {
-                if (household.Inventory.GetAmount(name) < quantity)
-                {
-                    return -1;
-                }
-                else
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.RemoveItem(name);
-                    }
-                }
-            }
-            if (type == "ox")
-            {
-                if (household.Inventory.GetAmount(name) < quantity)
-                {
-                    return -1;
-                }
-                else
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Inventory.RemoveItem(name);
-                    }
-                }
-            }
-            if (type == "land")
-            {
-                if (household.Land.Plots.Count < quantity)
-                {
-                    return -1;
-                }
-                else
-                {
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        household.Land.Plots.RemoveAt(household.Land.Plots.Count - 1);
-                    }
-                }
-            }
-            if (type == "Wheat")
-            {
-                if (household.Wheat < quantity)
-                {
-                    return -1;
-                }
-                else
-                {
-                    household.Wheat -= quantity;
-                }
-            }
-            household.Money += GetPrice(name) * quantity;
-            return 0;
+            return _products[name].Description;
         }
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements.Experimental;
 /*
  * Author: Hoa Nguyen, Bill Guo
  * This class represents a household 
@@ -40,7 +39,7 @@ namespace Backend
         // Sells all the wheat in the househould and updates money 
         public void SellWheat() {
             if (Wheat > 0) {
-                int income = Wheat * Market.GetPrice("Wheat"); //Change if market is implemented differently
+                int income = Wheat * Market.GetPrice("wheat"); //Change if market is implemented differently
                 Money = Money + income;
                 Wheat = 0;
             }

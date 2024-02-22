@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using Random = System.Random;
 
@@ -46,7 +45,9 @@ namespace Backend
             s_WeatherIndex = rand.Next(1, 6);
             s_Households = new Household[] { Player };
 
-        }
+            Market.Initialize();
+            
+    }
 
         // (Year 2+ only) Choose random village event and household event for each household
         //Read WorkshopSheets/Fate Seeds and Tools Cards.pdf
@@ -57,12 +58,14 @@ namespace Backend
             System.Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Phase = 1;
-            //Village event
+            Market.UpdateWheatPrice();
+            Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
+            Market.SetPriceMultiplier("Ox", 1);
+            //Market.SetPriceMultiplier("Tubewell", 1);
 
-            foreach (Household household in s_Households)
+            if (s_Year >= 2)
             {
-                
-                //Household event
+                Fate.TriggerYearlyEvents();
             }
         }
 
@@ -75,7 +78,9 @@ namespace Backend
 
         public static void AdvanceToPhaseThree()
         {
-
+            SceneUtils.LoadScene("Market");
+            // TODO: if player's wheat is negative, alert them
+            // this can be done in the future
         }
     }
 }

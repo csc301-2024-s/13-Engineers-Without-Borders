@@ -1,11 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System;
-using UnityEngine.PlayerLoop;
 
-
-// Author: Kevin Wu
+// Author: Kevin Wu, Andy Wang
 // This class represents the market where the player can buy products on phase 3.
 namespace Backend
 {

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 /*
  * Author: Hoa Nguyen
  * Class for a member in one family

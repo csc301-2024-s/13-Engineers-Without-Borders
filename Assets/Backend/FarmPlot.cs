@@ -1,69 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Backend
 {
     // Author: Jacqueline Zhu
     public class FarmPlot
     {
-        private int _seedType;
-        private FertilizerType _fertilizerType;
-        private Adult _worker;
+        // 1 for HYC, 0 for normal
+        public int SeedType { get; set; }
+
+        // Type of fertilizer
+        public FertilizerType FertilizerType { get; set; }
+
+        // Adult assigned to this plot
+        public Adult Worker { get; set; }
 
 
         public FarmPlot(int seedType, FertilizerType fertilizerType, Adult worker = null)
         {
-            this._seedType = seedType;
-            this._fertilizerType = fertilizerType;
-            this._worker = worker;
+            SeedType = seedType;
+            FertilizerType = fertilizerType;
+            Worker = worker;
         }
-
-
 
          // Returns either game's weather index or, if irrigated (implemented later), best weather
         public int GetWeatherEffect()
         {
             return GameState.s_WeatherIndex;
         }
-        
         /// <summary>
-        /// Get/update the seed type of this farm plot. 1 for HYC, 0 for Land. 
-        /// </summary>
-        /// <returns></returns>
-        public int SeedType {
-            get { return this._seedType;}
-            set { this._seedType = value; }
-
-        }
-
-        /// <summary>
-        /// Get/Update the type of fertilizer used for this plot of land.
-        /// </summary>
-        /// <param name="newFertilizerType"></param>
-        public FertilizerType FertilizerType
-        {
-            get { return this._fertilizerType; }
-            set { this._fertilizerType = value; }
-        }
-
-        /// <summary>
-        /// Get/Update the worker assigned to this plot of land.
-        /// </summary>
-        /// <param name="newFertilizerType"></param>
-        public Adult Worker
-        {
-            get { return this._worker; }
-            set { this._worker = value; }
-        }
-
-
-        /// <summary>
-        /// Remove the worker assigned to this farm plot.
+        /// Remove the worker assigned to this farm plot.  TODO: need to update worker's assigned plots
         /// </summary>
         public void RemoveWorker()
         {
-            this._worker = null;
+            Worker = null;
         }
 
         /// <summary>
@@ -72,7 +39,7 @@ namespace Backend
         /// <returns></returns>
         public int GetYield()
         {
-            if (this._worker != null)
+            if (Worker != null)
             {
                 return YieldPerformanceTable.GetYield(this);
             }

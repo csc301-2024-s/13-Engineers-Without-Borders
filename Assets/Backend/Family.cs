@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,18 +10,16 @@ using UnityEngine;
 
 public class Family
 {
-    public string FamilyName { get; }
+    public string Name { get; }
 
-    List<Adult> Adults = new List<Adult> ();
+    List<Adult> Adults = new List<Adult>();
     List<Child> Children = new List<Child>();
-    private int _numChildren;
-    private int _numAdults;
-    
+
     //Constructor of the class
     public Family(string FamilyName, int NumChildren, int numAdults)
     {
-        this.FamilyName = FamilyName;
-        for(int i = 0; i < NumChildren; i++)
+        Name = FamilyName;
+        for (int i = 0; i < NumChildren; i++)
         {
             //Temporary name
             int Age = CalculateChildAge();
@@ -35,8 +32,6 @@ public class Family
             Adult adult = new Adult("B", FamilyName);
             Adults.Add(adult);
         }
-        _numAdults = numAdults;
-        _numChildren = NumChildren;
     }
 
     //Calculate the age of a child
@@ -58,21 +53,20 @@ public class Family
     public void CreateChild()
     {
         //Temporary name
-        Child child = new Child("A", FamilyName, 0);
+        Child child = new Child("A", Name, 0);
         Children.Add(child);
-        _numChildren++;
     }
 
     //Calculate family's total consumption after each year
     public int GetTotalConsumption()
     {
-        return _numChildren * Child.Consumption + _numAdults * Adult.Consumption;
+        return Children.Count * Child.Consumption + Adults.Count * Adult.Consumption;
     }
 
     //Grow a child up if he or she reaches 12
     public void IncrementAge()
     {
-        for (int i = 0; i < _numChildren; i++)
+        for (var i = 0; i < Children.Count; i++)
         {
             Children[i].IncrementAge();
             if (Children[i].Age >= 12)
@@ -80,8 +74,6 @@ public class Family
                 Adult NewAdult = Children[i].ToAdult();
                 Adults.Add(NewAdult);
                 Children.Remove(Children[i]);
-                this._numAdults++;
-                this._numChildren--;
             }
 
         }

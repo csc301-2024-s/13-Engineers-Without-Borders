@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 /*
  * Author: Hoa Nguyen, Bill Guo
  * This class represents a household 
@@ -47,9 +44,9 @@ namespace Backend
 
         // If the farmland is harvestable, calculate net wheat yield and set canBeHarvested to false;
         public void HarvestCrops() {
-            if (Land.canBeHarvested) {
+            if (Land.CanBeHarvested) {
                 CalculateRemainingYield();
-                Land.canBeHarvested = false;
+                Land.CanBeHarvested = false;
             }
         }
     }

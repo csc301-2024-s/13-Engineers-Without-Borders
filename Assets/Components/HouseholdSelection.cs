@@ -38,7 +38,7 @@ public class LogicScript : MonoBehaviour
     {
         index = (index + 1) % s_PredefinedHouseholds.Length;
         Household CurrentHousehold = s_PredefinedHouseholds[index];
-        HouseholdInfo.text = CurrentHousehold.Family.FamilyName + " Family\n" + CurrentHousehold.Family.GetAdultAmount() + " adults\n" +
+        HouseholdInfo.text = CurrentHousehold.Family.Name + " Family\n" + CurrentHousehold.Family.GetAdultAmount() + " adults\n" +
             CurrentHousehold.Family.GetChildrenAmount() + " children\n" + CurrentHousehold.Land.Plots.Count + " arces of land";
         
     }
@@ -47,7 +47,7 @@ public class LogicScript : MonoBehaviour
     {
         index = (index - 1 + s_PredefinedHouseholds.Length) % s_PredefinedHouseholds.Length;
         Household CurrentHousehold = s_PredefinedHouseholds[index];
-        HouseholdInfo.text = CurrentHousehold.Family.FamilyName + " Family\n" + CurrentHousehold.Family.GetAdultAmount() + " adults\n" +
+        HouseholdInfo.text = CurrentHousehold.Family.Name + " Family\n" + CurrentHousehold.Family.GetAdultAmount() + " adults\n" +
             CurrentHousehold.Family.GetChildrenAmount() + " children\n" + CurrentHousehold.Land.Plots.Count + " arces of land";
     }
 

@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Random = System.Random;
 
 /*
@@ -41,7 +37,7 @@ namespace Backend
             s_Player = Player;
             s_Year = 1;
             s_Phase = 0;
-            System.Random rand = new Random();
+            Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Households = new Household[] { Player };
 
@@ -55,7 +51,7 @@ namespace Backend
         //Possible for there to be no village event, or for a household to have no event
         public static void AdvanceToPhaseOne()
         {
-            System.Random rand = new Random();
+            Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Phase = 1;
             Market.UpdateWheatPrice();
@@ -72,7 +68,7 @@ namespace Backend
         public static void AdvanceToPhaseTwo()
         {
             foreach (Household household in s_Households) {
-                household.Land.canBeHarvested = true;
+                household.Land.CanBeHarvested = true;
             }
         }
 

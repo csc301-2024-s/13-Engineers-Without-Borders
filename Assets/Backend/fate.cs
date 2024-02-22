@@ -1,14 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 /*
  * Author: Arick Liu
- * This class represents a fate event, in which it happens every 
+ * This class is for managing fate events, which happen yearly
  */
-
-
 namespace Backend
 {
     public static class Fate

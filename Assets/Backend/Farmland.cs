@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 /*
  * Author: Bill Guo
@@ -10,17 +8,17 @@ namespace Backend
     public class Farmland
     {
         public List<FarmPlot> Plots;
-        public bool canBeHarvested { get; set; }
+        public bool CanBeHarvested { get; set; }
 
         // Initializes empty list to store FarmPlot objects 
         public Farmland(int numPlots)
         {
             Plots = new List<FarmPlot>();
-            canBeHarvested = false;
+            CanBeHarvested = false;
 
             for (var i = 0; i < numPlots; i++)
             {
-                Plots.Add(new FarmPlot(0, FertilizerType.NO_FERTILIZER));
+                Plots.Add(new FarmPlot(0, FertilizerType.None));
             }
         }
 
@@ -38,7 +36,7 @@ namespace Backend
 
         // Add a plot to this land
         public void AddPlot() {
-            Plots.Add(new FarmPlot(0, FertilizerType.NO_FERTILIZER));
+            Plots.Add(new FarmPlot(0, FertilizerType.None));
         }
     }
 }

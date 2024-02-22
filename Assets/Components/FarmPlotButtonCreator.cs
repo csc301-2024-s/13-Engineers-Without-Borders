@@ -40,8 +40,8 @@ public class FarmPlotButtonCreator : MonoBehaviour
 
         // Initial toggle values
         seedToggle.isOn = plot.SeedType == 1;
-        lowFertilizerToggle.isOn = plot.FertilizerType == FertilizerType.LOW_FERTILIZER;
-        highFertilizerToggle.isOn = plot.FertilizerType == FertilizerType.HIGH_FERTILIZER;
+        lowFertilizerToggle.isOn = plot.FertilizerType == FertilizerType.Low;
+        highFertilizerToggle.isOn = plot.FertilizerType == FertilizerType.High;
 
         // When you want to add or remove HYC seed...
         seedToggle.onValueChanged.AddListener((bool value) =>
@@ -75,14 +75,14 @@ public class FarmPlotButtonCreator : MonoBehaviour
             if (value)
             {
                 GameState.s_Player.Inventory.RemoveItem(fertilizerName);
-                plot.FertilizerType = fertilizerName == "Low Fertilizer" ? FertilizerType.LOW_FERTILIZER : FertilizerType.HIGH_FERTILIZER;
+                plot.FertilizerType = fertilizerName == "Low Fertilizer" ? FertilizerType.Low : FertilizerType.High;
                 return;
             }
 
             // else; take away fertilizer
             // Precondition: the fertilizer toggles are in a group, so only one may be active at a time
             // This means if you disable a toggle, then both are off, so there is no fertilizer
-            plot.FertilizerType = FertilizerType.NO_FERTILIZER;
+            plot.FertilizerType = FertilizerType.None;
             GameState.s_Player.Inventory.AddItem(fertilizerName);
         };
     }

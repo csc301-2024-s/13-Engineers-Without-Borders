@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 /*
  * Author: Hoa Nguyen
  * This class represents a child in a family

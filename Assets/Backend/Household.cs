@@ -16,6 +16,8 @@ namespace Backend
         public Inventory Inventory { get; }
         public int Wheat { get; set; }
 
+        public int NumPlots { get; set; }
+
         //Constructor for this class
         public Household(int startMoney, string familyName, int numChildren, int numAdults, int numPlots)
         {
@@ -24,6 +26,7 @@ namespace Backend
             Family = new Family(familyName, numChildren, numAdults);
             Land = new Farmland(numPlots);
             Wheat = 0;
+            NumPlots = numPlots;
         } 
 
         /*
@@ -51,6 +54,11 @@ namespace Backend
                 CalculateRemainingYield();
                 Land.canBeHarvested = false;
             }
+        }
+
+        public string GetName()
+        {
+            return Family.FamilyName;
         }
     }
 }

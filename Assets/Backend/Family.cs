@@ -39,7 +39,7 @@ public class Family
         _numChildren = NumChildren;
     }
 
-    //Calculate the age of a child
+    //Generate a random age for the child
     private int CalculateChildAge()
     {
         // Use the current year and month to calculate age
@@ -47,7 +47,6 @@ public class Family
         int currentYear = currentTime.Year;
         int currentMonth = currentTime.Month;
 
-        // Example: age is a function of the current year and month
         int baseAge = 5; // Base age for all children
         int age = baseAge + (currentYear % 10) - (currentMonth % 5);
 

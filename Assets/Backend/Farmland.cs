@@ -36,9 +36,5 @@ namespace Backend
 
         }   
 
-        // Add a plot to this land
-        public void AddPlot() {
-            Plots.Add(new FarmPlot(0, FertilizerType.NO_FERTILIZER));
-        }
     }
 }

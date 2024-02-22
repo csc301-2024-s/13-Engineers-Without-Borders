@@ -46,7 +46,7 @@ namespace Backend
         }
 
         // Gets the count of a certain item in the inventory
-        // Return 0 if it doesn't exist
+        // Log an error and return -1 if item doesn't exist.
         public int GetAmount(string item)
         {
             if (_items.ContainsKey(item))
@@ -54,7 +54,8 @@ namespace Backend
                 return _items[item];
             }
 
-            return 0;
+            Debug.Log("Trying to get item that doesn't exist in inventory: " + item);
+            return -1;
         }
 
         // Sees if <item> is in the inventory

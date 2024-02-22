@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 /*
  * Author: Hoa Nguyen, Bill Guo
  * This class represents a household 
@@ -16,8 +17,6 @@ namespace Backend
         public Inventory Inventory { get; }
         public int Wheat { get; set; }
 
-        public int NumPlots { get; set; }
-
         //Constructor for this class
         public Household(int startMoney, string familyName, int numChildren, int numAdults, int numPlots)
         {
@@ -26,7 +25,6 @@ namespace Backend
             Family = new Family(familyName, numChildren, numAdults);
             Land = new Farmland(numPlots);
             Wheat = 0;
-            NumPlots = numPlots;
         } 
 
         /*
@@ -42,7 +40,7 @@ namespace Backend
         // Sells all the wheat in the househould and updates money 
         public void SellWheat() {
             if (Wheat > 0) {
-                int income = Wheat * Market.GetPrice("wheat"); //Change if market is implemented differently
+                int income = Wheat * Market.GetPrice("Wheat"); //Change if market is implemented differently
                 Money = Money + income;
                 Wheat = 0;
             }
@@ -54,11 +52,6 @@ namespace Backend
                 CalculateRemainingYield();
                 Land.canBeHarvested = false;
             }
-        }
-
-        public string GetName()
-        {
-            return Family.FamilyName;
         }
     }
 }

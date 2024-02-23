@@ -35,7 +35,7 @@ namespace Backend
         public static void Initialize(Household Player)
         {
             s_Player = Player;
-            s_Year = 1;
+            s_Year = 0;
             s_Phase = 0;
             Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
@@ -53,6 +53,7 @@ namespace Backend
         {
             Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
+            s_Year++;
             s_Phase = 1;
             Market.UpdateWheatPrice();
             Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
@@ -69,6 +70,7 @@ namespace Backend
 
         public static void AdvanceToPhaseTwo()
         {
+            s_Phase = 2;
             foreach (Household household in s_Households) {
                 household.Land.CanBeHarvested = true;
             }
@@ -78,6 +80,7 @@ namespace Backend
 
         public static void AdvanceToPhaseThree()
         {
+            s_Phase = 3;
             SceneUtils.LoadScene("Market");
             // TODO: if player's wheat is negative, alert them
             // this can be done in the future

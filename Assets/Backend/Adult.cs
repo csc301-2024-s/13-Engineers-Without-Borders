@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Backend;
 
 /*
@@ -8,8 +9,8 @@ using Backend;
 public class Adult : FamilyMember
 {
     public const int Consumption = 10;
-    public int MaxAssignedPlots { get; private set; }
-    public FarmPlot[] AssignedPlots;
+    public int MaxAssignedPlots { get; private set; } = 2;
+    public List<FarmPlot> AssignedPlots { get; } = new();
     private bool _hasOx;
     private bool _isAvailable;
 
@@ -36,24 +37,10 @@ public class Adult : FamilyMember
         _isAvailable = false;
     }
 
-    //Assign a farm plot to this adult. Return true if success. Otherwise, return false
-    public bool AssignPlot(FarmPlot Plot)
-    {
-        if (Plot.Worker != null)
-        {
-            return false;
-        }
-        else
-        {
-            Plot.Worker = this;
-            return true;
-        }
-    }
-
     // Check if the adult can be assigned to a farm plot
     public bool CanBeAssignedTo()
     {
-        return AssignedPlots.Length < MaxAssignedPlots;
+        return AssignedPlots.Count < MaxAssignedPlots;
     }
 
 }

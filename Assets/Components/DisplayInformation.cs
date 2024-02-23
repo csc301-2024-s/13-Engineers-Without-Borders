@@ -1,4 +1,6 @@
 using UnityEngine;
+using Backend;
+
 /*
  * Author: Hoa Nguyen
  * This scence is used to display the information of the selected household
@@ -18,6 +20,6 @@ public class DisplayInformation : MonoBehaviour
     // Display the household information
     void DisplayHouseholdInformation(string householdData)
     {
-        informationText.text = "Weather Index: 3\n" + householdData +  "\nWheat Price: 5\n";
+        informationText.text = $"Weather Index: {GameState.s_WeatherIndex}\n{householdData}\nWheat Price: {Market.GetPrice("Wheat")}\n";
     }
 }

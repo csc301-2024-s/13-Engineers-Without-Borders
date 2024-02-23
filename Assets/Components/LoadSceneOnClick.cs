@@ -5,7 +5,7 @@ using UnityEngine.UI;
 // Used to make a button load a scene on click
 public class LoadSceneOnClick : MonoBehaviour
 {
-    public string sceneName;  // this field is for dependency injection to be possible
+    [SerializeField] string sceneName;  // this field is for dependency injection to be possible
 
     void Start() {
         // If on an object with a button component, assign it automatically

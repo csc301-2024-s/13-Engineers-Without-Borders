@@ -12,8 +12,8 @@ public class Family
 {
     public string Name { get; }
 
-    List<Adult> Adults = new List<Adult>();
-    List<Child> Children = new List<Child>();
+    public List<Adult> Adults { get; } = new List<Adult>();
+    public List<Child> Children { get; } = new List<Child>();
 
     //Constructor of the class
     public Family(string FamilyName, int NumChildren, int numAdults)

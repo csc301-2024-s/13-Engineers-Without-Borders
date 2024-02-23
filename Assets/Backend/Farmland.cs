@@ -28,6 +28,10 @@ namespace Backend
 
             foreach (FarmPlot plot in Plots) {
                 totalYield += plot.GetYield();
+
+                // once collected, reset seed type and fertilizer
+                plot.SeedType = 0;
+                plot.FertilizerType = FertilizerType.None;
             }
 
             return totalYield;

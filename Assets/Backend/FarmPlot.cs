@@ -10,7 +10,7 @@ namespace Backend
         public FertilizerType FertilizerType { get; set; }
 
         // Adult assigned to this plot
-        public Adult Worker { get; set; }
+        public Adult Worker { get; private set; }
 
 
         public FarmPlot(int seedType, FertilizerType fertilizerType, Adult worker = null)
@@ -25,11 +25,19 @@ namespace Backend
         {
             return GameState.s_WeatherIndex;
         }
+
+        public void AssignWorker(Adult worker)
+        {
+            worker.AssignedPlots.Add(this);
+            Worker = worker;
+        }
+
         /// <summary>
-        /// Remove the worker assigned to this farm plot.  TODO: need to update worker's assigned plots
+        /// Remove the worker assigned to this farm plot.
         /// </summary>
         public void RemoveWorker()
         {
+            Worker.AssignedPlots.Remove(this);
             Worker = null;
         }
 

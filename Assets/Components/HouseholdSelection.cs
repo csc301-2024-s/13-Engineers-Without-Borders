@@ -2,12 +2,13 @@ using UnityEngine;
 using Backend;
 using TMPro;
 using UnityEngine.SceneManagement;
+
 /*
  * Author: Hoa Nguyen
  * Handle the logic of Household selection
  */
 
-public class LogicScript : MonoBehaviour
+public class HouseholdSelection : MonoBehaviour
 {
 
     public static Household[] s_PredefinedHouseholds = new Household[]
@@ -54,6 +55,6 @@ public class LogicScript : MonoBehaviour
         GameState.Initialize(CurrentHousehold);
         PlayerPrefs.SetString("SelectedHousehold", "Number of Adults: " + CurrentHousehold.Family.GetAdultAmount() + 
             "\nNumber of Children: " + CurrentHousehold.Family.GetChildrenAmount() + "\nLand: " + CurrentHousehold.Land.Plots.Count);
-        SceneManager.LoadScene("DisplayInformation");
+        GameState.AdvanceToPhaseOne();
     }
 }

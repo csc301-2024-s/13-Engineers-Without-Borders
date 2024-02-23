@@ -21,21 +21,42 @@ namespace Backend
             Family = new Family(familyName, numChildren, numAdults);
             Land = new Farmland(numPlots);
             Wheat = 0;
-        } 
+
+            // Default assignment of adults to farmplots
+            foreach (Adult adult in Family.Adults)
+            {
+                if (!adult.CanBeAssignedTo())
+                {
+                    continue;
+                }
+                // find first farmplot that can be assigned to
+                foreach (FarmPlot plot in Land.Plots)
+                {
+                    if (plot.Worker != null)
+                    {
+                        continue;
+                    }
+                    plot.AssignWorker(adult);
+                }
+            }
+        }
 
         /*
          * Calculates the net wheat yield of the household after consumption and updates the wheat value accordingly
          * Note that the wheat value can be negative, which will indicate starvation in phase 3
          */
-        public void CalculateRemainingYield() {
+        public void CalculateRemainingYield()
+        {
             int totalYield = Land.GetTotalYield();
             int totalConsumption = Family.GetTotalConsumption();
             Wheat = totalYield - totalConsumption;
         }
 
         // Sells all the wheat in the househould and updates money 
-        public void SellWheat() {
-            if (Wheat > 0) {
+        public void SellWheat()
+        {
+            if (Wheat > 0)
+            {
                 int income = Wheat * Market.GetPrice("wheat"); //Change if market is implemented differently
                 Money = Money + income;
                 Wheat = 0;
@@ -43,8 +64,10 @@ namespace Backend
         }
 
         // If the farmland is harvestable, calculate net wheat yield and set canBeHarvested to false;
-        public void HarvestCrops() {
-            if (Land.CanBeHarvested) {
+        public void HarvestCrops()
+        {
+            if (Land.CanBeHarvested)
+            {
                 CalculateRemainingYield();
                 Land.CanBeHarvested = false;
             }

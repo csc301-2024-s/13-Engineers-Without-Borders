@@ -63,6 +63,8 @@ namespace Backend
             {
                 Fate.TriggerYearlyEvents();
             }
+
+            SceneUtils.LoadScene("ManageHousehold");
         }
 
         public static void AdvanceToPhaseTwo()
@@ -70,6 +72,8 @@ namespace Backend
             foreach (Household household in s_Households) {
                 household.Land.CanBeHarvested = true;
             }
+
+            SceneUtils.LoadScene("Harvest");
         }
 
         public static void AdvanceToPhaseThree()

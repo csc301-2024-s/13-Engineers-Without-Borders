@@ -9,8 +9,6 @@ using Backend;
 public class Adult : FamilyMember
 {
     public const int Consumption = 10;
-    public int MaxAssignedPlots { get; private set; } = 2;
-    public List<FarmPlot> AssignedPlots { get; } = new();
     private bool _hasOx;
     private bool _isAvailable;
 
@@ -36,11 +34,4 @@ public class Adult : FamilyMember
     {
         _isAvailable = false;
     }
-
-    // Check if the adult can be assigned to a farm plot
-    public bool CanBeAssignedTo()
-    {
-        return AssignedPlots.Count < MaxAssignedPlots;
-    }
-
 }

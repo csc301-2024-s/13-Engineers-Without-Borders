@@ -66,7 +66,7 @@ public class Family
     //Grow a child up if he or she reaches 12
     public void IncrementAge()
     {
-        for (var i = 0; i < Children.Count; i++)
+        for (var i = Children.Count - 1; i > -1; i--)
         {
             Children[i].IncrementAge();
             if (Children[i].Age >= 12)
@@ -75,7 +75,6 @@ public class Family
                 Adults.Add(NewAdult);
                 Children.Remove(Children[i]);
             }
-
         }
     }
 

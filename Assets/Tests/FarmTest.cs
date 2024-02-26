@@ -12,10 +12,9 @@ public class FarmTest
     [Test]
     public void TestGetYield()
     {
-        int seedType = 1; 
+        SeedType seedType = SeedType.HYC; 
         FertilizerType fertilizerType = FertilizerType.High;
-        Adult worker = new Adult("Test", "Name");
-        FarmPlot plot = new FarmPlot(seedType, fertilizerType, worker);
+        FarmPlot plot = new FarmPlot(seedType, fertilizerType);
         
         GameState.s_WeatherIndex = 3;
 
@@ -31,10 +30,9 @@ public class FarmTest
     {
         Farmland farmland = new Farmland(0);
 
-        Adult worker = new Adult("Test", "Name");
-        FarmPlot plot1 = new FarmPlot(1, FertilizerType.None, worker); 
-        FarmPlot plot2 = new FarmPlot(1, FertilizerType.Low, worker); 
-        FarmPlot plot3 = new FarmPlot(1, FertilizerType.High, worker); 
+        FarmPlot plot1 = new FarmPlot(SeedType.HYC, FertilizerType.None); 
+        FarmPlot plot2 = new FarmPlot(SeedType.HYC, FertilizerType.Low); 
+        FarmPlot plot3 = new FarmPlot(SeedType.HYC, FertilizerType.High); 
 
         GameState.s_WeatherIndex = 1;
 

@@ -21,24 +21,6 @@ namespace Backend
             Family = new Family(familyName, numChildren, numAdults);
             Land = new Farmland(numPlots);
             Wheat = 0;
-
-            // Default assignment of adults to farmplots
-            foreach (Adult adult in Family.Adults)
-            {
-                if (!adult.CanBeAssignedTo())
-                {
-                    continue;
-                }
-                // find first farmplot that can be assigned to
-                foreach (FarmPlot plot in Land.Plots)
-                {
-                    if (plot.Worker != null)
-                    {
-                        continue;
-                    }
-                    plot.AssignWorker(adult);
-                }
-            }
         }
 
         /*
@@ -50,17 +32,6 @@ namespace Backend
             int totalYield = Land.GetTotalYield();
             int totalConsumption = Family.GetTotalConsumption();
             Wheat = totalYield - totalConsumption;
-        }
-
-        // Sells all the wheat in the househould and updates money 
-        public void SellWheat()
-        {
-            if (Wheat > 0)
-            {
-                int income = Wheat * Market.GetPrice("wheat"); //Change if market is implemented differently
-                Money = Money + income;
-                Wheat = 0;
-            }
         }
 
         // If the farmland is harvestable, calculate net wheat yield and set canBeHarvested to false;

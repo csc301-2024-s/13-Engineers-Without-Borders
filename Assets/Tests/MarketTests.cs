@@ -34,7 +34,7 @@ public class MarketTests
     [Test]
     public void TestBuyBasic()
     {
-        Household buyer = new(10000, "Rich", 0, 5, 69);
+        Household buyer = new(10000, "Rich", 0, 5, Farmland.MaxPlots - 1);
         Market.Initialize();
         
         int moneyNow = buyer.Money;
@@ -48,7 +48,9 @@ public class MarketTests
         Assert.AreEqual(buyer.Inventory.GetAmount("High Fertilizer"), 1);
 
         Market.Buy("Land", buyer);
-        Assert.AreEqual(buyer.Land.Plots.Count, 70);
+        Assert.AreEqual(buyer.Land.Plots.Count, Farmland.MaxPlots);
+        Market.Buy("Land", buyer);
+        Assert.AreEqual(buyer.Land.Plots.Count, Farmland.MaxPlots);  // can't go past max
     }
 
     // Test buying ox

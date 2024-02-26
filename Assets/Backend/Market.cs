@@ -57,6 +57,10 @@ namespace Backend
             {
                 buyer.Land.AddPlot();
             };  // Instead of adding to inventory, add plot of land instead (currently there is no limit)
+            _products["Land"].PurchaseCondition = (Household buyer) =>
+            {
+                return buyer.Land.Plots.Count < 25;
+            };
         }
 
         // <buyer> requests to purchase one product with name <name>

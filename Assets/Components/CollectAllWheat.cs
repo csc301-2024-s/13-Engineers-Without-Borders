@@ -32,7 +32,5 @@ public class CollectAllWheat : MonoBehaviour
         nextButton.gameObject.SetActive(true);
 
         GameState.s_Player.HarvestCrops();
-        Debug.Log("Crops harvested");
-
     }
 }

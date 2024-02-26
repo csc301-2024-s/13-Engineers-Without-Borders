@@ -7,6 +7,8 @@ namespace Backend
 {
     public class Farmland
     {
+        public const int MaxPlots = 25;
+
         public List<FarmPlot> Plots;
         public bool CanBeHarvested { get; set; }
 
@@ -40,6 +42,11 @@ namespace Backend
 
         // Add a plot to this land
         public void AddPlot() {
+            if (Plots.Count >= MaxPlots)
+            {
+                return;
+            }
+
             Plots.Add(new FarmPlot(0, FertilizerType.None));
         }
     }

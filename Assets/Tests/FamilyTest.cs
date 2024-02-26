@@ -14,6 +14,7 @@ public class FamilyTest
         Family family = new Family("Rama", 4, 3);
         Assert.AreEqual(family.GetAdultAmount(), 3);
         Assert.AreEqual(family.GetChildrenAmount(), 4);
+        Assert.AreEqual(family.GetLabourPoints(), 3 * Adult.BaseLabourPoints);
     }
 
     // Test the CreateChild method

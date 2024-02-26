@@ -9,6 +9,8 @@ using Backend;
 public class Adult : FamilyMember
 {
     public const int Consumption = 10;
+    public const int BaseLabourPoints = 2;
+    
     private bool _hasOx;
     private bool _isAvailable;
 
@@ -25,13 +27,17 @@ public class Adult : FamilyMember
     public void AssignOx(bool assigned)
     {
         _hasOx = assigned;
-        //modify maxAssignedPlot here
-
     }
 
     //Handle the event that an adult must stay at home to look after the children
     public void LookAfterChild()
     {
         _isAvailable = false;
+    }
+
+    // Calculate how many labour points this adult gives you
+    public int GetLabourPoints()
+    {
+        return _hasOx ? BaseLabourPoints * 2 : BaseLabourPoints;
     }
 }

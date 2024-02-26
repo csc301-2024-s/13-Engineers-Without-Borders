@@ -90,4 +90,8 @@ public class Family
         return Children.Count();
     }
 
+    // Get total labour points that this family can give
+    public int GetLabourPoints() {
+        return Adults.Aggregate(0, (sum, adult) => sum + adult.GetLabourPoints());
+    }
 }

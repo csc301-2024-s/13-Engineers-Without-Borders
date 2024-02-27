@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // This class represents a household's inventory of items in storage.
 namespace Backend
 {
-    public class Inventory
+    public class Inventory : HouseholdAsset
     {
         private Dictionary<string, int> _items;
 

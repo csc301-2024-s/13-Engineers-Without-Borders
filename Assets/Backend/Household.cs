@@ -1,5 +1,5 @@
 /*
- * Author: Hoa Nguyen, Bill Guo
+ * Original Author: Hoa Nguyen, Bill Guo
  * This class represents a household 
  */
 
@@ -21,6 +21,10 @@ namespace Backend
             Family = new Family(familyName, numChildren, numAdults);
             Land = new Farmland(numPlots);
             Wheat = 0;
+
+            Inventory.SetOwner(this);
+            Family.SetOwner(this);
+            Land.SetOwner(this);
         }
 
         /*

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 /*
- * Author: Hoa Nguyen
+ * Original Author: Hoa Nguyen
  * Handle the logic of Household selection
  */
 

@@ -2,7 +2,7 @@ using Backend;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Enable/disable a toggle based on if you have some of an inventory item
 public class ToggleIfHasProduct : MonoBehaviour
 {

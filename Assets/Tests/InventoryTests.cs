@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using Backend;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Testing some of the non-trivial methods of Inventory
 public class InventoryTests
 {

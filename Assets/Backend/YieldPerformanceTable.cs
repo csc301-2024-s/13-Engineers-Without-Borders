@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 /*
- * Author: Bill Guo
+ * Original Author: Bill Guo
  */
 namespace Backend
 {

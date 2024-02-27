@@ -2,7 +2,7 @@ using UnityEngine;
 using Backend;
 
 /*
- * Author: Hoa Nguyen
+ * Original Author: Hoa Nguyen
  * This scence is used to display the information of the selected household
  */
 

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 
 /*
- * Author: Bill Guo
+ * Original Author: Bill Guo
  */
 namespace Backend
 {
-    public class Farmland
+    public class Farmland : HouseholdAsset
     {
         public const int MaxPlots = 25;
 
@@ -21,6 +21,16 @@ namespace Backend
             for (var i = 0; i < numPlots; i++)
             {
                 Plots.Add(new FarmPlot(0, FertilizerType.None));
+            }
+        }
+
+        // Set owner of this farm land and all plots
+        public override void SetOwner(Household owner)
+        {
+            base.SetOwner(owner);
+            foreach (FarmPlot plot in Plots)
+            {
+                plot.SetOwner(owner);
             }
         }
 

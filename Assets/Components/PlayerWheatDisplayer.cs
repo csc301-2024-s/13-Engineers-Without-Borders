@@ -2,7 +2,7 @@ using Backend;
 using TMPro;
 using UnityEngine;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Display the player's wheat in a formatted string
 public class PlayerWheatDisplayer : MonoBehaviour
 {

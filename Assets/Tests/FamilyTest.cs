@@ -3,7 +3,7 @@ using UnityEngine.TestTools;
 using Backend;
 using NUnit.Framework;
 
-// Author: Hoa Nguyen
+// Original Author: Hoa Nguyen
 // Basic tests for the methods of Family's methods 
 public class FamilyTest
 {

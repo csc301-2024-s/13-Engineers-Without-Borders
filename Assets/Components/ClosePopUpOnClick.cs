@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// Author: Kevin
+// Original Author: Kevin
 public class ClosePopUpOnClick : MonoBehaviour
 {
     [SerializeField] private GameObject PopUpWindow;

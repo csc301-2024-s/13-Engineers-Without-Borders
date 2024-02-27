@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-// Author: Kevin Wu, Andy Wang
+// Original Author: Kevin Wu, Andy Wang
 // This class represents the market where the player can buy products on phase 3.
 namespace Backend
 {

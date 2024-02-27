@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Author: Arick Liu
+ * Original Author: Arick Liu
  * This class represents a fate event, in which it happens every 
  */
 

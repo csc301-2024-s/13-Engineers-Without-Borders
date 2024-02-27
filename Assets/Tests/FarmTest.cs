@@ -5,7 +5,7 @@ using UnityEngine.TestTools;
 using Backend;
 using NUnit.Framework;
 
-// Author: Bill Guo
+// Original Author: Bill Guo
 public class FarmTest 
 {   
     // Tests the GetYield function in the FarmPlot Class

@@ -2,7 +2,7 @@ using Backend;
 using TMPro;
 using UnityEngine;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Displays how many of a certain product you have in your inventory
 public class ProductAmountDisplayer : MonoBehaviour
 {

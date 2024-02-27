@@ -2,7 +2,7 @@ using Backend;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Used to make a button advance phase on click
 public class AdvancePhaseOnClick : MonoBehaviour
 {

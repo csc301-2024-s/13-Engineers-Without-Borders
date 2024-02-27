@@ -2,7 +2,7 @@ using Backend;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Put this component on a button to make it buy something from the market on click
 public class BuyButton : MonoBehaviour
 {

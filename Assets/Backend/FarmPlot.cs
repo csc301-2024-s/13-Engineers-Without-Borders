@@ -14,15 +14,14 @@ namespace Backend
         HYC = 1
     }
 
-    // Author: Jacqueline Zhu
-    public class FarmPlot
+    // Original Author: Jacqueline Zhu
+    public class FarmPlot : HouseholdAsset
     {
         // 1 for HYC, 0 for normal
         public SeedType SeedType { get; set; }
 
         // Type of fertilizer
         public FertilizerType FertilizerType { get; set; }
-
 
         public FarmPlot(SeedType seedType, FertilizerType fertilizerType)
         {

@@ -2,7 +2,7 @@ using Backend;
 using TMPro;
 using UnityEngine;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Display a product's price as it is registered in the shop
 public class PlayerFarmSizeDisplayer : MonoBehaviour
 {

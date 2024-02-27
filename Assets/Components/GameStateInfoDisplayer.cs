@@ -2,7 +2,7 @@ using Backend;
 using TMPro;
 using UnityEngine;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Display year, phase, weather
 // Mostly a placeholder class
 public class GameStateInfoDisplayer : MonoBehaviour

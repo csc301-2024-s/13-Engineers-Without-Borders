@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 using Backend;
 using UnityEditor.VersionControl;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 public class MarketTests
 {
     // Test Market initializer

@@ -2,42 +2,44 @@ using System.Collections.Generic;
 using Backend;
 
 /*
- * Author: Hoa Nguyen
+ * Original Author: Hoa Nguyen
  * This class represents an adult in a family
  */
-
-public class Adult : FamilyMember
+namespace Backend
 {
-    public const int Consumption = 10;
-    public const int BaseLabourPoints = 2;
-    
-    private bool _hasOx;
-    private bool _isAvailable;
-
-    //Constructor of the class
-    public Adult(string First, string Last)
+    public class Adult : FamilyMember
     {
-        FirstName = First;
-        LastName = Last;
-        _isAvailable = true;
-        _hasOx = false;
-    }
+        public const int Consumption = 10;
+        public const int BaseLabourPoints = 2;
 
-    //Assign or de-assign an ox to the adult
-    public void AssignOx(bool assigned)
-    {
-        _hasOx = assigned;
-    }
+        private bool _hasOx;
+        private bool _isAvailable;
 
-    //Handle the event that an adult must stay at home to look after the children
-    public void LookAfterChild()
-    {
-        _isAvailable = false;
-    }
+        //Constructor of the class
+        public Adult(string First, string Last)
+        {
+            FirstName = First;
+            LastName = Last;
+            _isAvailable = true;
+            _hasOx = false;
+        }
 
-    // Calculate how many labour points this adult gives you
-    public int GetLabourPoints()
-    {
-        return _hasOx ? BaseLabourPoints * 2 : BaseLabourPoints;
+        //Assign or de-assign an ox to the adult
+        public void AssignOx(bool assigned)
+        {
+            _hasOx = assigned;
+        }
+
+        //Handle the event that an adult must stay at home to look after the children
+        public void LookAfterChild()
+        {
+            _isAvailable = false;
+        }
+
+        // Calculate how many labour points this adult gives you
+        public int GetLabourPoints()
+        {
+            return _hasOx ? BaseLabourPoints * 2 : BaseLabourPoints;
+        }
     }
 }

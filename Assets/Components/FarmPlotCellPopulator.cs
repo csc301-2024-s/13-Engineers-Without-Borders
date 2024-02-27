@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-// Author: Andy Wang
+// Original Author: Andy Wang
 // Generate grid of farm plot cells
 public class FarmPlotCellPopulator : MonoBehaviour
 {

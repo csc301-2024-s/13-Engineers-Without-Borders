@@ -1,11 +1,13 @@
 /*
- * Author: Hoa Nguyen
+ * Original Author: Hoa Nguyen
  * Class for a member in one family
  */
 
-public class FamilyMember
+namespace Backend
 {
-    public string FirstName { get; protected set; }
-    public string LastName { get; protected set; }
+    public class FamilyMember
+    {
+        public string FirstName { get; protected set; }
+        public string LastName { get; protected set; }
+    }
 }
-

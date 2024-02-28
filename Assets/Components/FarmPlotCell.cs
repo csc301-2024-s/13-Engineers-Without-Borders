@@ -72,7 +72,8 @@ public class FarmPlotCell : MonoBehaviour
         }
     }
 
-    // Add or remove seed type/fertilizer/irrigation/select for harvest on click, depending on phase
+    // Select or deselect this farm cell on click
+    // Also handle planting/harvesting/irrigating depending on phase (read FarmManager fields)
     void HandleClick()
     {
         Debug.Log("You clicked me!");

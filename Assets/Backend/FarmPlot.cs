@@ -23,16 +23,18 @@ namespace Backend
         // Type of fertilizer
         public FertilizerType FertilizerType { get; set; }
 
+        public bool Irrigated { get; set; }
+
         public FarmPlot(SeedType seedType, FertilizerType fertilizerType)
         {
             SeedType = seedType;
             FertilizerType = fertilizerType;
         }
 
-         // Returns either game's weather index or, if irrigated (implemented later), best weather
+         // Returns either game's weather index or, if irrigated, best weather
         public int GetWeatherEffect()
         {
-            return GameState.s_WeatherIndex;
+            return Irrigated ? 1 : GameState.s_WeatherIndex;
         }
 
         /// <summary>

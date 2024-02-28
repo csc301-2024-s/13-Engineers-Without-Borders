@@ -9,7 +9,8 @@ public class FarmPlotCell : MonoBehaviour
     [SerializeField] Color irrigatedColor;
     [SerializeField] Color irrigatedPressedColor;
 
-    private Color _originalColor;
+    private Color _origColor;
+    private Color _origPressedColor;
     private Button _btn;
     private TextMeshProUGUI _hycLabel;
     private TextMeshProUGUI _fertilizerLabel;
@@ -20,7 +21,8 @@ public class FarmPlotCell : MonoBehaviour
     {
         _btn = GetComponent<Button>();
         _btn.onClick.AddListener(HandleClick);
-        _originalColor = _btn.colors.normalColor;
+        _origColor = _btn.colors.normalColor;
+        _origPressedColor = _btn.colors.pressedColor;
 
         _hycLabel = transform.Find("HYC").GetComponent<TextMeshProUGUI>();
         _fertilizerLabel = transform.Find("Fertilizer").GetComponent<TextMeshProUGUI>();
@@ -56,7 +58,18 @@ public class FarmPlotCell : MonoBehaviour
             _fertilizerLabel.text = "";
         }
 
-        // TODO: change colour to blue if irrigated
+        // change colour to blue if irrigated
+        var colors = _btn.colors;
+        if (Plot.Irrigated)
+        {
+            colors.normalColor = irrigatedColor;
+            colors.pressedColor = irrigatedPressedColor;
+        }
+        else
+        {
+            colors.normalColor = _origColor;
+            colors.pressedColor = _origPressedColor;
+        }
     }
 
     // Add or remove seed type/fertilizer/irrigation/select for harvest on click, depending on phase

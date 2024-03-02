@@ -57,7 +57,7 @@ namespace Backend
             s_Phase = 1;
             Market.UpdateWheatPrice();
             Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
-            Market.SetPriceMultiplier("Ox", 1);
+            Market.SetPriceMultiplier("Ox", 1);  // in case it was halved last year
             //Market.SetPriceMultiplier("Tubewell", 1);
 
             if (s_Year >= 2)

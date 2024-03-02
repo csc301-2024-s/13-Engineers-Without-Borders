@@ -21,6 +21,5 @@ public class ToolToggle : MonoBehaviour
     {
         FarmManager.SelectedTool = value ? toolName : null;
         // if this toggle is clicked, the other selected toggle gets disabled, THEN this one gets enabled
-        Debug.Log(FarmManager.SelectedTool);
     }
 }

@@ -57,7 +57,9 @@ namespace Backend
                 return;
             }
 
-            Plots.Add(new FarmPlot(0, FertilizerType.None));
+            FarmPlot newPlot = new(0, FertilizerType.None);
+            newPlot.SetOwner(Owner);
+            Plots.Add(newPlot);
         }
     }
 }

@@ -38,13 +38,12 @@ namespace Backend
         }
 
         /// <summary>
-        /// Returns the yield of this plot. Returns 0 if there is no worker assigned to this plot.
+        /// Returns the yield of this plot. Return 0 if this plot isn't set to be harvested.
         /// </summary>
         /// <returns></returns>
         public int GetYield()
         {
             return YieldPerformanceTable.GetYield(this);
         }
-
     }
 }

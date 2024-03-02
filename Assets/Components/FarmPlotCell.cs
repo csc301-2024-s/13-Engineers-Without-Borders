@@ -74,9 +74,53 @@ public class FarmPlotCell : MonoBehaviour
 
     // Select or deselect this farm cell on click
     // Also handle planting/harvesting/irrigating depending on phase (read FarmManager fields)
+    // Precondition: if the player has a tool selected, that means they can use it in the first place
     void HandleClick()
     {
-        Debug.Log("You clicked me!");
-        // TODO
+        Household owner = Plot.Owner;
+        Inventory inventory = owner.Inventory;
+
+        // Add or remove HYC Seed
+        if (FarmManager.SelectedTool == "HYC Seed")
+        {
+            if (Plot.SeedType == SeedType.Regular && inventory.Contains("HYC Seed"))
+            {
+                Plot.SeedType = SeedType.HYC;
+                inventory.RemoveItem("HYC Seed");
+            }
+            else
+            {
+                Plot.SeedType = SeedType.Regular;
+                inventory.AddItem("HYC Seed");
+            }
+        }
+
+        // Add or remove fertilizer
+        // Must replace current fertilizer type with selected one, must put it back in inventory
+        // If cell already has selected fertilizer, tapping it should remove it
+        if (FarmManager.SelectedTool == "Low Fertilizer" || FarmManager.SelectedTool == "High Fertilizer")
+        {
+            // if this becomes too cumbersome, create a static util function to convert between the two
+            string selectedFertilizerName = FarmManager.SelectedTool;
+            FertilizerType selectedFertilizer = selectedFertilizerName == "Low Fertilizer" ? FertilizerType.Low : FertilizerType.High;
+            string otherFertilizerName = selectedFertilizerName == "High Fertilizer" ? "Low Fertilizer" : "High Fertilizer";
+
+            // no fertilizer? simply add new fertilizer type
+            if (Plot.FertilizerType == FertilizerType.None && inventory.Contains(selectedFertilizerName))
+            {
+                Plot.FertilizerType = selectedFertilizer;
+                inventory.RemoveItem(selectedFertilizerName);
+            }
+            else if (Plot.FertilizerType == selectedFertilizer)
+            {  // the plot already has the fertilizer you selected, so it should be removed
+                Plot.FertilizerType = FertilizerType.None;
+                inventory.AddItem(selectedFertilizerName);
+            } else if (inventory.Contains(selectedFertilizerName))
+            {  // the plot has the other fertilizer type, so replace it
+                Plot.FertilizerType = selectedFertilizer;
+                inventory.RemoveItem(selectedFertilizerName);
+                inventory.AddItem(otherFertilizerName);
+            }
+        }
     }
 }

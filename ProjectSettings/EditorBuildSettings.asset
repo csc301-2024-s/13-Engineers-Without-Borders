@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Welcome.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 0
-    path: Assets/Scenes/AboutApp.unity
+    path: Assets/Scenes/LearnMore.unity
     guid: 9f351bb1f26032a49a0efc028d36733f
   - enabled: 0
     path: Assets/Scenes/AboutGR.unity

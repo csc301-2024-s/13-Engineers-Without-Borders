@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Screen%20UI/style.uss?fileID=7433441132597879392&amp;guid=ce7c3c0c2d28e0e42ae329ffe6092bf3&amp;type=3#style" />
+    <ui:VisualElement name="info-text" style="flex-grow: 1; min-height: 750px; max-height: 750px; margin-top: 0; width: 1125px;">
+        <ui:Label tabindex="-1" text="Positive Effects" parse-escape-sequences="true" display-tooltip-when-elided="true" name="title" style="font-size: 75px; white-space: normal; -unity-text-align: upper-center; color: rgb(255, 255, 255); margin-top: 100px;" />
+        <ui:Label tabindex="-1" text="PLACEHOLDER DESCRIPTION" parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="buttons" class="sideways-buttons">
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="AboutMechanization" name="back" class="load-scene-button" />
+        <ui:Button text="Next" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="NegativeEffects" name="next" class="load-scene-button" />
+    </ui:VisualElement>
+</ui:UXML>

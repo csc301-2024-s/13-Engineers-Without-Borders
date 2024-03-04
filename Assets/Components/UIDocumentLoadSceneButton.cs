@@ -18,15 +18,15 @@ public class UIDocumentLoadSceneButton : MonoBehaviour
 
         // query all buttons of class load-scene-button to handle their click
         _root.Query<Button>(className: "load-scene-button").ForEach(btn => {
-            btn.clicked += HandleLoadSceneButton(btn.tooltip);
+            btn.clicked += HandleLoadSceneButton(btn);
         });
     }
 
     // Return action that, when called, loads scene to sceneName
-    Action HandleLoadSceneButton(string sceneName)
+    Action HandleLoadSceneButton(Button btn)
     {
         return () => {
-            SceneUtils.LoadScene(sceneName);
+            SceneUtils.LoadScene(btn.tooltip);
         };
     }
 }

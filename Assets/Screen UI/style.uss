@@ -5,10 +5,10 @@
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
     background-color: rgba(0, 0, 0, 0.5);
-    border-left-color: rgba(255, 255, 255, 0);
-    border-right-color: rgba(255, 255, 255, 0);
-    border-top-color: rgba(255, 255, 255, 0);
-    border-bottom-color: rgba(255, 255, 255, 0);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
     border-top-width: 8px;
     border-right-width: 8px;
     border-bottom-width: 8px;
@@ -17,4 +17,24 @@
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sideways-buttons {
+    flex-grow: 1;
+    height: 200px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 1125px;
+    justify-content: space-around;
+    align-items: flex-end;
+    max-height: 200px;
+    min-height: 200px;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 50px;
 }

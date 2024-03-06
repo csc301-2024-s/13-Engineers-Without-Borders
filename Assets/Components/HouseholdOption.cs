@@ -12,8 +12,12 @@ public class HouseholdOption : MonoBehaviour
     void Start()
     {
         _btn = GetComponent<Button>();
+        _btn.onClick.AddListener(OnClick);
+    }
 
-        // TODO: assign a function to <_btn.onClick> so that when this button gets clicked, set the global player variable to the given Household
-        // also invoke SceneUtils.LoadScene to load the ManageHousehold scene
+    void OnClick()
+    {
+        GameState.Initialize(Household);
+        GameState.AdvanceToPhaseOne();
     }
 }

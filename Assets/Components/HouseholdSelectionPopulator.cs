@@ -2,7 +2,7 @@ using Backend;
 using TMPro;
 using UnityEngine;
 
-// Original Authors: Andy Wang & TODO: FILL IN YOUR NAME HERE
+// Original Author: Andy Wang
 // Populate the household selection screen with premade Households
 public class HouseholdSelectionPopulator : MonoBehaviour
 {
@@ -24,11 +24,14 @@ public class HouseholdSelectionPopulator : MonoBehaviour
 
     void SetUpHouseholdOptionManager(GameObject btn, Household household)
     {
-        // TODO: Use GetComponent on the btn to retrieve the attached HouseholdOption script, and set its Household property accordingly
+        HouseholdOption option = btn.GetComponent<HouseholdOption>();
+        option.Household = household;
 
         TextMeshProUGUI name = btn.transform.Find("Name").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI description = btn.transform.Find("Description").GetComponent<TextMeshProUGUI>();
 
-        // TODO: Set <name.text> to the household's name and <name.description> to "X adults<br>Y children<br>Z plots of land"
+        name.text = $"The {household.Family.Name} Household";
+        description.text = $"{household.Family.GetAdultAmount()} adults<br>" +
+            $"{household.Family.GetAdultAmount()} children<br>{household.Land.Plots.Count} plots of land";
     }
 }

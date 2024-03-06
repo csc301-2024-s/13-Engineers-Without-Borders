@@ -15,7 +15,7 @@ namespace Backend
         public static Household[] s_PredefinedHouseholds = new Household[]
         {
             new Household(500, "Madhar", 3, 2, 3),
-            new Household(500, "Barlch", 4, 2, 3),
+            new Household(500, "Bralch", 4, 2, 3),
             new Household(500, "Rama", 4, 3, 4),
             new Household(500, "Dulai", 4, 5, 4),
             new Household(500, "Grewal", 4, 6, 5),

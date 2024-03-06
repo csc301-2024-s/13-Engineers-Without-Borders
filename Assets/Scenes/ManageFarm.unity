@@ -592,13 +592,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1525356867668929631, guid: 96ac3ce2e60475345a89fb6746cf1944, type: 3}
       propertyPath: m_text
-      value: 'Home
-
-        (placeholder)'
+      value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 1525356867668929631, guid: 96ac3ce2e60475345a89fb6746cf1944, type: 3}
       propertyPath: m_fontSize
-      value: 34.1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1525356867668929631, guid: 96ac3ce2e60475345a89fb6746cf1944, type: 3}
       propertyPath: m_fontColor.b
@@ -722,11 +720,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7709391757876973778, guid: 96ac3ce2e60475345a89fb6746cf1944, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7709391757876973778, guid: 96ac3ce2e60475345a89fb6746cf1944, type: 3}
       propertyPath: sceneName
-      value: Home
+      value: ManageHousehold
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

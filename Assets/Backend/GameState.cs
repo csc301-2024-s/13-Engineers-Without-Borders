@@ -63,6 +63,24 @@ namespace Backend
             if (s_Year >= 2)
             {
                 Fate.TriggerYearlyEvents();
+
+                // age up children when they're old enough
+                foreach (Household household in s_Households)
+                {
+                    Family fam = household.Family;
+                    for (int i = fam.Children.Count - 1; i > -1; i--)
+                    {
+                        Child child = fam.Children[i];
+                        if (child.Age <= 12)
+                        {
+                            continue;
+                        }
+
+                        fam.Children.Remove(child);
+                        Adult newAdult = child.ToAdult();
+                        fam.Adults.Add(newAdult);
+                    }
+                }
             }
 
             SceneUtils.LoadScene("ManageHousehold");

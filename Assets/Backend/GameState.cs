@@ -71,6 +71,7 @@ namespace Backend
                     for (int i = fam.Children.Count - 1; i > -1; i--)
                     {
                         Child child = fam.Children[i];
+                        child.IncrementAge();
                         if (child.Age <= 12)
                         {
                             continue;

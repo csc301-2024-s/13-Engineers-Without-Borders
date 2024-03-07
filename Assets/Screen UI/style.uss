@@ -4,7 +4,7 @@
     font-size: 75px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(136, 199, 2);
     border-left-color: rgb(255, 255, 255);
     border-right-color: rgb(255, 255, 255);
     border-top-color: rgb(255, 255, 255);
@@ -37,4 +37,13 @@
     position: absolute;
     bottom: 0;
     padding-bottom: 50px;
+}
+
+.background {
+}
+
+.title-bar {
+}
+
+.title-text {
 }

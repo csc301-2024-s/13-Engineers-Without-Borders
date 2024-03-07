@@ -37,6 +37,20 @@ public class FarmManager : MonoBehaviour
         SetSelectedTool("Irrigation");
     }
 
+    private static void SetSelectedTool(string toolName)
+    {
+        if (SelectedTool == toolName)
+        {
+            SelectedTool = null;
+        }
+        else
+        {
+            SelectedTool = toolName;
+        }
+
+        UpdateToolSelectionUI();
+    }
+
     public static void HarvestSelectedCells()
     {
         foreach (FarmPlotCell cell in SelectedCells)

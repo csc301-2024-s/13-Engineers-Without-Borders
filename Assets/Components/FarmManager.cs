@@ -17,6 +17,26 @@ public class FarmManager : MonoBehaviour
 
     public static List<FarmPlotCell> SelectedCells = new List<FarmPlotCell>();
 
+    public void SelectHYCSeed()
+    {
+        SetSelectedTool("HYC Seed");
+    }
+
+    public void SelectLowFertilizer()
+    {
+        SetSelectedTool("Low Fertilizer");
+    }
+
+    public void SelectHighFertilizer()
+    {
+        SetSelectedTool("High Fertilizer");
+    }
+
+    public void SelectIrrigationTool()
+    {
+        SetSelectedTool("Irrigation");
+    }
+
     public static void HarvestSelectedCells()
     {
         foreach (FarmPlotCell cell in SelectedCells)

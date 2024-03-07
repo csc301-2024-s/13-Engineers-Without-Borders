@@ -69,10 +69,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Conclusion.unity
     guid: 20ad26b77bd879e49b2178770d14564f
   - enabled: 1
-    path: Assets/Scenes/Inventory.unity
+    path: Assets/Scenes/ViewInventory.unity
     guid: 6cb63b6a6dc4eb64a8e845712268c891
   - enabled: 1
     path: Assets/Scenes/ManageFamily.unity
     guid: 91653ff99cf73514cbf36b8bb8e70074
+  - enabled: 1
+    path: Assets/Scenes/ViewChildren.unity
+    guid: 5c7a5da3da842304b9d3ef436235cabf
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b1d4d93735aed1a4cba17a6b8c394fbd, type: 2}

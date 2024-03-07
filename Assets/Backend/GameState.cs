@@ -28,7 +28,8 @@ namespace Backend
             new Household(500, "Singh", 2, 3, 3),
             new Household(500, "Kapoor", 3, 5, 5),
             new Household(500, "Bhatia", 2, 2, 2),
-            new Household(500, "Gupta", 3, 5, 7)
+            new Household(500, "Gupta", 3, 5, 7),
+            new Household(500, "Khan", 1, 3, 4)   // added to make it an even number
         };
 
         // Initialize the game

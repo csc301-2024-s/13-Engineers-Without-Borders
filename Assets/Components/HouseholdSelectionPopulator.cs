@@ -32,6 +32,6 @@ public class HouseholdSelectionPopulator : MonoBehaviour
 
         name.text = $"The {household.Family.Name} Household";
         description.text = $"{household.Family.GetAdultAmount()} adults<br>" +
-            $"{household.Family.GetAdultAmount()} children<br>{household.Land.Plots.Count} plots of land";
+            $"{household.Family.GetChildrenAmount()} children<br>{household.Land.Plots.Count} plots of land";
     }
 }

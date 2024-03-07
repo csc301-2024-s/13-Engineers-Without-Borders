@@ -14,4 +14,15 @@ public class FarmManager : MonoBehaviour
     // - In phase 3, need to keep track of which tool is selected (HYC seeed or fertilizer?) which can be read statically
 
     public static string SelectedTool { get; set; } = null; // just make this a string for now lol
+
+    public static List<FarmPlotCell> SelectedCells = new List<FarmPlotCell>();
+
+    public static void HarvestSelectedCells()
+    {
+        foreach (FarmPlotCell cell in SelectedCells)
+        {
+            cell.Plot.Owner.Wheat += cell.Plot.GetYield();
+        }
+    }
+
 }

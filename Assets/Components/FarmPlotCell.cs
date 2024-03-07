@@ -26,6 +26,7 @@ public class FarmPlotCell : MonoBehaviour
 
         _hycLabel = transform.Find("HYC").GetComponent<TextMeshProUGUI>();
         _fertilizerLabel = transform.Find("Fertilizer").GetComponent<TextMeshProUGUI>();
+
     }
 
     // Update this cell visually based on the attributes of the assigned farm plot
@@ -80,6 +81,18 @@ public class FarmPlotCell : MonoBehaviour
         Household owner = Plot.Owner;
         Inventory inventory = owner.Inventory;
 
+
+        // Updates selection status in FarmManager on click 
+        if (!FarmManager.SelectedCells.Contains(this))
+        {
+            FarmManager.SelectedCells.Add(this);
+        }
+        else
+        {
+            FarmManager.SelectedCells.Remove(this);
+        }
+
+
         // Add or remove HYC Seed
         if (FarmManager.SelectedTool == "HYC Seed")
         {
@@ -122,5 +135,18 @@ public class FarmPlotCell : MonoBehaviour
                 inventory.AddItem(otherFertilizerName);
             }
         }
+
+        // Add or remove irrigation 
+        if (FarmManager.SelectedTool == "Irrigation")
+        {
+            if (!Plot.Irrigated) {
+                Plot.Irrigated = true;
+            }
+            else 
+            {
+                Plot.Irrigated = false;
+            }
+        }
     }
+
 }

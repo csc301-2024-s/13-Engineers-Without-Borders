@@ -30,8 +30,8 @@ public class HouseholdSelectionPopulator : MonoBehaviour
         TextMeshProUGUI name = btn.transform.Find("Name").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI description = btn.transform.Find("Description").GetComponent<TextMeshProUGUI>();
 
-        name.text = $"The {household.Family.Name} Household";
+        name.text = $"{household.Family.Name} Household";
         description.text = $"{household.Family.GetAdultAmount()} adults<br>" +
-            $"{household.Family.GetAdultAmount()} children<br>{household.Land.Plots.Count} plots of land";
+            $"{household.Family.GetChildrenAmount()} children<br>{household.Land.Plots.Count} plots of land";
     }
 }

@@ -17,26 +17,31 @@ public class FarmManager : MonoBehaviour
 
     public static List<FarmPlotCell> SelectedCells = new List<FarmPlotCell>();
 
+    // Sets selected tool to HYC Seed
     public void SelectHYCSeed()
     {
         SetSelectedTool("HYC Seed");
     }
 
+    // Sets selected tool to Low Feretilizer
     public void SelectLowFertilizer()
     {
         SetSelectedTool("Low Fertilizer");
     }
 
+    // Sets selected tool to High Fertilizer
     public void SelectHighFertilizer()
     {
         SetSelectedTool("High Fertilizer");
     }
 
+    // Sets selected tool to Irrigation
     public void SelectIrrigationTool()
     {
         SetSelectedTool("Irrigation");
     }
 
+    // Function to set selected tool
     private static void SetSelectedTool(string toolName)
     {
         if (SelectedTool == toolName)
@@ -48,9 +53,9 @@ public class FarmManager : MonoBehaviour
             SelectedTool = toolName;
         }
 
-        UpdateToolSelectionUI();
     }
 
+    // Harvests all currently selected Cells
     public static void HarvestSelectedCells()
     {
         foreach (FarmPlotCell cell in SelectedCells)

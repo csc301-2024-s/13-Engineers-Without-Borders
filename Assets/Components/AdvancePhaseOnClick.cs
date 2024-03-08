@@ -19,11 +19,11 @@ public class AdvancePhaseOnClick : MonoBehaviour
 
     public void OnClick() {
         if (phase == 1) {
-            GameState.AdvanceToPhaseOne();
-        } else if (phase == 2) {
             GameState.AdvanceToPhaseTwo();
-        } else {
+        } else if (phase == 2) {
             GameState.AdvanceToPhaseThree();
+        } else {
+            GameState.AdvanceToPhaseOne();
         }
     }
 }

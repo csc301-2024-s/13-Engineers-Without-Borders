@@ -85,7 +85,7 @@ namespace Backend
                 }
             }
 
-            SceneUtils.LoadScene("ManageHousehold");
+            SceneUtils.LoadScene("ManageFarm");
         }
 
         public static void AdvanceToPhaseTwo()
@@ -95,13 +95,14 @@ namespace Backend
                 household.Land.CanBeHarvested = true;
             }
 
-            SceneUtils.LoadScene("Harvest");
+            //SceneUtils.LoadScene("Harvest");
+
         }
 
         public static void AdvanceToPhaseThree()
         {
             s_Phase = 3;
-            SceneUtils.LoadScene("Market");
+            //SceneUtils.LoadScene("Market");
             // TODO: if player's wheat is negative, alert them
             // this can be done in the future
         }

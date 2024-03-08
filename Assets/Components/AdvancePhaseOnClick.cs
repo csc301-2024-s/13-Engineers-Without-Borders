@@ -18,12 +18,23 @@ public class AdvancePhaseOnClick : MonoBehaviour
     }
 
     public void OnClick() {
+
         if (phase == 1) {
             GameState.AdvanceToPhaseTwo();
         } else if (phase == 2) {
             GameState.AdvanceToPhaseThree();
         } else {
             GameState.AdvanceToPhaseOne();
+        }
+        phase = GameState.s_Phase;
+
+        UpdateGUI();
+    }
+
+    private void UpdateGUI() {
+        FarmGUIManager[] guiManagers = FindObjectsOfType<FarmGUIManager>();
+        foreach (FarmGUIManager manager in guiManagers) {
+            manager.UpdateVisibility();
         }
     }
 }

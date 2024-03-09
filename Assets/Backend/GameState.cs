@@ -85,7 +85,10 @@ namespace Backend
                 }
             }
 
-            SceneUtils.LoadScene("ManageFarm");
+            // I just put this here for now because its annoying that the scene gets reloaded every year when im trying to debug 
+            if (s_Year == 1) {
+                SceneUtils.LoadScene("ManageFarm");
+            }
         }
 
         public static void AdvanceToPhaseTwo()

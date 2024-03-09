@@ -1,18 +1,46 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Backend;
 
+// Author: Bill Guo     
 public class FarmGUIManager : MonoBehaviour
 {
-    [SerializeField] private List<int> activePhases;
+    public static FarmGUIManager Instance { get; private set; }
 
-    void Start()
+    private List<FarmGUI> farmGUIs = new List<FarmGUI>();
+
+    private void Awake()
     {
-        UpdateVisibility();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void UpdateVisibility()
+    // Adds a FarmGUI game object to the list
+    public void RegisterFarmGUI(FarmGUI farmGUI)
     {
-        bool isActive = activePhases.Contains(Backend.GameState.s_Phase);
-        this.gameObject.SetActive(isActive);
+        if (!farmGUIs.Contains(farmGUI))
+        {
+            farmGUIs.Add(farmGUI);
+        }
+    }
+
+    // Updates the visibility of every FarmGUI object
+    public void UpdateAllGUIManagersVisibility()
+    {
+        foreach (FarmGUI farmGUI in farmGUIs)
+        {
+            farmGUI.UpdateVisibility();
+        }
+    }
+
+    public bool IsRegistered(FarmGUI farmGUI)
+    {
+        return farmGUIs.Contains(farmGUI);
     }
 }

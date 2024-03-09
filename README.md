@@ -12,13 +12,13 @@ A mobile game where you play as a farmer trying to grow as much wheat and gain a
 - Includes teaching information about the pros and cons of the Green Revolution
 - Includes simulation of being a farmer
     - Specifically a Punjabi farmer
-    - Start of season - Random weather quality, village events
+    - Start of season - Random weather quality, village events, irrigation (if you have a tubewell)
     - Harvest season - See how much wheat your family consumes, and how much wheat your farm produces
-    - Shop season - Buy seeds, fertilizer, oxen, and other technology to help your farm
-- Includes self assessment of what you learned after the simulation
+    - Shop season - Buy seeds, fertilizer, oxen, and other technology to help your farm, and plant them
+- Includes reflection questions of what you learned after the simulation
 ​
 ## Instructions
-Final project is an iOS/Android app, so you'll either need an emulator or a phone. We'll probably make a Windows build as well to make testing easier.
+Final project is an iOS/Android app, so you'll either need an emulator or a phone. We'll make a Windows build as well for convenience.
 
 As for the features described above, it's quite self-explanatory. When you start the app there will be a button to learn about the Green Revolution before starting the simulation. The simulation itself will have a tutorial, so just follow that and you'll be good. The self assessment comes after it (or it can also be skipped).
  
@@ -69,4 +69,6 @@ As for comments, every class and method should be documented. Classes should hav
 **Always use `//` for comments**
 ​
 ## Licenses 
-Just a normal open source license, I guess. Will need to research what the formal term is.
+"You can upload the code to GitHub or other similar publicly available domains."
+
+This is the Intellectual Property Confidentiality Agreement our partner agreed to.

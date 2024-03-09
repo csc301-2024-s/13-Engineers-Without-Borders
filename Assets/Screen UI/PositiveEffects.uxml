@@ -6,7 +6,9 @@
     </ui:VisualElement>
     <ui:VisualElement name="info-text" style="flex-grow: 1; min-height: 750px; max-height: 750px; margin-top: 0; width: 1125px; top: 200px;">
         <ui:Label tabindex="-1" text="The Green Revolution increased yields for crops such as wheat and rice, helping&#10;many people avoid famine. It also helped many farmers sell more crops which&#10;lifted them out of poverty.&#10;Click on the portrait below to see a quote from Norman Borlaug, the “father of the&#10;Green Revolution” and 1970 Nobel Peace Prize winner. " parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="PICTURE OF Norman Borlaug" parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
+        <ui:VisualElement name="portrait" style="flex-grow: 1; min-width: auto; min-height: 500px; width: 800px; max-height: 800px; align-self: center; align-items: stretch; margin-top: 100px;">
+            <ui:VisualElement name="NormanBorlaug" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Sprites/NormanBorlaug.jpg?fileID=21300000&amp;guid=bb4f02752e77c504a87dd3c9f488c8c5&amp;type=3#NormanBorlaug&apos;); height: 700px; width: 563px; align-self: center;" />
+        </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="buttons" class="sideways-buttons">
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="AboutMechanization" name="back" class="load-scene-button" />

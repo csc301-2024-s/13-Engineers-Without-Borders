@@ -10,6 +10,7 @@
             <ui:VisualElement name="NormanBorlaug" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Sprites/NormanBorlaug.jpg?fileID=21300000&amp;guid=bb4f02752e77c504a87dd3c9f488c8c5&amp;type=3#NormanBorlaug&apos;); height: 700px; width: 563px; align-self: center;" />
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button" tooltip="PositiveEffectsQuote" class="load-scene-button" style="background-image: url(&apos;project://database/Assets/Sprites/NormanBorlaug.jpg?fileID=21300000&amp;guid=bb4f02752e77c504a87dd3c9f488c8c5&amp;type=3#NormanBorlaug&apos;); width: 590px; max-height: 800px; min-height: 500px; align-self: center; height: 772px;" />
     <ui:VisualElement name="buttons" class="sideways-buttons">
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="AboutMechanization" name="back" class="load-scene-button" />
         <ui:Button text="Next" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="NegativeEffects" name="next" class="load-scene-button" />

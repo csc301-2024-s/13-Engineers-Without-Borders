@@ -12,7 +12,8 @@ namespace Backend
         Fertilizer,
         Tool,
         Food,
-        Land
+        Land,
+        Labour
     }
 
     // a class for all products in the market
@@ -61,6 +62,13 @@ namespace Backend
             {
                 return buyer.Land.Plots.Count < 25;
             };
+
+            // Add one year-contract adult worker as a product. Currently there is no limit on how many adult workers can be hired.
+            AddProduct("Adult Worker", 100, ProductType.Tool, "Hire extra labour for one year.");
+            _products["Adult Worker"].BuyAction = (Household buyer) =>
+            {
+                buyer.HireLabour();
+            };  // Instead of adding to inventory, add adult worker instead)
 
             AddProduct("Tubewell", 500, ProductType.Tool, "Lets you irrigate up to 10 farm plots.");
         }

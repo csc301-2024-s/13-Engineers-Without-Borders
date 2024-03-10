@@ -12,15 +12,19 @@ A mobile game where you play as a farmer trying to grow as much wheat and gain a
 - Includes teaching information about the pros and cons of the Green Revolution
 - Includes simulation of being a farmer
     - Specifically a Punjabi farmer
-    - Start of season - Random weather quality, village events
+    - Start of season - Random weather quality, village events, irrigation (if you have a tubewell)
     - Harvest season - See how much wheat your family consumes, and how much wheat your farm produces
-    - Shop season - Buy seeds, fertilizer, oxen, and other technology to help your farm
-- Includes self assessment of what you learned after the simulation
+    - Shop season - Buy seeds, fertilizer, oxen, and other technology to help your farm, and plant them
+- Includes reflection questions of what you learned after the simulation
 ​
 ## Instructions
-Final project is an iOS/Android app, so you'll either need an emulator or a phone. We'll probably make a Windows build as well to make testing easier.
+Final project is an iOS/Android app, so you'll either need an emulator or a phone. We'll make a Windows build as well for convenience.
 
-As for the features described above, it's quite self-explanatory. When you start the app there will be a button to learn about the Green Revolution before starting the simulation. The simulation itself will have a tutorial, so just follow that and you'll be good. The self assessment comes after it (or it can also be skipped).
+When you open the app, you'll be greeted with the home screen. You'll have the option to skip the simulation, or continue on with the educational stuff.
+
+The educational stuff is the just information about the Green Revolution and its pros and cons. Simly click the next/back buttons to proceed.
+
+The simulation will have a tutorial, so you can follow that for now. [FILL THIS IN CLOSER TO THE DUE DATE]
  
 ## Development requirements
 We are using the Unity Engine, LTS version 2022.3.18f1. Your local git branch should be configured to use Unity YAML merge.
@@ -69,4 +73,8 @@ As for comments, every class and method should be documented. Classes should hav
 **Always use `//` for comments**
 ​
 ## Licenses 
-Just a normal open source license, I guess. Will need to research what the formal term is.
+"You can upload the code to GitHub or other similar publicly available domains."
+
+This is the Intellectual Property Confidentiality Agreement our partner agreed to.
+
+As for code usage, please do not fork this project or reuse it until the term ends.

@@ -12,8 +12,8 @@ public class FarmPlotCell : MonoBehaviour
     [SerializeField] Color irrigatedSelectedColor;
     [SerializeField] Color irrigatedHighlightedColor;
     [SerializeField] Color irrigatedDisabledColor;
-    [SerializeField] Outline outline;
 
+    private Outline _outline;
     private Color _origColor;
     private Color _origPressedColor;
     private Color _origSelectedColor;
@@ -24,7 +24,6 @@ public class FarmPlotCell : MonoBehaviour
     private TextMeshProUGUI _fertilizerLabel;
 
     public FarmPlot Plot { get; set; }
-    public bool IsIrrigated; // for debug purposes
 
     void Start()
     {
@@ -39,15 +38,16 @@ public class FarmPlotCell : MonoBehaviour
         _hycLabel = transform.Find("HYC").GetComponent<TextMeshProUGUI>();
         _fertilizerLabel = transform.Find("Fertilizer").GetComponent<TextMeshProUGUI>();
 
+        _outline = GetComponent<Outline>();
+
     }
 
     // Update this cell visually based on the attributes of the assigned farm plot
     void Update()
     {
-        IsIrrigated = Plot.Irrigated;
         RefreshVisuals();
         RefreshStatus();
-        outline.enabled = FarmManager.SelectedCells.Contains(this);
+        _outline.enabled = FarmManager.SelectedCells.Contains(this);
     }
 
     // Refreshes visual state of the farm plot cell

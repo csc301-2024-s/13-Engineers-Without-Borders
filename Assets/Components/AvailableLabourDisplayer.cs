@@ -17,6 +17,7 @@ public class AvailableLabourDisplayer : MonoBehaviour
         } else if (GameState.s_Phase == 2) {
             _availableLabour -= FarmManager.SelectedCells.Count;
         }
+        
         _text = GetComponent<TextMeshProUGUI>();
         _text.text = string.Format(formatString, _availableLabour);
     }

@@ -19,6 +19,11 @@ public class FarmManager : MonoBehaviour
 
     public static readonly int IrrigationLabour = 1; // const for labour cost for irrigation in case we want to change later
 
+    private void OnEnable()
+    {
+        SelectedCells.Clear();
+    }
+
     // Harvests all currently selected Cells
     public static void HarvestSelectedCells()
     {
@@ -28,4 +33,8 @@ public class FarmManager : MonoBehaviour
         }
     }
 
+    public static void ClearSelectedCells() 
+    {
+        SelectedCells.Clear();
+    }
 }

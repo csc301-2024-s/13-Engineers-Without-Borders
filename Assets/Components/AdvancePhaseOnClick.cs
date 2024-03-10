@@ -36,6 +36,7 @@ public class AdvancePhaseOnClick : MonoBehaviour
 
         // Updates the GUI
         FarmGUIManager.Instance.UpdateAllGUIManagersVisibility();
+        FarmManager.ClearSelectedCells();
     }
 
 }

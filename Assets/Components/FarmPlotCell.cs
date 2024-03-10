@@ -90,6 +90,17 @@ public class FarmPlotCell : MonoBehaviour
             } else if (GameState.s_Phase == 2 && ((GameState.s_Player.Family.GetLabourPoints() - FarmManager.SelectedCells.Count) > 0)) {
                 FarmManager.SelectedCells.Add(this);
             }
+
+            if (FarmManager.SelectedTool == "Irrigation")
+            {
+                if (!Plot.Irrigated ) {
+                    Plot.Irrigated = true;
+                }
+                else 
+                {
+                    Plot.Irrigated = false;
+                }
+            }
         }
         else
         {
@@ -140,17 +151,6 @@ public class FarmPlotCell : MonoBehaviour
             }
         }
 
-        // Add or remove irrigation 
-        if (FarmManager.SelectedTool == "Irrigation")
-        {
-            if (!Plot.Irrigated) {
-                Plot.Irrigated = true;
-            }
-            else 
-            {
-                Plot.Irrigated = false;
-            }
-        }
     }
 
 }

@@ -11,7 +11,7 @@ namespace Backend
         public static int s_Phase;
         public static int s_WeatherIndex;
         public static Household s_Player;
-        public static Household[] s_Households;
+        public static Household[] s_Households;  // originally planned to have AI players but not enough time :(
         public static Household[] s_PredefinedHouseholds = new Household[]
         {
             new Household(500, "Madhar", 3, 2, 3),
@@ -104,14 +104,13 @@ namespace Backend
             }
 
             //SceneUtils.LoadScene("Harvest");
-
         }
 
         public static void AdvanceToPhaseThree()
         {
             s_Phase = 3;
             s_Player.Land.ResetIrrigation();
-            //SceneUtils.LoadScene("Market");
+            SceneUtils.LoadScene("Market");
             // TODO: if player's wheat is negative, alert them
             // this can be done in the future
         }

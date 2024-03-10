@@ -14,6 +14,7 @@ public class NumFamilyMembersDisplayer : MonoBehaviour
     {
         _text = GetComponent<TextMeshProUGUI>();
         _text.text = string.Format(formatString,
-            countAdults ? GameState.s_Player.Family.GetAdultAmount() : GameState.s_Player.Family.GetChildrenAmount());
+            countAdults ? GameState.s_Player.Family.GetAdultAmount() + GameState.s_Player.Family.GetHiredWorkerAmount() :
+            GameState.s_Player.Family.GetChildrenAmount());
     }
 }

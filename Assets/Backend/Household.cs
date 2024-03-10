@@ -52,13 +52,13 @@ namespace Backend
         public void HireLabour()
         {
             Adult adult = new Adult("Hired", "Worker");
-            Family.Hired_Worker.Add(adult);
+            Family.HiredWorkers.Add(adult);
         }
 
         // Remove all hired workers from the family
         public void RemoveLabour()
         {
-            Family.Hired_Worker.Clear();
+            Family.HiredWorkers.Clear();
         }
     }
 }

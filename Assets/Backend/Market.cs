@@ -64,8 +64,8 @@ namespace Backend
             };
 
             // Add one year-contract adult worker as a product. Currently there is no limit on how many adult workers can be hired.
-            AddProduct("Adult Worker", 100, ProductType.Tool, "Hire extra labour for one year.");
-            _products["Adult Worker"].BuyAction = (Household buyer) =>
+            AddProduct("Labour", 100, ProductType.Tool, "Hire an extra worker for one year.");
+            _products["Labour"].BuyAction = (Household buyer) =>
             {
                 buyer.HireLabour();
             };  // Instead of adding to inventory, add adult worker instead)

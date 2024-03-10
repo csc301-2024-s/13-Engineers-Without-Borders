@@ -287,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2951263899667696263, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: productName
-      value: Adult Worker
+      value: Labour
       objectReference: {fileID: 0}
     - target: {fileID: 3105977242493593900, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: productName
@@ -295,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3444150539798219304, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_text
-      value: Adult Worker
+      value: Labour
       objectReference: {fileID: 0}
     - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -311,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: productName
-      value: High Fertilizer
+      value: Labour
       objectReference: {fileID: 0}
     - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: _productName
@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9139102236003138792, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: productName
-      value: Adult Worker
+      value: Labour
       objectReference: {fileID: 0}
     - target: {fileID: 9139102236003138792, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: formatString
@@ -452,7 +452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33ec6d89d41b4e429545d43a3ef4635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productName: Adult Worker
   formatString: '{0} workers'
 --- !u!1001 &167335238
 PrefabInstance:
@@ -989,6 +988,180 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
   m_PrefabInstance: {fileID: 314866332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &394324944
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 646969625}
+    m_Modifications:
+    - target: {fileID: 372843532677262587, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: _itemName
+      value: High Fertilizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 554770611415729112, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_Name
+      value: Tubewell
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409885256096061661, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409885256096061661, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409885256096061661, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_Color.r
+      value: 0.78172255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951263899667696263, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Tubewell
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105977242493593900, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Tubewell
+      objectReference: {fileID: 0}
+    - target: {fileID: 3444150539798219304, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_text
+      value: Tubewell
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.18817139
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.12145996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: _itemName
+      value: High Fertilizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Tubewell
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167758465231210762, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: _productName
+      value: High Fertilizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570074967044013494, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_text
+      value: DYNAMICALLY SET AT RUNTIME
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570074967044013494, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_fontSize
+      value: 36.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_text
+      value: DYNAMICALLY SET AT RUNTIME
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139102236003138792, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Tubewell
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139102236003138792, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: formatString
+      value: ${0}
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+--- !u!224 &394324945 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+  m_PrefabInstance: {fileID: 394324944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &574727343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,12 +1556,13 @@ RectTransform:
   - {fileID: 1948590100}
   - {fileID: 167335239}
   - {fileID: 135101574}
+  - {fileID: 394324945}
   m_Father: {fileID: 1506398595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -428.11633}
-  m_SizeDelta: {x: 0, y: 856.2324}
+  m_AnchoredPosition: {x: 0, y: -628.11633}
+  m_SizeDelta: {x: 0, y: 1256.2323}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &646969626
 MonoBehaviour:

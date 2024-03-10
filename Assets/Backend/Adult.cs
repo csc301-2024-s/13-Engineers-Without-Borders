@@ -39,6 +39,7 @@ namespace Backend
         // Calculate how many labour points this adult gives you
         public int GetLabourPoints()
         {
+            if (!_isAvailable) return 0;
             return HasOx ? BaseLabourPoints * 2 : BaseLabourPoints;
         }
     }

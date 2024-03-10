@@ -28,6 +28,15 @@ public class FamilyMemberPopulator : MonoBehaviour
             btnClone.transform.SetParent(adultListContent.transform, false);
             adultListRectSize.y += 400;
         }
+
+        foreach (Adult adult in GameState.s_Player.Family.HiredWorkers)
+        {
+            GameObject btnClone = Instantiate(prefab);
+            SetUpList(btnClone, adult);
+            btnClone.transform.SetParent(adultListContent.transform, false);
+            adultListRectSize.y += 400;
+        }
+        
         adultListRect.sizeDelta = adultListRectSize;
 
         // set up child list

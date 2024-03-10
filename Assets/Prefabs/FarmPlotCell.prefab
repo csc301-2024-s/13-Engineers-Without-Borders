@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 3993917186351157855}
   - component: {fileID: 8469191998241466760}
   - component: {fileID: 3260775289721576912}
+  - component: {fileID: 5485139529822319608}
   m_Layer: 5
   m_Name: FarmPlotCell
   m_TagString: Untagged
@@ -237,7 +238,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0, g: 0.79215693, b: 0.003921569, a: 1}
     m_HighlightedColor: {r: 0, g: 0.79215693, b: 0.003921569, a: 1}
     m_PressedColor: {r: 0, g: 0.6156863, b: 0.003921569, a: 1}
-    m_SelectedColor: {r: 0, g: 0.79215693, b: 0.003921569, a: 1}
+    m_SelectedColor: {r: 0, g: 0.7921569, b: 0.003921569, a: 1}
     m_DisabledColor: {r: 0, g: 0.3207547, b: 0.0020429997, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -271,6 +272,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   irrigatedColor: {r: 0, g: 0.4952731, b: 1, a: 1}
   irrigatedPressedColor: {r: 0, g: 0.36359605, b: 0.735849, a: 1}
+  outline: {fileID: 5485139529822319608}
+--- !u!114 &5485139529822319608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737331010837518622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 0.5}
+  m_EffectDistance: {x: 10, y: 10}
+  m_UseGraphicAlpha: 1
 --- !u!1 &9135175153113227639
 GameObject:
   m_ObjectHideFlags: 0

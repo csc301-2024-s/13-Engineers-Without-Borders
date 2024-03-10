@@ -8,6 +8,7 @@ public class FarmPlotCell : MonoBehaviour
 {
     [SerializeField] Color irrigatedColor;
     [SerializeField] Color irrigatedPressedColor;
+    [SerializeField] Outline outline;
 
     private Color _origColor;
     private Color _origPressedColor;
@@ -61,6 +62,11 @@ public class FarmPlotCell : MonoBehaviour
 
         // change colour to blue if irrigated
         var colors = _btn.colors;
+        if (FarmManager.SelectedCells.Contains(this))
+        {
+
+        }
+
         if (Plot.Irrigated)
         {
             colors.normalColor = irrigatedColor;
@@ -71,6 +77,8 @@ public class FarmPlotCell : MonoBehaviour
             colors.normalColor = _origColor;
             colors.pressedColor = _origPressedColor;
         }
+
+        outline.enabled = FarmManager.SelectedCells.Contains(this);
     }
 
     // Select or deselect this farm cell on click
@@ -87,8 +95,10 @@ public class FarmPlotCell : MonoBehaviour
         {
             if (GameState.s_Phase == 1 && ((GameState.s_Player.Family.GetLabourPoints() - (FarmManager.SelectedCells.Count * FarmManager.IrrigationLabour) > 0))) {
                 FarmManager.SelectedCells.Add(this);
+                //outline.enabled = true;
             } else if (GameState.s_Phase == 2 && ((GameState.s_Player.Family.GetLabourPoints() - FarmManager.SelectedCells.Count) > 0)) {
                 FarmManager.SelectedCells.Add(this);
+                //outline.enabled = true;
             }
 
             if (FarmManager.SelectedTool == "Irrigation")
@@ -105,6 +115,7 @@ public class FarmPlotCell : MonoBehaviour
         else
         {
             FarmManager.SelectedCells.Remove(this);
+            //outline.enabled = false;
         }
 
 

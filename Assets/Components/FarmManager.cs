@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Backend;
@@ -18,7 +17,15 @@ public class FarmManager : MonoBehaviour
     public static List<FarmPlotCell> SelectedCells = new List<FarmPlotCell>();
     public static List<FarmPlotCell> IrrigatedCells = new List<FarmPlotCell>();
 
-    public static readonly int IrrigationLabour = 1; // const for labour cost for irrigation in case we want to change later
+    public const int IrrigationLabour = 2; // const for labour cost for irrigation in case we want to change later
+    public const int HarvestLabour = 1;
+
+    public static int LabourPoints { get; set; }  // upon loading the farm management screen, show how many labour points you can spend
+
+    void Start()
+    {
+        LabourPoints = GameState.s_Player.Family.GetLabourPoints();
+    }
 
     private void OnEnable()
     {

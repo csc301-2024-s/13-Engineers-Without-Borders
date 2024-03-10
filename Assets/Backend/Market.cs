@@ -61,6 +61,8 @@ namespace Backend
             {
                 return buyer.Land.Plots.Count < 25;
             };
+
+            AddProduct("Tubewell", 500, ProductType.Tool, "Lets you irrigate up to 10 farm plots.");
         }
 
         // <buyer> requests to purchase one product with name <name>

@@ -2,6 +2,7 @@ using UnityEngine;
 using Backend;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 // Original Author: Andy Wang
 public class FarmPlotCell : MonoBehaviour
@@ -48,7 +49,7 @@ public class FarmPlotCell : MonoBehaviour
         RefreshStatus();
         outline.enabled = FarmManager.SelectedCells.Contains(this);
     }
-    
+
     // Refreshes visual state of the farm plot cell
     public void RefreshVisuals()
     {
@@ -72,7 +73,7 @@ public class FarmPlotCell : MonoBehaviour
         _btn.colors = colors;
     }
 
-    public void RefreshStatus() 
+    public void RefreshStatus()
     {
         if (Plot.SeedType == SeedType.HYC)
         {
@@ -105,66 +106,73 @@ public class FarmPlotCell : MonoBehaviour
         Household owner = Plot.Owner;
         Inventory inventory = owner.Inventory;
 
-        // Add or remove HYC Seed
-        if (FarmManager.SelectedTool == "HYC Seed")
+        // Phase 3 - planting phase
+        if (GameState.s_Phase == 3)
         {
-            if (Plot.SeedType == SeedType.Regular && inventory.Contains("HYC Seed"))
+            // Add or remove HYC Seed
+            if (FarmManager.SelectedTool == "HYC Seed")
             {
-                Plot.SeedType = SeedType.HYC;
-                inventory.RemoveItem("HYC Seed");
+                if (Plot.SeedType == SeedType.Regular && inventory.Contains("HYC Seed"))
+                {
+                    Plot.SeedType = SeedType.HYC;
+                    inventory.RemoveItem("HYC Seed");
+                }
+                else
+                {
+                    Plot.SeedType = SeedType.Regular;
+                    inventory.AddItem("HYC Seed");
+                }
             }
-            else
+
+            // Add or remove fertilizer
+            // Must replace current fertilizer type with selected one, must put it back in inventory
+            // If cell already has selected fertilizer, tapping it should remove it
+            if (FarmManager.SelectedTool == "Low Fertilizer" || FarmManager.SelectedTool == "High Fertilizer")
             {
-                Plot.SeedType = SeedType.Regular;
-                inventory.AddItem("HYC Seed");
+                // if this becomes too cumbersome, create a static util function to convert between the two
+                string selectedFertilizerName = FarmManager.SelectedTool;
+                FertilizerType selectedFertilizer = selectedFertilizerName == "Low Fertilizer" ? FertilizerType.Low : FertilizerType.High;
+                string otherFertilizerName = selectedFertilizerName == "High Fertilizer" ? "Low Fertilizer" : "High Fertilizer";
+
+                // no fertilizer? simply add new fertilizer type
+                if (Plot.FertilizerType == FertilizerType.None && inventory.Contains(selectedFertilizerName))
+                {
+                    Plot.FertilizerType = selectedFertilizer;
+                    inventory.RemoveItem(selectedFertilizerName);
+                }
+                else if (Plot.FertilizerType == selectedFertilizer)
+                {  // the plot already has the fertilizer you selected, so it should be removed
+                    Plot.FertilizerType = FertilizerType.None;
+                    inventory.AddItem(selectedFertilizerName);
+                }
+                else if (inventory.Contains(selectedFertilizerName))
+                {  // the plot has the other fertilizer type, so replace it
+                    Plot.FertilizerType = selectedFertilizer;
+                    inventory.RemoveItem(selectedFertilizerName);
+                    inventory.AddItem(otherFertilizerName);
+                }
             }
+            return;
         }
 
-        // Add or remove fertilizer
-        // Must replace current fertilizer type with selected one, must put it back in inventory
-        // If cell already has selected fertilizer, tapping it should remove it
-        if (FarmManager.SelectedTool == "Low Fertilizer" || FarmManager.SelectedTool == "High Fertilizer")
-        {
-            // if this becomes too cumbersome, create a static util function to convert between the two
-            string selectedFertilizerName = FarmManager.SelectedTool;
-            FertilizerType selectedFertilizer = selectedFertilizerName == "Low Fertilizer" ? FertilizerType.Low : FertilizerType.High;
-            string otherFertilizerName = selectedFertilizerName == "High Fertilizer" ? "Low Fertilizer" : "High Fertilizer";
+        // else - phase 1 - irrigation phase, or phase 2 - harvest phase
+        int numTubewells = inventory.GetAmount("Tubewell");
+        int maxSelectedCells = GameState.s_Phase == 1 ? Math.Min(Farmland.MaxPlots, numTubewells * 10) : Farmland.MaxPlots;
+        int labourCost = GameState.s_Phase == 1 ? FarmManager.IrrigationLabour : FarmManager.HarvestLabour;
 
-            // no fertilizer? simply add new fertilizer type
-            if (Plot.FertilizerType == FertilizerType.None && inventory.Contains(selectedFertilizerName))
-            {
-                Plot.FertilizerType = selectedFertilizer;
-                inventory.RemoveItem(selectedFertilizerName);
-            }
-            else if (Plot.FertilizerType == selectedFertilizer)
-            {  // the plot already has the fertilizer you selected, so it should be removed
-                Plot.FertilizerType = FertilizerType.None;
-                inventory.AddItem(selectedFertilizerName);
-            } else if (inventory.Contains(selectedFertilizerName))
-            {  // the plot has the other fertilizer type, so replace it
-                Plot.FertilizerType = selectedFertilizer;
-                inventory.RemoveItem(selectedFertilizerName);
-                inventory.AddItem(otherFertilizerName);
-            }
-        }
-
-        
         // Updates selection status in FarmManager, only adds if there is still labour remaining
         if (!FarmManager.SelectedCells.Contains(this))
         {
-            if (GameState.s_Phase == 1 && ((GameState.s_Player.Family.GetLabourPoints() - (FarmManager.SelectedCells.Count * FarmManager.IrrigationLabour) > 0))) {
+            if (FarmManager.LabourPoints > labourCost && FarmManager.SelectedCells.Count < maxSelectedCells)
+            {
                 FarmManager.SelectedCells.Add(this);
-                Debug.Log($"Added to SelectedCells: {gameObject.name}");
-            } else if (GameState.s_Phase == 2 && ((GameState.s_Player.Family.GetLabourPoints() - FarmManager.SelectedCells.Count) > 0)) {
-                FarmManager.SelectedCells.Add(this);
-                Debug.Log($"Added to SelectedCells: {gameObject.name}");
+                FarmManager.LabourPoints -= labourCost;
             }
         }
         else
         {
             FarmManager.SelectedCells.Remove(this);
-            Debug.Log($"Removed to SelectedCells: {gameObject.name}");
+            FarmManager.LabourPoints += labourCost;
         }
     }
-
 }

@@ -23,6 +23,7 @@ public class FarmPlotCell : MonoBehaviour
     private TextMeshProUGUI _fertilizerLabel;
 
     public FarmPlot Plot { get; set; }
+    public bool IsIrrigated; // for debug purposes
 
     void Start()
     {
@@ -42,34 +43,9 @@ public class FarmPlotCell : MonoBehaviour
     // Update this cell visually based on the attributes of the assigned farm plot
     void Update()
     {
-        if (Plot == null)
-        {
-            return;
-        }
-
-        if (Plot.SeedType == SeedType.HYC)
-        {
-            _hycLabel.text = "HYC";
-        }
-        else
-        {
-            _hycLabel.text = "";
-        }
-
-        if (Plot.FertilizerType == FertilizerType.Low)
-        {
-            _fertilizerLabel.text = "Low";
-        }
-        else if (Plot.FertilizerType == FertilizerType.High)
-        {
-            _fertilizerLabel.text = "High";
-        }
-        else
-        {
-            _fertilizerLabel.text = "";
-        }
-
+        IsIrrigated = Plot.Irrigated;
         RefreshVisuals();
+        RefreshStatus();
         outline.enabled = FarmManager.SelectedCells.Contains(this);
     }
     
@@ -96,6 +72,31 @@ public class FarmPlotCell : MonoBehaviour
         _btn.colors = colors;
     }
 
+    public void RefreshStatus() 
+    {
+        if (Plot.SeedType == SeedType.HYC)
+        {
+            _hycLabel.text = "HYC";
+        }
+        else
+        {
+            _hycLabel.text = "";
+        }
+
+        if (Plot.FertilizerType == FertilizerType.Low)
+        {
+            _fertilizerLabel.text = "Low";
+        }
+        else if (Plot.FertilizerType == FertilizerType.High)
+        {
+            _fertilizerLabel.text = "High";
+        }
+        else
+        {
+            _fertilizerLabel.text = "";
+        }
+    }
+
     // Select or deselect this farm cell on click
     // Also handle planting/harvesting/irrigating depending on phase (read FarmManager fields)
     // Precondition: if the player has a tool selected, that means they can use it in the first place
@@ -103,22 +104,6 @@ public class FarmPlotCell : MonoBehaviour
     {
         Household owner = Plot.Owner;
         Inventory inventory = owner.Inventory;
-
-
-        // Updates selection status in FarmManager, only adds if there is still labour remaining
-        if (!FarmManager.SelectedCells.Contains(this))
-        {
-            if (GameState.s_Phase == 1 && ((GameState.s_Player.Family.GetLabourPoints() - (FarmManager.SelectedCells.Count * FarmManager.IrrigationLabour) > 0))) {
-                FarmManager.SelectedCells.Add(this);
-            } else if (GameState.s_Phase == 2 && ((GameState.s_Player.Family.GetLabourPoints() - FarmManager.SelectedCells.Count) > 0)) {
-                FarmManager.SelectedCells.Add(this);
-            }
-        }
-        else
-        {
-            FarmManager.SelectedCells.Remove(this);
-        }
-
 
         // Add or remove HYC Seed
         if (FarmManager.SelectedTool == "HYC Seed")
@@ -163,6 +148,23 @@ public class FarmPlotCell : MonoBehaviour
             }
         }
 
+        
+        // Updates selection status in FarmManager, only adds if there is still labour remaining
+        if (!FarmManager.SelectedCells.Contains(this))
+        {
+            if (GameState.s_Phase == 1 && ((GameState.s_Player.Family.GetLabourPoints() - (FarmManager.SelectedCells.Count * FarmManager.IrrigationLabour) > 0))) {
+                FarmManager.SelectedCells.Add(this);
+                Debug.Log($"Added to SelectedCells: {gameObject.name}");
+            } else if (GameState.s_Phase == 2 && ((GameState.s_Player.Family.GetLabourPoints() - FarmManager.SelectedCells.Count) > 0)) {
+                FarmManager.SelectedCells.Add(this);
+                Debug.Log($"Added to SelectedCells: {gameObject.name}");
+            }
+        }
+        else
+        {
+            FarmManager.SelectedCells.Remove(this);
+            Debug.Log($"Removed to SelectedCells: {gameObject.name}");
+        }
     }
 
 }

@@ -37,15 +37,14 @@ public class FarmManager : MonoBehaviour
     // Irrigates all currently selected Cells
     public static void IrrigateSelectedCells()
     {
+        Debug.Log($"Irrigating {SelectedCells.Count} cells.");
         foreach (FarmPlotCell cell in SelectedCells)
         {
-            if (!cell.Plot.Irrigated)
-            {
-                cell.Plot.Irrigated = true;
-            } 
+            cell.Plot.Irrigated = true;
             cell.RefreshVisuals();
         }
     }
+
 
     public static void ClearSelectedCells() 
     {

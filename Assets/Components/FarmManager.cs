@@ -17,6 +17,8 @@ public class FarmManager : MonoBehaviour
 
     public static List<FarmPlotCell> SelectedCells = new List<FarmPlotCell>();
 
+    public static readonly int IrrigationLabour = 1; // const for labour cost for irrigation in case we want to change later
+
     // Harvests all currently selected Cells
     public static void HarvestSelectedCells()
     {

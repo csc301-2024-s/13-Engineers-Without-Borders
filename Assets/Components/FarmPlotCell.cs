@@ -82,10 +82,14 @@ public class FarmPlotCell : MonoBehaviour
         Inventory inventory = owner.Inventory;
 
 
-        // Updates selection status in FarmManager on click 
+        // Updates selection status in FarmManager, only adds if there is still labour remaining
         if (!FarmManager.SelectedCells.Contains(this))
         {
-            FarmManager.SelectedCells.Add(this);
+            if (GameState.s_Phase == 1 && ((GameState.s_Player.Family.GetLabourPoints() - (FarmManager.SelectedCells.Count * FarmManager.IrrigationLabour) > 0))) {
+                FarmManager.SelectedCells.Add(this);
+            } else if (GameState.s_Phase == 2 && ((GameState.s_Player.Family.GetLabourPoints() - FarmManager.SelectedCells.Count) > 0)) {
+                FarmManager.SelectedCells.Add(this);
+            }
         }
         else
         {

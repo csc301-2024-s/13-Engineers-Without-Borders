@@ -10,13 +10,11 @@ namespace Backend
         public const int MaxPlots = 25;
 
         public List<FarmPlot> Plots;
-        public bool CanBeHarvested { get; set; }
 
         // Initializes empty list to store FarmPlot objects 
         public Farmland(int numPlots)
         {
             Plots = new List<FarmPlot>();
-            CanBeHarvested = false;
 
             for (var i = 0; i < numPlots; i++)
             {

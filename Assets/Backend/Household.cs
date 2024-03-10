@@ -36,16 +36,14 @@ namespace Backend
             int totalYield = Land.GetTotalYield();
             int totalConsumption = Family.GetTotalConsumption();
             Wheat = totalYield - totalConsumption;
+
+            // TODO: eventually need to factor out consumption so we can display it to the user
         }
 
         // If the farmland is harvestable, calculate net wheat yield and set canBeHarvested to false;
         public void HarvestCrops()
         {
-            if (Land.CanBeHarvested)
-            {
-                CalculateRemainingYield();
-                Land.CanBeHarvested = false;
-            }
+            CalculateRemainingYield();
         }
 
         // Hire an adult worker to the family for one year

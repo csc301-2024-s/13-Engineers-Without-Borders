@@ -163,7 +163,7 @@ public class FarmPlotCell : MonoBehaviour
         // Updates selection status in FarmManager, only adds if there is still labour remaining
         if (!FarmManager.SelectedCells.Contains(this))
         {
-            if (FarmManager.LabourPoints > labourCost && FarmManager.SelectedCells.Count < maxSelectedCells)
+            if (FarmManager.LabourPoints >= labourCost && FarmManager.SelectedCells.Count < maxSelectedCells)
             {
                 FarmManager.SelectedCells.Add(this);
                 FarmManager.LabourPoints -= labourCost;

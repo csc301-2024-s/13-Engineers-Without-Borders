@@ -34,7 +34,6 @@ public class AdvancePhaseOnClick : MonoBehaviour
                 break;
         }
 
-        FarmGUIManager.Instance.UpdateAllGUIManagersVisibility();
         FarmManager.ClearSelectedCells();
         FarmManager.SelectedTool = null;
     }

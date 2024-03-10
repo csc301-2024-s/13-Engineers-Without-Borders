@@ -39,17 +39,18 @@ public class FarmManager : MonoBehaviour
         {
             cell.Plot.Owner.Wheat += cell.Plot.GetYield();
         }
+        GameState.AdvanceToPhaseThree();
     }
 
     // Irrigates all currently selected Cells
     public static void IrrigateSelectedCells()
     {
-        Debug.Log($"Irrigating {SelectedCells.Count} cells.");
         foreach (FarmPlotCell cell in SelectedCells)
         {
             cell.Plot.Irrigated = true;
             cell.RefreshVisuals();
         }
+        GameState.AdvanceToPhaseTwo();
     }
 
 

@@ -90,20 +90,13 @@ namespace Backend
                 }
             }
 
-            // I just put this here for now because its annoying that the scene gets reloaded every year when im trying to debug 
-            if (s_Year == 1) {
-                SceneUtils.LoadScene("ManageFarm");
-            }
+            SceneUtils.LoadScene("ManageFarm");
         }
 
         public static void AdvanceToPhaseTwo()
         {
             s_Phase = 2;
-            foreach (Household household in s_Households) {
-                household.Land.CanBeHarvested = true;
-            }
-
-            //SceneUtils.LoadScene("Harvest");
+            SceneUtils.LoadScene("ManageFarm");  // reload
         }
 
         public static void AdvanceToPhaseThree()

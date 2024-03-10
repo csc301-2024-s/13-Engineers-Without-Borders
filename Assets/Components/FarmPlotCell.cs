@@ -8,15 +8,22 @@ public class FarmPlotCell : MonoBehaviour
 {
     [SerializeField] Color irrigatedColor;
     [SerializeField] Color irrigatedPressedColor;
+    [SerializeField] Color irrigatedSelectedColor;
+    [SerializeField] Color irrigatedHighlightedColor;
+    [SerializeField] Color irrigatedDisabledColor;
     [SerializeField] Outline outline;
 
     private Color _origColor;
     private Color _origPressedColor;
+    private Color _origSelectedColor;
+    private Color _origHighlightedColor;
+    private Color _origDisabledColor;
     private Button _btn;
     private TextMeshProUGUI _hycLabel;
     private TextMeshProUGUI _fertilizerLabel;
 
     public FarmPlot Plot { get; set; }
+    public bool isIrrigated;
 
     void Start()
     {
@@ -24,6 +31,9 @@ public class FarmPlotCell : MonoBehaviour
         _btn.onClick.AddListener(HandleClick);
         _origColor = _btn.colors.normalColor;
         _origPressedColor = _btn.colors.pressedColor;
+        _origSelectedColor = _btn.colors.selectedColor;
+        _origDisabledColor = _btn.colors.disabledColor;
+        _origHighlightedColor = _btn.colors.highlightedColor;
 
         _hycLabel = transform.Find("HYC").GetComponent<TextMeshProUGUI>();
         _fertilizerLabel = transform.Find("Fertilizer").GetComponent<TextMeshProUGUI>();
@@ -60,25 +70,30 @@ public class FarmPlotCell : MonoBehaviour
             _fertilizerLabel.text = "";
         }
 
-        // change colour to blue if irrigated
+        outline.enabled = FarmManager.SelectedCells.Contains(this);
+    }
+    
+    // Refreshes visual state of the farm plot cell
+    public void RefreshVisuals()
+    {
         var colors = _btn.colors;
-        if (FarmManager.SelectedCells.Contains(this))
-        {
-
-        }
-
         if (Plot.Irrigated)
         {
             colors.normalColor = irrigatedColor;
             colors.pressedColor = irrigatedPressedColor;
+            colors.selectedColor = irrigatedSelectedColor;
+            colors.highlightedColor = irrigatedHighlightedColor;
+            colors.disabledColor = irrigatedDisabledColor;
         }
         else
         {
             colors.normalColor = _origColor;
             colors.pressedColor = _origPressedColor;
+            colors.selectedColor = _origSelectedColor;
+            colors.highlightedColor = _origHighlightedColor;
+            colors.disabledColor = _origDisabledColor;
         }
-
-        outline.enabled = FarmManager.SelectedCells.Contains(this);
+        _btn.colors = colors;
     }
 
     // Select or deselect this farm cell on click
@@ -95,27 +110,13 @@ public class FarmPlotCell : MonoBehaviour
         {
             if (GameState.s_Phase == 1 && ((GameState.s_Player.Family.GetLabourPoints() - (FarmManager.SelectedCells.Count * FarmManager.IrrigationLabour) > 0))) {
                 FarmManager.SelectedCells.Add(this);
-                //outline.enabled = true;
             } else if (GameState.s_Phase == 2 && ((GameState.s_Player.Family.GetLabourPoints() - FarmManager.SelectedCells.Count) > 0)) {
                 FarmManager.SelectedCells.Add(this);
-                //outline.enabled = true;
-            }
-
-            if (FarmManager.SelectedTool == "Irrigation")
-            {
-                if (!Plot.Irrigated ) {
-                    Plot.Irrigated = true;
-                }
-                else 
-                {
-                    Plot.Irrigated = false;
-                }
             }
         }
         else
         {
             FarmManager.SelectedCells.Remove(this);
-            //outline.enabled = false;
         }
 
 

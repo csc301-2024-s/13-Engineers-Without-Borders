@@ -23,7 +23,6 @@ public class FarmPlotCell : MonoBehaviour
     private TextMeshProUGUI _fertilizerLabel;
 
     public FarmPlot Plot { get; set; }
-    public bool isIrrigated;
 
     void Start()
     {
@@ -70,6 +69,7 @@ public class FarmPlotCell : MonoBehaviour
             _fertilizerLabel.text = "";
         }
 
+        RefreshVisuals();
         outline.enabled = FarmManager.SelectedCells.Contains(this);
     }
     

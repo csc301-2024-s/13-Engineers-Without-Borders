@@ -61,5 +61,15 @@ namespace Backend
             newPlot.SetOwner(Owner);
             Plots.Add(newPlot);
         }
+
+        // Resets irrigation status for every plot
+        public void ResetIrrigation() {
+            foreach (FarmPlot plot in Plots) {
+                if (plot.Irrigated) {
+                    plot.Irrigated = false;
+                }
+            }
+        }
+
     }
 }

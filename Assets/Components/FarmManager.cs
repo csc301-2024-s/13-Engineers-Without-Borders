@@ -16,6 +16,7 @@ public class FarmManager : MonoBehaviour
     public static string SelectedTool { get; set; } = null; // just make this a string for now lol
 
     public static List<FarmPlotCell> SelectedCells = new List<FarmPlotCell>();
+    public static List<FarmPlotCell> IrrigatedCells = new List<FarmPlotCell>();
 
     public static readonly int IrrigationLabour = 1; // const for labour cost for irrigation in case we want to change later
 

@@ -15,6 +15,7 @@ namespace Backend
 
         public List<Adult> Adults { get; } = new List<Adult>();
         public List<Child> Children { get; } = new List<Child>();
+        public List<Adult> Hired_Worker { get; } = new List<Adult>();
 
         //Constructor of the class
         public Family(string FamilyName, int NumChildren, int numAdults)
@@ -91,10 +92,17 @@ namespace Backend
             return Children.Count();
         }
 
+        public int GetHiredWorkerAmount()
+        {
+            return Hired_Worker.Count();
+        }
+
         // Get total labour points that this family can give
         public int GetLabourPoints()
         {
-            return Adults.Aggregate(0, (sum, adult) => sum + adult.GetLabourPoints());
+            int adult_point = Adults.Aggregate(0, (sum, adult) => sum + adult.GetLabourPoints());
+            int hired_worker_point = Hired_Worker.Aggregate(0, (sum, adult) => sum + adult.GetLabourPoints());
+            return adult_point + hired_worker_point;
         }
     }
 }

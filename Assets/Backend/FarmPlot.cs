@@ -45,5 +45,11 @@ namespace Backend
         {
             return YieldPerformanceTable.GetYield(this);
         }
+
+        public void ClearPlot()
+        {
+            SeedType = SeedType.Regular;
+            FertilizerType = FertilizerType.None;
+        }
     }
 }

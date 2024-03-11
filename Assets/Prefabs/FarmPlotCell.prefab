@@ -272,10 +272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   irrigatedColor: {r: 0, g: 0.4952731, b: 1, a: 1}
   irrigatedPressedColor: {r: 0, g: 0.36359605, b: 0.735849, a: 1}
-  irrigatedSelectedColor: {r: 0, g: 0.49411765, b: 1, a: 0}
-  irrigatedHighlightedColor: {r: 0, g: 0.49411765, b: 1, a: 0}
-  irrigatedDisabledColor: {r: 0.024474904, g: 0.24545582, b: 0.4716981, a: 0}
-  IsIrrigated: 0
+  irrigatedSelectedColor: {r: 0, g: 0.49411765, b: 1, a: 1}
+  irrigatedHighlightedColor: {r: 0, g: 0.49411765, b: 1, a: 1}
+  irrigatedDisabledColor: {r: 0.024474904, g: 0.24545582, b: 0.4716981, a: 1}
 --- !u!114 &5485139529822319608
 MonoBehaviour:
   m_ObjectHideFlags: 0

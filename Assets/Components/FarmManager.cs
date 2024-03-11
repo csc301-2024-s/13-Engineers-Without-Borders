@@ -38,8 +38,18 @@ public class FarmManager : MonoBehaviour
         foreach (FarmPlotCell cell in SelectedCells)
         {
             cell.Plot.Owner.Wheat += cell.Plot.GetYield();
+            cell.Plot.ClearPlot();
         }
-        GameState.AdvanceToPhaseThree();
+
+        // 7th year is the last one in the game, go to results after last harvest
+        if (GameState.s_Year == 7)
+        {
+            SceneUtils.LoadScene("Results");
+        }
+        else
+        {
+            GameState.AdvanceToPhaseThree();
+        }
     }
 
     // Irrigates all currently selected Cells
@@ -54,7 +64,7 @@ public class FarmManager : MonoBehaviour
     }
 
 
-    public static void ClearSelectedCells() 
+    public static void ClearSelectedCells()
     {
         SelectedCells.Clear();
     }

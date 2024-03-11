@@ -1,3 +1,4 @@
+using UnityEditor.SearchService;
 using Random = System.Random;
 
 /*
@@ -55,6 +56,7 @@ namespace Backend
             Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Year++;
+
             s_Phase = 1;
 
             Market.UpdateWheatPrice();
@@ -66,9 +68,9 @@ namespace Backend
             {
                 Fate.TriggerYearlyEvents();
 
-                // age up children when they're old enough
                 foreach (Household household in s_Households)
                 {
+                    // age up children when they're old enough
                     Family fam = household.Family;
                     for (int i = fam.Children.Count - 1; i > -1; i--)
                     {
@@ -99,6 +101,7 @@ namespace Backend
         {
             s_Phase = 3;
             s_Player.Land.ResetIrrigation();
+            s_Player.Land.ClearPlots();  // any hyc seeds/fertilizer that you didn't harvest get wasted
 
             // Remove all hired workers
             foreach (Household household in s_Households)

@@ -33,10 +33,12 @@ namespace Backend
         }
 
         // Gets the combined yield of every plot currently on this farmland
-        public int GetTotalYield() {
+        public int GetTotalYield()
+        {
             int totalYield = 0;
 
-            foreach (FarmPlot plot in Plots) {
+            foreach (FarmPlot plot in Plots)
+            {
                 totalYield += plot.GetYield();
 
                 // once collected, reset seed type and fertilizer
@@ -46,10 +48,11 @@ namespace Backend
 
             return totalYield;
 
-        }   
+        }
 
         // Add a plot to this land
-        public void AddPlot() {
+        public void AddPlot()
+        {
             if (Plots.Count >= MaxPlots)
             {
                 return;
@@ -61,11 +64,22 @@ namespace Backend
         }
 
         // Resets irrigation status for every plot
-        public void ResetIrrigation() {
-            foreach (FarmPlot plot in Plots) {
-                if (plot.Irrigated) {
+        public void ResetIrrigation()
+        {
+            foreach (FarmPlot plot in Plots)
+            {
+                if (plot.Irrigated)
+                {
                     plot.Irrigated = false;
                 }
+            }
+        }
+
+        public void ClearPlots()
+        {
+            foreach (FarmPlot plot in Plots)
+            {
+                plot.ClearPlot();
             }
         }
 

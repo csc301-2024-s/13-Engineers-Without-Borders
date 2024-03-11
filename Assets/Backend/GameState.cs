@@ -56,11 +56,7 @@ namespace Backend
             s_WeatherIndex = rand.Next(1, 6);
             s_Year++;
             s_Phase = 1;
-            // Remove all hired workers
-            foreach (Household household in s_Households)
-            {
-                household.RemoveLabour();
-            }
+
             Market.UpdateWheatPrice();
             Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
             Market.SetPriceMultiplier("Ox", 1);  // in case it was halved last year
@@ -103,6 +99,13 @@ namespace Backend
         {
             s_Phase = 3;
             s_Player.Land.ResetIrrigation();
+
+            // Remove all hired workers
+            foreach (Household household in s_Households)
+            {
+                household.RemoveLabour();
+            }
+            
             SceneUtils.LoadScene("Market");
             // TODO: if player's wheat is negative, alert them
             // this can be done in the future

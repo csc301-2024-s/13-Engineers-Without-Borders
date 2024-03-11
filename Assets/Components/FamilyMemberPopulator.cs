@@ -36,7 +36,7 @@ public class FamilyMemberPopulator : MonoBehaviour
             btnClone.transform.SetParent(adultListContent.transform, false);
             adultListRectSize.y += 400;
         }
-        
+        adultListRectSize.y += 150;  // make room for back button
         adultListRect.sizeDelta = adultListRectSize;
 
         // set up child list
@@ -49,6 +49,7 @@ public class FamilyMemberPopulator : MonoBehaviour
             btnClone.transform.SetParent(childListContent.transform, false);
             childListRectSize.y += 400;
         }
+        childListRectSize.y += 150;  // make room for back button
         childListRect.sizeDelta = childListRectSize;
     }
 

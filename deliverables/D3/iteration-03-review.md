@@ -38,10 +38,9 @@ List any **process-related** (i.e. team organization and/or how you work) change
  * Ordered from most to least important, with supporting argument explaining a change.
 
 #### Q3(b). Integration & Next steps
-Briefly explain how you integrated the previously developed individuals components as one product (i.e. How did you be combine the code from 3 sub-repos previously created) and if/how the assignment was helpful or not helpful.
+We split Deliverable 2 into the three simulation phases. It was straightforward to put it all together because each phase just needed to read some static data, so all we needed to do was make the advance buttons in each scene load the next scene. It was helpful practice dividing up a project, but it seems more appropriate for a web app; I think it would have been easier for all of us to work on each phase sequentially.
 
- * Keep this very short (1-3 lines).
-
+As for next steps after D3, we just need to polish up the GUI, put in pop-up notifications, and add a tutorial.
 
 ## Product - Review
 

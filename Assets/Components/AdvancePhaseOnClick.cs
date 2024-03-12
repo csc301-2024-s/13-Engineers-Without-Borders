@@ -33,7 +33,7 @@ public class AdvancePhaseOnClick : MonoBehaviour
                 GameState.AdvanceToPhaseOne();
                 break;
         }
-
+        
         FarmManager.ClearSelectedCells();
         FarmManager.SelectedTool = null;
     }

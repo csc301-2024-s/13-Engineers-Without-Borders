@@ -62,7 +62,7 @@ We were able to demo our progress in one of our biweekly meetings online (March 
 
 At this point, the non-simulation screens were starting to come together with basic styling and educational information written out, but accompanying images were still missing. The simulation screen was still incomplete, but it did feature updated menus and a reworked method of planting seeds and fertilizer.
 
-Fidel, from EWB, said he liked what he saw and thought we were progressing well.
+Fidel, from EWB, said he liked what he saw and thought we were progressing well. There were no requests to change or add features because our MVP was well-defined from the start (also he gave us storyboards to work with).
 
 The entire project so far has been a good learning experience. We learned how to discuss user stories and collaborate with a partner to meet their MVP.
 

@@ -6,12 +6,24 @@
     </ui:VisualElement>
     <ui:VisualElement name="info-text" style="flex-grow: 1; min-height: 750px; max-height: 750px; margin-top: 0; width: 1125px; top: 200px;">
         <ui:Label tabindex="-1" text="Which of these helped crops produce much more food during the Green Revolution? " parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="A) New types of high-yield crops" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionA" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="B) Chemical fertilizers and pesticides" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionB" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="C) Farming machinery such as tractors and harvesters" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionC" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="D) Smartphones and tablets " parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionD" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="E) A, B &amp; C" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionE" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="F) All of the above" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionF" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
+        <ui:Label tabindex="-1" text="A) New types of high-yield crops" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionA" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px; min-height: 200px;">
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonA" class="invisible-button" />
+        </ui:Label>
+        <ui:Label tabindex="-1" text="B) Chemical fertilizers and pesticides" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionB" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px; min-height: 200px;">
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonB" class="invisible-button" />
+        </ui:Label>
+        <ui:Label tabindex="-1" text="C) Farming machinery such as tractors and harvesters" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionC" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px; min-height: 200px;">
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonC" class="invisible-button" />
+        </ui:Label>
+        <ui:Label tabindex="-1" text="D) Smartphones and tablets " parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionD" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px; min-height: 200px;">
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonD" class="invisible-button" />
+        </ui:Label>
+        <ui:Label tabindex="-1" text="E) A, B &amp; C" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionE" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px; min-height: 200px;">
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonE" class="invisible-button" />
+        </ui:Label>
+        <ui:Label tabindex="-1" text="F) All of the above" parse-escape-sequences="true" display-tooltip-when-elided="true" name="optionF" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px; min-height: 200px;">
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonF" class="invisible-button" />
+        </ui:Label>
     </ui:VisualElement>
     <ui:VisualElement name="buttons" class="sideways-buttons">
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="Assessment1" name="back" class="load-scene-button" />

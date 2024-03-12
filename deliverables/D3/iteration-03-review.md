@@ -7,7 +7,7 @@
 
 ## Iteration 3 - Review & Retrospect
 
- * When: March 12, 2024
+ * When: March 11, 2024
  * Where: Online
 
 ## Process - Reflection

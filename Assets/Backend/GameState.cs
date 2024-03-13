@@ -32,6 +32,12 @@ namespace Backend
             new Household(500, "Gupta", 3, 5, 7)
         };
 
+        public static int _startMoney = 500;
+        public static string _familyName;
+        public static int _startingNumChildren = 0;
+        public static int _startingNumAdults = 0;
+        public static int _startingAcresOfLand = 0;
+        
         // Initialize the game
         public static void Initialize(Household Player)
         {
@@ -43,7 +49,14 @@ namespace Backend
             s_Households = new Household[] { Player };
 
             Market.Initialize();
-            
+
+            _startMoney = Player.Money;
+            _familyName = Player.Family.Name;
+            _startingNumChildren = Player.Family.Children.Count;
+            _startingNumAdults = Player.Family.Adults.Count;
+            _startingAcresOfLand = Player.Land.Plots.Count;
+
+
     }
 
         // (Year 2+ only) Choose random village event and household event for each household
@@ -95,7 +108,7 @@ namespace Backend
             //starting savings
             results["starting-savings"] = 500;
             //starting acres of land
-            results["starting-acres-of-land"] = 0;
+            results["starting-acres-of-land"] = _startingAcresOfLand;
             //tubewell
             results["tubewell"] = 0;
             if (s_Player != null)
@@ -128,8 +141,17 @@ namespace Backend
             results["total-earnings"] = results["total-assets"] - results["starting-assets"];
             //adults number
             results["adults-number"] = 0;
+            if (s_Player != null)
+            {
+                results["adults-number"] = s_Player.Family.Adults.Count;
+            }
+            results["adults-number"] = 0;
             //children number
             results["children-number"] = 0;
+            if (s_Player != null)
+            {
+                results["children-number"] = s_Player.Family.Adults.Count;
+            }
 
             return results;
         }

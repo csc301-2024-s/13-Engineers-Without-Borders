@@ -1,3 +1,6 @@
+Reference:
+-See EWBFiles/storyboard.pdf for reference
+
 Decisions Summary:
 -Popup windows are used to separate main sections
 -Certain screens are omitted or merged into other ones to make the flow more natural
@@ -16,13 +19,13 @@ Details:
 	Title reduced due to length limit.
 2.1 Learn More Screen 
 	Email will be displayed in link, the rest in logos.
-  Reasoning: Buttons instead of links would be more visually pleasant, but email address is kept in the form of text due to the way people are expected to use it.
+	Reasoning: Buttons instead of links would be more visually pleasant, but email address is kept in the form of text due to the way people are expected to use it.
 3.0 Introduction to the Green Revolution App Screen 
 	Made into a popup window at the start of page 4.0
-  Reasoning: Popup window with animation(animation not implemented yet) can give the feeling of separated sections.
+	Reasoning: Popup window with animation(animation not implemented yet) can give the feeling of separated sections.
 4.0 What is the Green Revolution? Screen
 	Same as in the storyboard.
-  Notes: For the next deliverable, we can make the logos more like a set, and implement keyframe animation to make the ui more fluid.
+	Notes: For the next deliverable, we can make the logos more like a set, and implement keyframe animation to make the ui more fluid.
 4.1 High-Yield Crop Varieties Screen
 	Same as in the storyboard.
 4.2 Synthetic Pesticides Screen
@@ -35,7 +38,7 @@ Details:
 	Title reduced due to length limit.
 5.1 Positive Effects Quote Screen
 	Made into a popup window on page 5.0 (not implemented yet)
-  Notes: 5.1 and 6.1 can be made into same animation like the one planned for 4.0
+	Notes: 5.1 and 6.1 can be made into same animation like the one planned for 4.0
 6.0 Negative Effects Screen
 	Title reduced due to length limit.
 6.1 Negative Effects Quote Screen
@@ -46,21 +49,21 @@ Details:
 8.0 Farming Simulation Setting Screen
 	Same as in the storyboard.
 14.0 Year7, End of Game Screen
-  Same as in the storyboard.
-  Notes: we need to think more about what stats need to be shown here.
-  Notes: maybe we can make a scoreboard in d4.
+	Same as in the storyboard.
+	Notes: we need to think more about what stats need to be shown here.
+  	Notes: maybe we can make a scoreboard in d4.
 15.0 Assessment Screen
 	Made into a popup window at the start of page 15.1
 	Title reduced due to length limit.
 15.1 Assessment Question #1 Screen
 	Same as in the storyboard.
-  Correctness is indicated in a popup window.
-  Notes: For D4, we can make the text turns into green or red to indicate correctness.
+  	Correctness is indicated in a popup window.
+  	Notes: For D4, we can make the text turns into green or red to indicate correctness.
 15.2 Assessment Question #2 Screen
 	Same as in the storyboard.
-  Correctness is indicated in a popup window.
+  	Correctness is indicated in a popup window.
 15.3 Assessment Question #3 Screen
 	Same as in the storyboard.
-  Correctness is indicated in a popup window.
+  	Correctness is indicated in a popup window.
 16.0 Thank You Screen
 	Same as in the storyboard.

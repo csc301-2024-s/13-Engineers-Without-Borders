@@ -48,7 +48,7 @@ It is recommended to edit scripts by clicking on them in the Unity editor, as th
 UML diagrams can be viewed in the browser, and edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  
 ## Deployment and Github Workflow
-Deployment Usage: navigate to D3/Build and run <NAME HERE>.exe
+Deployment Usage: navigate to D3/Build and run [FILL IN THE NAME HERE].exe
 
 
 

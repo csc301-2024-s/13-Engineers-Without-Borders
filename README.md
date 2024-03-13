@@ -24,7 +24,7 @@ When you open the app, you'll be greeted with the home screen. You'll have the o
 
 The educational stuff is the just information about the Green Revolution and its pros and cons. Simly click the next/back buttons to proceed.
 
-The simulation will have a tutorial, so you can follow that for now. [FILL THIS IN CLOSER TO THE DUE DATE]
+The simulation will have a tutorial, so you can follow that for now. After the simulation ends, there will be a result screen to show the final results for all the players. Finally, the last few screens will be dedicated for educational contents and feedback for EWB.
  
 ## Development requirements
 We are using the Unity Engine, LTS version 2022.3.18f1. Your local git branch should be configured to use Unity YAML merge.
@@ -48,7 +48,9 @@ It is recommended to edit scripts by clicking on them in the Unity editor, as th
 UML diagrams can be viewed in the browser, and edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  
 ## Deployment and Github Workflow
-Deployment is TBD. Maybe we'll set up an auto-building feature, or maybe not.
+Deployment Usage: navigate to D3/Build and run <NAME HERE>.exe
+
+
 
 Communication is done on our Discord server. We say what we're writing and how we're going to merge it (either directly or through a pull request). We honestly aren't very strict about this - as long as it gets the work done. As a rule of thumb, if we're making a small bug fix, we can just push directly to main. If it's a big change, like writing new classes, we'll create a branch for it, and the writer of it will create a pull request. Team lead reviews it and merges it.
 

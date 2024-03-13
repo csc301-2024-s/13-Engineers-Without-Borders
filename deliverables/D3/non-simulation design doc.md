@@ -1,4 +1,4 @@
-##Reference:
+#Reference:
 -See EWBFiles/Storyboard.pdf for reference
 
 ##Decisions Summary:

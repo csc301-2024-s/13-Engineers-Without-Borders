@@ -50,7 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ManageHousehold.unity
     guid: 26f0b3a697880b549aeee292095259b8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Harvest.unity
     guid: f75f6ab7c41f2224989549a34f07e26d
   - enabled: 1
@@ -80,8 +80,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ManageFamily.unity
     guid: 91653ff99cf73514cbf36b8bb8e70074
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ViewChildren.unity
     guid: 5c7a5da3da842304b9d3ef436235cabf
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 2ce2bf2bb0363d2489046bbb8b4b8cef, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b1d4d93735aed1a4cba17a6b8c394fbd, type: 2}

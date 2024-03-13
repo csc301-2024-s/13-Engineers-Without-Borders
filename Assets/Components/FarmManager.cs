@@ -57,7 +57,7 @@ public class FarmManager : MonoBehaviour
             if (FarmManager.PopupManagerInstance != null) 
             {
                 PopupManager.OnPopupClosed += LoadPhaseThree; // adds a listener that calls LoadPhaseThree when the pop up is closed
-                FarmManager.PopupManagerInstance.ShowPopup("TEST TEST TEST");
+                FarmManager.PopupManagerInstance.ShowPopup("Advancing To Phase 3"); // temp message before i do the actual one
             }
             else
             {

@@ -48,7 +48,7 @@ It is recommended to edit scripts by clicking on them in the Unity editor, as th
 UML diagrams can be viewed in the browser, and edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  
 ## Deployment and Github Workflow
-Deployment Usage: navigate to D3/Build and run [Green Revolution.exe](../13-Engineers-Without-Borders/deliverables/D3/Build/Green%20Revolution.exe)
+Deployment Usage: navigate to D3/Build and run [Green Revolution.exe](deliverables/D3/Build/Green%20Revolution.exe)
 
 
 

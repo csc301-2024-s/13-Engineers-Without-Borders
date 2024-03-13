@@ -18,6 +18,9 @@
     - Good separation of concerns, helps to avoid any conflicts, and is easier than us going back-and-forth between simulation code scenes non-simulation scenes
 - Discord communication
     - Very convenient that we can just chat with each other online, we can ping each other when we have an important message
+- UI Design Documentation
+    - A Design Documentation is made to help us keep track of the design decisions.
+    - See [non-simulation design doc](../D3/non-simulation%20design%20doc.md)
 
 <!-- 
 List **process-related** (i.e. team organization and how you work) decisions and actions that worked well.
@@ -47,6 +50,7 @@ List **process-related** (i.e. team organization and how you work) decisions and
  * Ordered from most to least important, with supporting argument explaining a change. -->
  - Discuss more about scene appearance
     - By the end of D3, the scenes will have been mostly completed. D4 will be polishing and implementing any missing features, we will discuss more as a team about what polishing we will do
+    - See [non-simulation design doc](../D3/non-simulation%20design%20doc.md) for some potential improvements on UI
 - Be more clear about how much time we should spend on each task
     - Knowing a time estimate can help us plan ahead, especially if one of us gets technical issues
 

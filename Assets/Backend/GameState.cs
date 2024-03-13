@@ -1,4 +1,5 @@
 using UnityEditor.SearchService;
+using System.Collections.Generic;
 using Random = System.Random;
 
 /*
@@ -8,7 +9,7 @@ namespace Backend
 {
     public static class GameState
     {
-        public static int s_Year;
+        public static int s_Year    ;
         public static int s_Phase;
         public static int s_WeatherIndex;
         public static Household s_Player;
@@ -33,6 +34,12 @@ namespace Backend
             new Household(500, "Khan", 1, 3, 4)   // added to make it an even number
         };
 
+        public static int _startMoney = 500;
+        public static string _familyName;
+        public static int _startingNumChildren = 0;
+        public static int _startingNumAdults = 0;
+        public static int _startingAcresOfLand = 0;
+        
         // Initialize the game
         public static void Initialize(Household Player)
         {
@@ -44,7 +51,14 @@ namespace Backend
             s_Households = new Household[] { Player };
 
             Market.Initialize();
-            
+
+            _startMoney = Player.Money;
+            _familyName = Player.Family.Name;
+            _startingNumChildren = Player.Family.Children.Count;
+            _startingNumAdults = Player.Family.Adults.Count;
+            _startingAcresOfLand = Player.Land.Plots.Count;
+
+
     }
 
         // (Year 2+ only) Choose random village event and household event for each household
@@ -112,6 +126,62 @@ namespace Backend
             SceneUtils.LoadScene("Market");
             // TODO: if player's wheat is negative, alert them
             // this can be done in the future
+        }
+        public static Dictionary<string, int> ResultReport()
+        {
+            Dictionary<string, int> results = new Dictionary<string, int>();
+
+            //ending year
+            results["end-of-year"] = s_Year;
+            //starting savings
+            results["starting-savings"] = 500;
+            //starting acres of land
+            results["starting-acres-of-land"] = _startingAcresOfLand;
+            //tubewell
+            results["tubewell"] = 0;
+            if (s_Player != null)
+            {
+                results["tubewell"] = s_Player.Inventory.GetAmount("tubewell");
+            }
+            //
+            results["ox"] = 0;
+            if (s_Player != null)
+            {
+                results["ox"] = s_Player.Inventory.GetAmount("tubewell"); ;
+            }
+            //acres of land
+            results["acres-of-land"] = 0;
+            if (s_Player != null)
+            {
+                results["acres-of-land"] = s_Player.Land.Plots.Count;
+            }
+            //total savings
+            results["total-savings"] = 0;
+            if (s_Player != null)
+            {
+                results["total-savings"] = s_Player.Money;
+            }
+            //total assets
+            results["total-assets"] = 1000 * results["tubewell"] + 1000 * results["ox"] + 300 * results["acres-of-land"] + results["total-savings"];
+            //staring assets
+            results["starting-assets"] = results["starting-savings"] + 300 * results["starting-acres-of-land"];
+            //total earnings
+            results["total-earnings"] = results["total-assets"] - results["starting-assets"];
+            //adults number
+            results["adults-number"] = 0;
+            if (s_Player != null)
+            {
+                results["adults-number"] = s_Player.Family.Adults.Count;
+            }
+            results["adults-number"] = 0;
+            //children number
+            results["children-number"] = 0;
+            if (s_Player != null)
+            {
+                results["children-number"] = s_Player.Family.Adults.Count;
+            }
+
+            return results;
         }
     }
 }

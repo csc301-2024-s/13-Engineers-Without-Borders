@@ -1,18 +1,18 @@
-Reference:
+****Reference:
 -See EWBFiles/Storyboard.pdf for reference
 
-Decisions Summary:
+****Decisions Summary:
 -Popup windows are used to separate main sections
 -Certain screens are omitted or merged into other ones to make the flow more natural
 
-Potential Improvements:
+****Potential Improvements:
 -Need to find better art assets for pictures, logos and buttons
 -Need to make detailed decisions on typography
 -Animation and transitions will make the ui look more fluid. The one ui builder offers feels super clumsy to use. Might look for other solutions.
 -Too many popup windows for now. All popup windows other than the ones between major sections need to be replaced.
 -Maybe implement a scoreboard.
 
-Details:
+****Details:
 1.0 Loading Screen
 	Omitted.
 2.0  Welcome Screen

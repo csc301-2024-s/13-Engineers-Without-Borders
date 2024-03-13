@@ -11,6 +11,7 @@
 -Animation and transitions will make the ui look more fluid. The one ui builder offers feels super clumsy to use. Might look for other solutions.  
 -Too many popup windows for now. All popup windows other than the ones between major sections need to be replaced.  
 -Maybe implement a scoreboard.  
+-Look for a decent implementation of the loading screen.
 
 ## Details:
 1.0 Loading Screen  

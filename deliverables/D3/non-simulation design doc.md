@@ -1,5 +1,5 @@
 Reference:
--See EWBFiles/storyboard.pdf for reference
+-See EWBFiles/Storyboard.pdf for reference
 
 Decisions Summary:
 -Popup windows are used to separate main sections

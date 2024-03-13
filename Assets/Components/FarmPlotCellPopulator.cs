@@ -13,15 +13,14 @@ public class FarmPlotCellPopulator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RectTransform rt = farmGrid.GetComponent<RectTransform>();
-        farmGrid.transform.SetParent(farmGrid.transform.parent, false);
+        farmGrid.transform.SetParent(farmGrid.transform.parent, false); // do this so scaling works??
 
         for (var i = 0; i < GameState.s_Player.Land.Plots.Count; i++)
         {
             FarmPlot plot = GameState.s_Player.Land.Plots[i];
             GameObject cellClone = Instantiate(farmPlotCellPrefab);
             SetUpFarmPlotManager(cellClone, plot);
-            cellClone.transform.SetParent(farmGrid.transform, false);  // do this so scaling works??
+            cellClone.transform.SetParent(farmGrid.transform, false);
         }
     }
 

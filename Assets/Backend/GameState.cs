@@ -1,3 +1,4 @@
+using UnityEditor.SearchService;
 using System.Collections.Generic;
 using Random = System.Random;
 
@@ -12,11 +13,11 @@ namespace Backend
         public static int s_Phase;
         public static int s_WeatherIndex;
         public static Household s_Player;
-        public static Household[] s_Households;
+        public static Household[] s_Households;  // originally planned to have AI players but not enough time :(
         public static Household[] s_PredefinedHouseholds = new Household[]
         {
             new Household(500, "Madhar", 3, 2, 3),
-            new Household(500, "Barlch", 4, 2, 3),
+            new Household(500, "Bralch", 4, 2, 3),
             new Household(500, "Rama", 4, 3, 4),
             new Household(500, "Dulai", 4, 5, 4),
             new Household(500, "Grewal", 4, 6, 5),
@@ -29,7 +30,8 @@ namespace Backend
             new Household(500, "Singh", 2, 3, 3),
             new Household(500, "Kapoor", 3, 5, 5),
             new Household(500, "Bhatia", 2, 2, 2),
-            new Household(500, "Gupta", 3, 5, 7)
+            new Household(500, "Gupta", 3, 5, 7),
+            new Household(500, "Khan", 1, 3, 4)   // added to make it an even number
         };
 
         public static int _startMoney = 500;
@@ -68,7 +70,9 @@ namespace Backend
             Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Year++;
+
             s_Phase = 1;
+
             Market.UpdateWheatPrice();
             Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
             Market.SetPriceMultiplier("Ox", 1);  // in case it was halved last year
@@ -77,24 +81,48 @@ namespace Backend
             if (s_Year >= 2)
             {
                 Fate.TriggerYearlyEvents();
+
+                foreach (Household household in s_Households)
+                {
+                    // age up children when they're old enough
+                    Family fam = household.Family;
+                    for (int i = fam.Children.Count - 1; i > -1; i--)
+                    {
+                        Child child = fam.Children[i];
+                        child.IncrementAge();
+                        if (child.Age <= 12)
+                        {
+                            continue;
+                        }
+
+                        fam.Children.Remove(child);
+                        Adult newAdult = child.ToAdult();
+                        fam.Adults.Add(newAdult);
+                    }
+                }
             }
 
-            SceneUtils.LoadScene("ManageHousehold");
+            SceneUtils.LoadScene("ManageFarm");
         }
 
         public static void AdvanceToPhaseTwo()
         {
             s_Phase = 2;
-            foreach (Household household in s_Households) {
-                household.Land.CanBeHarvested = true;
-            }
-
-            SceneUtils.LoadScene("Harvest");
+            SceneUtils.LoadScene("ManageFarm");  // reload
         }
 
         public static void AdvanceToPhaseThree()
         {
             s_Phase = 3;
+            s_Player.Land.ResetIrrigation();
+            s_Player.Land.ClearPlots();  // any hyc seeds/fertilizer that you didn't harvest get wasted
+
+            // Remove all hired workers
+            foreach (Household household in s_Households)
+            {
+                household.RemoveLabour();
+            }
+            
             SceneUtils.LoadScene("Market");
             // TODO: if player's wheat is negative, alert them
             // this can be done in the future

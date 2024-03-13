@@ -10,13 +10,11 @@ namespace Backend
         public const int MaxPlots = 25;
 
         public List<FarmPlot> Plots;
-        public bool CanBeHarvested { get; set; }
 
         // Initializes empty list to store FarmPlot objects 
         public Farmland(int numPlots)
         {
             Plots = new List<FarmPlot>();
-            CanBeHarvested = false;
 
             for (var i = 0; i < numPlots; i++)
             {
@@ -35,10 +33,12 @@ namespace Backend
         }
 
         // Gets the combined yield of every plot currently on this farmland
-        public int GetTotalYield() {
+        public int GetTotalYield()
+        {
             int totalYield = 0;
 
-            foreach (FarmPlot plot in Plots) {
+            foreach (FarmPlot plot in Plots)
+            {
                 totalYield += plot.GetYield();
 
                 // once collected, reset seed type and fertilizer
@@ -48,10 +48,11 @@ namespace Backend
 
             return totalYield;
 
-        }   
+        }
 
         // Add a plot to this land
-        public void AddPlot() {
+        public void AddPlot()
+        {
             if (Plots.Count >= MaxPlots)
             {
                 return;
@@ -61,5 +62,26 @@ namespace Backend
             newPlot.SetOwner(Owner);
             Plots.Add(newPlot);
         }
+
+        // Resets irrigation status for every plot
+        public void ResetIrrigation()
+        {
+            foreach (FarmPlot plot in Plots)
+            {
+                if (plot.Irrigated)
+                {
+                    plot.Irrigated = false;
+                }
+            }
+        }
+
+        public void ClearPlots()
+        {
+            foreach (FarmPlot plot in Plots)
+            {
+                plot.ClearPlot();
+            }
+        }
+
     }
 }

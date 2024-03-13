@@ -12,7 +12,7 @@ namespace Backend
         public const int Consumption = 10;
         public const int BaseLabourPoints = 2;
 
-        private bool _hasOx;
+        public bool HasOx { get; private set; }
         private bool _isAvailable;
 
         //Constructor of the class
@@ -21,13 +21,13 @@ namespace Backend
             FirstName = First;
             LastName = Last;
             _isAvailable = true;
-            _hasOx = false;
+            HasOx = false;
         }
 
         //Assign or de-assign an ox to the adult
         public void AssignOx(bool assigned)
         {
-            _hasOx = assigned;
+            HasOx = assigned;
         }
 
         //Handle the event that an adult must stay at home to look after the children
@@ -39,7 +39,8 @@ namespace Backend
         // Calculate how many labour points this adult gives you
         public int GetLabourPoints()
         {
-            return _hasOx ? BaseLabourPoints * 2 : BaseLabourPoints;
+            if (!_isAvailable) return 0;
+            return HasOx ? BaseLabourPoints * 2 : BaseLabourPoints;
         }
     }
 }

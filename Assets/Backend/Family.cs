@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 /*
  * Original Author: Hoa Nguyen
@@ -15,6 +16,7 @@ namespace Backend
 
         public List<Adult> Adults { get; } = new List<Adult>();
         public List<Child> Children { get; } = new List<Child>();
+        public List<Adult> HiredWorkers { get; } = new List<Adult>();
 
         //Constructor of the class
         public Family(string FamilyName, int NumChildren, int numAdults)
@@ -22,40 +24,26 @@ namespace Backend
             Name = FamilyName;
             for (int i = 0; i < NumChildren; i++)
             {
-                //Temporary name
-                int Age = CalculateChildAge();
-                Child child = new Child("A", FamilyName, Age);
-                Children.Add(child);
+                CreateChild();
             }
             for (int i = 0; i < numAdults; i++)
             {
-                //Temporary name
-                Adult adult = new Adult("B", FamilyName);
-                Adults.Add(adult);
+                CreateAdult();
             }
-        }
-
-        //Calculate the age of a child
-        private int CalculateChildAge()
-        {
-            // Use the current year and month to calculate age
-            DateTime currentTime = DateTime.Now;
-            int currentYear = currentTime.Year;
-            int currentMonth = currentTime.Month;
-
-            // Example: age is a function of the current year and month
-            int baseAge = 5; // Base age for all children
-            int age = baseAge + (currentYear % 10) - (currentMonth % 5);
-
-            return Mathf.Clamp(age, 0, 11); // Clamp age to a reasonable range (0-11)
         }
 
         //Add a new child to the family
         public void CreateChild()
         {
-            //Temporary name
-            Child child = new Child("A", Name, 0);
+            int age = Random.Range(0, 13);
+            Child child = new Child(FamilyMember.GetRandomFirstName(), Name, age);
             Children.Add(child);
+        }
+
+        public void CreateAdult()
+        {
+            Adult adult = new Adult(FamilyMember.GetRandomFirstName(), Name);
+            Adults.Add(adult);
         }
 
         //Calculate family's total consumption after each year
@@ -91,10 +79,17 @@ namespace Backend
             return Children.Count();
         }
 
+        public int GetHiredWorkerAmount()
+        {
+            return HiredWorkers.Count();
+        }
+
         // Get total labour points that this family can give
         public int GetLabourPoints()
         {
-            return Adults.Aggregate(0, (sum, adult) => sum + adult.GetLabourPoints());
+            int adult_point = Adults.Aggregate(0, (sum, adult) => sum + adult.GetLabourPoints());
+            int hired_worker_point = HiredWorkers.Aggregate(0, (sum, adult) => sum + adult.GetLabourPoints());
+            return adult_point + hired_worker_point;
         }
     }
 }

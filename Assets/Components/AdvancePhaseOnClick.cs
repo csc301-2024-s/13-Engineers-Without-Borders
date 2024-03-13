@@ -8,6 +8,7 @@ public class AdvancePhaseOnClick : MonoBehaviour
 {
     [SerializeField] [Range(1, 3)] int phase;  // should be from 1 to 3, but it's zero-indexed
 
+
     void Start() {
         // If on an object with a button component, assign it automatically
         Button btn = GetComponent<Button>();
@@ -18,12 +19,23 @@ public class AdvancePhaseOnClick : MonoBehaviour
     }
 
     public void OnClick() {
-        if (phase == 1) {
-            GameState.AdvanceToPhaseOne();
-        } else if (phase == 2) {
-            GameState.AdvanceToPhaseTwo();
-        } else {
-            GameState.AdvanceToPhaseThree();
+        switch (GameState.s_Phase) {
+            case 0:
+                GameState.AdvanceToPhaseOne();
+                break;
+            case 1:
+                GameState.AdvanceToPhaseTwo();
+                break;
+            case 2:
+                GameState.AdvanceToPhaseThree();
+                break;
+            default:
+                GameState.AdvanceToPhaseOne();
+                break;
         }
+        
+        FarmManager.ClearSelectedCells();
+        FarmManager.SelectedTool = null;
     }
+
 }

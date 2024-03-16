@@ -22,9 +22,38 @@ Final project is an iOS/Android app, so you'll either need an emulator or a phon
 
 When you open the app, you'll be greeted with the home screen. You'll have the option to skip the simulation, or continue on with the educational stuff.
 
-The educational stuff is the just information about the Green Revolution and its pros and cons. Simly click the next/back buttons to proceed.
+The educational stuff is the just information about the Green Revolution and its pros and cons. Simply click the next/back buttons to proceed.
 
-The simulation will have a tutorial, so you can follow that for now. After the simulation (after the 7th year), there will be a results screen to show your final score. This is followed by some self reflection questions to see how much you've learned.
+Eventually you will reach the simulation. There will be a screen where you can select which household you want to play as, each with a different number of adults, children, and plots of land. When you click, you will be brought to the farm management screen - in the upper left corner you can see the current weather index, year, and phase. In the lower left corner there is a button that will display information about your household. In the lower middle there is a green button to progress to the next phase. In the lower right corner there is a button to take you to the market, which should only be visible during phase 3. In the upper right corner of phases 1 and 2, you can see your total "labour value." Every adult by default contributes two labour points which can be doubled if an adult is assigned an ox.
+
+### Household Screen
+When you click the lower left button you will be taken to a screen where you can view your adults, children, inventory, and land (which takes you back to the farm management screen). In the adults section it lists all your adults (and hired labour), and there are buttons for you to assign oxen to them (if you have any). In the children section it lists all your children, as well as how many years until they become adults. In the inventory you can see how many of every item you own (except land and labour, which can be seen in farm management and the adult list respectively).
+
+### Phase 1
+At the start of the year, there may be random events - we currently do not have a way to display this event to the user but it will be implemented later. Events include making certain market items unavailable or changing their price, or adding a child to your family.
+
+In phase 1 you irrigate your crops. You can irrigate up to 10 plots of land per tubewell owned. Of course, this means you can't irrigate any land if you don't have tubewells - in the future we will make it so this phase is skipped if this is the case. Irrigating one plot of land costs two labour points.
+
+### Phase 2
+In this phase you select which plots of land you want to harvest. Every plot costs one labour point. The yield amount of each plot of land depends on what type of seed and fertilizer it has, as well as the weather and whether it's irrigated or not. The entire table of values can be found in `Assets/Backend/YieldPerformanceTable.c` but the gist of it is:
+- Low/high fertilizer increase yield by a low/high amount respectively
+- Lower weather index = better yield, higher weather index = worse yield
+- HYC Seeds perform better than regular seeds in good weather, but worse in worse weather
+- If a plot of land is irrigated, it uses the best weather index (1) to calculate its yield
+
+### Phase 3
+In this phase you end up in the market. Here you can buy items and sell wheat (by the tens or by the hundreds. Wheat sell price is the same as the buy price). Their descriptions as shown in the market should be explanatory enough.
+
+Some items have purchase limits:
+- You can only buy as many oxen as adults in your family
+- You can only own a maximum of 25 plots of land
+
+At the bottom of the market screen is a button that takes you back to the farm management screen, this time with three extra toggles at the bottom for planting. Yes, phase 3 is the planting phase. If you toggle the HYC Seed option, you can select plots of land to plant HYC seeds on them. It's a similar deal for the low/high fertilizer options.
+
+To remove HYC seed or fertilizer from a plot of land, simply select it with the proper toggle enabled.
+
+
+After the simulation (after the harvest on the 7th year), there will be a results screen to show your final score. This is followed by some self reflection questions to see how much you've learned.
  
 ## Development requirements
 We are using the Unity Engine, LTS version 2022.3.18f1. Your local git branch should be configured to use Unity YAML merge.

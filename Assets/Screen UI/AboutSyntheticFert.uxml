@@ -6,8 +6,8 @@
     </ui:VisualElement>
     <ui:VisualElement name="info-text" style="flex-grow: 1; min-height: 750px; max-height: 750px; margin-top: 0; width: 1125px; top: 200px;">
         <ui:Label tabindex="-1" text="Natural products like manure and compost can be used to make soil more fertile.&#10;Man-made fertilizers, on the other hand, provide nitrogen and other plant&#10;nutrients that plants can absorb directly. While synthetic fertilizers have been&#10;around since the 1800s, their use really took off after the 1940s. Ammonia from&#10;natural gas is used to produce fertilizers, and the process also creates carbon&#10;dioxide gas emissions. " parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px; -unity-text-outline-color: rgba(0, 0, 0, 0);" />
-        <ui:Label tabindex="-1" text="PICTURE PLACEHOLDER" parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
     </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; max-width: 300px; max-height: 300px; min-width: 300px; min-height: 300px; width: 300px; height: 300px; position: absolute; left: 425px; top: 800px; background-image: url(&apos;project://database/Assets/Sprites/soil.jpg?fileID=21300000&amp;guid=a5dea12970890ea4190dc2e2211cdcf2&amp;type=3#soil&apos;);" />
     <ui:VisualElement name="buttons" class="sideways-buttons">
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="AboutSyntheticPest" name="back" class="load-scene-button" />
         <ui:Button text="Next" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="AboutMechanization" name="next" class="load-scene-button" />

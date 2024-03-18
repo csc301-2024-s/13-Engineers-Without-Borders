@@ -6,8 +6,8 @@
     </ui:VisualElement>
     <ui:VisualElement name="info-text" style="flex-grow: 1; min-height: 750px; max-height: 750px; margin-top: 0; width: 1125px; top: 200px;">
         <ui:Label tabindex="-1" text="New versions of important crops such as wheat, rice, and potatoes were developed&#10;to provide more food and grow quicker than traditional varieties, but they require&#10;more water and fertilizers to achieve their full potential and are not as tough as&#10;their natural cousins." parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="PICTURE PLACEHOLDER" parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
     </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; width: 300px; align-items: center; height: 300px; min-width: 300px; max-width: 300px; max-height: 300px; min-height: 300px; position: absolute; left: 425px; top: 800px; background-image: url(&apos;project://database/Assets/Sprites/seeds.jpg?fileID=21300000&amp;guid=f4742e42c9521414ca618ba5a096ce46&amp;type=3#seeds&apos;);" />
     <ui:VisualElement name="buttons" class="sideways-buttons">
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="AboutGR" name="back" class="load-scene-button" />
         <ui:Button text="Next" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="AboutSyntheticPest" name="next" class="load-scene-button" />

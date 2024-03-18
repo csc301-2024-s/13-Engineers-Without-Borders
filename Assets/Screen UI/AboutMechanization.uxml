@@ -6,8 +6,8 @@
     </ui:VisualElement>
     <ui:VisualElement name="info-text" style="flex-grow: 1; min-height: 750px; max-height: 750px; margin-top: 0; width: 1125px; top: 200px;">
         <ui:Label tabindex="-1" text="While tools like ploughs and sickles have been used by farmers for hundreds of&#10;years, use of gasoline-powered tractors and other machines took off in the 1940s&#10;in North America and Europe and later in Asia and South America, completely&#10;replacing beasts of burden. While these machines are much faster than people or&#10;animals, they are more expensive and use lots of fuel. " parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px;" />
-        <ui:Label tabindex="-1" text="PICTURE PLACEHOLDER" parse-escape-sequences="true" display-tooltip-when-elided="true" name="description" style="color: rgb(0, 0, 0); -unity-text-align: middle-center; font-size: 45px; white-space: normal; padding-left: 50px; padding-right: 50px; -unity-text-outline-color: rgba(255, 255, 255, 0);" />
     </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; max-width: 300px; width: 300px; height: 300px; max-height: 300px; position: absolute; left: 425px; top: 800px; background-image: url(&apos;project://database/Assets/Sprites/tractor.jpg?fileID=21300000&amp;guid=156e623637c6f134691c9350575c2a6b&amp;type=3#tractor&apos;);" />
     <ui:VisualElement name="buttons" class="sideways-buttons">
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="AboutSyntheticFert" name="back" class="load-scene-button" />
         <ui:Button text="Next" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="PositiveEffects" name="next" class="load-scene-button" />

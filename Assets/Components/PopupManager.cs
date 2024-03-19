@@ -1,55 +1,71 @@
-using System; 
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-// Author: Bill Guo
+// Author: Andy Wang
+// A class with a static function to show popups
 public class PopupManager : MonoBehaviour
 {
-    [SerializeField] private Popup popupPrefab;
-    [SerializeField] private Canvas hud;
-    private Popup popupInstance;
-    public static event Action OnPopupClosed; 
+    struct Popup {
+        public string Title { get; private set; }
+        public string Description { get; private set; }
+        public string CloseText { get; private set; }
 
-    private void Awake()
-    {
-        hud = GameObject.Find("HUD").GetComponent<Canvas>();
-        if (popupInstance == null)
+        public Popup(string title, string description, string closeText)
         {
-            popupInstance = Instantiate(popupPrefab, hud.transform, false);
-            popupInstance.gameObject.SetActive(false);
+            Title = title;
+            Description = description;
+            CloseText = closeText;
         }
     }
 
-    // Sets up the popup and activates it in the scene
-    public void ShowPopup(string message)
+    [SerializeField] GameObject popup;
+    [SerializeField] TextMeshProUGUI title;
+    [SerializeField] TextMeshProUGUI description;
+    [SerializeField] TextMeshProUGUI closeText;
+    
+    private static GameObject _popup;
+    private static TextMeshProUGUI _title, _description, _closeText;
+    private static Queue<Popup> _queue = new();  // maintain a queue of popups in case multiple get shown at the same time
+    
+    void Awake()
     {
-        if (popupInstance != null)
-        {
-            TMP_Text textComponent = popupInstance.GetComponentInChildren<TMP_Text>();
-            if (textComponent != null)
-            {
-                textComponent.text = message;
-            }
+        _popup = popup;
+        _title = title;
+        _description = description;
+        _closeText = closeText;
 
-            Button closeButton = popupInstance.GetComponentInChildren<Button>();
-            if (closeButton != null)
-            {
-                closeButton.onClick.RemoveAllListeners();
-                closeButton.onClick.AddListener(() => ClosePopup());
-            }
-
-            popupInstance.gameObject.SetActive(true);
-        }
+        // listen to the close button - when closed, dequeue the next popup
+        Button closeButton = _closeText.transform.parent.GetComponent<Button>();
+        closeButton.onClick.AddListener(() => {
+            _popup.SetActive(false);
+            ShowNextPopup();
+        });
     }
 
-    // Closes the popup and signals that the popup was closed
-    private void ClosePopup()
+    // Enqueue a new popup to be shown once the current queue is exhausted
+    public static void QueuePopup(string title, string description, string closeText)
     {
-        if (popupInstance != null)
-        {
-            popupInstance.gameObject.SetActive(false);
-            OnPopupClosed?.Invoke(); 
-        }
+        _queue.Enqueue(new Popup(title, description, closeText));
+        ShowNextPopup();
+    }
+
+    // Show the next enqueued popup to the player
+    private static void ShowNextPopup()
+    {
+        if (_queue.Count == 0) return;  // do nothing if nothing enqueued
+
+        Popup next = _queue.Dequeue();
+        ShowPopup(next);
+    }
+
+    // Show a specific popup to the user
+    private static void ShowPopup(Popup popup)
+    {
+        _title.text = popup.Title;
+        _description.text = popup.Description;
+        _closeText.text = popup.CloseText;
+        _popup.SetActive(true);  // show the actual popup
     }
 }

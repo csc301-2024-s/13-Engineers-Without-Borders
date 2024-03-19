@@ -1,14 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 /*
  * Original Author: Arick Liu
- * This class represents a fate event, in which it happens every 
+ * This class represents a fate event which happens every year
  */
-
-
 namespace Backend
 {
     public static class Fate
@@ -17,10 +10,8 @@ namespace Backend
 
         public static void TriggerYearlyEvents()
         {
-            foreach (Household plr in GameState.s_Households) {
-                DetermineFamilyEvent(plr);
-                DetermineVillageEvent();
-            }
+            DetermineFamilyEvent(GameState.s_Player);
+            DetermineVillageEvent();
         }
 
         private static void DetermineVillageEvent()
@@ -31,7 +22,7 @@ namespace Backend
             {
                 case 1:
                     //Console.WriteLine("A Relief Organization is working in your community. Oxen are half price this year");
-                    // Example: Update ox prices in the market
+                    // Update ox prices in the market
                     Market.SetPriceMultiplier("Ox", 0.5f);
                     break;
                 case 2:

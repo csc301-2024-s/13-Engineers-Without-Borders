@@ -8,7 +8,7 @@ namespace Backend
     public class Farmland : HouseholdAsset
     {
         public const int MaxPlots = 25;
-
+        public float YieldMultiplier { get; set; } = 1;
         public List<FarmPlot> Plots;
 
         // Initializes empty list to store FarmPlot objects 
@@ -46,7 +46,7 @@ namespace Backend
                 plot.FertilizerType = FertilizerType.None;
             }
 
-            return totalYield;
+            return (int)(totalYield * YieldMultiplier);
 
         }
 

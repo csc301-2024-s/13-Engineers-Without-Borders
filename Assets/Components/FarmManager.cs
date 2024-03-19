@@ -6,13 +6,6 @@ using Backend;
 // Similar to GameState but specific to the Manage Farm scene, holding some variables used in that scene for convenience
 public class FarmManager : MonoBehaviour
 {
-    // TODO:
-    // - Need a field to keep track of selected farm cells
-    // - When farm cell is pressed while selected, it should be unselected
-    // - In phase 2 when you press harvest button, only selected farm cells should be harvested
-    // - In phase 3, need to keep track of which tool is selected (HYC seeed or fertilizer?) which can be read statically
-
-    [SerializeField] PopupManager popupManager;
     public static string SelectedTool { get; set; } = null; // just make this a string for now lol
 
     public static List<FarmPlotCell> SelectedCells = new List<FarmPlotCell>();
@@ -27,11 +20,6 @@ public class FarmManager : MonoBehaviour
     void Start()
     {
         LabourPoints = GameState.s_Player.Family.GetLabourPoints();
-    }
-
-    void Awake()
-    {
-        PopupManagerInstance = popupManager;
     }
 
     private void OnEnable()
@@ -54,23 +42,8 @@ public class FarmManager : MonoBehaviour
             SceneUtils.LoadScene("Results");
         } else 
         {   
-            if (FarmManager.PopupManagerInstance != null) 
-            {
-                PopupManager.OnPopupClosed += LoadPhaseThree; // adds a listener that calls LoadPhaseThree when the pop up is closed
-                FarmManager.PopupManagerInstance.ShowPopup("Advancing To Phase 3"); // temp message before i do the actual one
-            }
-            else
-            {
-                GameState.AdvanceToPhaseThree(); // in case something broke 
-            }
+            GameState.AdvanceToPhaseThree(); // in case something broke
         }
-    }
-
-    // Loads phase three and removes the listener 
-    private static void LoadPhaseThree()
-    {
-        PopupManager.OnPopupClosed -= LoadPhaseThree; 
-        GameState.AdvanceToPhaseThree();
     }
 
     // Irrigates all currently selected Cells

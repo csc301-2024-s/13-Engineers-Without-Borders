@@ -32,10 +32,11 @@ namespace Backend
             }
         }
 
-        //Add a new child to the family
-        public void CreateChild()
+        // Add a new child to the family
+        // If age is -1, then generate random age between 0 and 13
+        public void CreateChild(int age = -1)
         {
-            int age = Random.Range(0, 13);
+            age = age == -1 ? Random.Range(0, 13) : age;
             Child child = new Child(FamilyMember.GetRandomFirstName(), Name, age);
             Children.Add(child);
         }

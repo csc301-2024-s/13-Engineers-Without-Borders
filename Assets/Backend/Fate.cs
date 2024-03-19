@@ -1,13 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 /*
  * Original Author: Arick Liu
- * This class represents a fate event, in which it happens every 
+ * This class represents a fate event which happens every year
  */
-
+using UnityEngine;
 
 namespace Backend
 {
@@ -17,10 +12,8 @@ namespace Backend
 
         public static void TriggerYearlyEvents()
         {
-            foreach (Household plr in GameState.s_Households) {
-                DetermineFamilyEvent(plr);
-                DetermineVillageEvent();
-            }
+            DetermineFamilyEvent(GameState.s_Player);
+            DetermineVillageEvent();
         }
 
         private static void DetermineVillageEvent()
@@ -30,22 +23,21 @@ namespace Backend
             switch (villageEventOutcome)
             {
                 case 1:
-                    //Console.WriteLine("A Relief Organization is working in your community. Oxen are half price this year");
-                    // Example: Update ox prices in the market
+                    PopupManager.QueuePopup("Village Event", "A Relief Organization is working in your community. Oxen are half price this year!", "Hooray!");
+                    // Update ox prices in the market
                     Market.SetPriceMultiplier("Ox", 0.5f);
                     break;
                 case 2:
-                    //Console.WriteLine("A Relief Organization is working in your community. Tubewells are half price this year");
-                    // Example: Update tubewell prices in the market
-                    //Market.SetPriceMultiplier("Tubewell", 0.5f); tubewells not implemented yet
+                    PopupManager.QueuePopup("Village Event", "A Relief Organization is working in your community. Tubewells are half price this year!", "Hooray!");
+                    // Update tubewell prices in the market
+                    Market.SetPriceMultiplier("Tubewell", 0.5f);
                     break;
                 case 3:
-                    //Console.WriteLine("Sold Out! (No HYC seeds are available this year)");
+                    PopupManager.QueuePopup("Village Event", "HYC seeds are sold out this year!", "Oh no!");
                     Market.DeactivateProduct("HYC Seed");
                     break;
                 default:
-                    //Console.WriteLine("No village event this year.");
-                    // Example: No specific action for no village event
+                    Debug.Log("No village event this year");
                     break;
             }
         }
@@ -57,19 +49,15 @@ namespace Backend
             switch (familyEventOutcome)
             {
                 case 1:
-                    // Console.WriteLine("Pest Attack! Family loses half of the year's crop.");
-                    // Outcome: Reduce the amount of harvested crops in the household
-                    // TODO: this will be implemented later
+                    PopupManager.QueuePopup("Family Event", "Pest attack! You will lose half your crops this year!", "Oh no!");
+                    GameState.s_Player.Land.YieldMultiplier = 0.5f;
                     break;
-                case 2:
                 case 3:
-                    // Console.WriteLine("New Baby! Add one child to the family.");
-                    // Outcome: a new baby! Welcome to the family!
-                    household.Family.CreateChild();
+                    PopupManager.QueuePopup("Family Event", "Your family has a new child!", "Okay!");
+                    household.Family.CreateChild(0);
                     break;
                 default:
-                    // Console.WriteLine("No family event this year.");
-                    // Outcome: No specific action for no family event
+                    Debug.Log("No family event this year");
                     break;
             }
         }

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 // Author: Andy Wang
 // A class with a static function to show popups
+// This is in Backend becase Fate needs to be able to reference it, and it can only do that if it's in the same folder
+// because of the assembly definition
 public class PopupManager : MonoBehaviour
 {
     struct Popup {
@@ -44,11 +46,20 @@ public class PopupManager : MonoBehaviour
         });
     }
 
+    void Start()
+    {
+        // This is a workaround the fact that scene loading takes time, and sometimes the popup would show
+        // before the scene changed
+        ShowNextPopup();
+    }
+
     // Enqueue a new popup to be shown once the current queue is exhausted
-    public static void QueuePopup(string title, string description, string closeText)
+    // <immediate> is in case we want to queue a popup in the middle of a scene and not loading another scene right after
+    public static void QueuePopup(string title, string description, string closeText, bool immediate = false)
     {
         _queue.Enqueue(new Popup(title, description, closeText));
-        ShowNextPopup();
+
+        if (immediate) ShowNextPopup();
     }
 
     // Show the next enqueued popup to the player

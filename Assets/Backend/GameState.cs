@@ -69,13 +69,15 @@ namespace Backend
             Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Year++;
-
             s_Phase = 1;
+
+            SceneUtils.LoadScene("ManageFarm");
 
             Market.UpdateWheatPrice();
             Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
             Market.SetPriceMultiplier("Ox", 1);  // in case it was halved last year
-            //Market.SetPriceMultiplier("Tubewell", 1);
+            Market.SetPriceMultiplier("Tubewell", 1);
+            s_Player.Land.YieldMultiplier = 1;  // in case it was halved last year
 
             if (s_Year >= 2)
             {
@@ -100,8 +102,6 @@ namespace Backend
                     }
                 }
             }
-
-            SceneUtils.LoadScene("ManageFarm");
         }
 
         public static void AdvanceToPhaseTwo()

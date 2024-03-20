@@ -39,12 +39,6 @@
     padding-bottom: 50px;
 }
 
-.background {
-}
-
-.title-bar {
-}
-
 .title-text {
 }
 
@@ -84,4 +78,43 @@
 
 .red-text {
     color: rgb(255, 0, 0);
+}
+
+.background2 {
+    flex-grow: 1;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+.title-bar {
+    flex-grow: 1;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgb(239, 238, 185);
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    justify-content: center;
+    height: 10%;
+    align-items: stretch;
+    -unity-text-align: upper-center;
+    min-height: 10%;
+    max-height: 10%;
+    width: 100%;
+}
+
+.info-text {
+    flex-grow: 1;
+    min-height: auto;
+    max-height: none;
+    margin-top: 0;
+    width: 100%;
+    top: 13%;
+    bottom: 45%;
+    position: absolute;
 }

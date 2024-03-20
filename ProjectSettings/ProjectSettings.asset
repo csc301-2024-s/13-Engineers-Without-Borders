@@ -43,7 +43,7 @@ PlayerSettings:
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1125
-  defaultScreenHeight: 2000
+  defaultScreenHeight: 2500
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
@@ -158,8 +158,8 @@ PlayerSettings:
   targetPixelDensity: 135
   resolutionScalingMode: 0
   resetResolutionOnWindowResize: 0
-  androidSupportedAspectRatio: 0
-  androidMaxAspectRatio: 2.1
+  androidSupportedAspectRatio: 2
+  androidMaxAspectRatio: 2.222
   applicationIdentifier:
     Android: com.CSC301EngineersWithoutBordersCanada.GreenRevolution
     Lumin: com.DefaultCompany.com.unity.template.mobile2D

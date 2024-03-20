@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using Random = System.Random;
 
 /*
@@ -66,6 +67,18 @@ namespace Backend
         //Possible for there to be no village event, or for a household to have no event
         public static void AdvanceToPhaseOne()
         {
+            // TODO: If player's wheat is < 0, remove the first child or adult that cannot be fed
+            // For example, child consumption is 5 and adult consumption is 10
+            // If you have -4 wheat, one child starves. If you have -6 wheat, two children starve.
+            // If you have -4 or -6 wheat and no children, an adult starves.
+            // If you have -20 wheat, two adults starve.
+            // After starvation, if your family has no adults left, end the game (load results screen directly)
+            if (s_Player.Wheat < 0)
+            {
+                // TODO: use string interpolation to say which family member
+                PopupManager.QueuePopup("Notice", "A family member starved to death!", "R.I.P.");
+            }
+
             Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Year++;
@@ -77,7 +90,7 @@ namespace Backend
             Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
             Market.SetPriceMultiplier("Ox", 1);  // in case it was halved last year
             Market.SetPriceMultiplier("Tubewell", 1);
-            s_Player.Land.YieldMultiplier = 1;  // in case it was halved last year
+            s_Player.Land.SetYieldMultiplier(1);  // in case it was halved last year
 
             if (s_Year >= 2)
             {
@@ -122,9 +135,12 @@ namespace Backend
                 household.RemoveLabour();
             }
             
+            if (s_Player.Wheat < 0)
+            {
+                PopupManager.QueuePopup("Notice", "You need to buy wheat to feed your family! If you don't buy enough by the end of this year, some of your family will starve!", "Oh no!");
+            }
+
             SceneUtils.LoadScene("Market");
-            // TODO: if player's wheat is negative, alert them
-            // this can be done in the future
         }
         public static Dictionary<string, int> ResultReport()
         {

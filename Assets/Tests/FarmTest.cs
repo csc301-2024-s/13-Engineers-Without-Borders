@@ -44,6 +44,10 @@ public class FarmTest
         int actualTotalYield = farmland.GetTotalYield();
 
         Assert.AreEqual(expectedTotalYield, actualTotalYield);
+
+        // half multiplier
+        farmland.SetYieldMultiplier(0.5f);
+        Assert.AreEqual(expectedTotalYield / 2, farmland.GetTotalYield());
     }
 
 }

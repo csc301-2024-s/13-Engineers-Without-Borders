@@ -50,7 +50,7 @@ namespace Backend
             {
                 case 1:
                     PopupManager.QueuePopup("Family Event", "Pest attack! You will lose half your crops this year!", "Oh no!");
-                    GameState.s_Player.Land.YieldMultiplier = 0.5f;
+                    GameState.s_Player.Land.SetYieldMultiplier(0.5f);
                     break;
                 case 3:
                     PopupManager.QueuePopup("Family Event", "Your family has a new child!", "Okay!");

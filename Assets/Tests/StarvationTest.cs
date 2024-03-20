@@ -8,68 +8,43 @@ using NUnit.Framework;
 public class StarvationTest
 {
     // Test starvation
-    [SetUp]
     public void Test(Household household)
     {
-        if (household.Wheat < 0)
+        while (household.Wheat < 0 && household.Family.GetAdultAmount() > 0)
         {
             // Remove children first because they're less useful than adults
-            if (household.Family.Children.Count > 0)
+            if (household.Family.GetChildrenAmount() > 0)
             {
-                int amountChildrenDie = household.Wheat % 5;
-                for (int i = 0; i < amountChildrenDie; i++)
-                {
-                    if (household.Family.Children.Count > 0)
-                    {
-                        Child child = household.Family.Children[0];
-                        string name = child.FirstName;
-                        household.Family.Children.RemoveAt(0);
-                    }
-                    else if (household.Family.Adults.Count > 0)
-                    {
-                        Adult adult = household.Family.Adults[0];
-                        string name = adult.FirstName;
-                        household.Family.Adults.RemoveAt(0);
-                    }
-                    else if (household.Family.Adults.Count == 0)
-                    {
-                    }
-                }
+                household.Family.Children.RemoveAt(0);
+                household.Wheat += Child.Consumption;
             }
-            else if (household.Family.Adults.Count > 0)
+            else if (household.Family.GetAdultAmount() > 0)
             {
-                int amountAdultsDie = household.Wheat % 10;
-                for (int i = 0; i < amountAdultsDie; i++)
-                {
-                    if (household.Family.Adults.Count > 0)
-                    {
-                        Adult adult = household.Family.Adults[0];
-                        string name = adult.FirstName;
-                        household.Family.Adults.RemoveAt(0);
-                        
-                    }
-                    else if (household.Family.Adults.Count == 0)
-                    {
-           
-                    }
-                }
+                household.Family.Adults.RemoveAt(0);
+                household.Wheat += Adult.Consumption;
             }
+            household.Wheat = Mathf.Min(household.Wheat, 0);  // don't let it go over 0
         }
     }
+
     [Test]
     public void TestOneChildDied()
     {
-        Household poor = new(0, "Poor", 3, 2, 0);
-        poor.Wheat = -4;
+        Household poor = new(0, "Poor", 3, 2, 0)
+        {
+            Wheat = -4
+        };
         Test(poor);
-        Assert.AreEqual(poor.Family.Children.Count, 2);     
+        Assert.AreEqual(poor.Family.Children.Count, 2);
     }
 
     [Test]
     public void TestOneAdultDied()
     {
-        Household poor = new(0, "Poor", 0, 2, 0);
-        poor.Wheat = -3;
+        Household poor = new(0, "Poor", 0, 2, 0)
+        {
+            Wheat = -3
+        };
         Test(poor);
         Assert.AreEqual(poor.Family.Adults.Count, 1);
     }
@@ -77,8 +52,10 @@ public class StarvationTest
     [Test]
     public void TestAllChildrenDied()
     {
-        Household poor = new(0, "Poor", 3, 2, 0);
-        poor.Wheat = -12;
+        Household poor = new(0, "Poor", 3, 2, 0)
+        {
+            Wheat = -12
+        };
         Test(poor);
         Assert.AreEqual(poor.Family.Children.Count, 0);
     }
@@ -86,8 +63,10 @@ public class StarvationTest
     [Test]
     public void TestAllAdultsDied()
     {
-        Household poor = new(0, "Poor", 1, 2, 0);
-        poor.Wheat = -16;
+        Household poor = new(0, "Poor", 1, 2, 0)
+        {
+            Wheat = -16
+        };
         Test(poor);
         Assert.AreEqual(poor.Family.Adults.Count, 0);
     }

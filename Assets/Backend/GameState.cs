@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Random = System.Random;
@@ -67,62 +68,39 @@ namespace Backend
         //Possible for there to be no village event, or for a household to have no event
         public static void AdvanceToPhaseOne()
         {
-            // TODO: If player's wheat is < 0, remove the first child or adult that cannot be fed
+            // If player's wheat is < 0, remove the first children or adults that cannot be fed
             // For example, child consumption is 5 and adult consumption is 10
             // If you have -4 wheat, one child starves. If you have -6 wheat, two children starve.
             // If you have -4 or -6 wheat and no children, an adult starves.
             // If you have -20 wheat, two adults starve.
+            // If you don't harvest anything, your entire family should die the next year (if you don't buy more wheat)
             // After starvation, if your family has no adults left, end the game (load results screen directly)
-            if (s_Player.Wheat < 0)
+            while (s_Player.Wheat < 0 && s_Player.Family.GetAdultAmount() > 0)
             {
                 // Remove children first because they're less useful than adults
-                if (s_Player.Family.Children.Count > 0)
+                if (s_Player.Family.GetChildrenAmount() > 0)
                 {
-                    int amountChildrenDie = s_Player.Wheat % 5;
-                    for (int i = 0; i < amountChildrenDie; i++)
-                    {
-                        if (s_Player.Family.Children.Count > 0)
-                        {
-                            Child child = s_Player.Family.Children[0];
-                            string name = child.FirstName;
-                            s_Player.Family.Children.RemoveAt(0);
-                            PopupManager.QueuePopup("Notice", $"{name} starved to death!", "R.I.P.");
+                    Child child = s_Player.Family.Children[0];
+                    string name = child.FirstName;
+                    s_Player.Family.Children.RemoveAt(0);
+                    PopupManager.QueuePopup("Notice", $"{name} starved to death!", "R.I.P.");
+                    s_Player.Wheat += Child.Consumption;
+                } else if (s_Player.Family.GetAdultAmount() > 0)
+                {
+                    Adult adult = s_Player.Family.Adults[0];
+                    string name = adult.FirstName;
+                    s_Player.Family.Adults.RemoveAt(0);
+                    PopupManager.QueuePopup("Notice", $"{name} starved to death!", "R.I.P.");
+                    s_Player.Wheat += Adult.Consumption;
+                }
+                s_Player.Wheat = Math.Min(s_Player.Wheat, 0);  // don't let it go over 0
+            }
 
-                        }
-                        else if (s_Player.Family.Adults.Count > 0)
-                        {
-                            Adult adult = s_Player.Family.Adults[0];
-                            string name = adult.FirstName;
-                            s_Player.Family.Adults.RemoveAt(0);
-                            PopupManager.QueuePopup("Notice", $"{name} starved to death!", "R.I.P.");
-                        }
-                        else if (s_Player.Family.Adults.Count == 0)
-                        {
-                            SceneUtils.LoadScene("Results");
-                        }
-                    }
-                }
-                else if (s_Player.Family.Adults.Count > 0)
-                {
-                    int amountAdultsDie = s_Player.Wheat % 10;
-                    for (int i = 0; i < amountAdultsDie; i++)
-                    {
-                        if (s_Player.Family.Adults.Count > 0)
-                        {
-                            Adult adult = s_Player.Family.Adults[0];
-                            string name = adult.FirstName;
-                            s_Player.Family.Adults.RemoveAt(0);
-                            PopupManager.QueuePopup("Notice", $"{name} starved to death!", "R.I.P.");
-                        }
-                        else if (s_Player.Family.Adults.Count == 0)
-                        {
-                            SceneUtils.LoadScene("Results");
-                        }
-                    }
-                }
-                
-                // TODO: use string interpolation to say which family member
-                // PopupManager.QueuePopup("Notice", "A family member starved to death!", "R.I.P.");
+            if (s_Player.Family.GetAdultAmount() <= 0)
+            {
+                PopupManager.QueuePopup("Game Over!", $"All of your adults starved to death!", "Aw man");
+                SceneUtils.LoadScene("Results");
+                return;
             }
 
             Random rand = new Random();

@@ -99,6 +99,17 @@ namespace Backend
             if (s_Player.Family.GetAdultAmount() <= 0)
             {
                 PopupManager.QueuePopup("Game Over!", $"All of your adults starved to death!", "Aw man");
+                // Readded all the children and adults to the family 
+                for (int i = 0; i < numChildren; i++)
+                {
+                    s_Player.Family.CreateChild();
+                }
+                for (int i = 0; i < numAdults; i++)
+                {
+                    s_Player.Family.CreateAdult();
+                }
+                SceneUtils.LoadScene("Results");
+                return;
                 SceneUtils.LoadScene("Results");
                 return;
             }

@@ -70,7 +70,7 @@ namespace Backend
                 buyer.HireLabour();
             };  // Instead of adding to inventory, add adult worker instead)
 
-            AddProduct("Tubewell", 1500, ProductType.Tool, "Lets you irrigate up to 10 farm plots.");
+            AddProduct("Tubewell", 1000, ProductType.Tool, "Lets you irrigate up to 10 farm plots.");
         }
 
         // <buyer> requests to purchase one product with name <name>

@@ -7,7 +7,7 @@ namespace Backend
 {
     public class Farmland : HouseholdAsset
     {
-        public const int MaxPlots = 25;
+        public const int MaxPlots = 16;
         public float YieldMultiplier { get; set; } = 1;
         public List<FarmPlot> Plots;
 

@@ -46,7 +46,7 @@ In this phase you start in the market. Here you can buy items and sell wheat (by
 
 Some items have purchase limits:
 - You can only buy as many oxen as adults in your family
-- You can only own a maximum of 25 plots of land
+- You can only own a maximum of 16 plots of land
 
 At the bottom of the market screen is a button that takes you back to the farm management screen, this time with three extra toggles at the bottom for planting. Yes, phase 3 is the planting phase. If you toggle the HYC Seed option, you can select plots of land to plant HYC seeds on them. It's a similar deal for the low/high fertilizer options.
 

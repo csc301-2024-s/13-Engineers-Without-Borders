@@ -7,8 +7,7 @@ namespace Backend
 {
     public class Farmland : HouseholdAsset
     {
-        public const int MaxPlots = 25;
-        public float YieldMultiplier { get; set; } = 1;
+        public const int MaxPlots = 16;
         public List<FarmPlot> Plots;
 
         // Initializes empty list to store FarmPlot objects 
@@ -40,13 +39,9 @@ namespace Backend
             foreach (FarmPlot plot in Plots)
             {
                 totalYield += plot.GetYield();
-
-                // once collected, reset seed type and fertilizer
-                plot.SeedType = 0;
-                plot.FertilizerType = FertilizerType.None;
             }
 
-            return (int)(totalYield * YieldMultiplier);
+            return totalYield;
 
         }
 
@@ -80,6 +75,15 @@ namespace Backend
             foreach (FarmPlot plot in Plots)
             {
                 plot.ClearPlot();
+            }
+        }
+
+        // Set yield multiplier of all the plots in this land
+        public void SetYieldMultiplier(float val)
+        {
+            foreach (FarmPlot plot in Plots)
+            {
+                plot.YieldMultiplier = val;
             }
         }
 

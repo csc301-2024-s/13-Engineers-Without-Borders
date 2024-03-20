@@ -46,7 +46,7 @@ In this phase you start in the market. Here you can buy items and sell wheat (by
 
 Some items have purchase limits:
 - You can only buy as many oxen as adults in your family
-- You can only own a maximum of 25 plots of land
+- You can only own a maximum of 16 plots of land
 
 At the bottom of the market screen is a button that takes you back to the farm management screen, this time with three extra toggles at the bottom for planting. Yes, phase 3 is the planting phase. If you toggle the HYC Seed option, you can select plots of land to plant HYC seeds on them. It's a similar deal for the low/high fertilizer options.
 
@@ -69,7 +69,7 @@ Add this to your local git config file:
 
 On Windows at least, the path to the tool is `C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/UnityYAMLMerge.exe`
 
-Then, just open up the project in Unity, like any other normal Unity project. The project is optimized for a 9:16 viewport ratio, so be sure to set that as your
+Then, just open up the project in Unity, like any other normal Unity project. The project is optimized for a 9:20 viewport ratio, so be sure to set that as your
 viewport's ratio when testing.
 
 It is recommended to edit scripts by clicking on them in the Unity editor, as that will give you the appropriate intellisense (assuming you've set that up correctly; https://code.visualstudio.com/docs/other/unity ).

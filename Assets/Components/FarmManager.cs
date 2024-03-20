@@ -30,11 +30,17 @@ public class FarmManager : MonoBehaviour
     // Harvests all currently selected Cells
     public static void HarvestSelectedCells()
     {
+        int gain = 0;
         foreach (FarmPlotCell cell in SelectedCells)
         {
-            cell.Plot.Owner.Wheat += cell.Plot.GetYield();
+            gain += cell.Plot.GetYield();
             cell.Plot.ClearPlot();
         }
+
+        // subtract consumption
+        int consumption = GameState.s_Player.Family.GetTotalConsumption();
+        GameState.s_Player.Wheat = GameState.s_Player.Wheat + gain - consumption;
+        PopupManager.QueuePopup("Notice", $"You harvested: {gain} wheat<br>Your family needs: {consumption} wheat<br>Wheat left: {GameState.s_Player.Wheat}", "Okay");
 
         // 7th year is the last one in the game, go to results after last harvest
         if (GameState.s_Year == 7)

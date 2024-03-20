@@ -22,6 +22,7 @@ namespace Backend
 
         // Type of fertilizer
         public FertilizerType FertilizerType { get; set; }
+        public float YieldMultiplier { get; set; } = 1;
 
         public bool Irrigated { get; set; }
 
@@ -43,7 +44,7 @@ namespace Backend
         /// <returns></returns>
         public int GetYield()
         {
-            return YieldPerformanceTable.GetYield(this);
+            return (int)(YieldPerformanceTable.GetYield(this) * YieldMultiplier);
         }
 
         public void ClearPlot()

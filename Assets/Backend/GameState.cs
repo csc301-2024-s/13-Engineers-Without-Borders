@@ -110,8 +110,6 @@ namespace Backend
                 }
                 SceneUtils.LoadScene("Results");
                 return;
-                SceneUtils.LoadScene("Results");
-                return;
             }
 
             Random rand = new Random();

@@ -15,6 +15,7 @@ namespace Backend
         public static int s_WeatherIndex;
         public static Household s_Player;
         public static Household[] s_Households;  // originally planned to have AI players but not enough time :(
+        public static PopupManager PopupManagerInstance { get; private set; }
         public static Household[] s_PredefinedHouseholds = new Household[]
         {
             new Household(500, "Madhar", 3, 2, 3),
@@ -100,11 +101,11 @@ namespace Backend
             {
                 PopupManager.QueuePopup("Game Over!", $"All of your adults starved to death!", "Aw man");
                 // Readded all the children and adults to the family 
-                for (int i = 0; i < numChildren; i++)
+                for (int i = 0; i < _startingNumChildren; i++)
                 {
                     s_Player.Family.CreateChild();
                 }
-                for (int i = 0; i < numAdults; i++)
+                for (int i = 0; i < _startingNumAdults; i++)
                 {
                     s_Player.Family.CreateAdult();
                 }
@@ -147,6 +148,15 @@ namespace Backend
                         fam.Adults.Add(newAdult);
                     }
                 }
+            }
+
+            if (s_Year == 1) {
+                AdvanceToPhaseTwo();
+            }
+            else if (!s_Player.Inventory.Contains("Tubewell")) 
+            {
+                PopupManager.QueuePopup("Notice", $"Irrigation skipped due to lack of tubewell", "Okay");
+                AdvanceToPhaseTwo();
             }
         }
 

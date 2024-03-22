@@ -2225,7 +2225,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6918567702051715795, guid: c5be3c1ceaa198746881d1e59a462e07, type: 3}
       propertyPath: description
-      value: FILL INFORMATION ABOUT PHASE 3
+      value: The Market is now open! You can start trading to gain profits or make
+        the best out of next year's harvest.
       objectReference: {fileID: 0}
     - target: {fileID: 7362158548265663268, guid: c5be3c1ceaa198746881d1e59a462e07, type: 3}
       propertyPath: m_Pivot.x
@@ -2543,7 +2544,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6918567702051715795, guid: c5be3c1ceaa198746881d1e59a462e07, type: 3}
       propertyPath: description
-      value: FILL INFORMATION ABOUT PHASE 2
+      value: 'It''s time to collect the wheats! You need one Labour Unit to harvest
+        a plot of land. If your family does not have enough labour to harvest all
+        of your acres of land, your crops will be left on the field to rot.  '
       objectReference: {fileID: 0}
     - target: {fileID: 7362158548265663268, guid: c5be3c1ceaa198746881d1e59a462e07, type: 3}
       propertyPath: m_Pivot.x
@@ -2836,7 +2839,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6918567702051715795, guid: c5be3c1ceaa198746881d1e59a462e07, type: 3}
       propertyPath: description
-      value: FILL IN INFORMATION ABOUT PHASE 1
+      value: 'It''s Growing Season! Start planting to gain profit for your family.
+        Check out the Yield Table to see how each type of seed perform. '
       objectReference: {fileID: 0}
     - target: {fileID: 7362158548265663268, guid: c5be3c1ceaa198746881d1e59a462e07, type: 3}
       propertyPath: m_Pivot.x

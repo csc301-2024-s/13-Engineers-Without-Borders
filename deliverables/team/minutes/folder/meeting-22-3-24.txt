@@ -1,0 +1,4 @@
+Biweekly meeting with EWB, around 5:00pm to 5:30pm
+- Showed our progress so far in D4
+- Found some minor bugs during presentation so we're gonna fix those
+- Gave EWB link to executable download, they will try to give us some feedback/wording suggestions in a few days

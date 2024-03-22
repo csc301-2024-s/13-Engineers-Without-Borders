@@ -56,6 +56,13 @@ namespace Backend
         // Remove all hired workers from the family
         public void RemoveLabour()
         {
+            foreach (Adult worker in Family.HiredWorkers) 
+            {
+                if (worker.HasOx)
+                {
+                    Inventory.AddItem("Ox");
+                }
+            }
             Family.HiredWorkers.Clear();
         }
     }

@@ -88,6 +88,10 @@ namespace Backend
                 {
                     Adult adult = s_Player.Family.Adults[0];
                     string name = adult.FirstName;
+                    if (adult.HasOx)
+                    {
+                        s_Player.Inventory.AddItem("Ox");
+                    }
                     s_Player.Family.Adults.RemoveAt(0);
                     PopupManager.QueuePopup("Notice", $"An adult, {name}, starved to death!", "R.I.P.");
                     s_Player.Wheat += Adult.Consumption;

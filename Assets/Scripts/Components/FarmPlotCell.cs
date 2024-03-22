@@ -117,7 +117,7 @@ public class FarmPlotCell : MonoBehaviour
                     Plot.SeedType = SeedType.HYC;
                     inventory.RemoveItem("HYC Seed");
                 }
-                else
+                else if (Plot.SeedType == SeedType.HYC)
                 {
                     Plot.SeedType = SeedType.Regular;
                     inventory.AddItem("HYC Seed");

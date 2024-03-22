@@ -163,10 +163,7 @@ namespace Backend
             s_Player.Land.ClearPlots();  // any hyc seeds/fertilizer that you didn't harvest get wasted
 
             // Remove all hired workers
-            foreach (Household household in s_Households)
-            {
-                household.RemoveLabour();
-            }
+            s_Player.RemoveLabour();
 
             if (s_Player.Wheat < 0)
             {

@@ -192,13 +192,20 @@ namespace Backend
             results["tubewell"] = 0;
             if (s_Player != null)
             {
-                results["tubewell"] = s_Player.Inventory.GetAmount("tubewell");
+                results["tubewell"] = s_Player.Inventory.GetAmount("Tubewell");
             }
-            //
+            //ox
             results["ox"] = 0;
             if (s_Player != null)
             {
-                results["ox"] = s_Player.Inventory.GetAmount("tubewell"); ;
+                results["ox"] += s_Player.Inventory.GetAmount("Ox");
+                for (int i = 0; i < s_Player.Family.Adults.Count; i++)
+                {
+                    if (s_Player.Family.Adults[i].HasOx)
+                    {
+                        results["ox"]++;
+                    }
+                }
             }
             //acres of land
             results["acres-of-land"] = 0;

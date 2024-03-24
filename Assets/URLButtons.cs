@@ -10,6 +10,8 @@ public class URLButtons : MonoBehaviour
     Button fb;
     Button ins;
     Button linkedin;
+    Button twitter;
+    Button privacy;
     private void OnEnable()
     {
         document = GetComponent<UIDocument>();
@@ -18,11 +20,15 @@ public class URLButtons : MonoBehaviour
         fb = root.Q<Button>("fb");
         ins = root.Q<Button>("ins");
         linkedin = root.Q<Button>("linkedin");
+        twitter = root.Q<Button>("twitter");
+        privacy = root.Q<Button>("privacy");
 
         ewb.clicked += () => OnEwbClick();
         fb.clicked += () => OnFbClick();
         ins.clicked += () => OnInsClick();
         linkedin.clicked += () => OnLinkedinClick();
+        twitter.clicked += () => OnTwitterClick();
+        privacy.clicked += () => OnPrivacyPolicyClick();
     }
     public void OnEwbClick()
     {
@@ -41,5 +47,13 @@ public class URLButtons : MonoBehaviour
     public void OnLinkedinClick()
     {
         Application.OpenURL("https://www.linkedin.com/company/ewb-toronto-professional-chapter");
+    }
+    public void OnTwitterClick()
+    {
+        Application.OpenURL("https://twitter.com/EWBToronto");
+    }
+    public void OnPrivacyPolicyClick()
+    {
+        Application.OpenURL("https://www.torontopro.ewb.ca/w4tw-privacy-policy");
     }
 }

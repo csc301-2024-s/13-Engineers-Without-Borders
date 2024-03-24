@@ -13,6 +13,12 @@ public class AnswerCorrect1 : MonoBehaviour
     Button D;
     public UIDocument correct;
     public UIDocument wrong;
+
+    VisualElement wrongA;
+    VisualElement correctB;
+    VisualElement wrongC;
+    VisualElement wrongD;
+    Button next;
     private void OnEnable()
     {
         document = GetComponent<UIDocument>();
@@ -21,18 +27,36 @@ public class AnswerCorrect1 : MonoBehaviour
         B = root.Q<Button>("ButtonB");
         C = root.Q<Button>("ButtonC");
         D = root.Q<Button>("ButtonD");
+        wrongA = root.Q<VisualElement>("wrongA");
+        correctB = root.Q<VisualElement>("correctB");
+        wrongC = root.Q<VisualElement>("wrongC");
+        wrongD = root.Q<VisualElement>("wrongD");
+        next = root.Q<Button>("next");
         B.clicked += () => OnCorrectClick();
-        A.clicked += () => OnWrongClick();
-        C.clicked += () => OnWrongClick();
-        D.clicked += () => OnWrongClick();
+        A.clicked += () => OnWrongAClick();
+        C.clicked += () => OnWrongCClick();
+        D.clicked += () => OnWrongDClick();
 
     }
     public void OnCorrectClick()
     {
         correct.gameObject.SetActive(true);
+        correctB.BringToFront();
+        next.BringToFront();
     }
-    public void OnWrongClick()
+    public void OnWrongAClick()
     {
         wrong.gameObject.SetActive(true);
+        wrongA.BringToFront();
+    }
+    public void OnWrongCClick()
+    {
+        wrong.gameObject.SetActive(true);
+        wrongC.BringToFront();
+    }
+    public void OnWrongDClick()
+    {
+        wrong.gameObject.SetActive(true);
+        wrongD.BringToFront();
     }
 }

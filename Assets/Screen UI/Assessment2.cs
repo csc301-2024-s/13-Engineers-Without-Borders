@@ -14,6 +14,14 @@ public class Assessment2 : MonoBehaviour
     Button F;
     public UIDocument correct;
     public UIDocument wrong;
+
+    VisualElement wrongA;
+    VisualElement wrongB;
+    VisualElement wrongC;
+    VisualElement wrongD;
+    VisualElement correctE;
+    VisualElement wrongF;
+    Button next;
     private void OnEnable()
     {
         document = GetComponent<UIDocument>();
@@ -24,20 +32,50 @@ public class Assessment2 : MonoBehaviour
         D = root.Q<Button>("ButtonD");
         E = root.Q<Button>("ButtonE");
         F = root.Q<Button>("ButtonF");
+        wrongA = root.Q<VisualElement>("wrongA");
+        wrongB = root.Q<VisualElement>("wrongB");
+        wrongC = root.Q<VisualElement>("wrongC");
+        wrongD = root.Q<VisualElement>("wrongD");
+        correctE = root.Q<VisualElement>("correctE");
+        wrongF = root.Q<VisualElement>("wrongF");
+        next = root.Q<Button>("next");
         E.clicked += () => OnCorrectClick();
-        A.clicked += () => OnWrongClick();
-        B.clicked += () => OnWrongClick();
-        C.clicked += () => OnWrongClick();
-        D.clicked += () => OnWrongClick();
-        F.clicked += () => OnWrongClick();
+        A.clicked += () => OnWrongAClick();
+        B.clicked += () => OnWrongBClick();
+        C.clicked += () => OnWrongCClick();
+        D.clicked += () => OnWrongDClick();
+        F.clicked += () => OnWrongFClick();
 
     }
     public void OnCorrectClick()
     {
         correct.gameObject.SetActive(true);
+        correctE.BringToFront();
+        next.BringToFront();
     }
-    public void OnWrongClick()
+    public void OnWrongAClick()
     {
         wrong.gameObject.SetActive(true);
+        wrongA.BringToFront();
+    }
+    public void OnWrongBClick()
+    {
+        wrong.gameObject.SetActive(true);
+        wrongB.BringToFront();
+    }
+    public void OnWrongCClick()
+    {
+        wrong.gameObject.SetActive(true);
+        wrongC.BringToFront();
+    }
+    public void OnWrongDClick()
+    {
+        wrong.gameObject.SetActive(true);
+        wrongD.BringToFront();
+    }
+    public void OnWrongFClick()
+    {
+        wrong.gameObject.SetActive(true);
+        wrongF.BringToFront();
     }
 }

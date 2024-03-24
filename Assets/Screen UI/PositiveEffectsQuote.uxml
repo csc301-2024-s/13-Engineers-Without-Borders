@@ -10,7 +10,7 @@
     <ui:VisualElement name="buttons" class="sideways-buttons">
         <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" tooltip="PositiveEffects" name="back" class="load-scene-button" />
     </ui:VisualElement>
-    <ui:VisualElement name="portrait" style="flex-grow: 1; min-width: auto; min-height: 500px; width: 800px; max-height: 500px; align-self: center; align-items: stretch; margin-top: 100px; height: 500px; position: absolute; top: 55%;">
-        <ui:VisualElement name="NormanBorlaug" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Sprites/NormanBorlaug.jpg?fileID=21300000&amp;guid=bb4f02752e77c504a87dd3c9f488c8c5&amp;type=3#NormanBorlaug&apos;); height: 386px; width: 295px; align-self: center; max-height: 386px; min-height: 386px; margin-top: 0; margin-bottom: 0; margin-right: 0; margin-left: 0; border-top-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;" />
+    <ui:VisualElement name="portrait" style="flex-grow: 1; min-width: auto; min-height: 800px; width: 800px; max-height: 800px; align-self: center; align-items: stretch; margin-top: 100px; height: 800px; position: absolute; top: 50%;">
+        <ui:VisualElement name="NormanBorlaug" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Sprites/NormanBorlaug.jpg?fileID=21300000&amp;guid=bb4f02752e77c504a87dd3c9f488c8c5&amp;type=3#NormanBorlaug&apos;); height: 579px; width: 442.5px; align-self: center; max-height: 579px; min-height: 579px; margin-top: 0; margin-bottom: 0; margin-right: 0; margin-left: 0; border-top-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;" />
     </ui:VisualElement>
 </ui:UXML>

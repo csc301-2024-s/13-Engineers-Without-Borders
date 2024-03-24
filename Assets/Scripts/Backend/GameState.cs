@@ -232,7 +232,6 @@ namespace Backend
             {
                 results["adults-number"] = s_Player.Family.Adults.Count;
             }
-            results["adults-number"] = 0;
             //children number
             results["children-number"] = 0;
             if (s_Player != null)

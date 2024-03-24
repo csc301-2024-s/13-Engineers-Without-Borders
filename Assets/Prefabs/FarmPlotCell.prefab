@@ -204,8 +204,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b4747ee484408a94283c49848504cc98, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -235,11 +235,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0.79215693, b: 0.003921569, a: 1}
-    m_HighlightedColor: {r: 0, g: 0.79215693, b: 0.003921569, a: 1}
-    m_PressedColor: {r: 0, g: 0.6156863, b: 0.003921569, a: 1}
-    m_SelectedColor: {r: 0, g: 0.7921569, b: 0.003921569, a: 1}
-    m_DisabledColor: {r: 0, g: 0.3207547, b: 0.0020429997, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.8930817, g: 0.8930817, b: 0.8930817, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -270,11 +270,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1507286cbaed54d8fdfd9a1158dcd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  irrigatedColor: {r: 0, g: 0.4952731, b: 1, a: 1}
-  irrigatedPressedColor: {r: 0, g: 0.36359605, b: 0.735849, a: 1}
-  irrigatedSelectedColor: {r: 0, g: 0.49411765, b: 1, a: 1}
-  irrigatedHighlightedColor: {r: 0, g: 0.49411765, b: 1, a: 1}
-  irrigatedDisabledColor: {r: 0.024474904, g: 0.24545582, b: 0.4716981, a: 1}
+  normalSprite: {fileID: 21300000, guid: b4747ee484408a94283c49848504cc98, type: 3}
+  normalSelectedSprite: {fileID: 21300000, guid: e9ee36fcf840c0a47be8462f1e52694d, type: 3}
+  wheatSprite: {fileID: 21300000, guid: e9a5e5d67357b394cb1c17547b3eabf8, type: 3}
+  wheatSelectedSprite: {fileID: 21300000, guid: 1c1dd254e30903b47a2c5c52453b34f9, type: 3}
 --- !u!114 &5485139529822319608
 MonoBehaviour:
   m_ObjectHideFlags: 0

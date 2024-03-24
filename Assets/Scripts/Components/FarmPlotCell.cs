@@ -7,21 +7,15 @@ using System;
 // Original Author: Andy Wang
 public class FarmPlotCell : MonoBehaviour
 {
-    [SerializeField] Color irrigatedColor;
-    [SerializeField] Color irrigatedPressedColor;
-    [SerializeField] Color irrigatedSelectedColor;
-    [SerializeField] Color irrigatedHighlightedColor;
-    [SerializeField] Color irrigatedDisabledColor;
+    [SerializeField] Sprite normalSprite;
+    [SerializeField] Sprite normalSelectedSprite;
+    [SerializeField] Sprite wheatSprite;
+    [SerializeField] Sprite wheatSelectedSprite;
 
-    private Outline _outline;
-    private Color _origColor;
-    private Color _origPressedColor;
-    private Color _origSelectedColor;
-    private Color _origHighlightedColor;
-    private Color _origDisabledColor;
     private Button _btn;
     private TextMeshProUGUI _hycLabel;
     private TextMeshProUGUI _fertilizerLabel;
+    private Image _image;
 
     public FarmPlot Plot { get; set; }
 
@@ -29,17 +23,10 @@ public class FarmPlotCell : MonoBehaviour
     {
         _btn = GetComponent<Button>();
         _btn.onClick.AddListener(HandleClick);
-        _origColor = _btn.colors.normalColor;
-        _origPressedColor = _btn.colors.pressedColor;
-        _origSelectedColor = _btn.colors.selectedColor;
-        _origDisabledColor = _btn.colors.disabledColor;
-        _origHighlightedColor = _btn.colors.highlightedColor;
 
         _hycLabel = transform.Find("HYC").GetComponent<TextMeshProUGUI>();
         _fertilizerLabel = transform.Find("Fertilizer").GetComponent<TextMeshProUGUI>();
-
-        _outline = GetComponent<Outline>();
-
+        _image = GetComponent<Image>();
     }
 
     // Update this cell visually based on the attributes of the assigned farm plot
@@ -47,30 +34,33 @@ public class FarmPlotCell : MonoBehaviour
     {
         RefreshVisuals();
         RefreshStatus();
-        _outline.enabled = FarmManager.SelectedCells.Contains(this);
     }
 
     // Refreshes visual state of the farm plot cell
     public void RefreshVisuals()
     {
-        var colors = _btn.colors;
-        if (Plot.Irrigated)
+        if (GameState.s_Phase == 2)
         {
-            colors.normalColor = irrigatedColor;
-            colors.pressedColor = irrigatedPressedColor;
-            colors.selectedColor = irrigatedSelectedColor;
-            colors.highlightedColor = irrigatedHighlightedColor;
-            colors.disabledColor = irrigatedDisabledColor;
+            if (FarmManager.SelectedCells.Contains(this))
+            {
+                _image.sprite = wheatSelectedSprite;
+            }
+            else
+            {
+                _image.sprite = wheatSprite;
+            }
         }
         else
         {
-            colors.normalColor = _origColor;
-            colors.pressedColor = _origPressedColor;
-            colors.selectedColor = _origSelectedColor;
-            colors.highlightedColor = _origHighlightedColor;
-            colors.disabledColor = _origDisabledColor;
+            if (FarmManager.SelectedCells.Contains(this))
+            {
+                _image.sprite = normalSelectedSprite;
+            }
+            else
+            {
+                _image.sprite = normalSprite;
+            }
         }
-        _btn.colors = colors;
     }
 
     public void RefreshStatus()

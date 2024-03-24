@@ -145,6 +145,7 @@ namespace Backend
 
             if (s_Year == 1)
             {
+                PopupManager.QueuePopup("Greetings", "Welcome to the simulation! Start by tapping your crops to select them, then press the big harvest button at the bottom!", "Okay");
                 AdvanceToPhaseTwo();
             }
             else if (!s_Player.Inventory.Contains("Tubewell"))

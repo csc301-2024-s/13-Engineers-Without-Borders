@@ -40,7 +40,11 @@ public class FarmManager : MonoBehaviour
         // subtract consumption
         int consumption = GameState.s_Player.Family.GetTotalConsumption();
         GameState.s_Player.Wheat = GameState.s_Player.Wheat + gain - consumption;
-        PopupManager.QueuePopup("Notice", $"You harvested: {gain} wheat<br>Your family needs: {consumption} wheat<br>Wheat left: {GameState.s_Player.Wheat}", "Okay");
+
+        if (GameState.s_Player.Wheat < 0)
+            PopupManager.QueuePopup("Notice", $"You harvested: {gain} wheat<br>Your family needs: {consumption} wheat<br>Wheat left: {GameState.s_Player.Wheat}", "Okay");
+        else
+            PopupManager.QueuePopup("Notice", $"You harvested: {gain} wheat<br>Your family needs: {consumption} wheat<br>Wheat left: {GameState.s_Player.Wheat}<br>Total value: ${GameState.s_Player.Wheat * Market.GetPrice("Wheat")}", "Okay");
 
         // 7th year is the last one in the game, go to results after last harvest
         if (GameState.s_Year == 7)

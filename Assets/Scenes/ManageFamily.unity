@@ -1568,6 +1568,8 @@ MonoBehaviour:
   prefab: {fileID: 554770611415729112, guid: d31e47c248038494f8a137421d0e746e, type: 3}
   adultListContent: {fileID: 181699216}
   childListContent: {fileID: 970822204}
+  adultSprite: {fileID: 21300000, guid: 9ed1af60fa66de7449da127df2c01026, type: 3}
+  childSprite: {fileID: 21300000, guid: aa2933bd181ba3e44ba9cc8aaaed52a4, type: 3}
 --- !u!1 &1668433999
 GameObject:
   m_ObjectHideFlags: 0

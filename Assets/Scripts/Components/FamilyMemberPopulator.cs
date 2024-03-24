@@ -10,6 +10,8 @@ public class FamilyMemberPopulator : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField] GameObject adultListContent;
     [SerializeField] GameObject childListContent;
+    [SerializeField] Sprite adultSprite;
+    [SerializeField] Sprite childSprite;
 
 
     // Start is called before the first frame update
@@ -58,6 +60,7 @@ public class FamilyMemberPopulator : MonoBehaviour
         TextMeshProUGUI name = obj.transform.Find("Name").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI age = obj.transform.Find("Age").GetComponent<TextMeshProUGUI>();
         GiveOxButton giveOx = obj.transform.Find("GiveOx").GetComponent<GiveOxButton>();
+        Image sprite = obj.transform.Find("Sprite").GetComponent<Image>();
 
         name.text = $"{fam.FirstName} {fam.LastName}";
 
@@ -65,11 +68,13 @@ public class FamilyMemberPopulator : MonoBehaviour
         {
             giveOx.Adult = (Adult)fam;
             age.gameObject.SetActive(false);
+            sprite.sprite = adultSprite;
         }
         else  // child
         {
             giveOx.gameObject.SetActive(false);
             age.text = $"Turns adult in: {13 - ((Child)fam).Age} years";
+            sprite.sprite = childSprite;
         }
     }
 }

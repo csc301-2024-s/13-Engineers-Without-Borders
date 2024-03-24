@@ -13,8 +13,9 @@ public class FarmPlotCell : MonoBehaviour
     [SerializeField] Sprite wheatSelectedSprite;
 
     private Button _btn;
-    private TextMeshProUGUI _hycLabel;
-    private TextMeshProUGUI _fertilizerLabel;
+    private GameObject _hycImage;
+    private GameObject _lowImage;
+    private GameObject _highImage;
     private Image _image;
 
     public FarmPlot Plot { get; set; }
@@ -24,8 +25,9 @@ public class FarmPlotCell : MonoBehaviour
         _btn = GetComponent<Button>();
         _btn.onClick.AddListener(HandleClick);
 
-        _hycLabel = transform.Find("HYC").GetComponent<TextMeshProUGUI>();
-        _fertilizerLabel = transform.Find("Fertilizer").GetComponent<TextMeshProUGUI>();
+        _hycImage = gameObject.transform.Find("HYC").gameObject;
+        _lowImage = gameObject.transform.Find("Low").gameObject;
+        _highImage = gameObject.transform.Find("High").gameObject;
         _image = GetComponent<Image>();
     }
 
@@ -67,24 +69,27 @@ public class FarmPlotCell : MonoBehaviour
     {
         if (Plot.SeedType == SeedType.HYC)
         {
-            _hycLabel.text = "HYC";
+            _hycImage.SetActive(true);
         }
         else
         {
-            _hycLabel.text = "";
+            _hycImage.SetActive(false);
         }
 
         if (Plot.FertilizerType == FertilizerType.Low)
         {
-            _fertilizerLabel.text = "Low";
+            _lowImage.SetActive(true);
+            _highImage.SetActive(false);
         }
         else if (Plot.FertilizerType == FertilizerType.High)
         {
-            _fertilizerLabel.text = "High";
+            _lowImage.SetActive(false);
+            _highImage.SetActive(true);
         }
         else
         {
-            _fertilizerLabel.text = "";
+            _lowImage.SetActive(false);
+            _highImage.SetActive(false);
         }
     }
 

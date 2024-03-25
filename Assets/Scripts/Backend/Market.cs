@@ -31,6 +31,7 @@ namespace Backend
     public static class Market
     {
         private static Dictionary<string, Product> _products;
+        public const int PlotsPerTubewell = 8;
 
         // Initialize the Market; should be called in GameState.Initialize
         public static void Initialize()
@@ -65,12 +66,10 @@ namespace Backend
 
             // Add one year-contract adult worker as a product. Currently there is no limit on how many adult workers can be hired.
             AddProduct("Labour", 300, ProductType.Tool, "Hire an extra worker for one year. They do not need to be fed.");
-            _products["Labour"].BuyAction = (Household buyer) =>
-            {
-                buyer.HireLabour();
-            };  // Instead of adding to inventory, add adult worker instead)
+            _products["Labour"].BuyAction = (Household buyer) => buyer.HireLabour(); // Instead of adding to inventory, add adult worker instead)
 
-            AddProduct("Tubewell", 1000, ProductType.Tool, "Lets you irrigate up to 10 farm plots.");
+            AddProduct("Tubewell", 1000, ProductType.Tool, $"Lets you irrigate up to {PlotsPerTubewell} plots. Can buy at most 2.");
+            _products["Tubewell"].PurchaseCondition = (Household buyer) => buyer.Inventory.GetAmount("Tubewell") < 2;
         }
 
         // <buyer> requests to purchase one product with name <name>
@@ -109,10 +108,12 @@ namespace Backend
             {
                 toSell = Math.Min(quantity, seller.Wheat);
                 seller.Wheat -= toSell;
-            } else if (product == "Labour")
+            }
+            else if (product == "Labour")
             {
                 toSell = Math.Min(quantity, seller.Family.GetHiredWorkerAmount());
-                for (var i = 0; i < toSell; i++) {
+                for (var i = 0; i < toSell; i++)
+                {
                     Adult worker = seller.Family.HiredWorkers[0];
                     if (worker.HasOx)  // add back ox if hired worker has one
                         seller.Inventory.AddItem("Ox");

@@ -16,6 +16,7 @@ public class FarmPlotCell : MonoBehaviour
     private GameObject _hycImage;
     private GameObject _lowImage;
     private GameObject _highImage;
+    private GameObject _irrigatedOverlay;
     private Image _image;
 
     public FarmPlot Plot { get; set; }
@@ -28,6 +29,7 @@ public class FarmPlotCell : MonoBehaviour
         _hycImage = gameObject.transform.Find("HYC").gameObject;
         _lowImage = gameObject.transform.Find("Low").gameObject;
         _highImage = gameObject.transform.Find("High").gameObject;
+        _irrigatedOverlay = gameObject.transform.Find("Irrigated").gameObject;
         _image = GetComponent<Image>();
     }
 
@@ -67,14 +69,7 @@ public class FarmPlotCell : MonoBehaviour
 
     public void RefreshStatus()
     {
-        if (Plot.SeedType == SeedType.HYC)
-        {
-            _hycImage.SetActive(true);
-        }
-        else
-        {
-            _hycImage.SetActive(false);
-        }
+        _hycImage.SetActive(Plot.SeedType == SeedType.HYC);
 
         if (Plot.FertilizerType == FertilizerType.Low)
         {
@@ -91,6 +86,8 @@ public class FarmPlotCell : MonoBehaviour
             _lowImage.SetActive(false);
             _highImage.SetActive(false);
         }
+
+        _irrigatedOverlay.SetActive(Plot.Irrigated);
     }
 
     // Select or deselect this farm cell on click
@@ -152,7 +149,7 @@ public class FarmPlotCell : MonoBehaviour
 
         // else - phase 1 - irrigation phase, or phase 2 - harvest phase
         int numTubewells = inventory.GetAmount("Tubewell");
-        int maxSelectedCells = GameState.s_Phase == 1 ? Math.Min(Farmland.MaxPlots, numTubewells * 10) : Farmland.MaxPlots;
+        int maxSelectedCells = GameState.s_Phase == 1 ? Math.Min(Farmland.MaxPlots, numTubewells * Market.PlotsPerTubewell) : Farmland.MaxPlots;
         int labourCost = GameState.s_Phase == 1 ? FarmManager.IrrigationLabour : FarmManager.HarvestLabour;
 
         // Updates selection status in FarmManager, only adds if there is still labour remaining

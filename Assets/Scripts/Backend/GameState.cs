@@ -152,7 +152,7 @@ namespace Backend
             }
             else if (!s_Player.Inventory.Contains("Tubewell"))
             {
-                PopupManager.QueuePopup("Notice", $"Irrigation skipped due to lack of tubewell.", "Okay");
+                PopupManager.QueuePopup("Notice", $"Growing Season skipped due to lack of tubewell.", "Okay");
                 AdvanceToPhaseTwo();
             }
             else if (!_phase1TutorialShown)

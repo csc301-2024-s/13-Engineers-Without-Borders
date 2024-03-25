@@ -34,7 +34,7 @@ In year 1, there is nothing for you to do in this phase, so it automatically ski
 
 At the start of years 2+, there may be random events - if there is one, a popup will be shown. Events include making certain market items unavailable or changing their price, or adding a child to your family.
 
-In phase 1 you irrigate your crops. You can irrigate up to 10 plots of land per tubewell owned. Of course, this means you can't irrigate any land if you don't have tubewells - you will receive a popup to prompt to skip to phase 2 if this is the case. Irrigating one plot of land costs two labour points.
+In phase 1 you irrigate your crops. You can irrigate up to 8 plots of land per tubewell owned. Of course, this means you can't irrigate any land if you don't have tubewells - you will receive a popup to prompt to skip to phase 2 if this is the case. Irrigating one plot of land costs two labour points.
 
 ### Phase 2
 In this phase you select which plots of land you want to harvest. Every plot costs one labour point. The yield amount of each plot of land depends on what type of seed and fertilizer it has, as well as the weather and whether it's irrigated or not. The entire table of values can be found in `Assets/Backend/YieldPerformanceTable.cs` but the gist of it is:

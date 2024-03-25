@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using Backend;
-
 /*
  * Original Author: Hoa Nguyen
  * This class represents an adult in a family

@@ -349,6 +349,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Labour
       objectReference: {fileID: 0}
+    - target: {fileID: 6844478631513531460, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Labour
+      objectReference: {fileID: 0}
     - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.18817139
@@ -383,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 70.75
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x
@@ -545,6 +549,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Land
       objectReference: {fileID: 0}
+    - target: {fileID: 6844478631513531460, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Land
+      objectReference: {fileID: 0}
     - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.18817139
@@ -579,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 70.75
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x
@@ -667,7 +675,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3105977242493593900, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5637325374631170320, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6350062654342636218, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
@@ -740,6 +749,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Low Fertilizer
       objectReference: {fileID: 0}
+    - target: {fileID: 6844478631513531460, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Low Fertilizer
+      objectReference: {fileID: 0}
     - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.18817139
@@ -774,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 70.75
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x
@@ -918,6 +931,10 @@ PrefabInstance:
       propertyPath: m_text
       value: HYC Seeds
       objectReference: {fileID: 0}
+    - target: {fileID: 6844478631513531460, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: HYC Seed
+      objectReference: {fileID: 0}
     - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.18817139
@@ -952,7 +969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 70.75
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x
@@ -1096,6 +1113,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Tubewell
       objectReference: {fileID: 0}
+    - target: {fileID: 6844478631513531460, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Tubewell
+      objectReference: {fileID: 0}
     - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.18817139
@@ -1130,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 70.75
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x
@@ -1512,7 +1533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7770ad67dd0b9ce46806f5d031a3395f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numWheat: 10
+  num: 10
+  productName: Wheat
 --- !u!1 &619039765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,9 +1644,9 @@ RectTransform:
   - {fileID: 213986350}
   - {fileID: 1132458004}
   - {fileID: 1948590100}
-  - {fileID: 167335239}
   - {fileID: 135101574}
   - {fileID: 394324945}
+  - {fileID: 167335239}
   m_Father: {fileID: 1506398595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1720,7 +1742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 70.75
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x
@@ -1808,7 +1830,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3105977242493593900, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5637325374631170320, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       insertIndex: -1
@@ -2331,6 +2354,10 @@ PrefabInstance:
       propertyPath: m_text
       value: High Fertilizer
       objectReference: {fileID: 0}
+    - target: {fileID: 6844478631513531460, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: High Fertilizer
+      objectReference: {fileID: 0}
     - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.18817139
@@ -2365,7 +2392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 70.75
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x
@@ -2816,7 +2843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7770ad67dd0b9ce46806f5d031a3395f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numWheat: 100
+  num: 100
+  productName: Wheat
 --- !u!1 &1755625732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,6 +3023,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Ox
       objectReference: {fileID: 0}
+    - target: {fileID: 6844478631513531460, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
+      propertyPath: productName
+      value: Ox
+      objectReference: {fileID: 0}
     - target: {fileID: 6931345740859354242, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.18817139
@@ -3029,7 +3061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760107110393580891, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 70.75
       objectReference: {fileID: 0}
     - target: {fileID: 7970516408925270985, guid: f4c996a2d726be946b2173c93db72e65, type: 3}
       propertyPath: m_Pivot.x

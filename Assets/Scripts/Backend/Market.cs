@@ -100,13 +100,29 @@ namespace Backend
             }
         }
 
-        // <seller> sells <quantity> wheat
-        // Sells min(<quantity>, <seller.Wheat>) wheat
-        public static void SellWheat(Household seller, int quantity)
+        // <seller> sells <quantity> product
+        public static void Sell(Household seller, int quantity, string product)
         {
-            int wheatToSell = Math.Min(quantity, seller.Wheat);
-            seller.Wheat -= wheatToSell;
-            seller.Money += GetPrice("Wheat") * wheatToSell;
+            int toSell;
+
+            if (product == "Wheat")
+            {
+                toSell = Math.Min(quantity, seller.Wheat);
+                seller.Wheat -= toSell;
+            } else if (product == "Labour")
+            {
+                toSell = Math.Min(quantity, seller.Family.GetHiredWorkerAmount());
+                for (var i = 0; i < toSell; i++)
+                    seller.Family.HiredWorkers.RemoveAt(0);
+            }
+            else
+            {
+                toSell = Math.Min(quantity, seller.Inventory.GetAmount(product));
+                for (var i = 0; i < toSell; i++)
+                    seller.Inventory.RemoveItem(product);
+            }
+
+            seller.Money += GetPrice(product) * toSell;
         }
 
         // Change wheat price to random int in 1-10

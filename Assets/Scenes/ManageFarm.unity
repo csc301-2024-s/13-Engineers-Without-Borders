@@ -613,18 +613,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: LowFertilizerToggle
       objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3978194481325448825, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: productName
       value: Low Fertilizer
       objectReference: {fileID: 0}
     - target: {fileID: 3978194481325448825, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: formatString
-      value: Low F:<br>{0}
+      value: '{0}'
       objectReference: {fileID: 0}
     - target: {fileID: 4456753881029446815, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: toolName
       value: Low Fertilizer
       objectReference: {fileID: 0}
+    - target: {fileID: 5299105459949918467, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 076a96d429a21d54abb2fb04f29bfdc4, type: 3}
     - target: {fileID: 5312392842818132951, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: productName
       value: Low Fertilizer
@@ -719,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 1406926796}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_text
-      value: 'Low F: 99'
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_fontSize
@@ -727,7 +743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 512
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -2227,18 +2243,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: HighFertilizerToggle
       objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3978194481325448825, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: productName
       value: High Fertilizer
       objectReference: {fileID: 0}
     - target: {fileID: 3978194481325448825, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: formatString
-      value: High F:<br>{0}
+      value: '{0}'
       objectReference: {fileID: 0}
     - target: {fileID: 4456753881029446815, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: toolName
       value: High Fertilizer
       objectReference: {fileID: 0}
+    - target: {fileID: 5299105459949918467, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2066d9d99ebd4794b915aa887defee03, type: 3}
     - target: {fileID: 5312392842818132951, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: productName
       value: High Fertilizer
@@ -2333,7 +2365,9 @@ PrefabInstance:
       objectReference: {fileID: 1406926796}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_text
-      value: 'High F: 99'
+      value: '
+
+        99'
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_fontSize
@@ -2341,7 +2375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 512
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -2836,14 +2870,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: HYCToggle
       objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3571504923827668448, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3978194481325448825, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: formatString
-      value: HYC:<br>{0}
+      value: '{0}'
       objectReference: {fileID: 0}
     - target: {fileID: 4456753881029446815, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: toolName
       value: HYC Seed
       objectReference: {fileID: 0}
+    - target: {fileID: 5299105459949918467, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee75cdfb6f55df5449fcfa3529af5276, type: 3}
     - target: {fileID: 5312392842818132951, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: productName
       value: HYC Seed
@@ -2938,7 +2988,7 @@ PrefabInstance:
       objectReference: {fileID: 1406926796}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_text
-      value: HYC:<br>0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_fontSize
@@ -2950,7 +3000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 512
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7154558002356559521, guid: 02b8e527ebd3e6d4999f02630f7ec1f3, type: 3}
       propertyPath: m_HorizontalAlignment

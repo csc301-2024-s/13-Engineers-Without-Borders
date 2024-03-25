@@ -112,8 +112,12 @@ namespace Backend
             } else if (product == "Labour")
             {
                 toSell = Math.Min(quantity, seller.Family.GetHiredWorkerAmount());
-                for (var i = 0; i < toSell; i++)
-                    seller.Family.HiredWorkers.RemoveAt(0);
+                for (var i = 0; i < toSell; i++) {
+                    Adult worker = seller.Family.HiredWorkers[0];
+                    if (worker.HasOx)  // add back ox if hired worker has one
+                        seller.Inventory.AddItem("Ox");
+                    seller.Family.HiredWorkers.Remove(worker);
+                }
             }
             else
             {

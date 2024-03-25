@@ -38,6 +38,7 @@ namespace Backend
         };
 
         private static int _startingAcresOfLand = 0;
+        private static bool _phase1TutorialShown = false;
 
         // Initialize the game
         public static void Initialize(Household Player)
@@ -54,6 +55,7 @@ namespace Backend
             Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
             s_Households = new Household[] { Player };
+            _phase1TutorialShown = false;
 
             Market.Initialize();
 
@@ -145,13 +147,18 @@ namespace Backend
 
             if (s_Year == 1)
             {
-                PopupManager.QueuePopup("Greetings", "Welcome to the simulation! Start by tapping your crops to select them, then press the big harvest button at the bottom!", "Okay");
+                PopupManager.QueuePopup("Tutorial", "Welcome to the simulation! Tap on each plot to select it, then press the harvest button below to advance. Each plot costs one labour point to harvest. If you don't have enough labour to harvest all of your land, your remaining crops will be left on the field to rot.", "Okay");
                 AdvanceToPhaseTwo();
             }
             else if (!s_Player.Inventory.Contains("Tubewell"))
             {
                 PopupManager.QueuePopup("Notice", $"Irrigation skipped due to lack of tubewell.", "Okay");
                 AdvanceToPhaseTwo();
+            }
+            else if (!_phase1TutorialShown)
+            {
+                _phase1TutorialShown = true;  // show the tutorial promp the first year you get a tubewell
+                PopupManager.QueuePopup("Tutorial", "It's Growing Season! Since you have a tubewell, you can irrigate your crops to make sure they yield the most wheat as possible! Each plot costs two labour points to irrigate.", "Okay");
             }
         }
 
@@ -169,6 +176,9 @@ namespace Backend
 
             // Remove all hired workers
             s_Player.RemoveLabour();
+
+            if (s_Year == 1)
+                PopupManager.QueuePopup("Tutorial", "The Market is now open! You can buy or sell tools or make the best out of next year's harvest. You can also select a seed type and fertilizer and apply them to your farm plots.", "Okay");
 
             if (s_Player.Wheat < 0)
             {

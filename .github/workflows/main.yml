@@ -3,7 +3,6 @@ on: [push]
 jobs:
   run_tests:
     environment: main
-    projectPath: .
     runs-on: ubuntu-latest  
     steps:
       - name: Unity - Test runner

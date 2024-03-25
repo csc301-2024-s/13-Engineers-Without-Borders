@@ -88,7 +88,7 @@ Communication is done on our Discord server. We say what we're writing and how w
 
 Access our Trello here: https://trello.com/b/YwVbyUKp/green-revolution  (you may need to request permission).
 
-We TRIED to get a workflow working to automatically test our test suite, but we just couldn't get it to work. Also I think it's actually faster to run the tests in the Unity editor anyway, so there really wasn't much of a point to a workflow.
+We TRIED to get a [workflow](https://github.com/marketplace/actions/unity-test-runner) working to automatically test our test suite, but we just couldn't get it to work. Also I think it's actually faster to run the tests in the Unity editor anyway, so there really wasn't much of a point to a workflow.
 
 ## Coding Standards and Guidelines
 We will be adapting https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions .

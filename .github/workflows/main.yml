@@ -1,1 +1,14 @@
-PUT STUFF HERE
+on: [push]
+
+jobs:
+  run_tests:
+
+    runs-on: windows-2022
+  
+    name: Test Suite
+    steps:
+      - uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}

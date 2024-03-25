@@ -3,7 +3,7 @@ on: [push]
 jobs:
   run_tests:
 
-    runs-on: windows-2022
+    runs-on: ubuntu-latest
             
     steps:
       - name: Unity - Test runner

@@ -58,7 +58,7 @@ To remove HYC seed or fertilizer from a plot of land, simply select it with the 
 
 After the simulation (after the harvest on the 7th year), there will be a results screen to show your final score. This is followed by some self reflection questions to see how much you've learned.
 
-If you're a contributor, you can read the [technical document](technical-document.md) to learn more about the nitty gritty code behind the project.
+If you're a contributor, you can read the [technical document](technical-document.md) to learn more about the specifics behind the project.
  
 ## Development requirements
 We are using the Unity Engine, LTS version 2022.3.18f1. Your local git branch should be configured to use Unity YAML merge.

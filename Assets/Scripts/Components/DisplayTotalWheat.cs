@@ -2,6 +2,9 @@ using Backend;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Add to an object with a TextMeshPro component to make it display the player's total wheat.
+/// </summary>
 public class DisplayTotalWheat : MonoBehaviour
 {
     [SerializeField] string text;

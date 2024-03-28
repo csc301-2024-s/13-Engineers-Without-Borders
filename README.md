@@ -85,7 +85,7 @@ It is recommended to edit scripts by clicking on them in the Unity editor, as th
 UML diagrams can be viewed in the browser, and edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  
 ## Deployment and Github Workflow
-Deployment Usage: navigate to D4/Build and run [Green Revolution.exe](deliverables/D4/Build/Green%20Revolution.exe)
+Deployment Usage: navigate to deliverables/D4/Build and run [Green Revolution.exe](deliverables/D4/Build/Green%20Revolution.exe)
 
 Communication is done on our Discord server. We say what we're writing and how we're going to merge it (either directly or through a pull request). We honestly aren't very strict about this - as long as it gets the work done. As a rule of thumb, if we're making a small bug fix, we can just push directly to main. If it's a big change, like writing new classes, we'll create a branch for it, and the writer of it will create a pull request. Team lead reviews it and merges it.
 
@@ -111,7 +111,7 @@ And we will ignore the note about four spaces instead of tabs.
 
 As for comments, every class and method should be documented. Classes should have authors, and methods should have comments explaining their parameters and return values. These don't need to be in a specific format, as long as they explain the information.
 
-**Always use `//` for comments**
+**Always use `//` for comments**, and use `///` for XML comments. Public variables/methods should be documented with XML comments so they'll appear on our auto-generated documentation. (Bonus points if your IDE automatically creates a template for you when you type `///`.)
 ​
 ## Licenses 
 "You can upload the code to GitHub or other similar publicly available domains."

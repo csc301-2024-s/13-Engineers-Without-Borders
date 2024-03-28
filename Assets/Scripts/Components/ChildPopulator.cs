@@ -3,7 +3,10 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Populate the view children scene with your children
+/// <summary>
+/// Populates a specified grid/list with prefabs containing information about your children.
+/// This is unused and has been superceded by FamilyMemberPopulator.cs
+/// </summary>
 public class ChildPopulator : MonoBehaviour
 {
     [SerializeField] GameObject childPrefab;

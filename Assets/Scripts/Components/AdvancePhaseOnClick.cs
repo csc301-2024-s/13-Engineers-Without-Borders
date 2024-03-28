@@ -3,7 +3,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Original Author: Andy Wang
-// Used to make a button advance phase on click
+/// <summary>
+/// Makes a button advance to the next phase on click.
+/// Place on an object with a Button component.
+/// </summary>
 public class AdvancePhaseOnClick : MonoBehaviour
 {
     [SerializeField] [Range(1, 3)] int phase;  // should be from 1 to 3, but it's zero-indexed
@@ -18,6 +21,9 @@ public class AdvancePhaseOnClick : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Click handler. Advances phase based on the serialized field "phase."
+    /// </summary>
     public void OnClick() {
         switch (GameState.s_Phase) {
             case 0:

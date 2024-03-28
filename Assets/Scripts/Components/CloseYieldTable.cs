@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Unused.
+/// </summary>
 public class CloseYieldTable : MonoBehaviour
 {
     public Image yieldTable;

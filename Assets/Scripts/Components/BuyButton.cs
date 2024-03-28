@@ -3,7 +3,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Original Author: Andy Wang
-// Put this component on a button to make it buy something from the market on click
+/// <summary>
+/// Makes a button buy a product from the market on click. Product name is a serialized field.
+/// Place on an object with a Button component.
+/// </summary>
 public class BuyButton : MonoBehaviour
 {
     [SerializeField] string productName;
@@ -19,6 +22,9 @@ public class BuyButton : MonoBehaviour
         _btn.interactable = Market.CanBuyerBuy(GameState.s_Player, productName);
     }
 
+    /// <summary>
+    /// Click handler.
+    /// </summary>
     public void OnClick() {
         Market.Buy(productName, GameState.s_Player);
         // we probably don't need error message handling because the buy button can only be clicked if you can buy it

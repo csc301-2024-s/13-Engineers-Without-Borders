@@ -3,6 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // author: Jacqueline Zhu
+/// <summary>
+/// Add to an object with a TextMeshPro component to make it show the weather.
+/// </summary>
 public class DisplayWeather : MonoBehaviour
 {
     [SerializeField] string text;

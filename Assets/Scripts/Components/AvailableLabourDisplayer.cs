@@ -2,6 +2,11 @@ using Backend;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Makes a text label show your available labour points from a serialized format string.
+/// Place on an object with a TextMeshPro component.
+/// This component is unused.
+/// </summary>
 public class AvailableLabourDisplayer : MonoBehaviour
 {
     [SerializeField] string formatString;

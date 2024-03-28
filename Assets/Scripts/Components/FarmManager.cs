@@ -3,16 +3,35 @@ using UnityEngine;
 using Backend;
 
 // Original Author: Andy Wang
-// Similar to GameState but specific to the Manage Farm scene, holding some variables used in that scene for convenience
+/// <summary>
+/// Holds the main gameplay logic during the farm management scene (phases 1, 2, 3).
+/// Handles the irrigation button and harvest button logic.
+/// </summary>
 public class FarmManager : MonoBehaviour
 {
+    /// <summary>
+    /// The tool currently selected during phase 3.
+    /// </summary>
     public static string SelectedTool { get; set; } = null; // just make this a string for now lol
 
+    /// <summary>
+    /// Selected farm plot cells during phases 1/2.
+    /// </summary>
     public static List<FarmPlotCell> SelectedCells = new List<FarmPlotCell>();
 
+    /// <summary>
+    /// Labour cost of selecting a plot cell to be irrigated.
+    /// </summary>
     public const int IrrigationLabour = 2; // const for labour cost for irrigation in case we want to change later
+    
+    /// <summary>
+    /// Labour cost of selecting a plot cell to be harvested.
+    /// </summary>
     public const int HarvestLabour = 1;
 
+    /// <summary>
+    /// How many labour points you currently have in this phase.
+    /// </summary>
     public static int LabourPoints { get; set; }  // upon loading the farm management screen, show how many labour points you can spend
 
     void Start()
@@ -25,7 +44,9 @@ public class FarmManager : MonoBehaviour
         SelectedCells.Clear();
     }
 
-    // Harvests all currently selected Cells
+    /// <summary>
+    /// Harvests all selected farm cells.
+    /// </summary>
     public static void HarvestSelectedCells()
     {
         int gain = 0;
@@ -55,7 +76,9 @@ public class FarmManager : MonoBehaviour
         }
     }
 
-    // Irrigates all currently selected Cells
+    /// <summary>
+    /// Harvests all selected farm cells.
+    /// </summary>
     public static void IrrigateSelectedCells()
     {
         foreach (FarmPlotCell cell in SelectedCells)
@@ -66,6 +89,9 @@ public class FarmManager : MonoBehaviour
         GameState.AdvanceToPhaseTwo();
     }
 
+    /// <summary>
+    /// Deselect all farm plot cells.
+    /// </summary>
     public static void ClearSelectedCells()
     {
         SelectedCells.Clear();

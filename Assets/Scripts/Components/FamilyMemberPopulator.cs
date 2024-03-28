@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Original Author: Andy Wang
-// Populate the adult/child view in household manager
+/// <summary>
+/// Populate grids with information about your adults and children. Used in the household management scene.
+/// </summary>
 public class FamilyMemberPopulator : MonoBehaviour
 {
     [SerializeField] GameObject prefab;

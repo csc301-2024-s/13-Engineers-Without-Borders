@@ -5,6 +5,9 @@ using TMPro;
 using System;
 
 // Original Author: Andy Wang
+/// <summary>
+/// Represents a tile in the farm management screen that can be pressed on. Represents a single farm plot in your land.
+/// </summary>
 public class FarmPlotCell : MonoBehaviour
 {
     [SerializeField] Sprite normalSprite;
@@ -19,6 +22,9 @@ public class FarmPlotCell : MonoBehaviour
     private GameObject _irrigatedOverlay;
     private Image _image;
 
+    /// <summary>
+    /// The FarmPlot object that this cell represents.
+    /// </summary>
     public FarmPlot Plot { get; set; }
 
     void Start()
@@ -40,7 +46,9 @@ public class FarmPlotCell : MonoBehaviour
         RefreshStatus();
     }
 
-    // Refreshes visual state of the farm plot cell
+    /// <summary>
+    /// Update the farm cell's sprite based on phase and whether it's selected or not.
+    /// </summary>
     public void RefreshVisuals()
     {
         if (GameState.s_Phase == 2)
@@ -67,6 +75,10 @@ public class FarmPlotCell : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Update visuals based on plot's status, aka seed type, irrigated, fertilizer.
+    /// Essentially sets a bunch of overlays over the main sprite.
+    /// </summary>
     public void RefreshStatus()
     {
         _hycImage.SetActive(Plot.SeedType == SeedType.HYC);
@@ -90,9 +102,10 @@ public class FarmPlotCell : MonoBehaviour
         _irrigatedOverlay.SetActive(Plot.Irrigated);
     }
 
-    // Select or deselect this farm cell on click
-    // Also handle planting/harvesting/irrigating depending on phase (read FarmManager fields)
-    // Precondition: if the player has a tool selected, that means they can use it in the first place
+    /// <summary>
+    /// In phases 1/2, select this farm cell (if the player has enough labour points to do so).
+    /// In phase 3, set seed/fertilizer type depending on what tool the player has selected.
+    /// </summary>
     void HandleClick()
     {
         Household owner = Plot.Owner;

@@ -1,0 +1,265 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Assessment3
+  commentId: T:Global.Assessment3
+  id: Assessment3
+  parent: Global
+  children:
+  - Global.Assessment3.correct
+  - Global.Assessment3.OnCorrectClick
+  - Global.Assessment3.OnWrongAClick
+  - Global.Assessment3.OnWrongBClick
+  - Global.Assessment3.OnWrongCClick
+  - Global.Assessment3.OnWrongDClick
+  - Global.Assessment3.OnWrongEClick
+  - Global.Assessment3.wrong
+  langs:
+  - csharp
+  - vb
+  name: Assessment3
+  nameWithType: Assessment3
+  fullName: Assessment3
+  type: Class
+  source:
+    id: Assessment3
+    path: ''
+    startLine: 150
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class Assessment3 : MonoBehaviour'
+    content.vb: Public Class Assessment3 Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.Assessment3.correct
+  commentId: F:Global.Assessment3.correct
+  id: correct
+  parent: Global.Assessment3
+  langs:
+  - csharp
+  - vb
+  name: correct
+  nameWithType: Assessment3.correct
+  fullName: Assessment3.correct
+  type: Field
+  source:
+    id: correct
+    path: ''
+    startLine: 159
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public UIDocument correct
+    return:
+      type: Global.UIDocument
+    content.vb: Public correct As UIDocument
+- uid: Global.Assessment3.wrong
+  commentId: F:Global.Assessment3.wrong
+  id: wrong
+  parent: Global.Assessment3
+  langs:
+  - csharp
+  - vb
+  name: wrong
+  nameWithType: Assessment3.wrong
+  fullName: Assessment3.wrong
+  type: Field
+  source:
+    id: wrong
+    path: ''
+    startLine: 160
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public UIDocument wrong
+    return:
+      type: Global.UIDocument
+    content.vb: Public wrong As UIDocument
+- uid: Global.Assessment3.OnCorrectClick
+  commentId: M:Global.Assessment3.OnCorrectClick
+  id: OnCorrectClick
+  parent: Global.Assessment3
+  langs:
+  - csharp
+  - vb
+  name: OnCorrectClick()
+  nameWithType: Assessment3.OnCorrectClick()
+  fullName: Assessment3.OnCorrectClick()
+  type: Method
+  source:
+    id: OnCorrectClick
+    path: ''
+    startLine: 194
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnCorrectClick()
+    content.vb: Public Sub OnCorrectClick()
+  overload: Global.Assessment3.OnCorrectClick*
+- uid: Global.Assessment3.OnWrongAClick
+  commentId: M:Global.Assessment3.OnWrongAClick
+  id: OnWrongAClick
+  parent: Global.Assessment3
+  langs:
+  - csharp
+  - vb
+  name: OnWrongAClick()
+  nameWithType: Assessment3.OnWrongAClick()
+  fullName: Assessment3.OnWrongAClick()
+  type: Method
+  source:
+    id: OnWrongAClick
+    path: ''
+    startLine: 200
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnWrongAClick()
+    content.vb: Public Sub OnWrongAClick()
+  overload: Global.Assessment3.OnWrongAClick*
+- uid: Global.Assessment3.OnWrongBClick
+  commentId: M:Global.Assessment3.OnWrongBClick
+  id: OnWrongBClick
+  parent: Global.Assessment3
+  langs:
+  - csharp
+  - vb
+  name: OnWrongBClick()
+  nameWithType: Assessment3.OnWrongBClick()
+  fullName: Assessment3.OnWrongBClick()
+  type: Method
+  source:
+    id: OnWrongBClick
+    path: ''
+    startLine: 205
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnWrongBClick()
+    content.vb: Public Sub OnWrongBClick()
+  overload: Global.Assessment3.OnWrongBClick*
+- uid: Global.Assessment3.OnWrongCClick
+  commentId: M:Global.Assessment3.OnWrongCClick
+  id: OnWrongCClick
+  parent: Global.Assessment3
+  langs:
+  - csharp
+  - vb
+  name: OnWrongCClick()
+  nameWithType: Assessment3.OnWrongCClick()
+  fullName: Assessment3.OnWrongCClick()
+  type: Method
+  source:
+    id: OnWrongCClick
+    path: ''
+    startLine: 210
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnWrongCClick()
+    content.vb: Public Sub OnWrongCClick()
+  overload: Global.Assessment3.OnWrongCClick*
+- uid: Global.Assessment3.OnWrongDClick
+  commentId: M:Global.Assessment3.OnWrongDClick
+  id: OnWrongDClick
+  parent: Global.Assessment3
+  langs:
+  - csharp
+  - vb
+  name: OnWrongDClick()
+  nameWithType: Assessment3.OnWrongDClick()
+  fullName: Assessment3.OnWrongDClick()
+  type: Method
+  source:
+    id: OnWrongDClick
+    path: ''
+    startLine: 215
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnWrongDClick()
+    content.vb: Public Sub OnWrongDClick()
+  overload: Global.Assessment3.OnWrongDClick*
+- uid: Global.Assessment3.OnWrongEClick
+  commentId: M:Global.Assessment3.OnWrongEClick
+  id: OnWrongEClick
+  parent: Global.Assessment3
+  langs:
+  - csharp
+  - vb
+  name: OnWrongEClick()
+  nameWithType: Assessment3.OnWrongEClick()
+  fullName: Assessment3.OnWrongEClick()
+  type: Method
+  source:
+    id: OnWrongEClick
+    path: ''
+    startLine: 220
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnWrongEClick()
+    content.vb: Public Sub OnWrongEClick()
+  overload: Global.Assessment3.OnWrongEClick*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.UIDocument
+  isExternal: true
+  name: UIDocument
+  nameWithType: UIDocument
+  fullName: UIDocument
+- uid: Global.Assessment3.OnCorrectClick*
+  commentId: Overload:Global.Assessment3.OnCorrectClick
+  name: OnCorrectClick
+  nameWithType: Assessment3.OnCorrectClick
+  fullName: Assessment3.OnCorrectClick
+- uid: Global.Assessment3.OnWrongAClick*
+  commentId: Overload:Global.Assessment3.OnWrongAClick
+  name: OnWrongAClick
+  nameWithType: Assessment3.OnWrongAClick
+  fullName: Assessment3.OnWrongAClick
+- uid: Global.Assessment3.OnWrongBClick*
+  commentId: Overload:Global.Assessment3.OnWrongBClick
+  name: OnWrongBClick
+  nameWithType: Assessment3.OnWrongBClick
+  fullName: Assessment3.OnWrongBClick
+- uid: Global.Assessment3.OnWrongCClick*
+  commentId: Overload:Global.Assessment3.OnWrongCClick
+  name: OnWrongCClick
+  nameWithType: Assessment3.OnWrongCClick
+  fullName: Assessment3.OnWrongCClick
+- uid: Global.Assessment3.OnWrongDClick*
+  commentId: Overload:Global.Assessment3.OnWrongDClick
+  name: OnWrongDClick
+  nameWithType: Assessment3.OnWrongDClick
+  fullName: Assessment3.OnWrongDClick
+- uid: Global.Assessment3.OnWrongEClick*
+  commentId: Overload:Global.Assessment3.OnWrongEClick
+  name: OnWrongEClick
+  nameWithType: Assessment3.OnWrongEClick
+  fullName: Assessment3.OnWrongEClick

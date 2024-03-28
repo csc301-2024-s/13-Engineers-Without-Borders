@@ -1,0 +1,334 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.Adult
+  commentId: T:Backend.Adult
+  id: Adult
+  parent: Backend
+  children:
+  - Backend.Adult.#ctor(System.String,System.String)
+  - Backend.Adult.AssignOx(System.Boolean)
+  - Backend.Adult.BaseLabourPoints
+  - Backend.Adult.Consumption
+  - Backend.Adult.GetLabourPoints
+  - Backend.Adult.HasOx
+  - Backend.Adult.LookAfterChild
+  langs:
+  - csharp
+  - vb
+  name: Adult
+  nameWithType: Adult
+  fullName: Backend.Adult
+  type: Class
+  source:
+    id: Adult
+    path: ''
+    startLine: 378
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: 'public class Adult : FamilyMember'
+    content.vb: Public Class Adult Inherits FamilyMember
+  inheritance:
+  - System.Object
+  - Backend.FamilyMember
+  inheritedMembers:
+  - Backend.FamilyMember.FirstName
+  - Backend.FamilyMember.LastName
+  - Backend.FamilyMember.s_FirstNames
+  - Backend.FamilyMember.GetRandomFirstName
+- uid: Backend.Adult.Consumption
+  commentId: F:Backend.Adult.Consumption
+  id: Consumption
+  parent: Backend.Adult
+  langs:
+  - csharp
+  - vb
+  name: Consumption
+  nameWithType: Adult.Consumption
+  fullName: Backend.Adult.Consumption
+  type: Field
+  source:
+    id: Consumption
+    path: ''
+    startLine: 380
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public const int Consumption = 10
+    return:
+      type: System.Int32
+    content.vb: Public Const Consumption As Integer = 10
+- uid: Backend.Adult.BaseLabourPoints
+  commentId: F:Backend.Adult.BaseLabourPoints
+  id: BaseLabourPoints
+  parent: Backend.Adult
+  langs:
+  - csharp
+  - vb
+  name: BaseLabourPoints
+  nameWithType: Adult.BaseLabourPoints
+  fullName: Backend.Adult.BaseLabourPoints
+  type: Field
+  source:
+    id: BaseLabourPoints
+    path: ''
+    startLine: 381
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public const int BaseLabourPoints = 2
+    return:
+      type: System.Int32
+    content.vb: Public Const BaseLabourPoints As Integer = 2
+- uid: Backend.Adult.HasOx
+  commentId: P:Backend.Adult.HasOx
+  id: HasOx
+  parent: Backend.Adult
+  langs:
+  - csharp
+  - vb
+  name: HasOx
+  nameWithType: Adult.HasOx
+  fullName: Backend.Adult.HasOx
+  type: Property
+  source:
+    id: HasOx
+    path: ''
+    startLine: 383
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public bool HasOx { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasOx As Boolean
+  overload: Backend.Adult.HasOx*
+- uid: Backend.Adult.#ctor(System.String,System.String)
+  commentId: M:Backend.Adult.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Backend.Adult
+  langs:
+  - csharp
+  - vb
+  name: Adult(string, string)
+  nameWithType: Adult.Adult(string, string)
+  fullName: Backend.Adult.Adult(string, string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 387
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public Adult(string First, string Last)
+    parameters:
+    - id: First
+      type: System.String
+    - id: Last
+      type: System.String
+    content.vb: Public Sub New(First As String, Last As String)
+  overload: Backend.Adult.#ctor*
+  nameWithType.vb: Adult.New(String, String)
+  fullName.vb: Backend.Adult.New(String, String)
+  name.vb: New(String, String)
+- uid: Backend.Adult.AssignOx(System.Boolean)
+  commentId: M:Backend.Adult.AssignOx(System.Boolean)
+  id: AssignOx(System.Boolean)
+  parent: Backend.Adult
+  langs:
+  - csharp
+  - vb
+  name: AssignOx(bool)
+  nameWithType: Adult.AssignOx(bool)
+  fullName: Backend.Adult.AssignOx(bool)
+  type: Method
+  source:
+    id: AssignOx
+    path: ''
+    startLine: 396
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public void AssignOx(bool assigned)
+    parameters:
+    - id: assigned
+      type: System.Boolean
+    content.vb: Public Sub AssignOx(assigned As Boolean)
+  overload: Backend.Adult.AssignOx*
+  nameWithType.vb: Adult.AssignOx(Boolean)
+  fullName.vb: Backend.Adult.AssignOx(Boolean)
+  name.vb: AssignOx(Boolean)
+- uid: Backend.Adult.LookAfterChild
+  commentId: M:Backend.Adult.LookAfterChild
+  id: LookAfterChild
+  parent: Backend.Adult
+  langs:
+  - csharp
+  - vb
+  name: LookAfterChild()
+  nameWithType: Adult.LookAfterChild()
+  fullName: Backend.Adult.LookAfterChild()
+  type: Method
+  source:
+    id: LookAfterChild
+    path: ''
+    startLine: 402
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public void LookAfterChild()
+    content.vb: Public Sub LookAfterChild()
+  overload: Backend.Adult.LookAfterChild*
+- uid: Backend.Adult.GetLabourPoints
+  commentId: M:Backend.Adult.GetLabourPoints
+  id: GetLabourPoints
+  parent: Backend.Adult
+  langs:
+  - csharp
+  - vb
+  name: GetLabourPoints()
+  nameWithType: Adult.GetLabourPoints()
+  fullName: Backend.Adult.GetLabourPoints()
+  type: Method
+  source:
+    id: GetLabourPoints
+    path: ''
+    startLine: 408
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public int GetLabourPoints()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetLabourPoints() As Integer
+  overload: Backend.Adult.GetLabourPoints*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Backend.FamilyMember
+  commentId: T:Backend.FamilyMember
+  parent: Backend
+  name: FamilyMember
+  nameWithType: FamilyMember
+  fullName: Backend.FamilyMember
+- uid: Backend.FamilyMember.FirstName
+  commentId: P:Backend.FamilyMember.FirstName
+  parent: Backend.FamilyMember
+  name: FirstName
+  nameWithType: FamilyMember.FirstName
+  fullName: Backend.FamilyMember.FirstName
+- uid: Backend.FamilyMember.LastName
+  commentId: P:Backend.FamilyMember.LastName
+  parent: Backend.FamilyMember
+  name: LastName
+  nameWithType: FamilyMember.LastName
+  fullName: Backend.FamilyMember.LastName
+- uid: Backend.FamilyMember.s_FirstNames
+  commentId: F:Backend.FamilyMember.s_FirstNames
+  parent: Backend.FamilyMember
+  name: s_FirstNames
+  nameWithType: FamilyMember.s_FirstNames
+  fullName: Backend.FamilyMember.s_FirstNames
+- uid: Backend.FamilyMember.GetRandomFirstName
+  commentId: M:Backend.FamilyMember.GetRandomFirstName
+  parent: Backend.FamilyMember
+  name: GetRandomFirstName()
+  nameWithType: FamilyMember.GetRandomFirstName()
+  fullName: Backend.FamilyMember.GetRandomFirstName()
+  spec.csharp:
+  - uid: Backend.FamilyMember.GetRandomFirstName
+    name: GetRandomFirstName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Backend.FamilyMember.GetRandomFirstName
+    name: GetRandomFirstName
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Backend.Adult.HasOx*
+  commentId: Overload:Backend.Adult.HasOx
+  name: HasOx
+  nameWithType: Adult.HasOx
+  fullName: Backend.Adult.HasOx
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Backend.Adult.#ctor*
+  commentId: Overload:Backend.Adult.#ctor
+  name: Adult
+  nameWithType: Adult.Adult
+  fullName: Backend.Adult.Adult
+  nameWithType.vb: Adult.New
+  fullName.vb: Backend.Adult.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Backend.Adult.AssignOx*
+  commentId: Overload:Backend.Adult.AssignOx
+  name: AssignOx
+  nameWithType: Adult.AssignOx
+  fullName: Backend.Adult.AssignOx
+- uid: Backend.Adult.LookAfterChild*
+  commentId: Overload:Backend.Adult.LookAfterChild
+  name: LookAfterChild
+  nameWithType: Adult.LookAfterChild
+  fullName: Backend.Adult.LookAfterChild
+- uid: Backend.Adult.GetLabourPoints*
+  commentId: Overload:Backend.Adult.GetLabourPoints
+  name: GetLabourPoints
+  nameWithType: Adult.GetLabourPoints
+  fullName: Backend.Adult.GetLabourPoints

@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.Market
+  commentId: T:Backend.Market
+  id: Market
+  parent: Backend
+  children:
+  - Backend.Market.ActivateProduct(System.String)
+  - Backend.Market.AddProduct(System.String,System.Int32,Backend.ProductType,System.String,System.Single)
+  - Backend.Market.Buy(System.String,Backend.Household)
+  - Backend.Market.CanBuyerBuy(Backend.Household,System.String)
+  - Backend.Market.DeactivateProduct(System.String)
+  - Backend.Market.GetDescription(System.String)
+  - Backend.Market.GetPrice(System.String)
+  - Backend.Market.Initialize
+  - Backend.Market.IsBuyable(System.String)
+  - Backend.Market.PlotsPerTubewell
+  - Backend.Market.RemoveProduct(System.String)
+  - Backend.Market.Sell(Backend.Household,System.Int32,System.String)
+  - Backend.Market.SetPriceMultiplier(System.String,System.Single)
+  - Backend.Market.UpdateWheatPrice
+  langs:
+  - csharp
+  - vb
+  name: Market
+  nameWithType: Market
+  fullName: Backend.Market
+  type: Class
+  source:
+    id: Market
+    path: ''
+    startLine: 1316
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static class Market
+    content.vb: Public Module Market
+  inheritance:
+  - System.Object
+- uid: Backend.Market.PlotsPerTubewell
+  commentId: F:Backend.Market.PlotsPerTubewell
+  id: PlotsPerTubewell
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: PlotsPerTubewell
+  nameWithType: Market.PlotsPerTubewell
+  fullName: Backend.Market.PlotsPerTubewell
+  type: Field
+  source:
+    id: PlotsPerTubewell
+    path: ''
+    startLine: 1319
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public const int PlotsPerTubewell = 8
+    return:
+      type: System.Int32
+    content.vb: Public Const PlotsPerTubewell As Integer = 8
+- uid: Backend.Market.Initialize
+  commentId: M:Backend.Market.Initialize
+  id: Initialize
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: Market.Initialize()
+  fullName: Backend.Market.Initialize()
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 1322
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void Initialize()
+    content.vb: Public Shared Sub Initialize()
+  overload: Backend.Market.Initialize*
+- uid: Backend.Market.Buy(System.String,Backend.Household)
+  commentId: M:Backend.Market.Buy(System.String,Backend.Household)
+  id: Buy(System.String,Backend.Household)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: Buy(string, Household)
+  nameWithType: Market.Buy(string, Household)
+  fullName: Backend.Market.Buy(string, Backend.Household)
+  type: Method
+  source:
+    id: Buy
+    path: ''
+    startLine: 1364
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static string Buy(string name, Household buyer)
+    parameters:
+    - id: name
+      type: System.String
+    - id: buyer
+      type: Backend.Household
+    return:
+      type: System.String
+    content.vb: Public Shared Function Buy(name As String, buyer As Household) As String
+  overload: Backend.Market.Buy*
+  nameWithType.vb: Market.Buy(String, Household)
+  fullName.vb: Backend.Market.Buy(String, Backend.Household)
+  name.vb: Buy(String, Household)
+- uid: Backend.Market.Sell(Backend.Household,System.Int32,System.String)
+  commentId: M:Backend.Market.Sell(Backend.Household,System.Int32,System.String)
+  id: Sell(Backend.Household,System.Int32,System.String)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: Sell(Household, int, string)
+  nameWithType: Market.Sell(Household, int, string)
+  fullName: Backend.Market.Sell(Backend.Household, int, string)
+  type: Method
+  source:
+    id: Sell
+    path: ''
+    startLine: 1388
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void Sell(Household seller, int quantity, string product)
+    parameters:
+    - id: seller
+      type: Backend.Household
+    - id: quantity
+      type: System.Int32
+    - id: product
+      type: System.String
+    content.vb: Public Shared Sub Sell(seller As Household, quantity As Integer, product As String)
+  overload: Backend.Market.Sell*
+  nameWithType.vb: Market.Sell(Household, Integer, String)
+  fullName.vb: Backend.Market.Sell(Backend.Household, Integer, String)
+  name.vb: Sell(Household, Integer, String)
+- uid: Backend.Market.UpdateWheatPrice
+  commentId: M:Backend.Market.UpdateWheatPrice
+  id: UpdateWheatPrice
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: UpdateWheatPrice()
+  nameWithType: Market.UpdateWheatPrice()
+  fullName: Backend.Market.UpdateWheatPrice()
+  type: Method
+  source:
+    id: UpdateWheatPrice
+    path: ''
+    startLine: 1419
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void UpdateWheatPrice()
+    content.vb: Public Shared Sub UpdateWheatPrice()
+  overload: Backend.Market.UpdateWheatPrice*
+- uid: Backend.Market.AddProduct(System.String,System.Int32,Backend.ProductType,System.String,System.Single)
+  commentId: M:Backend.Market.AddProduct(System.String,System.Int32,Backend.ProductType,System.String,System.Single)
+  id: AddProduct(System.String,System.Int32,Backend.ProductType,System.String,System.Single)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: AddProduct(string, int, ProductType, string, float)
+  nameWithType: Market.AddProduct(string, int, ProductType, string, float)
+  fullName: Backend.Market.AddProduct(string, int, Backend.ProductType, string, float)
+  type: Method
+  source:
+    id: AddProduct
+    path: ''
+    startLine: 1426
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void AddProduct(string name, int price, ProductType type, string description = "", float multiplier = 1)
+    parameters:
+    - id: name
+      type: System.String
+    - id: price
+      type: System.Int32
+    - id: type
+      type: Backend.ProductType
+    - id: description
+      type: System.String
+    - id: multiplier
+      type: System.Single
+    content.vb: Public Shared Sub AddProduct(name As String, price As Integer, type As ProductType, description As String = "", multiplier As Single = 1)
+  overload: Backend.Market.AddProduct*
+  nameWithType.vb: Market.AddProduct(String, Integer, ProductType, String, Single)
+  fullName.vb: Backend.Market.AddProduct(String, Integer, Backend.ProductType, String, Single)
+  name.vb: AddProduct(String, Integer, ProductType, String, Single)
+- uid: Backend.Market.RemoveProduct(System.String)
+  commentId: M:Backend.Market.RemoveProduct(System.String)
+  id: RemoveProduct(System.String)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: RemoveProduct(string)
+  nameWithType: Market.RemoveProduct(string)
+  fullName: Backend.Market.RemoveProduct(string)
+  type: Method
+  source:
+    id: RemoveProduct
+    path: ''
+    startLine: 1446
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void RemoveProduct(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Shared Sub RemoveProduct(name As String)
+  overload: Backend.Market.RemoveProduct*
+  nameWithType.vb: Market.RemoveProduct(String)
+  fullName.vb: Backend.Market.RemoveProduct(String)
+  name.vb: RemoveProduct(String)
+- uid: Backend.Market.CanBuyerBuy(Backend.Household,System.String)
+  commentId: M:Backend.Market.CanBuyerBuy(Backend.Household,System.String)
+  id: CanBuyerBuy(Backend.Household,System.String)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: CanBuyerBuy(Household, string)
+  nameWithType: Market.CanBuyerBuy(Household, string)
+  fullName: Backend.Market.CanBuyerBuy(Backend.Household, string)
+  type: Method
+  source:
+    id: CanBuyerBuy
+    path: ''
+    startLine: 1452
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static bool CanBuyerBuy(Household buyer, string productName)
+    parameters:
+    - id: buyer
+      type: Backend.Household
+    - id: productName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function CanBuyerBuy(buyer As Household, productName As String) As Boolean
+  overload: Backend.Market.CanBuyerBuy*
+  nameWithType.vb: Market.CanBuyerBuy(Household, String)
+  fullName.vb: Backend.Market.CanBuyerBuy(Backend.Household, String)
+  name.vb: CanBuyerBuy(Household, String)
+- uid: Backend.Market.GetPrice(System.String)
+  commentId: M:Backend.Market.GetPrice(System.String)
+  id: GetPrice(System.String)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: GetPrice(string)
+  nameWithType: Market.GetPrice(string)
+  fullName: Backend.Market.GetPrice(string)
+  type: Method
+  source:
+    id: GetPrice
+    path: ''
+    startLine: 1461
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static int GetPrice(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function GetPrice(name As String) As Integer
+  overload: Backend.Market.GetPrice*
+  nameWithType.vb: Market.GetPrice(String)
+  fullName.vb: Backend.Market.GetPrice(String)
+  name.vb: GetPrice(String)
+- uid: Backend.Market.SetPriceMultiplier(System.String,System.Single)
+  commentId: M:Backend.Market.SetPriceMultiplier(System.String,System.Single)
+  id: SetPriceMultiplier(System.String,System.Single)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: SetPriceMultiplier(string, float)
+  nameWithType: Market.SetPriceMultiplier(string, float)
+  fullName: Backend.Market.SetPriceMultiplier(string, float)
+  type: Method
+  source:
+    id: SetPriceMultiplier
+    path: ''
+    startLine: 1468
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void SetPriceMultiplier(string name, float mult)
+    parameters:
+    - id: name
+      type: System.String
+    - id: mult
+      type: System.Single
+    content.vb: Public Shared Sub SetPriceMultiplier(name As String, mult As Single)
+  overload: Backend.Market.SetPriceMultiplier*
+  nameWithType.vb: Market.SetPriceMultiplier(String, Single)
+  fullName.vb: Backend.Market.SetPriceMultiplier(String, Single)
+  name.vb: SetPriceMultiplier(String, Single)
+- uid: Backend.Market.ActivateProduct(System.String)
+  commentId: M:Backend.Market.ActivateProduct(System.String)
+  id: ActivateProduct(System.String)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: ActivateProduct(string)
+  nameWithType: Market.ActivateProduct(string)
+  fullName: Backend.Market.ActivateProduct(string)
+  type: Method
+  source:
+    id: ActivateProduct
+    path: ''
+    startLine: 1475
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void ActivateProduct(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Shared Sub ActivateProduct(name As String)
+  overload: Backend.Market.ActivateProduct*
+  nameWithType.vb: Market.ActivateProduct(String)
+  fullName.vb: Backend.Market.ActivateProduct(String)
+  name.vb: ActivateProduct(String)
+- uid: Backend.Market.DeactivateProduct(System.String)
+  commentId: M:Backend.Market.DeactivateProduct(System.String)
+  id: DeactivateProduct(System.String)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: DeactivateProduct(string)
+  nameWithType: Market.DeactivateProduct(string)
+  fullName: Backend.Market.DeactivateProduct(string)
+  type: Method
+  source:
+    id: DeactivateProduct
+    path: ''
+    startLine: 1482
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void DeactivateProduct(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Shared Sub DeactivateProduct(name As String)
+  overload: Backend.Market.DeactivateProduct*
+  nameWithType.vb: Market.DeactivateProduct(String)
+  fullName.vb: Backend.Market.DeactivateProduct(String)
+  name.vb: DeactivateProduct(String)
+- uid: Backend.Market.IsBuyable(System.String)
+  commentId: M:Backend.Market.IsBuyable(System.String)
+  id: IsBuyable(System.String)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: IsBuyable(string)
+  nameWithType: Market.IsBuyable(string)
+  fullName: Backend.Market.IsBuyable(string)
+  type: Method
+  source:
+    id: IsBuyable
+    path: ''
+    startLine: 1489
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static bool IsBuyable(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsBuyable(name As String) As Boolean
+  overload: Backend.Market.IsBuyable*
+  nameWithType.vb: Market.IsBuyable(String)
+  fullName.vb: Backend.Market.IsBuyable(String)
+  name.vb: IsBuyable(String)
+- uid: Backend.Market.GetDescription(System.String)
+  commentId: M:Backend.Market.GetDescription(System.String)
+  id: GetDescription(System.String)
+  parent: Backend.Market
+  langs:
+  - csharp
+  - vb
+  name: GetDescription(string)
+  nameWithType: Market.GetDescription(string)
+  fullName: Backend.Market.GetDescription(string)
+  type: Method
+  source:
+    id: GetDescription
+    path: ''
+    startLine: 1496
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static string GetDescription(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetDescription(name As String) As String
+  overload: Backend.Market.GetDescription*
+  nameWithType.vb: Market.GetDescription(String)
+  fullName.vb: Backend.Market.GetDescription(String)
+  name.vb: GetDescription(String)
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Backend.Market.Initialize*
+  commentId: Overload:Backend.Market.Initialize
+  name: Initialize
+  nameWithType: Market.Initialize
+  fullName: Backend.Market.Initialize
+- uid: Backend.Market.Buy*
+  commentId: Overload:Backend.Market.Buy
+  name: Buy
+  nameWithType: Market.Buy
+  fullName: Backend.Market.Buy
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Backend.Household
+  commentId: T:Backend.Household
+  parent: Backend
+  name: Household
+  nameWithType: Household
+  fullName: Backend.Household
+- uid: Backend.Market.Sell*
+  commentId: Overload:Backend.Market.Sell
+  name: Sell
+  nameWithType: Market.Sell
+  fullName: Backend.Market.Sell
+- uid: Backend.Market.UpdateWheatPrice*
+  commentId: Overload:Backend.Market.UpdateWheatPrice
+  name: UpdateWheatPrice
+  nameWithType: Market.UpdateWheatPrice
+  fullName: Backend.Market.UpdateWheatPrice
+- uid: Backend.Market.AddProduct*
+  commentId: Overload:Backend.Market.AddProduct
+  name: AddProduct
+  nameWithType: Market.AddProduct
+  fullName: Backend.Market.AddProduct
+- uid: Backend.ProductType
+  commentId: T:Backend.ProductType
+  parent: Backend
+  name: ProductType
+  nameWithType: ProductType
+  fullName: Backend.ProductType
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Backend.Market.RemoveProduct*
+  commentId: Overload:Backend.Market.RemoveProduct
+  name: RemoveProduct
+  nameWithType: Market.RemoveProduct
+  fullName: Backend.Market.RemoveProduct
+- uid: Backend.Market.CanBuyerBuy*
+  commentId: Overload:Backend.Market.CanBuyerBuy
+  name: CanBuyerBuy
+  nameWithType: Market.CanBuyerBuy
+  fullName: Backend.Market.CanBuyerBuy
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Backend.Market.GetPrice*
+  commentId: Overload:Backend.Market.GetPrice
+  name: GetPrice
+  nameWithType: Market.GetPrice
+  fullName: Backend.Market.GetPrice
+- uid: Backend.Market.SetPriceMultiplier*
+  commentId: Overload:Backend.Market.SetPriceMultiplier
+  name: SetPriceMultiplier
+  nameWithType: Market.SetPriceMultiplier
+  fullName: Backend.Market.SetPriceMultiplier
+- uid: Backend.Market.ActivateProduct*
+  commentId: Overload:Backend.Market.ActivateProduct
+  name: ActivateProduct
+  nameWithType: Market.ActivateProduct
+  fullName: Backend.Market.ActivateProduct
+- uid: Backend.Market.DeactivateProduct*
+  commentId: Overload:Backend.Market.DeactivateProduct
+  name: DeactivateProduct
+  nameWithType: Market.DeactivateProduct
+  fullName: Backend.Market.DeactivateProduct
+- uid: Backend.Market.IsBuyable*
+  commentId: Overload:Backend.Market.IsBuyable
+  name: IsBuyable
+  nameWithType: Market.IsBuyable
+  fullName: Backend.Market.IsBuyable
+- uid: Backend.Market.GetDescription*
+  commentId: Overload:Backend.Market.GetDescription
+  name: GetDescription
+  nameWithType: Market.GetDescription
+  fullName: Backend.Market.GetDescription

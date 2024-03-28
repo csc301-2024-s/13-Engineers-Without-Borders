@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.Fate
+  commentId: T:Backend.Fate
+  id: Fate
+  parent: Backend
+  children:
+  - Backend.Fate.TriggerYearlyEvents
+  langs:
+  - csharp
+  - vb
+  name: Fate
+  nameWithType: Fate
+  fullName: Backend.Fate
+  type: Class
+  source:
+    id: Fate
+    path: ''
+    startLine: 825
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static class Fate
+    content.vb: Public Module Fate
+  inheritance:
+  - System.Object
+- uid: Backend.Fate.TriggerYearlyEvents
+  commentId: M:Backend.Fate.TriggerYearlyEvents
+  id: TriggerYearlyEvents
+  parent: Backend.Fate
+  langs:
+  - csharp
+  - vb
+  name: TriggerYearlyEvents()
+  nameWithType: Fate.TriggerYearlyEvents()
+  fullName: Backend.Fate.TriggerYearlyEvents()
+  type: Method
+  source:
+    id: TriggerYearlyEvents
+    path: ''
+    startLine: 829
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public static void TriggerYearlyEvents()
+    content.vb: Public Shared Sub TriggerYearlyEvents()
+  overload: Backend.Fate.TriggerYearlyEvents*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Backend.Fate.TriggerYearlyEvents*
+  commentId: Overload:Backend.Fate.TriggerYearlyEvents
+  name: TriggerYearlyEvents
+  nameWithType: Fate.TriggerYearlyEvents
+  fullName: Backend.Fate.TriggerYearlyEvents

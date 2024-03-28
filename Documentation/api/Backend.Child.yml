@@ -1,0 +1,274 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.Child
+  commentId: T:Backend.Child
+  id: Child
+  parent: Backend
+  children:
+  - Backend.Child.#ctor(System.String,System.String,System.Int32)
+  - Backend.Child.Age
+  - Backend.Child.Consumption
+  - Backend.Child.IncrementAge
+  - Backend.Child.ToAdult
+  langs:
+  - csharp
+  - vb
+  name: Child
+  nameWithType: Child
+  fullName: Backend.Child
+  type: Class
+  source:
+    id: Child
+    path: ''
+    startLine: 422
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: 'public class Child : FamilyMember'
+    content.vb: Public Class Child Inherits FamilyMember
+  inheritance:
+  - System.Object
+  - Backend.FamilyMember
+  inheritedMembers:
+  - Backend.FamilyMember.FirstName
+  - Backend.FamilyMember.LastName
+  - Backend.FamilyMember.s_FirstNames
+  - Backend.FamilyMember.GetRandomFirstName
+- uid: Backend.Child.Consumption
+  commentId: F:Backend.Child.Consumption
+  id: Consumption
+  parent: Backend.Child
+  langs:
+  - csharp
+  - vb
+  name: Consumption
+  nameWithType: Child.Consumption
+  fullName: Backend.Child.Consumption
+  type: Field
+  source:
+    id: Consumption
+    path: ''
+    startLine: 424
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public const int Consumption = 5
+    return:
+      type: System.Int32
+    content.vb: Public Const Consumption As Integer = 5
+- uid: Backend.Child.Age
+  commentId: P:Backend.Child.Age
+  id: Age
+  parent: Backend.Child
+  langs:
+  - csharp
+  - vb
+  name: Age
+  nameWithType: Child.Age
+  fullName: Backend.Child.Age
+  type: Property
+  source:
+    id: Age
+    path: ''
+    startLine: 425
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public int Age { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Age As Integer
+  overload: Backend.Child.Age*
+- uid: Backend.Child.#ctor(System.String,System.String,System.Int32)
+  commentId: M:Backend.Child.#ctor(System.String,System.String,System.Int32)
+  id: '#ctor(System.String,System.String,System.Int32)'
+  parent: Backend.Child
+  langs:
+  - csharp
+  - vb
+  name: Child(string, string, int)
+  nameWithType: Child.Child(string, string, int)
+  fullName: Backend.Child.Child(string, string, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 429
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public Child(string FirstName, string LastName, int Age)
+    parameters:
+    - id: FirstName
+      type: System.String
+    - id: LastName
+      type: System.String
+    - id: Age
+      type: System.Int32
+    content.vb: Public Sub New(FirstName As String, LastName As String, Age As Integer)
+  overload: Backend.Child.#ctor*
+  nameWithType.vb: Child.New(String, String, Integer)
+  fullName.vb: Backend.Child.New(String, String, Integer)
+  name.vb: New(String, String, Integer)
+- uid: Backend.Child.ToAdult
+  commentId: M:Backend.Child.ToAdult
+  id: ToAdult
+  parent: Backend.Child
+  langs:
+  - csharp
+  - vb
+  name: ToAdult()
+  nameWithType: Child.ToAdult()
+  fullName: Backend.Child.ToAdult()
+  type: Method
+  source:
+    id: ToAdult
+    path: ''
+    startLine: 438
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public Adult ToAdult()
+    return:
+      type: Backend.Adult
+    content.vb: Public Function ToAdult() As Adult
+  overload: Backend.Child.ToAdult*
+- uid: Backend.Child.IncrementAge
+  commentId: M:Backend.Child.IncrementAge
+  id: IncrementAge
+  parent: Backend.Child
+  langs:
+  - csharp
+  - vb
+  name: IncrementAge()
+  nameWithType: Child.IncrementAge()
+  fullName: Backend.Child.IncrementAge()
+  type: Method
+  source:
+    id: IncrementAge
+    path: ''
+    startLine: 447
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public void IncrementAge()
+    content.vb: Public Sub IncrementAge()
+  overload: Backend.Child.IncrementAge*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Backend.FamilyMember
+  commentId: T:Backend.FamilyMember
+  parent: Backend
+  name: FamilyMember
+  nameWithType: FamilyMember
+  fullName: Backend.FamilyMember
+- uid: Backend.FamilyMember.FirstName
+  commentId: P:Backend.FamilyMember.FirstName
+  parent: Backend.FamilyMember
+  name: FirstName
+  nameWithType: FamilyMember.FirstName
+  fullName: Backend.FamilyMember.FirstName
+- uid: Backend.FamilyMember.LastName
+  commentId: P:Backend.FamilyMember.LastName
+  parent: Backend.FamilyMember
+  name: LastName
+  nameWithType: FamilyMember.LastName
+  fullName: Backend.FamilyMember.LastName
+- uid: Backend.FamilyMember.s_FirstNames
+  commentId: F:Backend.FamilyMember.s_FirstNames
+  parent: Backend.FamilyMember
+  name: s_FirstNames
+  nameWithType: FamilyMember.s_FirstNames
+  fullName: Backend.FamilyMember.s_FirstNames
+- uid: Backend.FamilyMember.GetRandomFirstName
+  commentId: M:Backend.FamilyMember.GetRandomFirstName
+  parent: Backend.FamilyMember
+  name: GetRandomFirstName()
+  nameWithType: FamilyMember.GetRandomFirstName()
+  fullName: Backend.FamilyMember.GetRandomFirstName()
+  spec.csharp:
+  - uid: Backend.FamilyMember.GetRandomFirstName
+    name: GetRandomFirstName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Backend.FamilyMember.GetRandomFirstName
+    name: GetRandomFirstName
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Backend.Child.Age*
+  commentId: Overload:Backend.Child.Age
+  name: Age
+  nameWithType: Child.Age
+  fullName: Backend.Child.Age
+- uid: Backend.Child.#ctor*
+  commentId: Overload:Backend.Child.#ctor
+  name: Child
+  nameWithType: Child.Child
+  fullName: Backend.Child.Child
+  nameWithType.vb: Child.New
+  fullName.vb: Backend.Child.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Backend.Child.ToAdult*
+  commentId: Overload:Backend.Child.ToAdult
+  name: ToAdult
+  nameWithType: Child.ToAdult
+  fullName: Backend.Child.ToAdult
+- uid: Backend.Adult
+  commentId: T:Backend.Adult
+  parent: Backend
+  name: Adult
+  nameWithType: Adult
+  fullName: Backend.Adult
+- uid: Backend.Child.IncrementAge*
+  commentId: Overload:Backend.Child.IncrementAge
+  name: IncrementAge
+  nameWithType: Child.IncrementAge
+  fullName: Backend.Child.IncrementAge

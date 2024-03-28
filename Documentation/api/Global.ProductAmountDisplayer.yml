@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ProductAmountDisplayer
+  commentId: T:Global.ProductAmountDisplayer
+  id: ProductAmountDisplayer
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ProductAmountDisplayer
+  nameWithType: ProductAmountDisplayer
+  fullName: ProductAmountDisplayer
+  type: Class
+  source:
+    id: ProductAmountDisplayer
+    path: ''
+    startLine: 2567
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ProductAmountDisplayer : MonoBehaviour'
+    content.vb: Public Class ProductAmountDisplayer Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

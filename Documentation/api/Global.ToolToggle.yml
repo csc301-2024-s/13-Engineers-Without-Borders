@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ToolToggle
+  commentId: T:Global.ToolToggle
+  id: ToolToggle
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ToolToggle
+  nameWithType: ToolToggle
+  fullName: ToolToggle
+  type: Class
+  source:
+    id: ToolToggle
+    path: ''
+    startLine: 2823
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ToolToggle : MonoBehaviour'
+    content.vb: Public Class ToolToggle Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

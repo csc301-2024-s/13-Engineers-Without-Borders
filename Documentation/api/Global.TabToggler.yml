@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.TabToggler
+  commentId: T:Global.TabToggler
+  id: TabToggler
+  parent: Global
+  children:
+  - Global.TabToggler.Toggle
+  langs:
+  - csharp
+  - vb
+  name: TabToggler
+  nameWithType: TabToggler
+  fullName: TabToggler
+  type: Class
+  source:
+    id: TabToggler
+    path: ''
+    startLine: 2761
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class TabToggler : MonoBehaviour'
+    content.vb: Public Class TabToggler Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.TabToggler.Toggle
+  commentId: M:Global.TabToggler.Toggle
+  id: Toggle
+  parent: Global.TabToggler
+  langs:
+  - csharp
+  - vb
+  name: Toggle()
+  nameWithType: TabToggler.Toggle()
+  fullName: TabToggler.Toggle()
+  type: Method
+  source:
+    id: Toggle
+    path: ''
+    startLine: 2776
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Toggle()
+    content.vb: Public Sub Toggle()
+  overload: Global.TabToggler.Toggle*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.TabToggler.Toggle*
+  commentId: Overload:Global.TabToggler.Toggle
+  name: Toggle
+  nameWithType: TabToggler.Toggle
+  fullName: TabToggler.Toggle

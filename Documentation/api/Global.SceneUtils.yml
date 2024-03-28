@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.SceneUtils
+  commentId: T:Global.SceneUtils
+  id: SceneUtils
+  parent: Global
+  children:
+  - Global.SceneUtils.LoadScene(System.String)
+  langs:
+  - csharp
+  - vb
+  name: SceneUtils
+  nameWithType: SceneUtils
+  fullName: SceneUtils
+  type: Class
+  source:
+    id: SceneUtils
+    path: ''
+    startLine: 2623
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class SceneUtils : MonoBehaviour'
+    content.vb: Public Class SceneUtils Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.SceneUtils.LoadScene(System.String)
+  commentId: M:Global.SceneUtils.LoadScene(System.String)
+  id: LoadScene(System.String)
+  parent: Global.SceneUtils
+  langs:
+  - csharp
+  - vb
+  name: LoadScene(string)
+  nameWithType: SceneUtils.LoadScene(string)
+  fullName: SceneUtils.LoadScene(string)
+  type: Method
+  source:
+    id: LoadScene
+    path: ''
+    startLine: 2626
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static void LoadScene(string sceneName)
+    parameters:
+    - id: sceneName
+      type: System.String
+    content.vb: Public Shared Sub LoadScene(sceneName As String)
+  overload: Global.SceneUtils.LoadScene*
+  nameWithType.vb: SceneUtils.LoadScene(String)
+  fullName.vb: SceneUtils.LoadScene(String)
+  name.vb: LoadScene(String)
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.SceneUtils.LoadScene*
+  commentId: Overload:Global.SceneUtils.LoadScene
+  name: LoadScene
+  nameWithType: SceneUtils.LoadScene
+  fullName: SceneUtils.LoadScene
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

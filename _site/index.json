@@ -1,0 +1,332 @@
+{
+  "api/Backend.Adult.html": {
+    "href": "api/Backend.Adult.html",
+    "title": "Class Adult | Green Revolution Code Documentation",
+    "keywords": "Class Adult Inheritance object FamilyMember Adult Inherited Members FamilyMember.FirstName FamilyMember.LastName FamilyMember.s_FirstNames FamilyMember.GetRandomFirstName() Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class Adult : FamilyMember Constructors Adult(string, string) Declaration public Adult(string First, string Last) Parameters Type Name Description string First string Last Fields BaseLabourPoints Declaration public const int BaseLabourPoints = 2 Field Value Type Description int Consumption Declaration public const int Consumption = 10 Field Value Type Description int Properties HasOx Declaration public bool HasOx { get; } Property Value Type Description bool Methods AssignOx(bool) Declaration public void AssignOx(bool assigned) Parameters Type Name Description bool assigned GetLabourPoints() Declaration public int GetLabourPoints() Returns Type Description int LookAfterChild() Declaration public void LookAfterChild()"
+  },
+  "api/Backend.Child.html": {
+    "href": "api/Backend.Child.html",
+    "title": "Class Child | Green Revolution Code Documentation",
+    "keywords": "Class Child Inheritance object FamilyMember Child Inherited Members FamilyMember.FirstName FamilyMember.LastName FamilyMember.s_FirstNames FamilyMember.GetRandomFirstName() Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class Child : FamilyMember Constructors Child(string, string, int) Declaration public Child(string FirstName, string LastName, int Age) Parameters Type Name Description string FirstName string LastName int Age Fields Consumption Declaration public const int Consumption = 5 Field Value Type Description int Properties Age Declaration public int Age { get; } Property Value Type Description int Methods IncrementAge() Declaration public void IncrementAge() ToAdult() Declaration public Adult ToAdult() Returns Type Description Adult"
+  },
+  "api/Backend.Family.html": {
+    "href": "api/Backend.Family.html",
+    "title": "Class Family | Green Revolution Code Documentation",
+    "keywords": "Class Family Inheritance object HouseholdAsset Family Inherited Members HouseholdAsset.Owner HouseholdAsset.SetOwner(Household) Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class Family : HouseholdAsset Constructors Family(string, int, int) Declaration public Family(string FamilyName, int NumChildren, int numAdults) Parameters Type Name Description string FamilyName int NumChildren int numAdults Properties Adults Declaration public List<Adult> Adults { get; } Property Value Type Description List<Adult> Children Declaration public List<Child> Children { get; } Property Value Type Description List<Child> HiredWorkers Declaration public List<Adult> HiredWorkers { get; } Property Value Type Description List<Adult> Name Declaration public string Name { get; } Property Value Type Description string Methods CreateAdult() Declaration public void CreateAdult() CreateChild(int) Declaration public void CreateChild(int age = -1) Parameters Type Name Description int age GetAdultAmount() Declaration public int GetAdultAmount() Returns Type Description int GetChildrenAmount() Declaration public int GetChildrenAmount() Returns Type Description int GetHiredWorkerAmount() Declaration public int GetHiredWorkerAmount() Returns Type Description int GetLabourPoints() Declaration public int GetLabourPoints() Returns Type Description int GetTotalConsumption() Declaration public int GetTotalConsumption() Returns Type Description int IncrementAge() Declaration public void IncrementAge()"
+  },
+  "api/Backend.FamilyMember.html": {
+    "href": "api/Backend.FamilyMember.html",
+    "title": "Class FamilyMember | Green Revolution Code Documentation",
+    "keywords": "Class FamilyMember Inheritance object FamilyMember Adult Child Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class FamilyMember Fields s_FirstNames Declaration public static string[] s_FirstNames Field Value Type Description string[] Properties FirstName Declaration public string FirstName { get; protected set; } Property Value Type Description string LastName Declaration public string LastName { get; protected set; } Property Value Type Description string Methods GetRandomFirstName() Declaration public static string GetRandomFirstName() Returns Type Description string"
+  },
+  "api/Backend.Farmland.html": {
+    "href": "api/Backend.Farmland.html",
+    "title": "Class Farmland | Green Revolution Code Documentation",
+    "keywords": "Class Farmland Inheritance object HouseholdAsset Farmland Inherited Members HouseholdAsset.Owner Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class Farmland : HouseholdAsset Constructors Farmland(int) Declaration public Farmland(int numPlots) Parameters Type Name Description int numPlots Fields MaxPlots Declaration public const int MaxPlots = 16 Field Value Type Description int Plots Declaration public List<FarmPlot> Plots Field Value Type Description List<FarmPlot> Methods AddPlot() Declaration public void AddPlot() ClearPlots() Declaration public void ClearPlots() GetTotalYield() Declaration public int GetTotalYield() Returns Type Description int ResetIrrigation() Declaration public void ResetIrrigation() SetOwner(Household) Declaration public override void SetOwner(Household owner) Parameters Type Name Description Household owner Overrides HouseholdAsset.SetOwner(Household) SetYieldMultiplier(float) Declaration public void SetYieldMultiplier(float val) Parameters Type Name Description float val"
+  },
+  "api/Backend.FarmPlot.html": {
+    "href": "api/Backend.FarmPlot.html",
+    "title": "Class FarmPlot | Green Revolution Code Documentation",
+    "keywords": "Class FarmPlot Inheritance object HouseholdAsset FarmPlot Inherited Members HouseholdAsset.Owner HouseholdAsset.SetOwner(Household) Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class FarmPlot : HouseholdAsset Constructors FarmPlot(SeedType, FertilizerType) Declaration public FarmPlot(SeedType seedType, FertilizerType fertilizerType) Parameters Type Name Description SeedType seedType FertilizerType fertilizerType Properties FertilizerType Declaration public FertilizerType FertilizerType { get; set; } Property Value Type Description FertilizerType Irrigated Declaration public bool Irrigated { get; set; } Property Value Type Description bool SeedType Declaration public SeedType SeedType { get; set; } Property Value Type Description SeedType YieldMultiplier Declaration public float YieldMultiplier { get; set; } Property Value Type Description float Methods ClearPlot() Declaration public void ClearPlot() GetWeatherEffect() Declaration public int GetWeatherEffect() Returns Type Description int GetYield() Returns the yield of this plot. Return 0 if this plot isn't set to be harvested. Declaration public int GetYield() Returns Type Description int"
+  },
+  "api/Backend.Fate.html": {
+    "href": "api/Backend.Fate.html",
+    "title": "Class Fate | Green Revolution Code Documentation",
+    "keywords": "Class Fate Inheritance object Fate Namespace: Backend Assembly: cs.temp.dll.dll Syntax public static class Fate Methods TriggerYearlyEvents() Declaration public static void TriggerYearlyEvents()"
+  },
+  "api/Backend.FertilizerType.html": {
+    "href": "api/Backend.FertilizerType.html",
+    "title": "Enum FertilizerType | Green Revolution Code Documentation",
+    "keywords": "Enum FertilizerType Namespace: Backend Assembly: cs.temp.dll.dll Syntax public enum FertilizerType Fields Name Description High Low None"
+  },
+  "api/Backend.GameState.html": {
+    "href": "api/Backend.GameState.html",
+    "title": "Class GameState | Green Revolution Code Documentation",
+    "keywords": "Class GameState Inheritance object GameState Namespace: Backend Assembly: cs.temp.dll.dll Syntax public static class GameState Fields s_Households Declaration public static Household[] s_Households Field Value Type Description Household[] s_Phase Declaration public static int s_Phase Field Value Type Description int s_Player Declaration public static Household s_Player Field Value Type Description Household s_PredefinedHouseholds Declaration public static Household[] s_PredefinedHouseholds Field Value Type Description Household[] s_WeatherIndex Declaration public static int s_WeatherIndex Field Value Type Description int s_Year Declaration public static int s_Year Field Value Type Description int StartMoney Declaration public const int StartMoney = 500 Field Value Type Description int Properties PopupManagerInstance Declaration public static PopupManager PopupManagerInstance { get; } Property Value Type Description PopupManager Methods AdvanceToPhaseOne() Declaration public static void AdvanceToPhaseOne() AdvanceToPhaseThree() Declaration public static void AdvanceToPhaseThree() AdvanceToPhaseTwo() Declaration public static void AdvanceToPhaseTwo() Initialize(Household) Declaration public static void Initialize(Household Player) Parameters Type Name Description Household Player ResultReport() Declaration public static Dictionary<string, int> ResultReport() Returns Type Description Dictionary<string, int>"
+  },
+  "api/Backend.Household.html": {
+    "href": "api/Backend.Household.html",
+    "title": "Class Household | Green Revolution Code Documentation",
+    "keywords": "Class Household Inheritance object Household Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class Household Constructors Household(int, string, int, int, int) Declaration public Household(int startMoney, string familyName, int numChildren, int numAdults, int numPlots) Parameters Type Name Description int startMoney string familyName int numChildren int numAdults int numPlots Properties Family Declaration public Family Family { get; } Property Value Type Description Family Inventory Declaration public Inventory Inventory { get; } Property Value Type Description Inventory Land Declaration public Farmland Land { get; } Property Value Type Description Farmland Money Declaration public int Money { get; set; } Property Value Type Description int Wheat Declaration public int Wheat { get; set; } Property Value Type Description int Methods CalculateRemainingYield() Declaration public void CalculateRemainingYield() HarvestCrops() Declaration public void HarvestCrops() HireLabour() Declaration public void HireLabour() RemoveLabour() Declaration public void RemoveLabour()"
+  },
+  "api/Backend.HouseholdAsset.html": {
+    "href": "api/Backend.HouseholdAsset.html",
+    "title": "Class HouseholdAsset | Green Revolution Code Documentation",
+    "keywords": "Class HouseholdAsset Inheritance object HouseholdAsset Family Farmland FarmPlot Inventory Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class HouseholdAsset Properties Owner Declaration public Household Owner { get; } Property Value Type Description Household Methods SetOwner(Household) Declaration public virtual void SetOwner(Household owner) Parameters Type Name Description Household owner"
+  },
+  "api/Backend.html": {
+    "href": "api/Backend.html",
+    "title": "Namespace Backend | Green Revolution Code Documentation",
+    "keywords": "Namespace Backend Classes Adult Child Family FamilyMember Farmland FarmPlot Fate GameState Household HouseholdAsset Inventory Market Product YieldPerformanceTable Enums FertilizerType ProductType SeedType"
+  },
+  "api/Backend.Inventory.html": {
+    "href": "api/Backend.Inventory.html",
+    "title": "Class Inventory | Green Revolution Code Documentation",
+    "keywords": "Class Inventory Inheritance object HouseholdAsset Inventory Inherited Members HouseholdAsset.Owner HouseholdAsset.SetOwner(Household) Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class Inventory : HouseholdAsset Constructors Inventory() Declaration public Inventory() Methods AddItem(string) Declaration public void AddItem(string newItem) Parameters Type Name Description string newItem Contains(string) Declaration public bool Contains(string item) Parameters Type Name Description string item Returns Type Description bool GetAmount(string) Declaration public int GetAmount(string item) Parameters Type Name Description string item Returns Type Description int RemoveItem(string) Declaration public void RemoveItem(string item) Parameters Type Name Description string item"
+  },
+  "api/Backend.Market.html": {
+    "href": "api/Backend.Market.html",
+    "title": "Class Market | Green Revolution Code Documentation",
+    "keywords": "Class Market Inheritance object Market Namespace: Backend Assembly: cs.temp.dll.dll Syntax public static class Market Fields PlotsPerTubewell Declaration public const int PlotsPerTubewell = 8 Field Value Type Description int Methods ActivateProduct(string) Declaration public static void ActivateProduct(string name) Parameters Type Name Description string name AddProduct(string, int, ProductType, string, float) Declaration public static void AddProduct(string name, int price, ProductType type, string description = \"\", float multiplier = 1) Parameters Type Name Description string name int price ProductType type string description float multiplier Buy(string, Household) Declaration public static string Buy(string name, Household buyer) Parameters Type Name Description string name Household buyer Returns Type Description string CanBuyerBuy(Household, string) Declaration public static bool CanBuyerBuy(Household buyer, string productName) Parameters Type Name Description Household buyer string productName Returns Type Description bool DeactivateProduct(string) Declaration public static void DeactivateProduct(string name) Parameters Type Name Description string name GetDescription(string) Declaration public static string GetDescription(string name) Parameters Type Name Description string name Returns Type Description string GetPrice(string) Declaration public static int GetPrice(string name) Parameters Type Name Description string name Returns Type Description int Initialize() Declaration public static void Initialize() IsBuyable(string) Declaration public static bool IsBuyable(string name) Parameters Type Name Description string name Returns Type Description bool RemoveProduct(string) Declaration public static void RemoveProduct(string name) Parameters Type Name Description string name Sell(Household, int, string) Declaration public static void Sell(Household seller, int quantity, string product) Parameters Type Name Description Household seller int quantity string product SetPriceMultiplier(string, float) Declaration public static void SetPriceMultiplier(string name, float mult) Parameters Type Name Description string name float mult UpdateWheatPrice() Declaration public static void UpdateWheatPrice()"
+  },
+  "api/Backend.Product.html": {
+    "href": "api/Backend.Product.html",
+    "title": "Class Product | Green Revolution Code Documentation",
+    "keywords": "Class Product Inheritance object Product Namespace: Backend Assembly: cs.temp.dll.dll Syntax public class Product Properties Buyable Declaration public bool Buyable { get; set; } Property Value Type Description bool BuyAction Declaration public Action<Household> BuyAction { get; set; } Property Value Type Description Action<><Household> Description Declaration public string Description { get; set; } Property Value Type Description string Name Declaration public string Name { get; set; } Property Value Type Description string Price Declaration public int Price { get; set; } Property Value Type Description int PriceMultiplier Declaration public float PriceMultiplier { get; set; } Property Value Type Description float PurchaseCondition Declaration public Func<Household, bool> PurchaseCondition { get; set; } Property Value Type Description Func<, ><Household, bool> Type Declaration public ProductType Type { get; set; } Property Value Type Description ProductType"
+  },
+  "api/Backend.ProductType.html": {
+    "href": "api/Backend.ProductType.html",
+    "title": "Enum ProductType | Green Revolution Code Documentation",
+    "keywords": "Enum ProductType Namespace: Backend Assembly: cs.temp.dll.dll Syntax public enum ProductType Fields Name Description Fertilizer Food Labour Land Seed Tool"
+  },
+  "api/Backend.SeedType.html": {
+    "href": "api/Backend.SeedType.html",
+    "title": "Enum SeedType | Green Revolution Code Documentation",
+    "keywords": "Enum SeedType Namespace: Backend Assembly: cs.temp.dll.dll Syntax public enum SeedType Fields Name Description HYC Regular"
+  },
+  "api/Backend.YieldPerformanceTable.html": {
+    "href": "api/Backend.YieldPerformanceTable.html",
+    "title": "Class YieldPerformanceTable | Green Revolution Code Documentation",
+    "keywords": "Class YieldPerformanceTable Inheritance object YieldPerformanceTable Namespace: Backend Assembly: cs.temp.dll.dll Syntax public static class YieldPerformanceTable Methods GetYield(FarmPlot) Declaration public static int GetYield(FarmPlot plot) Parameters Type Name Description FarmPlot plot Returns Type Description int"
+  },
+  "api/Global.AdvancePhaseOnClick.html": {
+    "href": "api/Global.AdvancePhaseOnClick.html",
+    "title": "Class AdvancePhaseOnClick | Green Revolution Code Documentation",
+    "keywords": "Class AdvancePhaseOnClick Inheritance object AdvancePhaseOnClick Namespace: Global Assembly: cs.temp.dll.dll Syntax public class AdvancePhaseOnClick : MonoBehaviour Methods OnClick() Declaration public void OnClick()"
+  },
+  "api/Global.AnswerCorrect1.html": {
+    "href": "api/Global.AnswerCorrect1.html",
+    "title": "Class AnswerCorrect1 | Green Revolution Code Documentation",
+    "keywords": "Class AnswerCorrect1 Inheritance object AnswerCorrect1 Namespace: Global Assembly: cs.temp.dll.dll Syntax public class AnswerCorrect1 : MonoBehaviour Fields correct Declaration public UIDocument correct Field Value Type Description UIDocument wrong Declaration public UIDocument wrong Field Value Type Description UIDocument Methods OnCorrectClick() Declaration public void OnCorrectClick() OnWrongAClick() Declaration public void OnWrongAClick() OnWrongCClick() Declaration public void OnWrongCClick() OnWrongDClick() Declaration public void OnWrongDClick()"
+  },
+  "api/Global.Assessment2.html": {
+    "href": "api/Global.Assessment2.html",
+    "title": "Class Assessment2 | Green Revolution Code Documentation",
+    "keywords": "Class Assessment2 Inheritance object Assessment2 Namespace: Global Assembly: cs.temp.dll.dll Syntax public class Assessment2 : MonoBehaviour Fields correct Declaration public UIDocument correct Field Value Type Description UIDocument wrong Declaration public UIDocument wrong Field Value Type Description UIDocument Methods OnCorrectClick() Declaration public void OnCorrectClick() OnWrongAClick() Declaration public void OnWrongAClick() OnWrongBClick() Declaration public void OnWrongBClick() OnWrongCClick() Declaration public void OnWrongCClick() OnWrongDClick() Declaration public void OnWrongDClick() OnWrongFClick() Declaration public void OnWrongFClick()"
+  },
+  "api/Global.Assessment3.html": {
+    "href": "api/Global.Assessment3.html",
+    "title": "Class Assessment3 | Green Revolution Code Documentation",
+    "keywords": "Class Assessment3 Inheritance object Assessment3 Namespace: Global Assembly: cs.temp.dll.dll Syntax public class Assessment3 : MonoBehaviour Fields correct Declaration public UIDocument correct Field Value Type Description UIDocument wrong Declaration public UIDocument wrong Field Value Type Description UIDocument Methods OnCorrectClick() Declaration public void OnCorrectClick() OnWrongAClick() Declaration public void OnWrongAClick() OnWrongBClick() Declaration public void OnWrongBClick() OnWrongCClick() Declaration public void OnWrongCClick() OnWrongDClick() Declaration public void OnWrongDClick() OnWrongEClick() Declaration public void OnWrongEClick()"
+  },
+  "api/Global.AvailableLabourDisplayer.html": {
+    "href": "api/Global.AvailableLabourDisplayer.html",
+    "title": "Class AvailableLabourDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class AvailableLabourDisplayer Inheritance object AvailableLabourDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class AvailableLabourDisplayer : MonoBehaviour"
+  },
+  "api/Global.BuyButton.html": {
+    "href": "api/Global.BuyButton.html",
+    "title": "Class BuyButton | Green Revolution Code Documentation",
+    "keywords": "Class BuyButton Inheritance object BuyButton Namespace: Global Assembly: cs.temp.dll.dll Syntax public class BuyButton : MonoBehaviour Methods OnClick() Declaration public void OnClick()"
+  },
+  "api/Global.ChildPopulator.html": {
+    "href": "api/Global.ChildPopulator.html",
+    "title": "Class ChildPopulator | Green Revolution Code Documentation",
+    "keywords": "Class ChildPopulator Inheritance object ChildPopulator Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ChildPopulator : MonoBehaviour"
+  },
+  "api/Global.ClosePopUpOnClick.html": {
+    "href": "api/Global.ClosePopUpOnClick.html",
+    "title": "Class ClosePopUpOnClick | Green Revolution Code Documentation",
+    "keywords": "Class ClosePopUpOnClick Inheritance object ClosePopUpOnClick Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ClosePopUpOnClick : MonoBehaviour Methods OnClick() Declaration public void OnClick()"
+  },
+  "api/Global.CloseYieldTable.html": {
+    "href": "api/Global.CloseYieldTable.html",
+    "title": "Class CloseYieldTable | Green Revolution Code Documentation",
+    "keywords": "Class CloseYieldTable Inheritance object CloseYieldTable Namespace: Global Assembly: cs.temp.dll.dll Syntax public class CloseYieldTable : MonoBehaviour Fields closeYieldTableButton Declaration public Button closeYieldTableButton Field Value Type Description Button showYieldTableButton Declaration public Button showYieldTableButton Field Value Type Description Button yieldTable Declaration public Image yieldTable Field Value Type Description Image"
+  },
+  "api/Global.CollectAllWheat.html": {
+    "href": "api/Global.CollectAllWheat.html",
+    "title": "Class CollectAllWheat | Green Revolution Code Documentation",
+    "keywords": "Class CollectAllWheat Inheritance object CollectAllWheat Namespace: Global Assembly: cs.temp.dll.dll Syntax public class CollectAllWheat : MonoBehaviour Fields collectAllButton Declaration public Button collectAllButton Field Value Type Description Button nextPhaseButton Declaration public Button nextPhaseButton Field Value Type Description Button wheatField Declaration public Image wheatField Field Value Type Description Image"
+  },
+  "api/Global.DisplayTotalWheat.html": {
+    "href": "api/Global.DisplayTotalWheat.html",
+    "title": "Class DisplayTotalWheat | Green Revolution Code Documentation",
+    "keywords": "Class DisplayTotalWheat Inheritance object DisplayTotalWheat Namespace: Global Assembly: cs.temp.dll.dll Syntax public class DisplayTotalWheat : MonoBehaviour"
+  },
+  "api/Global.DisplayWeather.html": {
+    "href": "api/Global.DisplayWeather.html",
+    "title": "Class DisplayWeather | Green Revolution Code Documentation",
+    "keywords": "Class DisplayWeather Inheritance object DisplayWeather Namespace: Global Assembly: cs.temp.dll.dll Syntax public class DisplayWeather : MonoBehaviour"
+  },
+  "api/Global.EnableBasedOnPhase.html": {
+    "href": "api/Global.EnableBasedOnPhase.html",
+    "title": "Class EnableBasedOnPhase | Green Revolution Code Documentation",
+    "keywords": "Class EnableBasedOnPhase Inheritance object EnableBasedOnPhase Namespace: Global Assembly: cs.temp.dll.dll Syntax public class EnableBasedOnPhase : MonoBehaviour"
+  },
+  "api/Global.FamilyMemberPopulator.html": {
+    "href": "api/Global.FamilyMemberPopulator.html",
+    "title": "Class FamilyMemberPopulator | Green Revolution Code Documentation",
+    "keywords": "Class FamilyMemberPopulator Inheritance object FamilyMemberPopulator Namespace: Global Assembly: cs.temp.dll.dll Syntax public class FamilyMemberPopulator : MonoBehaviour"
+  },
+  "api/Global.FarmManager.html": {
+    "href": "api/Global.FarmManager.html",
+    "title": "Class FarmManager | Green Revolution Code Documentation",
+    "keywords": "Class FarmManager Inheritance object FarmManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class FarmManager : MonoBehaviour Fields HarvestLabour Declaration public const int HarvestLabour = 1 Field Value Type Description int IrrigationLabour Declaration public const int IrrigationLabour = 2 Field Value Type Description int SelectedCells Declaration public static List<FarmPlotCell> SelectedCells Field Value Type Description List<FarmPlotCell> Properties LabourPoints Declaration public static int LabourPoints { get; set; } Property Value Type Description int SelectedTool Declaration public static string SelectedTool { get; set; } Property Value Type Description string Methods ClearSelectedCells() Declaration public static void ClearSelectedCells() HarvestSelectedCells() Declaration public static void HarvestSelectedCells() IrrigateSelectedCells() Declaration public static void IrrigateSelectedCells()"
+  },
+  "api/Global.FarmPlotCell.html": {
+    "href": "api/Global.FarmPlotCell.html",
+    "title": "Class FarmPlotCell | Green Revolution Code Documentation",
+    "keywords": "Class FarmPlotCell Inheritance object FarmPlotCell Namespace: Global Assembly: cs.temp.dll.dll Syntax public class FarmPlotCell : MonoBehaviour Properties Plot Declaration public FarmPlot Plot { get; set; } Property Value Type Description FarmPlot Methods RefreshStatus() Declaration public void RefreshStatus() RefreshVisuals() Declaration public void RefreshVisuals()"
+  },
+  "api/Global.FarmPlotCellPopulator.html": {
+    "href": "api/Global.FarmPlotCellPopulator.html",
+    "title": "Class FarmPlotCellPopulator | Green Revolution Code Documentation",
+    "keywords": "Class FarmPlotCellPopulator Inheritance object FarmPlotCellPopulator Namespace: Global Assembly: cs.temp.dll.dll Syntax public class FarmPlotCellPopulator : MonoBehaviour"
+  },
+  "api/Global.GameStateInfoDisplayer.html": {
+    "href": "api/Global.GameStateInfoDisplayer.html",
+    "title": "Class GameStateInfoDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class GameStateInfoDisplayer Inheritance object GameStateInfoDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class GameStateInfoDisplayer : MonoBehaviour"
+  },
+  "api/Global.GiveOxButton.html": {
+    "href": "api/Global.GiveOxButton.html",
+    "title": "Class GiveOxButton | Green Revolution Code Documentation",
+    "keywords": "Class GiveOxButton Inheritance object GiveOxButton Namespace: Global Assembly: cs.temp.dll.dll Syntax public class GiveOxButton : MonoBehaviour Properties Adult Declaration public Adult Adult { get; set; } Property Value Type Description Adult"
+  },
+  "api/Global.HouseholdOption.html": {
+    "href": "api/Global.HouseholdOption.html",
+    "title": "Class HouseholdOption | Green Revolution Code Documentation",
+    "keywords": "Class HouseholdOption Inheritance object HouseholdOption Namespace: Global Assembly: cs.temp.dll.dll Syntax public class HouseholdOption : MonoBehaviour Properties Household Declaration public Household Household { get; set; } Property Value Type Description Household"
+  },
+  "api/Global.HouseholdSelectionPopulator.html": {
+    "href": "api/Global.HouseholdSelectionPopulator.html",
+    "title": "Class HouseholdSelectionPopulator | Green Revolution Code Documentation",
+    "keywords": "Class HouseholdSelectionPopulator Inheritance object HouseholdSelectionPopulator Namespace: Global Assembly: cs.temp.dll.dll Syntax public class HouseholdSelectionPopulator : MonoBehaviour"
+  },
+  "api/Global.html": {
+    "href": "api/Global.html",
+    "title": "Namespace | Green Revolution Code Documentation",
+    "keywords": "Namespace Classes AdvancePhaseOnClick AnswerCorrect1 Assessment2 Assessment3 AvailableLabourDisplayer BuyButton ChildPopulator ClosePopUpOnClick CloseYieldTable CollectAllWheat DisplayTotalWheat DisplayWeather EnableBasedOnPhase FamilyMemberPopulator FarmManager FarmPlotCell FarmPlotCellPopulator GameStateInfoDisplayer GiveOxButton HouseholdOption HouseholdSelectionPopulator LabourDisplayer LoadSceneOnClick MaxIrrigationDisplayer NumFamilyMembersDisplayer PlayerFarmSizeDisplayer PlayerMoneyDisplayer PlayerWheatDisplayer PopupButton PopupManager ProductAmountDisplayer ProductDescriptionDisplayer ProductPriceDisplayer Result SceneUtils SellButton ShowFamilyMembers ShowPopupOnClick ShowWheatPrice ShowYieldTable TabToggler ToggleIfHasProduct ToolToggle UIDocumentLoadSceneButton URLButtons"
+  },
+  "api/Global.LabourDisplayer.html": {
+    "href": "api/Global.LabourDisplayer.html",
+    "title": "Class LabourDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class LabourDisplayer Inheritance object LabourDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class LabourDisplayer : MonoBehaviour"
+  },
+  "api/Global.LoadSceneOnClick.html": {
+    "href": "api/Global.LoadSceneOnClick.html",
+    "title": "Class LoadSceneOnClick | Green Revolution Code Documentation",
+    "keywords": "Class LoadSceneOnClick Inheritance object LoadSceneOnClick Namespace: Global Assembly: cs.temp.dll.dll Syntax public class LoadSceneOnClick : MonoBehaviour Methods OnClick() Declaration public void OnClick()"
+  },
+  "api/Global.MaxIrrigationDisplayer.html": {
+    "href": "api/Global.MaxIrrigationDisplayer.html",
+    "title": "Class MaxIrrigationDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class MaxIrrigationDisplayer Inheritance object MaxIrrigationDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class MaxIrrigationDisplayer : MonoBehaviour"
+  },
+  "api/Global.NumFamilyMembersDisplayer.html": {
+    "href": "api/Global.NumFamilyMembersDisplayer.html",
+    "title": "Class NumFamilyMembersDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class NumFamilyMembersDisplayer Inheritance object NumFamilyMembersDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class NumFamilyMembersDisplayer : MonoBehaviour"
+  },
+  "api/Global.PlayerFarmSizeDisplayer.html": {
+    "href": "api/Global.PlayerFarmSizeDisplayer.html",
+    "title": "Class PlayerFarmSizeDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class PlayerFarmSizeDisplayer Inheritance object PlayerFarmSizeDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PlayerFarmSizeDisplayer : MonoBehaviour"
+  },
+  "api/Global.PlayerMoneyDisplayer.html": {
+    "href": "api/Global.PlayerMoneyDisplayer.html",
+    "title": "Class PlayerMoneyDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class PlayerMoneyDisplayer Inheritance object PlayerMoneyDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PlayerMoneyDisplayer : MonoBehaviour"
+  },
+  "api/Global.PlayerWheatDisplayer.html": {
+    "href": "api/Global.PlayerWheatDisplayer.html",
+    "title": "Class PlayerWheatDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class PlayerWheatDisplayer Inheritance object PlayerWheatDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PlayerWheatDisplayer : MonoBehaviour"
+  },
+  "api/Global.PopupButton.html": {
+    "href": "api/Global.PopupButton.html",
+    "title": "Class PopupButton | Green Revolution Code Documentation",
+    "keywords": "Class PopupButton Inheritance object PopupButton Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PopupButton : MonoBehaviour Methods OnButtonClick(ClickEvent) Declaration public void OnButtonClick(ClickEvent evt) Parameters Type Name Description ClickEvent evt"
+  },
+  "api/Global.PopupManager.html": {
+    "href": "api/Global.PopupManager.html",
+    "title": "Class PopupManager | Green Revolution Code Documentation",
+    "keywords": "Class PopupManager Inheritance object PopupManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PopupManager : MonoBehaviour Methods QueuePopup(string, string, string, bool) Declaration public static void QueuePopup(string title, string description, string closeText, bool immediate = false) Parameters Type Name Description string title string description string closeText bool immediate"
+  },
+  "api/Global.ProductAmountDisplayer.html": {
+    "href": "api/Global.ProductAmountDisplayer.html",
+    "title": "Class ProductAmountDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class ProductAmountDisplayer Inheritance object ProductAmountDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ProductAmountDisplayer : MonoBehaviour"
+  },
+  "api/Global.ProductDescriptionDisplayer.html": {
+    "href": "api/Global.ProductDescriptionDisplayer.html",
+    "title": "Class ProductDescriptionDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class ProductDescriptionDisplayer Inheritance object ProductDescriptionDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ProductDescriptionDisplayer : MonoBehaviour"
+  },
+  "api/Global.ProductPriceDisplayer.html": {
+    "href": "api/Global.ProductPriceDisplayer.html",
+    "title": "Class ProductPriceDisplayer | Green Revolution Code Documentation",
+    "keywords": "Class ProductPriceDisplayer Inheritance object ProductPriceDisplayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ProductPriceDisplayer : MonoBehaviour"
+  },
+  "api/Global.Result.html": {
+    "href": "api/Global.Result.html",
+    "title": "Class Result | Green Revolution Code Documentation",
+    "keywords": "Class Result Inheritance object Result Namespace: Global Assembly: cs.temp.dll.dll Syntax public class Result : MonoBehaviour"
+  },
+  "api/Global.SceneUtils.html": {
+    "href": "api/Global.SceneUtils.html",
+    "title": "Class SceneUtils | Green Revolution Code Documentation",
+    "keywords": "Class SceneUtils Inheritance object SceneUtils Namespace: Global Assembly: cs.temp.dll.dll Syntax public class SceneUtils : MonoBehaviour Methods LoadScene(string) Declaration public static void LoadScene(string sceneName) Parameters Type Name Description string sceneName"
+  },
+  "api/Global.SellButton.html": {
+    "href": "api/Global.SellButton.html",
+    "title": "Class SellButton | Green Revolution Code Documentation",
+    "keywords": "Class SellButton Inheritance object SellButton Namespace: Global Assembly: cs.temp.dll.dll Syntax public class SellButton : MonoBehaviour Methods OnClick() Declaration public void OnClick()"
+  },
+  "api/Global.ShowFamilyMembers.html": {
+    "href": "api/Global.ShowFamilyMembers.html",
+    "title": "Class ShowFamilyMembers | Green Revolution Code Documentation",
+    "keywords": "Class ShowFamilyMembers Inheritance object ShowFamilyMembers Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ShowFamilyMembers : MonoBehaviour"
+  },
+  "api/Global.ShowPopupOnClick.html": {
+    "href": "api/Global.ShowPopupOnClick.html",
+    "title": "Class ShowPopupOnClick | Green Revolution Code Documentation",
+    "keywords": "Class ShowPopupOnClick Inheritance object ShowPopupOnClick Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ShowPopupOnClick : MonoBehaviour"
+  },
+  "api/Global.ShowWheatPrice.html": {
+    "href": "api/Global.ShowWheatPrice.html",
+    "title": "Class ShowWheatPrice | Green Revolution Code Documentation",
+    "keywords": "Class ShowWheatPrice Inheritance object ShowWheatPrice Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ShowWheatPrice : MonoBehaviour Fields wheatPriceText Declaration public TextMeshProUGUI wheatPriceText Field Value Type Description TextMeshProUGUI"
+  },
+  "api/Global.ShowYieldTable.html": {
+    "href": "api/Global.ShowYieldTable.html",
+    "title": "Class ShowYieldTable | Green Revolution Code Documentation",
+    "keywords": "Class ShowYieldTable Inheritance object ShowYieldTable Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ShowYieldTable : MonoBehaviour Fields closeYieldTableButton Declaration public Button closeYieldTableButton Field Value Type Description Button showYieldTableButton Declaration public Button showYieldTableButton Field Value Type Description Button yieldTable Declaration public Image yieldTable Field Value Type Description Image"
+  },
+  "api/Global.TabToggler.html": {
+    "href": "api/Global.TabToggler.html",
+    "title": "Class TabToggler | Green Revolution Code Documentation",
+    "keywords": "Class TabToggler Inheritance object TabToggler Namespace: Global Assembly: cs.temp.dll.dll Syntax public class TabToggler : MonoBehaviour Methods Toggle() Declaration public void Toggle()"
+  },
+  "api/Global.ToggleIfHasProduct.html": {
+    "href": "api/Global.ToggleIfHasProduct.html",
+    "title": "Class ToggleIfHasProduct | Green Revolution Code Documentation",
+    "keywords": "Class ToggleIfHasProduct Inheritance object ToggleIfHasProduct Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ToggleIfHasProduct : MonoBehaviour"
+  },
+  "api/Global.ToolToggle.html": {
+    "href": "api/Global.ToolToggle.html",
+    "title": "Class ToolToggle | Green Revolution Code Documentation",
+    "keywords": "Class ToolToggle Inheritance object ToolToggle Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ToolToggle : MonoBehaviour"
+  },
+  "api/Global.UIDocumentLoadSceneButton.html": {
+    "href": "api/Global.UIDocumentLoadSceneButton.html",
+    "title": "Class UIDocumentLoadSceneButton | Green Revolution Code Documentation",
+    "keywords": "Class UIDocumentLoadSceneButton Inheritance object UIDocumentLoadSceneButton Namespace: Global Assembly: cs.temp.dll.dll Syntax public class UIDocumentLoadSceneButton : MonoBehaviour"
+  },
+  "api/Global.URLButtons.html": {
+    "href": "api/Global.URLButtons.html",
+    "title": "Class URLButtons | Green Revolution Code Documentation",
+    "keywords": "Class URLButtons Inheritance object URLButtons Namespace: Global Assembly: cs.temp.dll.dll Syntax public class URLButtons : MonoBehaviour Methods OnEwbClick() Declaration public void OnEwbClick() OnFbClick() Declaration public void OnFbClick() OnInsClick() Declaration public void OnInsClick() OnLinkedinClick() Declaration public void OnLinkedinClick() OnPrivacyPolicyClick() Declaration public void OnPrivacyPolicyClick() OnTwitterClick() Declaration public void OnTwitterClick()"
+  },
+  "manual/coniunctis.html": {
+    "href": "manual/coniunctis.html",
+    "title": "Coniunctis nec qui et lanient monticolae vitae | Green Revolution Code Documentation",
+    "keywords": "Coniunctis nec qui et lanient monticolae vitae Opem ille Lorem markdownum cavis exululat inutile. Illi quem caeli, vola patruo difficili Iuppiter Patraeque, est ardebant ingeniis Troica intus Amore tibi mirantem superfusis, multum. Ut Achilles Et sitim Tibi modo ait temptant crinita daret Pariter in removi offensasque Lenaeo damno terra Phoebes ut damnosa classis ignes templo; tua ulla capillos ultima. Videre percusso plectro templa fuit diva minimum debere, quid nomen Philomela animis. Verbis istis flagrat vulnera inpediique ignes. Gravi filo obvius arte Amphionis Panes emisitque iubet. Latona te timens Latentia ante, eundem meritorum sunto! Elige in timuit templa ferrea, qui arma ligati stagnum turbant. Fraternaque aeternus, dedisse, naufragus corripiens ranas Amathunta et quod laetior culpa nec semper scorpius fuit vicem corpora ardere. Fallit in artus primordia, fratres per aliis, ipsi manu Asiae quod marmorea. mountain(googleVga, pngIphone); var radcabBitrate = dnsCronRecursion; gui(2); ipImageAix += vle(drm_cisc, horizontal + computer_key); jre(vaporware_adc_multi); Lumina ut tamen praesentia vidistis nymphae auroque Bromumque in portant furorem. Visa init resurgere praevitiat canibus et, dedignata turea, ilia. Pisenore mensura insula aere nec per o gladium causa: Alcidae. Veris sentes pallet, alta melius nostra amborum probant, deam. Iuventae dedimus nitidaque hunc traxisse sermonibus pectine flecti an pateres, hac ore gelidis foret semper. Sithon pelle. Bracchia Hippason videntur fateri hosti: palpitat animo est reliquit anne nam confusaque. Interea rex altis munera quem quae quoque rorant, rauco albescere scopulo moriensque parvo, pectus illa, quadrupedes. Notavit haec. Vertit pars quem Euryte casu usta iterum! Ablatum pectus corripiunt neu humus tamquam; ducens stellarum amore. Pulsisque latet, ad tamen victor fulva Tirynthius posco; qui inque in poena quidem enses!"
+  },
+  "manual/etiam.html": {
+    "href": "manual/etiam.html",
+    "title": "Etiam nantemque exul | Green Revolution Code Documentation",
+    "keywords": "Etiam nantemque exul Cum tulit Lorem markdownum quos stimulosque altos. Putat nubes molle Troiae vero dea; nostraque plurima. Vos de mihi, credidit: salibus et iacuit, volvitur sunt unda fronti deriguisse refert. Sumpsisse viso Nubila nomine. Purpura se o et causa parva ripas, adsonat saevaque; quid modo ambo et venere voveo. Sine et esse, illa tempore, sive tibi roseo, ministerio altos. Trepident medicamine, primasque cum et peregit dapibusque quoslibet hominis quoque insula. Tepentibus ut Cecropios ab turba, est auro ferventi aliter duratos feres differtis Ausoniis potes, non noctis Laertaque iuvenes. Caelumque vestigia Et promissa fila sentiet leges; Phrygiae et levatus ferire? Salutifer coniugis fierent ante fecissent post vultumque ultima, per radios currere; tandem. Fuerat qua, ne foedera reformatus nunc diu dea audet nonne. Ut utinam mitia tenuerunt movent spectans Mavortis nulla ite, somnos exsiccata dixit Aeetias. Binas Trinacriam album ex ipse. Quoque una utraque tardius placetque gerere; mariti sed dare ludunt memorante Delphice corpora. Caret quantum intellegat venis gaudent eurus. Et suos crista; has et ferarum quid audit omine; mea cum praemia quae duris, suspicor. Adflati qui Spiro conata supprimit diemque; ora oblitus ensem alti non quo lacrimis ferunt, ageret Cebrenida rutilis delendaque? Terras lata modus: nec fas, misi utque adpositis Iunonis. Fide vidit, ferox Schoeneia mundi, voce, tellus pariterque pedum, sic Celadon securior corpora partesque posito. Potest faxo unda pendulaque ille rostro, haesit pars: formidine captat, viseret simulaverat! Sequi est peragit flumineae pallent simulatas formae avulsa, imagine undis; formam. Et nec sed adeunt, huic aequa et ignes nec, medere terram. Move ipsum abnuat retemptat retinebat duabus diu Iovi est pluma. Tecum non deducit Pelops Inachus: arcet aliquemque, regia telo. Tollens altore nec semel qui voce Palatinae Apertis et dei duo inquit; luna secundo, fervida terret. In haec dextra septima Tydides tibi: congelat hospes nativum radice tegumenque membris Hesperio ne Libys, est vocabula siqua. Dumque stet mulces, ut fontem dea atricolor, est pronos, clarissimus poterat cum intrare sidere templi. cut_metadata(whitelistSequenceUnit.thick.of_bezel_cdma( address_suffix_troubleshooting), sram_trojan(4, hdmi_network - 1)); flash.apache -= web_gps_plug; if (offline.dac_bridge(scrollEbookRom, parameter.internal_target_superscalar(2)) < qwerty + 2 - ipvCgiContextual) { certificateIdeAsp = overclocking + app; supplyCard = siteRaster; } Sagitta curvum quoque petisti opibusque proximitas in, illa vestrum, mihi domum nescia flexit sacra in. Magni vive sim crescente causam saxo voluit, mens, quod. Tela ter ulterius similis illos nato refugit ait verbaque nec fatigatum penates iaculatricemque cecidit pinnas, cum. Misso contigit caelo dedissent lumina; nympha ad vobis occidat, malo sacra utrumque cunctos Diomedeos addita. Virgineus autumnos, ait mitissima curru: fuit sed fessi se habebat hactenus Ultor; meus."
+  }
+}

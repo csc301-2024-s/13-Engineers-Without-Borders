@@ -1,0 +1,104 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PopupManager
+  commentId: T:Global.PopupManager
+  id: PopupManager
+  parent: Global
+  children:
+  - Global.PopupManager.QueuePopup(System.String,System.String,System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: PopupManager
+  nameWithType: PopupManager
+  fullName: PopupManager
+  type: Class
+  source:
+    id: PopupManager
+    path: ''
+    startLine: 2488
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PopupManager : MonoBehaviour'
+    content.vb: Public Class PopupManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.PopupManager.QueuePopup(System.String,System.String,System.String,System.Boolean)
+  commentId: M:Global.PopupManager.QueuePopup(System.String,System.String,System.String,System.Boolean)
+  id: QueuePopup(System.String,System.String,System.String,System.Boolean)
+  parent: Global.PopupManager
+  langs:
+  - csharp
+  - vb
+  name: QueuePopup(string, string, string, bool)
+  nameWithType: PopupManager.QueuePopup(string, string, string, bool)
+  fullName: PopupManager.QueuePopup(string, string, string, bool)
+  type: Method
+  source:
+    id: QueuePopup
+    path: ''
+    startLine: 2536
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static void QueuePopup(string title, string description, string closeText, bool immediate = false)
+    parameters:
+    - id: title
+      type: System.String
+    - id: description
+      type: System.String
+    - id: closeText
+      type: System.String
+    - id: immediate
+      type: System.Boolean
+    content.vb: Public Shared Sub QueuePopup(title As String, description As String, closeText As String, immediate As Boolean = False)
+  overload: Global.PopupManager.QueuePopup*
+  nameWithType.vb: PopupManager.QueuePopup(String, String, String, Boolean)
+  fullName.vb: PopupManager.QueuePopup(String, String, String, Boolean)
+  name.vb: QueuePopup(String, String, String, Boolean)
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.PopupManager.QueuePopup*
+  commentId: Overload:Global.PopupManager.QueuePopup
+  name: QueuePopup
+  nameWithType: PopupManager.QueuePopup
+  fullName: PopupManager.QueuePopup
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

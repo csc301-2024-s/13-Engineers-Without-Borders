@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.URLButtons
+  commentId: T:Global.URLButtons
+  id: URLButtons
+  parent: Global
+  children:
+  - Global.URLButtons.OnEwbClick
+  - Global.URLButtons.OnFbClick
+  - Global.URLButtons.OnInsClick
+  - Global.URLButtons.OnLinkedinClick
+  - Global.URLButtons.OnPrivacyPolicyClick
+  - Global.URLButtons.OnTwitterClick
+  langs:
+  - csharp
+  - vb
+  name: URLButtons
+  nameWithType: URLButtons
+  fullName: URLButtons
+  type: Class
+  source:
+    id: URLButtons
+    path: ''
+    startLine: 317
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class URLButtons : MonoBehaviour'
+    content.vb: Public Class URLButtons Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.URLButtons.OnEwbClick
+  commentId: M:Global.URLButtons.OnEwbClick
+  id: OnEwbClick
+  parent: Global.URLButtons
+  langs:
+  - csharp
+  - vb
+  name: OnEwbClick()
+  nameWithType: URLButtons.OnEwbClick()
+  fullName: URLButtons.OnEwbClick()
+  type: Method
+  source:
+    id: OnEwbClick
+    path: ''
+    startLine: 344
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnEwbClick()
+    content.vb: Public Sub OnEwbClick()
+  overload: Global.URLButtons.OnEwbClick*
+- uid: Global.URLButtons.OnFbClick
+  commentId: M:Global.URLButtons.OnFbClick
+  id: OnFbClick
+  parent: Global.URLButtons
+  langs:
+  - csharp
+  - vb
+  name: OnFbClick()
+  nameWithType: URLButtons.OnFbClick()
+  fullName: URLButtons.OnFbClick()
+  type: Method
+  source:
+    id: OnFbClick
+    path: ''
+    startLine: 349
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnFbClick()
+    content.vb: Public Sub OnFbClick()
+  overload: Global.URLButtons.OnFbClick*
+- uid: Global.URLButtons.OnInsClick
+  commentId: M:Global.URLButtons.OnInsClick
+  id: OnInsClick
+  parent: Global.URLButtons
+  langs:
+  - csharp
+  - vb
+  name: OnInsClick()
+  nameWithType: URLButtons.OnInsClick()
+  fullName: URLButtons.OnInsClick()
+  type: Method
+  source:
+    id: OnInsClick
+    path: ''
+    startLine: 354
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnInsClick()
+    content.vb: Public Sub OnInsClick()
+  overload: Global.URLButtons.OnInsClick*
+- uid: Global.URLButtons.OnLinkedinClick
+  commentId: M:Global.URLButtons.OnLinkedinClick
+  id: OnLinkedinClick
+  parent: Global.URLButtons
+  langs:
+  - csharp
+  - vb
+  name: OnLinkedinClick()
+  nameWithType: URLButtons.OnLinkedinClick()
+  fullName: URLButtons.OnLinkedinClick()
+  type: Method
+  source:
+    id: OnLinkedinClick
+    path: ''
+    startLine: 358
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnLinkedinClick()
+    content.vb: Public Sub OnLinkedinClick()
+  overload: Global.URLButtons.OnLinkedinClick*
+- uid: Global.URLButtons.OnTwitterClick
+  commentId: M:Global.URLButtons.OnTwitterClick
+  id: OnTwitterClick
+  parent: Global.URLButtons
+  langs:
+  - csharp
+  - vb
+  name: OnTwitterClick()
+  nameWithType: URLButtons.OnTwitterClick()
+  fullName: URLButtons.OnTwitterClick()
+  type: Method
+  source:
+    id: OnTwitterClick
+    path: ''
+    startLine: 362
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnTwitterClick()
+    content.vb: Public Sub OnTwitterClick()
+  overload: Global.URLButtons.OnTwitterClick*
+- uid: Global.URLButtons.OnPrivacyPolicyClick
+  commentId: M:Global.URLButtons.OnPrivacyPolicyClick
+  id: OnPrivacyPolicyClick
+  parent: Global.URLButtons
+  langs:
+  - csharp
+  - vb
+  name: OnPrivacyPolicyClick()
+  nameWithType: URLButtons.OnPrivacyPolicyClick()
+  fullName: URLButtons.OnPrivacyPolicyClick()
+  type: Method
+  source:
+    id: OnPrivacyPolicyClick
+    path: ''
+    startLine: 366
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnPrivacyPolicyClick()
+    content.vb: Public Sub OnPrivacyPolicyClick()
+  overload: Global.URLButtons.OnPrivacyPolicyClick*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.URLButtons.OnEwbClick*
+  commentId: Overload:Global.URLButtons.OnEwbClick
+  name: OnEwbClick
+  nameWithType: URLButtons.OnEwbClick
+  fullName: URLButtons.OnEwbClick
+- uid: Global.URLButtons.OnFbClick*
+  commentId: Overload:Global.URLButtons.OnFbClick
+  name: OnFbClick
+  nameWithType: URLButtons.OnFbClick
+  fullName: URLButtons.OnFbClick
+- uid: Global.URLButtons.OnInsClick*
+  commentId: Overload:Global.URLButtons.OnInsClick
+  name: OnInsClick
+  nameWithType: URLButtons.OnInsClick
+  fullName: URLButtons.OnInsClick
+- uid: Global.URLButtons.OnLinkedinClick*
+  commentId: Overload:Global.URLButtons.OnLinkedinClick
+  name: OnLinkedinClick
+  nameWithType: URLButtons.OnLinkedinClick
+  fullName: URLButtons.OnLinkedinClick
+- uid: Global.URLButtons.OnTwitterClick*
+  commentId: Overload:Global.URLButtons.OnTwitterClick
+  name: OnTwitterClick
+  nameWithType: URLButtons.OnTwitterClick
+  fullName: URLButtons.OnTwitterClick
+- uid: Global.URLButtons.OnPrivacyPolicyClick*
+  commentId: Overload:Global.URLButtons.OnPrivacyPolicyClick
+  name: OnPrivacyPolicyClick
+  nameWithType: URLButtons.OnPrivacyPolicyClick
+  fullName: URLButtons.OnPrivacyPolicyClick

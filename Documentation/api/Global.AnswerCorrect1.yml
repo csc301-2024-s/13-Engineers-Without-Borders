@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.AnswerCorrect1
+  commentId: T:Global.AnswerCorrect1
+  id: AnswerCorrect1
+  parent: Global
+  children:
+  - Global.AnswerCorrect1.correct
+  - Global.AnswerCorrect1.OnCorrectClick
+  - Global.AnswerCorrect1.OnWrongAClick
+  - Global.AnswerCorrect1.OnWrongCClick
+  - Global.AnswerCorrect1.OnWrongDClick
+  - Global.AnswerCorrect1.wrong
+  langs:
+  - csharp
+  - vb
+  name: AnswerCorrect1
+  nameWithType: AnswerCorrect1
+  fullName: AnswerCorrect1
+  type: Class
+  source:
+    id: AnswerCorrect1
+    path: ''
+    startLine: 6
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class AnswerCorrect1 : MonoBehaviour'
+    content.vb: Public Class AnswerCorrect1 Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.AnswerCorrect1.correct
+  commentId: F:Global.AnswerCorrect1.correct
+  id: correct
+  parent: Global.AnswerCorrect1
+  langs:
+  - csharp
+  - vb
+  name: correct
+  nameWithType: AnswerCorrect1.correct
+  fullName: AnswerCorrect1.correct
+  type: Field
+  source:
+    id: correct
+    path: ''
+    startLine: 13
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public UIDocument correct
+    return:
+      type: Global.UIDocument
+    content.vb: Public correct As UIDocument
+- uid: Global.AnswerCorrect1.wrong
+  commentId: F:Global.AnswerCorrect1.wrong
+  id: wrong
+  parent: Global.AnswerCorrect1
+  langs:
+  - csharp
+  - vb
+  name: wrong
+  nameWithType: AnswerCorrect1.wrong
+  fullName: AnswerCorrect1.wrong
+  type: Field
+  source:
+    id: wrong
+    path: ''
+    startLine: 14
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public UIDocument wrong
+    return:
+      type: Global.UIDocument
+    content.vb: Public wrong As UIDocument
+- uid: Global.AnswerCorrect1.OnCorrectClick
+  commentId: M:Global.AnswerCorrect1.OnCorrectClick
+  id: OnCorrectClick
+  parent: Global.AnswerCorrect1
+  langs:
+  - csharp
+  - vb
+  name: OnCorrectClick()
+  nameWithType: AnswerCorrect1.OnCorrectClick()
+  fullName: AnswerCorrect1.OnCorrectClick()
+  type: Method
+  source:
+    id: OnCorrectClick
+    path: ''
+    startLine: 40
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnCorrectClick()
+    content.vb: Public Sub OnCorrectClick()
+  overload: Global.AnswerCorrect1.OnCorrectClick*
+- uid: Global.AnswerCorrect1.OnWrongAClick
+  commentId: M:Global.AnswerCorrect1.OnWrongAClick
+  id: OnWrongAClick
+  parent: Global.AnswerCorrect1
+  langs:
+  - csharp
+  - vb
+  name: OnWrongAClick()
+  nameWithType: AnswerCorrect1.OnWrongAClick()
+  fullName: AnswerCorrect1.OnWrongAClick()
+  type: Method
+  source:
+    id: OnWrongAClick
+    path: ''
+    startLine: 46
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnWrongAClick()
+    content.vb: Public Sub OnWrongAClick()
+  overload: Global.AnswerCorrect1.OnWrongAClick*
+- uid: Global.AnswerCorrect1.OnWrongCClick
+  commentId: M:Global.AnswerCorrect1.OnWrongCClick
+  id: OnWrongCClick
+  parent: Global.AnswerCorrect1
+  langs:
+  - csharp
+  - vb
+  name: OnWrongCClick()
+  nameWithType: AnswerCorrect1.OnWrongCClick()
+  fullName: AnswerCorrect1.OnWrongCClick()
+  type: Method
+  source:
+    id: OnWrongCClick
+    path: ''
+    startLine: 51
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnWrongCClick()
+    content.vb: Public Sub OnWrongCClick()
+  overload: Global.AnswerCorrect1.OnWrongCClick*
+- uid: Global.AnswerCorrect1.OnWrongDClick
+  commentId: M:Global.AnswerCorrect1.OnWrongDClick
+  id: OnWrongDClick
+  parent: Global.AnswerCorrect1
+  langs:
+  - csharp
+  - vb
+  name: OnWrongDClick()
+  nameWithType: AnswerCorrect1.OnWrongDClick()
+  fullName: AnswerCorrect1.OnWrongDClick()
+  type: Method
+  source:
+    id: OnWrongDClick
+    path: ''
+    startLine: 56
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnWrongDClick()
+    content.vb: Public Sub OnWrongDClick()
+  overload: Global.AnswerCorrect1.OnWrongDClick*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.UIDocument
+  isExternal: true
+  name: UIDocument
+  nameWithType: UIDocument
+  fullName: UIDocument
+- uid: Global.AnswerCorrect1.OnCorrectClick*
+  commentId: Overload:Global.AnswerCorrect1.OnCorrectClick
+  name: OnCorrectClick
+  nameWithType: AnswerCorrect1.OnCorrectClick
+  fullName: AnswerCorrect1.OnCorrectClick
+- uid: Global.AnswerCorrect1.OnWrongAClick*
+  commentId: Overload:Global.AnswerCorrect1.OnWrongAClick
+  name: OnWrongAClick
+  nameWithType: AnswerCorrect1.OnWrongAClick
+  fullName: AnswerCorrect1.OnWrongAClick
+- uid: Global.AnswerCorrect1.OnWrongCClick*
+  commentId: Overload:Global.AnswerCorrect1.OnWrongCClick
+  name: OnWrongCClick
+  nameWithType: AnswerCorrect1.OnWrongCClick
+  fullName: AnswerCorrect1.OnWrongCClick
+- uid: Global.AnswerCorrect1.OnWrongDClick*
+  commentId: Overload:Global.AnswerCorrect1.OnWrongDClick
+  name: OnWrongDClick
+  nameWithType: AnswerCorrect1.OnWrongDClick
+  fullName: AnswerCorrect1.OnWrongDClick

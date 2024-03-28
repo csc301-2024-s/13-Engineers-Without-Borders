@@ -1,0 +1,74 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ShowWheatPrice
+  commentId: T:Global.ShowWheatPrice
+  id: ShowWheatPrice
+  parent: Global
+  children:
+  - Global.ShowWheatPrice.wheatPriceText
+  langs:
+  - csharp
+  - vb
+  name: ShowWheatPrice
+  nameWithType: ShowWheatPrice
+  fullName: ShowWheatPrice
+  type: Class
+  source:
+    id: ShowWheatPrice
+    path: ''
+    startLine: 2715
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ShowWheatPrice : MonoBehaviour'
+    content.vb: Public Class ShowWheatPrice Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.ShowWheatPrice.wheatPriceText
+  commentId: F:Global.ShowWheatPrice.wheatPriceText
+  id: wheatPriceText
+  parent: Global.ShowWheatPrice
+  langs:
+  - csharp
+  - vb
+  name: wheatPriceText
+  nameWithType: ShowWheatPrice.wheatPriceText
+  fullName: ShowWheatPrice.wheatPriceText
+  type: Field
+  source:
+    id: wheatPriceText
+    path: ''
+    startLine: 2717
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public TextMeshProUGUI wheatPriceText
+    return:
+      type: Global.TextMeshProUGUI
+    content.vb: Public wheatPriceText As TextMeshProUGUI
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.TextMeshProUGUI
+  commentId: '!:Global.TextMeshProUGUI'
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TextMeshProUGUI

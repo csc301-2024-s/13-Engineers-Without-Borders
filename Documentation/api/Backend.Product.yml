@@ -1,0 +1,462 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.Product
+  commentId: T:Backend.Product
+  id: Product
+  parent: Backend
+  children:
+  - Backend.Product.Buyable
+  - Backend.Product.BuyAction
+  - Backend.Product.Description
+  - Backend.Product.Name
+  - Backend.Product.Price
+  - Backend.Product.PriceMultiplier
+  - Backend.Product.PurchaseCondition
+  - Backend.Product.Type
+  langs:
+  - csharp
+  - vb
+  name: Product
+  nameWithType: Product
+  fullName: Backend.Product
+  type: Class
+  source:
+    id: Product
+    path: ''
+    startLine: 1305
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public class Product
+    content.vb: Public Class Product
+  inheritance:
+  - System.Object
+- uid: Backend.Product.Name
+  commentId: P:Backend.Product.Name
+  id: Name
+  parent: Backend.Product
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Product.Name
+  fullName: Backend.Product.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 1307
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Backend.Product.Name*
+- uid: Backend.Product.Price
+  commentId: P:Backend.Product.Price
+  id: Price
+  parent: Backend.Product
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: Product.Price
+  fullName: Backend.Product.Price
+  type: Property
+  source:
+    id: Price
+    path: ''
+    startLine: 1308
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public int Price { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Price As Integer
+  overload: Backend.Product.Price*
+- uid: Backend.Product.PriceMultiplier
+  commentId: P:Backend.Product.PriceMultiplier
+  id: PriceMultiplier
+  parent: Backend.Product
+  langs:
+  - csharp
+  - vb
+  name: PriceMultiplier
+  nameWithType: Product.PriceMultiplier
+  fullName: Backend.Product.PriceMultiplier
+  type: Property
+  source:
+    id: PriceMultiplier
+    path: ''
+    startLine: 1309
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public float PriceMultiplier { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property PriceMultiplier As Single
+  overload: Backend.Product.PriceMultiplier*
+- uid: Backend.Product.Buyable
+  commentId: P:Backend.Product.Buyable
+  id: Buyable
+  parent: Backend.Product
+  langs:
+  - csharp
+  - vb
+  name: Buyable
+  nameWithType: Product.Buyable
+  fullName: Backend.Product.Buyable
+  type: Property
+  source:
+    id: Buyable
+    path: ''
+    startLine: 1310
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public bool Buyable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Buyable As Boolean
+  overload: Backend.Product.Buyable*
+- uid: Backend.Product.Type
+  commentId: P:Backend.Product.Type
+  id: Type
+  parent: Backend.Product
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Product.Type
+  fullName: Backend.Product.Type
+  type: Property
+  source:
+    id: Type
+    path: ''
+    startLine: 1311
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public ProductType Type { get; set; }
+    parameters: []
+    return:
+      type: Backend.ProductType
+    content.vb: Public Property Type As ProductType
+  overload: Backend.Product.Type*
+- uid: Backend.Product.Description
+  commentId: P:Backend.Product.Description
+  id: Description
+  parent: Backend.Product
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: Product.Description
+  fullName: Backend.Product.Description
+  type: Property
+  source:
+    id: Description
+    path: ''
+    startLine: 1312
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Backend.Product.Description*
+- uid: Backend.Product.PurchaseCondition
+  commentId: P:Backend.Product.PurchaseCondition
+  id: PurchaseCondition
+  parent: Backend.Product
+  langs:
+  - csharp
+  - vb
+  name: PurchaseCondition
+  nameWithType: Product.PurchaseCondition
+  fullName: Backend.Product.PurchaseCondition
+  type: Property
+  source:
+    id: PurchaseCondition
+    path: ''
+    startLine: 1313
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public Func<Household, bool> PurchaseCondition { get; set; }
+    parameters: []
+    return:
+      type: Global.Func{Backend.Household,System.Boolean}
+    content.vb: Public Property PurchaseCondition As Func(Of Household, Boolean)
+  overload: Backend.Product.PurchaseCondition*
+- uid: Backend.Product.BuyAction
+  commentId: P:Backend.Product.BuyAction
+  id: BuyAction
+  parent: Backend.Product
+  langs:
+  - csharp
+  - vb
+  name: BuyAction
+  nameWithType: Product.BuyAction
+  fullName: Backend.Product.BuyAction
+  type: Property
+  source:
+    id: BuyAction
+    path: ''
+    startLine: 1314
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public Action<Household> BuyAction { get; set; }
+    parameters: []
+    return:
+      type: Global.Action{Backend.Household}
+    content.vb: Public Property BuyAction As Action(Of Household)
+  overload: Backend.Product.BuyAction*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Backend.Product.Name*
+  commentId: Overload:Backend.Product.Name
+  name: Name
+  nameWithType: Product.Name
+  fullName: Backend.Product.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Backend.Product.Price*
+  commentId: Overload:Backend.Product.Price
+  name: Price
+  nameWithType: Product.Price
+  fullName: Backend.Product.Price
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Backend.Product.PriceMultiplier*
+  commentId: Overload:Backend.Product.PriceMultiplier
+  name: PriceMultiplier
+  nameWithType: Product.PriceMultiplier
+  fullName: Backend.Product.PriceMultiplier
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Backend.Product.Buyable*
+  commentId: Overload:Backend.Product.Buyable
+  name: Buyable
+  nameWithType: Product.Buyable
+  fullName: Backend.Product.Buyable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Backend.Product.Type*
+  commentId: Overload:Backend.Product.Type
+  name: Type
+  nameWithType: Product.Type
+  fullName: Backend.Product.Type
+- uid: Backend.ProductType
+  commentId: T:Backend.ProductType
+  parent: Backend
+  name: ProductType
+  nameWithType: ProductType
+  fullName: Backend.ProductType
+- uid: Backend.Product.Description*
+  commentId: Overload:Backend.Product.Description
+  name: Description
+  nameWithType: Product.Description
+  fullName: Backend.Product.Description
+- uid: Backend.Product.PurchaseCondition*
+  commentId: Overload:Backend.Product.PurchaseCondition
+  name: PurchaseCondition
+  nameWithType: Product.PurchaseCondition
+  fullName: Backend.Product.PurchaseCondition
+- uid: Global.Func{Backend.Household,System.Boolean}
+  commentId: '!:Global.Func{Backend.Household,System.Boolean}'
+  definition: Global.Func`2
+  name: Func<Household, bool>
+  nameWithType: Func<Household, bool>
+  fullName: Func<Backend.Household, bool>
+  nameWithType.vb: Func(Of Household, Boolean)
+  fullName.vb: Func(Of Backend.Household, Boolean)
+  name.vb: Func(Of Household, Boolean)
+  spec.csharp:
+  - uid: Global.Func`2
+    name: Func
+    isExternal: true
+  - name: <
+  - uid: Backend.Household
+    name: Household
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.Func`2
+    name: Func
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Backend.Household
+    name: Household
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+  - name: )
+- uid: Global.Func`2
+  commentId: '!:Global.Func`2'
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: Global.Func`2
+    name: Func
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: ','
+  - name: " "
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.Func`2
+    name: Func
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: ','
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Backend.Product.BuyAction*
+  commentId: Overload:Backend.Product.BuyAction
+  name: BuyAction
+  nameWithType: Product.BuyAction
+  fullName: Backend.Product.BuyAction
+- uid: Global.Action{Backend.Household}
+  commentId: '!:Global.Action{Backend.Household}'
+  definition: Global.Action`1
+  name: Action<Household>
+  nameWithType: Action<Household>
+  fullName: Action<Backend.Household>
+  nameWithType.vb: Action(Of Household)
+  fullName.vb: Action(Of Backend.Household)
+  name.vb: Action(Of Household)
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    isExternal: true
+  - name: <
+  - uid: Backend.Household
+    name: Household
+  - name: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Backend.Household
+    name: Household
+  - name: )
+- uid: Global.Action`1
+  commentId: '!:Global.Action`1'
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )

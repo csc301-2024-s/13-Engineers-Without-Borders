@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.BuyButton
+  commentId: T:Global.BuyButton
+  id: BuyButton
+  parent: Global
+  children:
+  - Global.BuyButton.OnClick
+  langs:
+  - csharp
+  - vb
+  name: BuyButton
+  nameWithType: BuyButton
+  fullName: BuyButton
+  type: Class
+  source:
+    id: BuyButton
+    path: ''
+    startLine: 1610
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class BuyButton : MonoBehaviour'
+    content.vb: Public Class BuyButton Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.BuyButton.OnClick
+  commentId: M:Global.BuyButton.OnClick
+  id: OnClick
+  parent: Global.BuyButton
+  langs:
+  - csharp
+  - vb
+  name: OnClick()
+  nameWithType: BuyButton.OnClick()
+  fullName: BuyButton.OnClick()
+  type: Method
+  source:
+    id: OnClick
+    path: ''
+    startLine: 1625
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnClick()
+    content.vb: Public Sub OnClick()
+  overload: Global.BuyButton.OnClick*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.BuyButton.OnClick*
+  commentId: Overload:Global.BuyButton.OnClick
+  name: OnClick
+  nameWithType: BuyButton.OnClick
+  fullName: BuyButton.OnClick

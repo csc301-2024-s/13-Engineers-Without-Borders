@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.LabourDisplayer
+  commentId: T:Global.LabourDisplayer
+  id: LabourDisplayer
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: LabourDisplayer
+  nameWithType: LabourDisplayer
+  fullName: LabourDisplayer
+  type: Class
+  source:
+    id: LabourDisplayer
+    path: ''
+    startLine: 2338
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class LabourDisplayer : MonoBehaviour'
+    content.vb: Public Class LabourDisplayer Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

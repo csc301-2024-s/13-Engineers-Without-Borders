@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.FarmPlotCell
+  commentId: T:Global.FarmPlotCell
+  id: FarmPlotCell
+  parent: Global
+  children:
+  - Global.FarmPlotCell.Plot
+  - Global.FarmPlotCell.RefreshStatus
+  - Global.FarmPlotCell.RefreshVisuals
+  langs:
+  - csharp
+  - vb
+  name: FarmPlotCell
+  nameWithType: FarmPlotCell
+  fullName: FarmPlotCell
+  type: Class
+  source:
+    id: FarmPlotCell
+    path: ''
+    startLine: 1974
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class FarmPlotCell : MonoBehaviour'
+    content.vb: Public Class FarmPlotCell Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.FarmPlotCell.Plot
+  commentId: P:Global.FarmPlotCell.Plot
+  id: Plot
+  parent: Global.FarmPlotCell
+  langs:
+  - csharp
+  - vb
+  name: Plot
+  nameWithType: FarmPlotCell.Plot
+  fullName: FarmPlotCell.Plot
+  type: Property
+  source:
+    id: Plot
+    path: ''
+    startLine: 1988
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public FarmPlot Plot { get; set; }
+    parameters: []
+    return:
+      type: Global.FarmPlot
+    content.vb: Public Property Plot As FarmPlot
+  overload: Global.FarmPlotCell.Plot*
+- uid: Global.FarmPlotCell.RefreshVisuals
+  commentId: M:Global.FarmPlotCell.RefreshVisuals
+  id: RefreshVisuals
+  parent: Global.FarmPlotCell
+  langs:
+  - csharp
+  - vb
+  name: RefreshVisuals()
+  nameWithType: FarmPlotCell.RefreshVisuals()
+  fullName: FarmPlotCell.RefreshVisuals()
+  type: Method
+  source:
+    id: RefreshVisuals
+    path: ''
+    startLine: 2010
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void RefreshVisuals()
+    content.vb: Public Sub RefreshVisuals()
+  overload: Global.FarmPlotCell.RefreshVisuals*
+- uid: Global.FarmPlotCell.RefreshStatus
+  commentId: M:Global.FarmPlotCell.RefreshStatus
+  id: RefreshStatus
+  parent: Global.FarmPlotCell
+  langs:
+  - csharp
+  - vb
+  name: RefreshStatus()
+  nameWithType: FarmPlotCell.RefreshStatus()
+  fullName: FarmPlotCell.RefreshStatus()
+  type: Method
+  source:
+    id: RefreshStatus
+    path: ''
+    startLine: 2036
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void RefreshStatus()
+    content.vb: Public Sub RefreshStatus()
+  overload: Global.FarmPlotCell.RefreshStatus*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.FarmPlotCell.Plot*
+  commentId: Overload:Global.FarmPlotCell.Plot
+  name: Plot
+  nameWithType: FarmPlotCell.Plot
+  fullName: FarmPlotCell.Plot
+- uid: Global.FarmPlot
+  commentId: '!:Global.FarmPlot'
+  isExternal: true
+  name: FarmPlot
+  nameWithType: FarmPlot
+  fullName: FarmPlot
+- uid: Global.FarmPlotCell.RefreshVisuals*
+  commentId: Overload:Global.FarmPlotCell.RefreshVisuals
+  name: RefreshVisuals
+  nameWithType: FarmPlotCell.RefreshVisuals
+  fullName: FarmPlotCell.RefreshVisuals
+- uid: Global.FarmPlotCell.RefreshStatus*
+  commentId: Overload:Global.FarmPlotCell.RefreshStatus
+  name: RefreshStatus
+  nameWithType: FarmPlotCell.RefreshStatus
+  fullName: FarmPlotCell.RefreshStatus

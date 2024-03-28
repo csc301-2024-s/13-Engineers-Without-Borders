@@ -1,0 +1,82 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.SeedType
+  commentId: T:Backend.SeedType
+  id: SeedType
+  parent: Backend
+  children:
+  - Backend.SeedType.HYC
+  - Backend.SeedType.Regular
+  langs:
+  - csharp
+  - vb
+  name: SeedType
+  nameWithType: SeedType
+  fullName: Backend.SeedType
+  type: Enum
+  source:
+    id: SeedType
+    path: ''
+    startLine: 770
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public enum SeedType
+    content.vb: Public Enum SeedType
+- uid: Backend.SeedType.Regular
+  commentId: F:Backend.SeedType.Regular
+  id: Regular
+  parent: Backend.SeedType
+  langs:
+  - csharp
+  - vb
+  name: Regular
+  nameWithType: SeedType.Regular
+  fullName: Backend.SeedType.Regular
+  type: Field
+  source:
+    id: Regular
+    path: ''
+    startLine: 772
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: Regular = 0
+    return:
+      type: Backend.SeedType
+- uid: Backend.SeedType.HYC
+  commentId: F:Backend.SeedType.HYC
+  id: HYC
+  parent: Backend.SeedType
+  langs:
+  - csharp
+  - vb
+  name: HYC
+  nameWithType: SeedType.HYC
+  fullName: Backend.SeedType.HYC
+  type: Field
+  source:
+    id: HYC
+    path: ''
+    startLine: 773
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: HYC = 1
+    return:
+      type: Backend.SeedType
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: Backend.SeedType
+  commentId: T:Backend.SeedType
+  parent: Backend
+  name: SeedType
+  nameWithType: SeedType
+  fullName: Backend.SeedType

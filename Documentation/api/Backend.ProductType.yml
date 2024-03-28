@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.ProductType
+  commentId: T:Backend.ProductType
+  id: ProductType
+  parent: Backend
+  children:
+  - Backend.ProductType.Fertilizer
+  - Backend.ProductType.Food
+  - Backend.ProductType.Labour
+  - Backend.ProductType.Land
+  - Backend.ProductType.Seed
+  - Backend.ProductType.Tool
+  langs:
+  - csharp
+  - vb
+  name: ProductType
+  nameWithType: ProductType
+  fullName: Backend.ProductType
+  type: Enum
+  source:
+    id: ProductType
+    path: ''
+    startLine: 1294
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public enum ProductType
+    content.vb: Public Enum ProductType
+- uid: Backend.ProductType.Seed
+  commentId: F:Backend.ProductType.Seed
+  id: Seed
+  parent: Backend.ProductType
+  langs:
+  - csharp
+  - vb
+  name: Seed
+  nameWithType: ProductType.Seed
+  fullName: Backend.ProductType.Seed
+  type: Field
+  source:
+    id: Seed
+    path: ''
+    startLine: 1296
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: Seed = 0
+    return:
+      type: Backend.ProductType
+- uid: Backend.ProductType.Fertilizer
+  commentId: F:Backend.ProductType.Fertilizer
+  id: Fertilizer
+  parent: Backend.ProductType
+  langs:
+  - csharp
+  - vb
+  name: Fertilizer
+  nameWithType: ProductType.Fertilizer
+  fullName: Backend.ProductType.Fertilizer
+  type: Field
+  source:
+    id: Fertilizer
+    path: ''
+    startLine: 1297
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: Fertilizer = 1
+    return:
+      type: Backend.ProductType
+- uid: Backend.ProductType.Tool
+  commentId: F:Backend.ProductType.Tool
+  id: Tool
+  parent: Backend.ProductType
+  langs:
+  - csharp
+  - vb
+  name: Tool
+  nameWithType: ProductType.Tool
+  fullName: Backend.ProductType.Tool
+  type: Field
+  source:
+    id: Tool
+    path: ''
+    startLine: 1298
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: Tool = 2
+    return:
+      type: Backend.ProductType
+- uid: Backend.ProductType.Food
+  commentId: F:Backend.ProductType.Food
+  id: Food
+  parent: Backend.ProductType
+  langs:
+  - csharp
+  - vb
+  name: Food
+  nameWithType: ProductType.Food
+  fullName: Backend.ProductType.Food
+  type: Field
+  source:
+    id: Food
+    path: ''
+    startLine: 1299
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: Food = 3
+    return:
+      type: Backend.ProductType
+- uid: Backend.ProductType.Land
+  commentId: F:Backend.ProductType.Land
+  id: Land
+  parent: Backend.ProductType
+  langs:
+  - csharp
+  - vb
+  name: Land
+  nameWithType: ProductType.Land
+  fullName: Backend.ProductType.Land
+  type: Field
+  source:
+    id: Land
+    path: ''
+    startLine: 1300
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: Land = 4
+    return:
+      type: Backend.ProductType
+- uid: Backend.ProductType.Labour
+  commentId: F:Backend.ProductType.Labour
+  id: Labour
+  parent: Backend.ProductType
+  langs:
+  - csharp
+  - vb
+  name: Labour
+  nameWithType: ProductType.Labour
+  fullName: Backend.ProductType.Labour
+  type: Field
+  source:
+    id: Labour
+    path: ''
+    startLine: 1301
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: Labour = 5
+    return:
+      type: Backend.ProductType
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: Backend.ProductType
+  commentId: T:Backend.ProductType
+  parent: Backend
+  name: ProductType
+  nameWithType: ProductType
+  fullName: Backend.ProductType

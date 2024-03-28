@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.EnableBasedOnPhase
+  commentId: T:Global.EnableBasedOnPhase
+  id: EnableBasedOnPhase
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: EnableBasedOnPhase
+  nameWithType: EnableBasedOnPhase
+  fullName: EnableBasedOnPhase
+  type: Class
+  source:
+    id: EnableBasedOnPhase
+    path: ''
+    startLine: 1799
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class EnableBasedOnPhase : MonoBehaviour'
+    content.vb: Public Class EnableBasedOnPhase Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

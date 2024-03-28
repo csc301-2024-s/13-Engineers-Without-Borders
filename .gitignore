@@ -81,4 +81,5 @@ crashlytics-build.properties
 
 # docfx stuff
 _site/
-Documentation/obj/.cache/
+.cache/
+cache/

@@ -23,7 +23,7 @@ items:
   source:
     id: FarmManager
     path: ''
-    startLine: 1897
+    startLine: 2128
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -46,7 +46,7 @@ items:
   source:
     id: SelectedTool
     path: ''
-    startLine: 1899
+    startLine: 2130
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -71,7 +71,7 @@ items:
   source:
     id: SelectedCells
     path: ''
-    startLine: 1901
+    startLine: 2132
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -94,7 +94,7 @@ items:
   source:
     id: IrrigationLabour
     path: ''
-    startLine: 1903
+    startLine: 2134
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -117,7 +117,7 @@ items:
   source:
     id: HarvestLabour
     path: ''
-    startLine: 1904
+    startLine: 2135
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -140,7 +140,7 @@ items:
   source:
     id: LabourPoints
     path: ''
-    startLine: 1906
+    startLine: 2137
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -165,7 +165,7 @@ items:
   source:
     id: HarvestSelectedCells
     path: ''
-    startLine: 1919
+    startLine: 2150
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -187,7 +187,7 @@ items:
   source:
     id: IrrigateSelectedCells
     path: ''
-    startLine: 1949
+    startLine: 2180
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -209,7 +209,7 @@ items:
   source:
     id: ClearSelectedCells
     path: ''
-    startLine: 1959
+    startLine: 2190
   assemblies:
   - cs.temp.dll
   namespace: Global

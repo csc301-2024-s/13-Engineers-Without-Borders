@@ -24,10 +24,12 @@ items:
   source:
     id: Farmland
     path: ''
-    startLine: 675
+    startLine: 713
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nA player&apos;s farmland.\n"
+  example: []
   syntax:
     content: 'public class Farmland : HouseholdAsset'
     content.vb: Public Class Farmland Inherits HouseholdAsset
@@ -50,10 +52,12 @@ items:
   source:
     id: MaxPlots
     path: ''
-    startLine: 677
+    startLine: 718
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nThe maximum number of plots a player can have.\n"
+  example: []
   syntax:
     content: public const int MaxPlots = 16
     return:
@@ -73,10 +77,12 @@ items:
   source:
     id: Plots
     path: ''
-    startLine: 678
+    startLine: 723
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nThe list of farm plots.\n"
+  example: []
   syntax:
     content: public List<FarmPlot> Plots
     return:
@@ -96,15 +102,18 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 681
+    startLine: 729
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nInitializes a farmland with <code data-dev-comment-type=\"paramref\" class=\"paramref\">numPlots</code> plots.\n"
+  example: []
   syntax:
     content: public Farmland(int numPlots)
     parameters:
     - id: numPlots
       type: System.Int32
+      description: Number of farm plots.
     content.vb: Public Sub New(numPlots As Integer)
   overload: Backend.Farmland.#ctor*
   nameWithType.vb: Farmland.New(Integer)
@@ -124,15 +133,18 @@ items:
   source:
     id: SetOwner
     path: ''
-    startLine: 692
+    startLine: 743
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nSet the owner of this land and its plots.\n"
+  example: []
   syntax:
     content: public override void SetOwner(Household owner)
     parameters:
     - id: owner
       type: Backend.Household
+      description: The owner.
     content.vb: Public Overrides Sub SetOwner(owner As Household)
   overridden: Backend.HouseholdAsset.SetOwner(Backend.Household)
   overload: Backend.Farmland.SetOwner*
@@ -150,14 +162,17 @@ items:
   source:
     id: GetTotalYield
     path: ''
-    startLine: 702
+    startLine: 756
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nGets the total wheat yield of this land.\n"
+  example: []
   syntax:
     content: public int GetTotalYield()
     return:
       type: System.Int32
+      description: Total wheat yield.
     content.vb: Public Function GetTotalYield() As Integer
   overload: Backend.Farmland.GetTotalYield*
 - uid: Backend.Farmland.AddPlot
@@ -174,10 +189,12 @@ items:
   source:
     id: AddPlot
     path: ''
-    startLine: 716
+    startLine: 772
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nAdds a farm plot to this land.\n"
+  example: []
   syntax:
     content: public void AddPlot()
     content.vb: Public Sub AddPlot()
@@ -196,10 +213,12 @@ items:
   source:
     id: ResetIrrigation
     path: ''
-    startLine: 729
+    startLine: 787
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nReset irrigation status for every plot.\n"
+  example: []
   syntax:
     content: public void ResetIrrigation()
     content.vb: Public Sub ResetIrrigation()
@@ -218,10 +237,12 @@ items:
   source:
     id: ClearPlots
     path: ''
-    startLine: 740
+    startLine: 801
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nClear seed and fertilizer type for all plots.\n"
+  example: []
   syntax:
     content: public void ClearPlots()
     content.vb: Public Sub ClearPlots()
@@ -240,15 +261,18 @@ items:
   source:
     id: SetYieldMultiplier
     path: ''
-    startLine: 749
+    startLine: 813
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nSet yield multiplier of all plots.\n"
+  example: []
   syntax:
     content: public void SetYieldMultiplier(float val)
     parameters:
     - id: val
       type: System.Single
+      description: The multiplier.
     content.vb: Public Sub SetYieldMultiplier(val As Single)
   overload: Backend.Farmland.SetYieldMultiplier*
   nameWithType.vb: Farmland.SetYieldMultiplier(Single)

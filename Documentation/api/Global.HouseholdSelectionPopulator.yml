@@ -15,7 +15,7 @@ items:
   source:
     id: HouseholdSelectionPopulator
     path: ''
-    startLine: 2300
+    startLine: 2531
   assemblies:
   - cs.temp.dll
   namespace: Global

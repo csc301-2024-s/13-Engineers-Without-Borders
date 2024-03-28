@@ -16,10 +16,12 @@ items:
   source:
     id: Fate
     path: ''
-    startLine: 825
+    startLine: 941
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nHandles random village and family events.\n"
+  example: []
   syntax:
     content: public static class Fate
     content.vb: Public Module Fate
@@ -39,10 +41,12 @@ items:
   source:
     id: TriggerYearlyEvents
     path: ''
-    startLine: 829
+    startLine: 948
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nCalled every year (2+) to handle family and village events.\n"
+  example: []
   syntax:
     content: public static void TriggerYearlyEvents()
     content.vb: Public Shared Sub TriggerYearlyEvents()

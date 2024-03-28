@@ -20,8 +20,6 @@
     name: ClosePopUpOnClick
   - uid: Global.CloseYieldTable
     name: CloseYieldTable
-  - uid: Global.CollectAllWheat
-    name: CollectAllWheat
   - uid: Global.DisplayTotalWheat
     name: DisplayTotalWheat
   - uid: Global.DisplayWeather
@@ -123,8 +121,6 @@
     name: Market
   - uid: Backend.Product
     name: Product
-  - uid: Backend.ProductType
-    name: ProductType
   - uid: Backend.SeedType
     name: SeedType
   - uid: Backend.YieldPerformanceTable

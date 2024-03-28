@@ -15,7 +15,7 @@ items:
   source:
     id: PlayerMoneyDisplayer
     path: ''
-    startLine: 2435
+    startLine: 2666
   assemblies:
   - cs.temp.dll
   namespace: Global

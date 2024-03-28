@@ -18,10 +18,12 @@ items:
   source:
     id: FertilizerType
     path: ''
-    startLine: 762
+    startLine: 829
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nType of fertilizer.\n"
+  example: []
   syntax:
     content: public enum FertilizerType
     content.vb: Public Enum FertilizerType
@@ -39,10 +41,12 @@ items:
   source:
     id: None
     path: ''
-    startLine: 764
+    startLine: 834
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nNo fertilizer.\n"
+  example: []
   syntax:
     content: None = 0
     return:
@@ -61,10 +65,12 @@ items:
   source:
     id: Low
     path: ''
-    startLine: 765
+    startLine: 839
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nLow fertilizer.\n"
+  example: []
   syntax:
     content: Low = 1
     return:
@@ -83,10 +89,12 @@ items:
   source:
     id: High
     path: ''
-    startLine: 766
+    startLine: 844
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nHigh fertilizer.\n"
+  example: []
   syntax:
     content: High = 2
     return:

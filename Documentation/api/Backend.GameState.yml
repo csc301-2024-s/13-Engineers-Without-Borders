@@ -9,7 +9,6 @@ items:
   - Backend.GameState.AdvanceToPhaseThree
   - Backend.GameState.AdvanceToPhaseTwo
   - Backend.GameState.Initialize(Backend.Household)
-  - Backend.GameState.PopupManagerInstance
   - Backend.GameState.ResultReport
   - Backend.GameState.s_Households
   - Backend.GameState.s_Phase
@@ -28,10 +27,12 @@ items:
   source:
     id: GameState
     path: ''
-    startLine: 891
+    startLine: 1013
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nRepresents global game state.\n"
+  example: []
   syntax:
     content: public static class GameState
     content.vb: Public Module GameState
@@ -51,10 +52,12 @@ items:
   source:
     id: StartMoney
     path: ''
-    startLine: 893
+    startLine: 1018
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nStarting money of player.\n"
+  example: []
   syntax:
     content: public const int StartMoney = 500
     return:
@@ -74,10 +77,12 @@ items:
   source:
     id: s_Year
     path: ''
-    startLine: 894
+    startLine: 1023
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nGame year.\n"
+  example: []
   syntax:
     content: public static int s_Year
     return:
@@ -97,10 +102,12 @@ items:
   source:
     id: s_Phase
     path: ''
-    startLine: 895
+    startLine: 1028
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nGame phase/season. From 1 to 3.\n"
+  example: []
   syntax:
     content: public static int s_Phase
     return:
@@ -120,10 +127,12 @@ items:
   source:
     id: s_WeatherIndex
     path: ''
-    startLine: 896
+    startLine: 1033
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nGame weather index. From 1 (best) to 5 (worst).\n"
+  example: []
   syntax:
     content: public static int s_WeatherIndex
     return:
@@ -143,10 +152,12 @@ items:
   source:
     id: s_Player
     path: ''
-    startLine: 897
+    startLine: 1038
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nThe player&apos;s household object.\n"
+  example: []
   syntax:
     content: public static Household s_Player
     return:
@@ -166,40 +177,17 @@ items:
   source:
     id: s_Households
     path: ''
-    startLine: 898
+    startLine: 1043
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nA list of all households in the game. We originally wanted to have AI players which is why this is here, but we didn&apos;t end up doing that.\n"
+  example: []
   syntax:
     content: public static Household[] s_Households
     return:
       type: Backend.Household[]
     content.vb: Public Shared s_Households As Household()
-- uid: Backend.GameState.PopupManagerInstance
-  commentId: P:Backend.GameState.PopupManagerInstance
-  id: PopupManagerInstance
-  parent: Backend.GameState
-  langs:
-  - csharp
-  - vb
-  name: PopupManagerInstance
-  nameWithType: GameState.PopupManagerInstance
-  fullName: Backend.GameState.PopupManagerInstance
-  type: Property
-  source:
-    id: PopupManagerInstance
-    path: ''
-    startLine: 899
-  assemblies:
-  - cs.temp.dll
-  namespace: Backend
-  syntax:
-    content: public static PopupManager PopupManagerInstance { get; }
-    parameters: []
-    return:
-      type: Global.PopupManager
-    content.vb: Public Shared Property PopupManagerInstance As PopupManager
-  overload: Backend.GameState.PopupManagerInstance*
 - uid: Backend.GameState.s_PredefinedHouseholds
   commentId: F:Backend.GameState.s_PredefinedHouseholds
   id: s_PredefinedHouseholds
@@ -214,10 +202,12 @@ items:
   source:
     id: s_PredefinedHouseholds
     path: ''
-    startLine: 900
+    startLine: 1049
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nArray of predefined households that the player can choose from. Learn from our mistakes and don&apos;t do this in your own projects,\nload data from a JSON file or something instead.\n"
+  example: []
   syntax:
     content: public static Household[] s_PredefinedHouseholds
     return:
@@ -237,15 +227,18 @@ items:
   source:
     id: Initialize
     path: ''
-    startLine: 924
+    startLine: 1076
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nInitializes the game, setting year and phase to 0 (this happens before the main gameplay).\n"
+  example: []
   syntax:
     content: public static void Initialize(Household Player)
     parameters:
     - id: Player
       type: Backend.Household
+      description: The household that the player chose.
     content.vb: Public Shared Sub Initialize(Player As Household)
   overload: Backend.GameState.Initialize*
 - uid: Backend.GameState.AdvanceToPhaseOne
@@ -262,10 +255,12 @@ items:
   source:
     id: AdvanceToPhaseOne
     path: ''
-    startLine: 949
+    startLine: 1101
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nAdvance to phase 1, the growing season. (Year 2+ only) Choose random village event and household event for each household, but there might not be one.\nHandle starvation and losing condition if player wheat is in the negatives. Automatically loads phase 2 if you don&apos;t have any tubewells.\n"
+  example: []
   syntax:
     content: public static void AdvanceToPhaseOne()
     content.vb: Public Shared Sub AdvanceToPhaseOne()
@@ -284,10 +279,12 @@ items:
   source:
     id: AdvanceToPhaseTwo
     path: ''
-    startLine: 1045
+    startLine: 1200
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nAdvance to phase 2, the harvest season. Simply sets the phase variable and switches scenes.\n"
+  example: []
   syntax:
     content: public static void AdvanceToPhaseTwo()
     content.vb: Public Shared Sub AdvanceToPhaseTwo()
@@ -306,10 +303,12 @@ items:
   source:
     id: AdvanceToPhaseThree
     path: ''
-    startLine: 1051
+    startLine: 1209
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nAdvance to phase 3, the planting season. Any hired labour is removed.\n"
+  example: []
   syntax:
     content: public static void AdvanceToPhaseThree()
     content.vb: Public Shared Sub AdvanceToPhaseThree()
@@ -328,14 +327,17 @@ items:
   source:
     id: ResultReport
     path: ''
-    startLine: 1072
+    startLine: 1233
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nHelper method to return game data to be displayed in the results screen at the end.\n"
+  example: []
   syntax:
     content: public static Dictionary<string, int> ResultReport()
     return:
       type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+      description: Game data used for results.
     content.vb: Public Shared Function ResultReport() As Dictionary(Of String, Integer)
   overload: Backend.GameState.ResultReport*
 references:
@@ -394,16 +396,6 @@ references:
     name: Household
   - name: (
   - name: )
-- uid: Backend.GameState.PopupManagerInstance*
-  commentId: Overload:Backend.GameState.PopupManagerInstance
-  name: PopupManagerInstance
-  nameWithType: GameState.PopupManagerInstance
-  fullName: Backend.GameState.PopupManagerInstance
-- uid: Global.PopupManager
-  commentId: T:Global.PopupManager
-  name: PopupManager
-  nameWithType: PopupManager
-  fullName: PopupManager
 - uid: Backend.GameState.Initialize*
   commentId: Overload:Backend.GameState.Initialize
   name: Initialize

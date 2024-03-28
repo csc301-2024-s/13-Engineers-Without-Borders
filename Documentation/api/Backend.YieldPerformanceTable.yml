@@ -16,10 +16,12 @@ items:
   source:
     id: YieldPerformanceTable
     path: ''
-    startLine: 1510
+    startLine: 1774
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nA lookup table that dictates a plot&apos;s wheat yield depending on fertilizer/seed type and weather.\n"
+  example: []
   syntax:
     content: public static class YieldPerformanceTable
     content.vb: Public Module YieldPerformanceTable
@@ -39,17 +41,21 @@ items:
   source:
     id: GetYield
     path: ''
-    startLine: 1524
+    startLine: 1792
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nFind expected wheat yield for <code data-dev-comment-type=\"paramref\" class=\"paramref\">plot</code>.\n"
+  example: []
   syntax:
     content: public static int GetYield(FarmPlot plot)
     parameters:
     - id: plot
       type: Backend.FarmPlot
+      description: The farm plot whose wheat to calculate.
     return:
       type: System.Int32
+      description: The expected wheat yield (before applying multiplier).
     content.vb: Public Shared Function GetYield(plot As FarmPlot) As Integer
   overload: Backend.YieldPerformanceTable.GetYield*
 references:

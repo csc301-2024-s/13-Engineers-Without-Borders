@@ -18,7 +18,6 @@ items:
   - Backend.Inventory
   - Backend.Market
   - Backend.Product
-  - Backend.ProductType
   - Backend.SeedType
   - Backend.YieldPerformanceTable
   langs:
@@ -106,12 +105,6 @@ references:
   name: Inventory
   nameWithType: Inventory
   fullName: Backend.Inventory
-- uid: Backend.ProductType
-  commentId: T:Backend.ProductType
-  parent: Backend
-  name: ProductType
-  nameWithType: ProductType
-  fullName: Backend.ProductType
 - uid: Backend.Product
   commentId: T:Backend.Product
   name: Product

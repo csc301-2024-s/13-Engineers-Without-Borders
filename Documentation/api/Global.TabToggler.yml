@@ -16,7 +16,7 @@ items:
   source:
     id: TabToggler
     path: ''
-    startLine: 2761
+    startLine: 2992
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -39,7 +39,7 @@ items:
   source:
     id: Toggle
     path: ''
-    startLine: 2776
+    startLine: 3007
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -19,10 +19,12 @@ items:
   source:
     id: FamilyMember
     path: ''
-    startLine: 557
+    startLine: 579
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nBase class for a family member.\n"
+  example: []
   syntax:
     content: public class FamilyMember
     content.vb: Public Class FamilyMember
@@ -45,10 +47,12 @@ items:
   source:
     id: FirstName
     path: ''
-    startLine: 559
+    startLine: 584
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nFirst name.\n"
+  example: []
   syntax:
     content: public string FirstName { get; protected set; }
     parameters: []
@@ -70,10 +74,12 @@ items:
   source:
     id: LastName
     path: ''
-    startLine: 560
+    startLine: 589
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nLast name.\n"
+  example: []
   syntax:
     content: public string LastName { get; protected set; }
     parameters: []
@@ -95,10 +101,12 @@ items:
   source:
     id: s_FirstNames
     path: ''
-    startLine: 563
+    startLine: 594
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nStatic array of Punjab first names. Adapted from <a href=\"https://www.in.pampers.com/pregnancy/baby-names/article/50-punjabi-baby-names-of-2021\">here.</a>\n"
+  example: []
   syntax:
     content: public static string[] s_FirstNames
     return:
@@ -118,14 +126,17 @@ items:
   source:
     id: GetRandomFirstName
     path: ''
-    startLine: 662
+    startLine: 697
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nGets a random first name from s_FirstNames.\n"
+  example: []
   syntax:
     content: public static string GetRandomFirstName()
     return:
       type: System.String
+      description: A random first name.
     content.vb: Public Shared Function GetRandomFirstName() As String
   overload: Backend.FamilyMember.GetRandomFirstName*
 references:

@@ -20,10 +20,12 @@ items:
   source:
     id: Child
     path: ''
-    startLine: 422
+    startLine: 439
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nRepresents a child in a family.\n"
+  example: []
   syntax:
     content: 'public class Child : FamilyMember'
     content.vb: Public Class Child Inherits FamilyMember
@@ -49,10 +51,12 @@ items:
   source:
     id: Consumption
     path: ''
-    startLine: 424
+    startLine: 444
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nAnnual wheat consumption of a child.\n"
+  example: []
   syntax:
     content: public const int Consumption = 5
     return:
@@ -72,10 +76,12 @@ items:
   source:
     id: Age
     path: ''
-    startLine: 425
+    startLine: 449
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nChild&apos;s age.\n"
+  example: []
   syntax:
     content: public int Age { get; }
     parameters: []
@@ -97,19 +103,24 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 429
+    startLine: 458
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nCreate a child.\n"
+  example: []
   syntax:
     content: public Child(string FirstName, string LastName, int Age)
     parameters:
     - id: FirstName
       type: System.String
+      description: First name.
     - id: LastName
       type: System.String
+      description: Last name.
     - id: Age
       type: System.Int32
+      description: Age.
     content.vb: Public Sub New(FirstName As String, LastName As String, Age As Integer)
   overload: Backend.Child.#ctor*
   nameWithType.vb: Child.New(String, String, Integer)
@@ -129,14 +140,17 @@ items:
   source:
     id: ToAdult
     path: ''
-    startLine: 438
+    startLine: 470
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nCreate an adult version of this child with the same name. Should be invoked when the child turns 13.\n"
+  example: []
   syntax:
     content: public Adult ToAdult()
     return:
       type: Backend.Adult
+      description: An adult with the same name as the child.
     content.vb: Public Function ToAdult() As Adult
   overload: Backend.Child.ToAdult*
 - uid: Backend.Child.IncrementAge
@@ -153,10 +167,12 @@ items:
   source:
     id: IncrementAge
     path: ''
-    startLine: 447
+    startLine: 481
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nIncrement age of child. This does NOT handle growing up into an adult.\n"
+  example: []
   syntax:
     content: public void IncrementAge()
     content.vb: Public Sub IncrementAge()

@@ -16,7 +16,7 @@ items:
   source:
     id: ClosePopUpOnClick
     path: ''
-    startLine: 1667
+    startLine: 1935
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -39,7 +39,7 @@ items:
   source:
     id: OnClick
     path: ''
-    startLine: 1679
+    startLine: 1947
   assemblies:
   - cs.temp.dll
   namespace: Global

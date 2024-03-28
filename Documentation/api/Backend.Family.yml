@@ -16,7 +16,6 @@ items:
   - Backend.Family.GetLabourPoints
   - Backend.Family.GetTotalConsumption
   - Backend.Family.HiredWorkers
-  - Backend.Family.IncrementAge
   - Backend.Family.Name
   langs:
   - csharp
@@ -28,7 +27,7 @@ items:
   source:
     id: Family
     path: ''
-    startLine: 464
+    startLine: 498
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -55,7 +54,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 466
+    startLine: 500
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -80,7 +79,7 @@ items:
   source:
     id: Adults
     path: ''
-    startLine: 468
+    startLine: 502
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -105,7 +104,7 @@ items:
   source:
     id: Children
     path: ''
-    startLine: 469
+    startLine: 503
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -130,7 +129,7 @@ items:
   source:
     id: HiredWorkers
     path: ''
-    startLine: 470
+    startLine: 504
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -155,7 +154,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 473
+    startLine: 507
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -187,7 +186,7 @@ items:
   source:
     id: CreateChild
     path: ''
-    startLine: 488
+    startLine: 522
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -215,7 +214,7 @@ items:
   source:
     id: CreateAdult
     path: ''
-    startLine: 495
+    startLine: 529
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -237,7 +236,7 @@ items:
   source:
     id: GetTotalConsumption
     path: ''
-    startLine: 502
+    startLine: 536
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -247,28 +246,6 @@ items:
       type: System.Int32
     content.vb: Public Function GetTotalConsumption() As Integer
   overload: Backend.Family.GetTotalConsumption*
-- uid: Backend.Family.IncrementAge
-  commentId: M:Backend.Family.IncrementAge
-  id: IncrementAge
-  parent: Backend.Family
-  langs:
-  - csharp
-  - vb
-  name: IncrementAge()
-  nameWithType: Family.IncrementAge()
-  fullName: Backend.Family.IncrementAge()
-  type: Method
-  source:
-    id: IncrementAge
-    path: ''
-    startLine: 508
-  assemblies:
-  - cs.temp.dll
-  namespace: Backend
-  syntax:
-    content: public void IncrementAge()
-    content.vb: Public Sub IncrementAge()
-  overload: Backend.Family.IncrementAge*
 - uid: Backend.Family.GetAdultAmount
   commentId: M:Backend.Family.GetAdultAmount
   id: GetAdultAmount
@@ -283,7 +260,7 @@ items:
   source:
     id: GetAdultAmount
     path: ''
-    startLine: 523
+    startLine: 542
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -307,7 +284,7 @@ items:
   source:
     id: GetChildrenAmount
     path: ''
-    startLine: 529
+    startLine: 548
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -331,7 +308,7 @@ items:
   source:
     id: GetHiredWorkerAmount
     path: ''
-    startLine: 534
+    startLine: 553
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -355,7 +332,7 @@ items:
   source:
     id: GetLabourPoints
     path: ''
-    startLine: 540
+    startLine: 559
   assemblies:
   - cs.temp.dll
   namespace: Backend
@@ -593,11 +570,6 @@ references:
   name: GetTotalConsumption
   nameWithType: Family.GetTotalConsumption
   fullName: Backend.Family.GetTotalConsumption
-- uid: Backend.Family.IncrementAge*
-  commentId: Overload:Backend.Family.IncrementAge
-  name: IncrementAge
-  nameWithType: Family.IncrementAge
-  fullName: Backend.Family.IncrementAge
 - uid: Backend.Family.GetAdultAmount*
   commentId: Overload:Backend.Family.GetAdultAmount
   name: GetAdultAmount

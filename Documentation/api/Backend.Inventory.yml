@@ -20,10 +20,12 @@ items:
   source:
     id: Inventory
     path: ''
-    startLine: 1228
+    startLine: 1416
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nA household&apos;s inventory. Can store items.\n"
+  example: []
   syntax:
     content: 'public class Inventory : HouseholdAsset'
     content.vb: Public Class Inventory Inherits HouseholdAsset
@@ -47,10 +49,12 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1233
+    startLine: 1423
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nCreates an empty inventory.\n"
+  example: []
   syntax:
     content: public Inventory()
     content.vb: Public Sub New()
@@ -72,15 +76,18 @@ items:
   source:
     id: AddItem
     path: ''
-    startLine: 1239
+    startLine: 1432
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nAdds <code data-dev-comment-type=\"paramref\" class=\"paramref\">newItem</code> to the inventory. If it already exists, increment its count.\n"
+  example: []
   syntax:
     content: public void AddItem(string newItem)
     parameters:
     - id: newItem
       type: System.String
+      description: The item to add.
     content.vb: Public Sub AddItem(newItem As String)
   overload: Backend.Inventory.AddItem*
   nameWithType.vb: Inventory.AddItem(String)
@@ -100,15 +107,18 @@ items:
   source:
     id: RemoveItem
     path: ''
-    startLine: 1252
+    startLine: 1448
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nRemoves one <code data-dev-comment-type=\"paramref\" class=\"paramref\">item</code> from the inventory. If it exists, decrement its count. If its count becomes 0, remove the key entry.\nIf it doesn&apos;t exist, log a message in the Unity console.\n"
+  example: []
   syntax:
     content: public void RemoveItem(string item)
     parameters:
     - id: item
       type: System.String
+      description: The item to remove.
     content.vb: Public Sub RemoveItem(item As String)
   overload: Backend.Inventory.RemoveItem*
   nameWithType.vb: Inventory.RemoveItem(String)
@@ -128,17 +138,21 @@ items:
   source:
     id: GetAmount
     path: ''
-    startLine: 1270
+    startLine: 1469
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nGets the count of <code data-dev-comment-type=\"paramref\" class=\"paramref\">item</code> in the inventory.\n"
+  example: []
   syntax:
     content: public int GetAmount(string item)
     parameters:
     - id: item
       type: System.String
+      description: Item to count.
     return:
       type: System.Int32
+      description: Count of item in inventory, 0 if none.
     content.vb: Public Function GetAmount(item As String) As Integer
   overload: Backend.Inventory.GetAmount*
   nameWithType.vb: Inventory.GetAmount(String)
@@ -158,17 +172,21 @@ items:
   source:
     id: Contains
     path: ''
-    startLine: 1281
+    startLine: 1484
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nCheck if <code data-dev-comment-type=\"paramref\" class=\"paramref\">item</code> is in the inventory.\n"
+  example: []
   syntax:
     content: public bool Contains(string item)
     parameters:
     - id: item
       type: System.String
+      description: The item to look for.
     return:
       type: System.Boolean
+      description: Whether the item is in the inventory.
     content.vb: Public Function Contains(item As String) As Boolean
   overload: Backend.Inventory.Contains*
   nameWithType.vb: Inventory.Contains(String)

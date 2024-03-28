@@ -12,7 +12,6 @@ items:
   - Backend.Product.Price
   - Backend.Product.PriceMultiplier
   - Backend.Product.PurchaseCondition
-  - Backend.Product.Type
   langs:
   - csharp
   - vb
@@ -23,10 +22,12 @@ items:
   source:
     id: Product
     path: ''
-    startLine: 1305
+    startLine: 1499
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nRepresents a product that can be sold in the market.\n"
+  example: []
   syntax:
     content: public class Product
     content.vb: Public Class Product
@@ -46,15 +47,18 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1307
+    startLine: 1505
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nThe product&apos;s name.\n"
+  example: []
   syntax:
     content: public string Name { get; set; }
     parameters: []
     return:
       type: System.String
+      description: The name.
     content.vb: Public Property Name As String
   overload: Backend.Product.Name*
 - uid: Backend.Product.Price
@@ -71,15 +75,18 @@ items:
   source:
     id: Price
     path: ''
-    startLine: 1308
+    startLine: 1511
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nThe product&apos;s base price.\n"
+  example: []
   syntax:
     content: public int Price { get; set; }
     parameters: []
     return:
       type: System.Int32
+      description: The base price.
     content.vb: Public Property Price As Integer
   overload: Backend.Product.Price*
 - uid: Backend.Product.PriceMultiplier
@@ -96,15 +103,18 @@ items:
   source:
     id: PriceMultiplier
     path: ''
-    startLine: 1309
+    startLine: 1517
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nA multiplier for the price.\n"
+  example: []
   syntax:
     content: public float PriceMultiplier { get; set; }
     parameters: []
     return:
       type: System.Single
+      description: The price multiplier.
     content.vb: Public Property PriceMultiplier As Single
   overload: Backend.Product.PriceMultiplier*
 - uid: Backend.Product.Buyable
@@ -121,42 +131,20 @@ items:
   source:
     id: Buyable
     path: ''
-    startLine: 1310
+    startLine: 1523
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nWhether the product is purchasable from the market.\n"
+  example: []
   syntax:
     content: public bool Buyable { get; set; }
     parameters: []
     return:
       type: System.Boolean
+      description: Whether it&apos;s purchasable.
     content.vb: Public Property Buyable As Boolean
   overload: Backend.Product.Buyable*
-- uid: Backend.Product.Type
-  commentId: P:Backend.Product.Type
-  id: Type
-  parent: Backend.Product
-  langs:
-  - csharp
-  - vb
-  name: Type
-  nameWithType: Product.Type
-  fullName: Backend.Product.Type
-  type: Property
-  source:
-    id: Type
-    path: ''
-    startLine: 1311
-  assemblies:
-  - cs.temp.dll
-  namespace: Backend
-  syntax:
-    content: public ProductType Type { get; set; }
-    parameters: []
-    return:
-      type: Backend.ProductType
-    content.vb: Public Property Type As ProductType
-  overload: Backend.Product.Type*
 - uid: Backend.Product.Description
   commentId: P:Backend.Product.Description
   id: Description
@@ -171,15 +159,18 @@ items:
   source:
     id: Description
     path: ''
-    startLine: 1312
+    startLine: 1529
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nThe product&apos;s description.\n"
+  example: []
   syntax:
     content: public string Description { get; set; }
     parameters: []
     return:
       type: System.String
+      description: The description.
     content.vb: Public Property Description As String
   overload: Backend.Product.Description*
 - uid: Backend.Product.PurchaseCondition
@@ -196,15 +187,18 @@ items:
   source:
     id: PurchaseCondition
     path: ''
-    startLine: 1313
+    startLine: 1535
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nSome products have extra conditions that must be met aside from price before they can be bought.\n"
+  example: []
   syntax:
     content: public Func<Household, bool> PurchaseCondition { get; set; }
     parameters: []
     return:
       type: Global.Func{Backend.Household,System.Boolean}
+      description: A function that takes in a buyer and returns whether the condition is met.
     content.vb: Public Property PurchaseCondition As Func(Of Household, Boolean)
   overload: Backend.Product.PurchaseCondition*
 - uid: Backend.Product.BuyAction
@@ -221,15 +215,18 @@ items:
   source:
     id: BuyAction
     path: ''
-    startLine: 1314
+    startLine: 1541
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nSome products have a special action that must be performed upon purchase.\n"
+  example: []
   syntax:
     content: public Action<Household> BuyAction { get; set; }
     parameters: []
     return:
       type: Global.Action{Backend.Household}
+      description: A function that takes in a buyer and returns void.
     content.vb: Public Property BuyAction As Action(Of Household)
   overload: Backend.Product.BuyAction*
 references:
@@ -314,17 +311,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: Backend.Product.Type*
-  commentId: Overload:Backend.Product.Type
-  name: Type
-  nameWithType: Product.Type
-  fullName: Backend.Product.Type
-- uid: Backend.ProductType
-  commentId: T:Backend.ProductType
-  parent: Backend
-  name: ProductType
-  nameWithType: ProductType
-  fullName: Backend.ProductType
 - uid: Backend.Product.Description*
   commentId: Overload:Backend.Product.Description
   name: Description

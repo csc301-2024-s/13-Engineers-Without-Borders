@@ -23,10 +23,12 @@ items:
   source:
     id: FarmPlot
     path: ''
-    startLine: 777
+    startLine: 868
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nA plot of land.\n"
+  example: []
   syntax:
     content: 'public class FarmPlot : HouseholdAsset'
     content.vb: Public Class FarmPlot Inherits HouseholdAsset
@@ -50,10 +52,12 @@ items:
   source:
     id: SeedType
     path: ''
-    startLine: 780
+    startLine: 873
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nWhat type of seed is planted currently.\n"
+  example: []
   syntax:
     content: public SeedType SeedType { get; set; }
     parameters: []
@@ -75,10 +79,12 @@ items:
   source:
     id: FertilizerType
     path: ''
-    startLine: 783
+    startLine: 878
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nWhat type of fertilizer is currently on the land.\n"
+  example: []
   syntax:
     content: public FertilizerType FertilizerType { get; set; }
     parameters: []
@@ -100,10 +106,12 @@ items:
   source:
     id: YieldMultiplier
     path: ''
-    startLine: 784
+    startLine: 883
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nA value that the yield of this plot is multiplied by.\n"
+  example: []
   syntax:
     content: public float YieldMultiplier { get; set; }
     parameters: []
@@ -125,10 +133,12 @@ items:
   source:
     id: Irrigated
     path: ''
-    startLine: 786
+    startLine: 888
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nWhether the plot is irrigated.\n"
+  example: []
   syntax:
     content: public bool Irrigated { get; set; }
     parameters: []
@@ -150,17 +160,21 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 788
+    startLine: 895
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nCreate a new farm plot with <code data-dev-comment-type=\"paramref\" class=\"paramref\">seedType</code> seed type and <code data-dev-comment-type=\"paramref\" class=\"paramref\">fertilizerType</code> fertilizer type.\n"
+  example: []
   syntax:
     content: public FarmPlot(SeedType seedType, FertilizerType fertilizerType)
     parameters:
     - id: seedType
       type: Backend.SeedType
+      description: Seed type.
     - id: fertilizerType
       type: Backend.FertilizerType
+      description: Fertilizer type.
     content.vb: Public Sub New(seedType As SeedType, fertilizerType As FertilizerType)
   overload: Backend.FarmPlot.#ctor*
   nameWithType.vb: FarmPlot.New(SeedType, FertilizerType)
@@ -180,14 +194,17 @@ items:
   source:
     id: GetWeatherEffect
     path: ''
-    startLine: 795
+    startLine: 905
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nReturns game&apos;s weather index or 1 (the best weather) if irrigated.\n"
+  example: []
   syntax:
     content: public int GetWeatherEffect()
     return:
       type: System.Int32
+      description: Game&apos;s weather index or 1 (the best weather) if irrigated.
     content.vb: Public Function GetWeatherEffect() As Integer
   overload: Backend.FarmPlot.GetWeatherEffect*
 - uid: Backend.FarmPlot.GetYield
@@ -204,17 +221,17 @@ items:
   source:
     id: GetYield
     path: ''
-    startLine: 804
+    startLine: 914
   assemblies:
   - cs.temp.dll
   namespace: Backend
-  summary: "\nReturns the yield of this plot. Return 0 if this plot isn&apos;t set to be harvested.\n"
+  summary: "\nReturns the yield of this plot multiplied by the yield multiplier.\n"
   example: []
   syntax:
     content: public int GetYield()
     return:
       type: System.Int32
-      description: ''
+      description: Plot&apos;s wheat yield.
     content.vb: Public Function GetYield() As Integer
   overload: Backend.FarmPlot.GetYield*
 - uid: Backend.FarmPlot.ClearPlot
@@ -231,10 +248,12 @@ items:
   source:
     id: ClearPlot
     path: ''
-    startLine: 809
+    startLine: 922
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nSets seed type to regular and fertilizer to none.\n"
+  example: []
   syntax:
     content: public void ClearPlot()
     content.vb: Public Sub ClearPlot()

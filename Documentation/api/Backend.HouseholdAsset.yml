@@ -17,10 +17,12 @@ items:
   source:
     id: HouseholdAsset
     path: ''
-    startLine: 1211
+    startLine: 1389
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nSomething that a household can own.\n"
+  example: []
   syntax:
     content: public class HouseholdAsset
     content.vb: Public Class HouseholdAsset
@@ -45,10 +47,12 @@ items:
   source:
     id: Owner
     path: ''
-    startLine: 1213
+    startLine: 1394
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nOwner of the asset.\n"
+  example: []
   syntax:
     content: public Household Owner { get; }
     parameters: []
@@ -70,15 +74,18 @@ items:
   source:
     id: SetOwner
     path: ''
-    startLine: 1215
+    startLine: 1400
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nSet the owner.\n"
+  example: []
   syntax:
     content: public virtual void SetOwner(Household owner)
     parameters:
     - id: owner
       type: Backend.Household
+      description: Owner.
     content.vb: Public Overridable Sub SetOwner(owner As Household)
   overload: Backend.HouseholdAsset.SetOwner*
 references:

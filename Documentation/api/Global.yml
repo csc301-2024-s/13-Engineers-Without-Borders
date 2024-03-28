@@ -12,7 +12,6 @@ items:
   - Global.ChildPopulator
   - Global.ClosePopUpOnClick
   - Global.CloseYieldTable
-  - Global.CollectAllWheat
   - Global.DisplayTotalWheat
   - Global.DisplayWeather
   - Global.EnableBasedOnPhase
@@ -118,11 +117,6 @@ references:
   name: CloseYieldTable
   nameWithType: CloseYieldTable
   fullName: CloseYieldTable
-- uid: Global.CollectAllWheat
-  commentId: T:Global.CollectAllWheat
-  name: CollectAllWheat
-  nameWithType: CollectAllWheat
-  fullName: CollectAllWheat
 - uid: Global.DisplayTotalWheat
   commentId: T:Global.DisplayTotalWheat
   name: DisplayTotalWheat

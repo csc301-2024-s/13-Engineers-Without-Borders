@@ -15,7 +15,7 @@ items:
   source:
     id: GameStateInfoDisplayer
     path: ''
-    startLine: 2178
+    startLine: 2409
   assemblies:
   - cs.temp.dll
   namespace: Global

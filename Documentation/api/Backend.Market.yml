@@ -6,7 +6,6 @@ items:
   parent: Backend
   children:
   - Backend.Market.ActivateProduct(System.String)
-  - Backend.Market.AddProduct(System.String,System.Int32,Backend.ProductType,System.String,System.Single)
   - Backend.Market.Buy(System.String,Backend.Household)
   - Backend.Market.CanBuyerBuy(Backend.Household,System.String)
   - Backend.Market.DeactivateProduct(System.String)
@@ -15,7 +14,6 @@ items:
   - Backend.Market.Initialize
   - Backend.Market.IsBuyable(System.String)
   - Backend.Market.PlotsPerTubewell
-  - Backend.Market.RemoveProduct(System.String)
   - Backend.Market.Sell(Backend.Household,System.Int32,System.String)
   - Backend.Market.SetPriceMultiplier(System.String,System.Single)
   - Backend.Market.UpdateWheatPrice
@@ -29,10 +27,12 @@ items:
   source:
     id: Market
     path: ''
-    startLine: 1316
+    startLine: 1547
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nHandles market logic so the player can buy and sell products/items.\n"
+  example: []
   syntax:
     content: public static class Market
     content.vb: Public Module Market
@@ -52,10 +52,12 @@ items:
   source:
     id: PlotsPerTubewell
     path: ''
-    startLine: 1319
+    startLine: 1554
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nHow many plots a single tubewell can irrigate.\n"
+  example: []
   syntax:
     content: public const int PlotsPerTubewell = 8
     return:
@@ -75,10 +77,12 @@ items:
   source:
     id: Initialize
     path: ''
-    startLine: 1322
+    startLine: 1559
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nInitialize the Market and set its products; should be called in GameState.Initialize\n"
+  example: []
   syntax:
     content: public static void Initialize()
     content.vb: Public Shared Sub Initialize()
@@ -97,19 +101,24 @@ items:
   source:
     id: Buy
     path: ''
-    startLine: 1364
+    startLine: 1604
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nHandle when <code data-dev-comment-type=\"paramref\" class=\"paramref\">buyer</code> wants to buy <code data-dev-comment-type=\"paramref\" class=\"paramref\">name</code>.\n"
+  example: []
   syntax:
     content: public static string Buy(string name, Household buyer)
     parameters:
     - id: name
       type: System.String
+      description: The name of the item to buy.
     - id: buyer
       type: Backend.Household
+      description: The buyer.
     return:
       type: System.String
+      description: Returns a string with a message if purchase is unsuccessful, empty string otherwise.
     content.vb: Public Shared Function Buy(name As String, buyer As Household) As String
   overload: Backend.Market.Buy*
   nameWithType.vb: Market.Buy(String, Household)
@@ -129,19 +138,24 @@ items:
   source:
     id: Sell
     path: ''
-    startLine: 1388
+    startLine: 1635
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\n<code data-dev-comment-type=\"paramref\" class=\"paramref\">seller</code> wants to sell <code data-dev-comment-type=\"paramref\" class=\"paramref\">quantity</code> of <code data-dev-comment-type=\"paramref\" class=\"paramref\">product</code>.\nThe actual sold amount will not exceed how much of <code data-dev-comment-type=\"paramref\" class=\"paramref\">product</code> the seller actually owns.\nSeller&apos;s money is automatically increased.\n"
+  example: []
   syntax:
     content: public static void Sell(Household seller, int quantity, string product)
     parameters:
     - id: seller
       type: Backend.Household
+      description: The seller.
     - id: quantity
       type: System.Int32
+      description: The quantity to sell.
     - id: product
       type: System.String
+      description: The product to sell.
     content.vb: Public Shared Sub Sell(seller As Household, quantity As Integer, product As String)
   overload: Backend.Market.Sell*
   nameWithType.vb: Market.Sell(Household, Integer, String)
@@ -161,78 +175,16 @@ items:
   source:
     id: UpdateWheatPrice
     path: ''
-    startLine: 1419
+    startLine: 1668
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nChanges global wheat price to something between 1 and 10 (inclusive).\n"
+  example: []
   syntax:
     content: public static void UpdateWheatPrice()
     content.vb: Public Shared Sub UpdateWheatPrice()
   overload: Backend.Market.UpdateWheatPrice*
-- uid: Backend.Market.AddProduct(System.String,System.Int32,Backend.ProductType,System.String,System.Single)
-  commentId: M:Backend.Market.AddProduct(System.String,System.Int32,Backend.ProductType,System.String,System.Single)
-  id: AddProduct(System.String,System.Int32,Backend.ProductType,System.String,System.Single)
-  parent: Backend.Market
-  langs:
-  - csharp
-  - vb
-  name: AddProduct(string, int, ProductType, string, float)
-  nameWithType: Market.AddProduct(string, int, ProductType, string, float)
-  fullName: Backend.Market.AddProduct(string, int, Backend.ProductType, string, float)
-  type: Method
-  source:
-    id: AddProduct
-    path: ''
-    startLine: 1426
-  assemblies:
-  - cs.temp.dll
-  namespace: Backend
-  syntax:
-    content: public static void AddProduct(string name, int price, ProductType type, string description = "", float multiplier = 1)
-    parameters:
-    - id: name
-      type: System.String
-    - id: price
-      type: System.Int32
-    - id: type
-      type: Backend.ProductType
-    - id: description
-      type: System.String
-    - id: multiplier
-      type: System.Single
-    content.vb: Public Shared Sub AddProduct(name As String, price As Integer, type As ProductType, description As String = "", multiplier As Single = 1)
-  overload: Backend.Market.AddProduct*
-  nameWithType.vb: Market.AddProduct(String, Integer, ProductType, String, Single)
-  fullName.vb: Backend.Market.AddProduct(String, Integer, Backend.ProductType, String, Single)
-  name.vb: AddProduct(String, Integer, ProductType, String, Single)
-- uid: Backend.Market.RemoveProduct(System.String)
-  commentId: M:Backend.Market.RemoveProduct(System.String)
-  id: RemoveProduct(System.String)
-  parent: Backend.Market
-  langs:
-  - csharp
-  - vb
-  name: RemoveProduct(string)
-  nameWithType: Market.RemoveProduct(string)
-  fullName: Backend.Market.RemoveProduct(string)
-  type: Method
-  source:
-    id: RemoveProduct
-    path: ''
-    startLine: 1446
-  assemblies:
-  - cs.temp.dll
-  namespace: Backend
-  syntax:
-    content: public static void RemoveProduct(string name)
-    parameters:
-    - id: name
-      type: System.String
-    content.vb: Public Shared Sub RemoveProduct(name As String)
-  overload: Backend.Market.RemoveProduct*
-  nameWithType.vb: Market.RemoveProduct(String)
-  fullName.vb: Backend.Market.RemoveProduct(String)
-  name.vb: RemoveProduct(String)
 - uid: Backend.Market.CanBuyerBuy(Backend.Household,System.String)
   commentId: M:Backend.Market.CanBuyerBuy(Backend.Household,System.String)
   id: CanBuyerBuy(Backend.Household,System.String)
@@ -247,19 +199,24 @@ items:
   source:
     id: CanBuyerBuy
     path: ''
-    startLine: 1452
+    startLine: 1697
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nTest if <code data-dev-comment-type=\"paramref\" class=\"paramref\">buyer</code> can actually buy <code data-dev-comment-type=\"paramref\" class=\"paramref\">productName</code>.\n"
+  example: []
   syntax:
     content: public static bool CanBuyerBuy(Household buyer, string productName)
     parameters:
     - id: buyer
       type: Backend.Household
+      description: The buyer.
     - id: productName
       type: System.String
+      description: The product to buy.
     return:
       type: System.Boolean
+      description: Whether the buyer can buy it.
     content.vb: Public Shared Function CanBuyerBuy(buyer As Household, productName As String) As Boolean
   overload: Backend.Market.CanBuyerBuy*
   nameWithType.vb: Market.CanBuyerBuy(Household, String)
@@ -279,17 +236,21 @@ items:
   source:
     id: GetPrice
     path: ''
-    startLine: 1461
+    startLine: 1709
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nReturns the actual selling price of a product, taking price multiplier into account.\n"
+  example: []
   syntax:
     content: public static int GetPrice(string name)
     parameters:
     - id: name
       type: System.String
+      description: The product name.
     return:
       type: System.Int32
+      description: The selling price.
     content.vb: Public Shared Function GetPrice(name As String) As Integer
   overload: Backend.Market.GetPrice*
   nameWithType.vb: Market.GetPrice(String)
@@ -309,17 +270,21 @@ items:
   source:
     id: SetPriceMultiplier
     path: ''
-    startLine: 1468
+    startLine: 1719
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nSet a product&apos;s price multiplier.\n"
+  example: []
   syntax:
     content: public static void SetPriceMultiplier(string name, float mult)
     parameters:
     - id: name
       type: System.String
+      description: Name of product.
     - id: mult
       type: System.Single
+      description: Desired price multiplier.
     content.vb: Public Shared Sub SetPriceMultiplier(name As String, mult As Single)
   overload: Backend.Market.SetPriceMultiplier*
   nameWithType.vb: Market.SetPriceMultiplier(String, Single)
@@ -339,15 +304,18 @@ items:
   source:
     id: ActivateProduct
     path: ''
-    startLine: 1475
+    startLine: 1728
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nIf a product is disabled in the market, re-enable it.\n"
+  example: []
   syntax:
     content: public static void ActivateProduct(string name)
     parameters:
     - id: name
       type: System.String
+      description: The product to enable.
     content.vb: Public Shared Sub ActivateProduct(name As String)
   overload: Backend.Market.ActivateProduct*
   nameWithType.vb: Market.ActivateProduct(String)
@@ -367,15 +335,18 @@ items:
   source:
     id: DeactivateProduct
     path: ''
-    startLine: 1482
+    startLine: 1737
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nDisable a product from being able to be purchased.\n"
+  example: []
   syntax:
     content: public static void DeactivateProduct(string name)
     parameters:
     - id: name
       type: System.String
+      description: ''
     content.vb: Public Shared Sub DeactivateProduct(name As String)
   overload: Backend.Market.DeactivateProduct*
   nameWithType.vb: Market.DeactivateProduct(String)
@@ -395,17 +366,21 @@ items:
   source:
     id: IsBuyable
     path: ''
-    startLine: 1489
+    startLine: 1747
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nChecks if a product is enabled for purchase.\n"
+  example: []
   syntax:
     content: public static bool IsBuyable(string name)
     parameters:
     - id: name
       type: System.String
+      description: The product&apos;s name.
     return:
       type: System.Boolean
+      description: If the product can be purchased.
     content.vb: Public Shared Function IsBuyable(name As String) As Boolean
   overload: Backend.Market.IsBuyable*
   nameWithType.vb: Market.IsBuyable(String)
@@ -425,17 +400,21 @@ items:
   source:
     id: GetDescription
     path: ''
-    startLine: 1496
+    startLine: 1757
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nGet a product&apos;s description.\n"
+  example: []
   syntax:
     content: public static string GetDescription(string name)
     parameters:
     - id: name
       type: System.String
+      description: The product&apos;s name.
     return:
       type: System.String
+      description: The product&apos;s description.
     content.vb: Public Shared Function GetDescription(name As String) As String
   overload: Backend.Market.GetDescription*
   nameWithType.vb: Market.GetDescription(String)
@@ -509,32 +488,6 @@ references:
   name: UpdateWheatPrice
   nameWithType: Market.UpdateWheatPrice
   fullName: Backend.Market.UpdateWheatPrice
-- uid: Backend.Market.AddProduct*
-  commentId: Overload:Backend.Market.AddProduct
-  name: AddProduct
-  nameWithType: Market.AddProduct
-  fullName: Backend.Market.AddProduct
-- uid: Backend.ProductType
-  commentId: T:Backend.ProductType
-  parent: Backend
-  name: ProductType
-  nameWithType: ProductType
-  fullName: Backend.ProductType
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
-- uid: Backend.Market.RemoveProduct*
-  commentId: Overload:Backend.Market.RemoveProduct
-  name: RemoveProduct
-  nameWithType: Market.RemoveProduct
-  fullName: Backend.Market.RemoveProduct
 - uid: Backend.Market.CanBuyerBuy*
   commentId: Overload:Backend.Market.CanBuyerBuy
   name: CanBuyerBuy
@@ -560,6 +513,16 @@ references:
   name: SetPriceMultiplier
   nameWithType: Market.SetPriceMultiplier
   fullName: Backend.Market.SetPriceMultiplier
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
 - uid: Backend.Market.ActivateProduct*
   commentId: Overload:Backend.Market.ActivateProduct
   name: ActivateProduct

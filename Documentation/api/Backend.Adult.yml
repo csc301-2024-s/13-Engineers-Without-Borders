@@ -11,7 +11,6 @@ items:
   - Backend.Adult.Consumption
   - Backend.Adult.GetLabourPoints
   - Backend.Adult.HasOx
-  - Backend.Adult.LookAfterChild
   langs:
   - csharp
   - vb
@@ -22,10 +21,12 @@ items:
   source:
     id: Adult
     path: ''
-    startLine: 378
+    startLine: 381
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nRepresents an adult worker in a family.\n"
+  example: []
   syntax:
     content: 'public class Adult : FamilyMember'
     content.vb: Public Class Adult Inherits FamilyMember
@@ -51,10 +52,12 @@ items:
   source:
     id: Consumption
     path: ''
-    startLine: 380
+    startLine: 386
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nWheat consumption per year.\n"
+  example: []
   syntax:
     content: public const int Consumption = 10
     return:
@@ -74,10 +77,12 @@ items:
   source:
     id: BaseLabourPoints
     path: ''
-    startLine: 381
+    startLine: 391
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nBase labour points contributed.\n"
+  example: []
   syntax:
     content: public const int BaseLabourPoints = 2
     return:
@@ -97,10 +102,12 @@ items:
   source:
     id: HasOx
     path: ''
-    startLine: 383
+    startLine: 396
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nWhether the adult has an ox.\n"
+  example: []
   syntax:
     content: public bool HasOx { get; }
     parameters: []
@@ -122,17 +129,21 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 387
+    startLine: 403
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nCreates an adult.\n"
+  example: []
   syntax:
     content: public Adult(string First, string Last)
     parameters:
     - id: First
       type: System.String
+      description: First name.
     - id: Last
       type: System.String
+      description: Last name.
     content.vb: Public Sub New(First As String, Last As String)
   overload: Backend.Adult.#ctor*
   nameWithType.vb: Adult.New(String, String)
@@ -152,42 +163,23 @@ items:
   source:
     id: AssignOx
     path: ''
-    startLine: 396
+    startLine: 414
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nAssign or unassign an ox to this adult.\n"
+  example: []
   syntax:
     content: public void AssignOx(bool assigned)
     parameters:
     - id: assigned
       type: System.Boolean
+      description: Whether to assign or unassign.
     content.vb: Public Sub AssignOx(assigned As Boolean)
   overload: Backend.Adult.AssignOx*
   nameWithType.vb: Adult.AssignOx(Boolean)
   fullName.vb: Backend.Adult.AssignOx(Boolean)
   name.vb: AssignOx(Boolean)
-- uid: Backend.Adult.LookAfterChild
-  commentId: M:Backend.Adult.LookAfterChild
-  id: LookAfterChild
-  parent: Backend.Adult
-  langs:
-  - csharp
-  - vb
-  name: LookAfterChild()
-  nameWithType: Adult.LookAfterChild()
-  fullName: Backend.Adult.LookAfterChild()
-  type: Method
-  source:
-    id: LookAfterChild
-    path: ''
-    startLine: 402
-  assemblies:
-  - cs.temp.dll
-  namespace: Backend
-  syntax:
-    content: public void LookAfterChild()
-    content.vb: Public Sub LookAfterChild()
-  overload: Backend.Adult.LookAfterChild*
 - uid: Backend.Adult.GetLabourPoints
   commentId: M:Backend.Adult.GetLabourPoints
   id: GetLabourPoints
@@ -202,14 +194,17 @@ items:
   source:
     id: GetLabourPoints
     path: ''
-    startLine: 408
+    startLine: 423
   assemblies:
   - cs.temp.dll
   namespace: Backend
+  summary: "\nCalculate how many labour points this adult contributes. Doubled if adult has an ox.\n"
+  example: []
   syntax:
     content: public int GetLabourPoints()
     return:
       type: System.Int32
+      description: Labour points contributed.
     content.vb: Public Function GetLabourPoints() As Integer
   overload: Backend.Adult.GetLabourPoints*
 references:
@@ -322,11 +317,6 @@ references:
   name: AssignOx
   nameWithType: Adult.AssignOx
   fullName: Backend.Adult.AssignOx
-- uid: Backend.Adult.LookAfterChild*
-  commentId: Overload:Backend.Adult.LookAfterChild
-  name: LookAfterChild
-  nameWithType: Adult.LookAfterChild
-  fullName: Backend.Adult.LookAfterChild
 - uid: Backend.Adult.GetLabourPoints*
   commentId: Overload:Backend.Adult.GetLabourPoints
   name: GetLabourPoints

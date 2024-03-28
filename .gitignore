@@ -80,6 +80,5 @@ crashlytics-build.properties
 .github/
 
 # docfx stuff
-_site/
 .cache/
 cache/

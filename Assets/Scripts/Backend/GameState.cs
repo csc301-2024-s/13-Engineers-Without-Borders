@@ -216,7 +216,7 @@ namespace Backend
             s_Player.RemoveLabour();
 
             if (s_Year == 1)
-                PopupManager.QueuePopup("Tutorial", "The Market is now open! You can buy or sell tools or make the best out of next year's harvest. You can also select a seed type and fertilizer and apply them to your farm plots.", "Okay");
+                PopupManager.QueuePopup("Tutorial", "The Market is now open! You can buy or sell tools or make the best out of next year's harvest. You can also apply HYC seeds and fertilizer to your farm plots.", "Okay");
 
             if (s_Player.Wheat < 0)
             {

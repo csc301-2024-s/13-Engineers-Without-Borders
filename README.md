@@ -58,7 +58,7 @@ To remove HYC seed or fertilizer from a plot of land, simply select it with the 
 
 After the simulation (after the harvest on the 7th year), there will be a results screen to show your final score. This is followed by some self reflection questions to see how much you've learned.
 
-If you're a contributor, you can read the [technical document](technical-document.md) to learn more about the specifics behind the project, and view our [code documentation](https://csc301-2024-s.github.io/13-Engineers-Without-Borders/api/Global.html) (you can see classes from the Global namespace and the Backend namespace on the left side of the screen).
+If you're a contributor, you can read the [technical document](technical-document.md) to learn more about the specifics behind the project, and view our [code documentation](https://csc301-2024-s.github.io/13-Engineers-Without-Borders/api/Global.html). The scrollbar on the left side is a little janky, so here's the link to the [Backend](https://csc301-2024-s.github.io/13-Engineers-Without-Borders/api/Backend.html) namespace documentation.
 
 You can view/download our demo [here](deliverables/D4/demo-video.mp4).
  

@@ -55,6 +55,7 @@ At the bottom of the market screen is a button that takes you back to the farm m
 
 To remove HYC seed or fertilizer from a plot of land, simply select it with the proper toggle enabled.
 
+Plots by default have regular seed.
 
 After the simulation (after the harvest on the 7th year), there will be a results screen to show your final score. This is followed by some self reflection questions to see how much you've learned.
 
@@ -91,6 +92,8 @@ Communication is done on our Discord server. We say what we're writing and how w
 Access our Trello here: https://trello.com/b/YwVbyUKp/green-revolution  (you may need to request permission).
 
 We TRIED to get a [workflow](https://github.com/marketplace/actions/unity-test-runner) working to automatically test our test suite, but we just couldn't get it to work. Also I think it's actually faster to run the tests in the Unity editor anyway, so there really wasn't much of a point to a workflow.
+
+Luckily we got a workflow working to auto-generate code documentation using docfx.
 
 ## Coding Standards and Guidelines
 We will be adapting https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions .

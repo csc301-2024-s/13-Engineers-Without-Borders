@@ -33,7 +33,12 @@ jobs:
         dotnet-version: 8.x
 
     - run: dotnet tool install -g docfx --version 2.61.0
-    - run: docfx Documentation/docfx.json
+
+    - name: Use README.md as index.md
+      run: cp README.md Documentation/index.md
+
+    - name: Build
+      run: docfx Documentation/docfx.json
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.DisplayTotalWheat
+  commentId: T:Global.DisplayTotalWheat
+  id: DisplayTotalWheat
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: DisplayTotalWheat
+  nameWithType: DisplayTotalWheat
+  fullName: DisplayTotalWheat
+  type: Class
+  source:
+    id: DisplayTotalWheat
+    path: ''
+    startLine: 1984
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class DisplayTotalWheat : MonoBehaviour'
+    content.vb: Public Class DisplayTotalWheat Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

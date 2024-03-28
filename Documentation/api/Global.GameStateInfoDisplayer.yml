@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.GameStateInfoDisplayer
+  commentId: T:Global.GameStateInfoDisplayer
+  id: GameStateInfoDisplayer
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GameStateInfoDisplayer
+  nameWithType: GameStateInfoDisplayer
+  fullName: GameStateInfoDisplayer
+  type: Class
+  source:
+    id: GameStateInfoDisplayer
+    path: ''
+    startLine: 2409
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class GameStateInfoDisplayer : MonoBehaviour'
+    content.vb: Public Class GameStateInfoDisplayer Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

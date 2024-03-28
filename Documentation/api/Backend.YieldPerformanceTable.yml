@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.YieldPerformanceTable
+  commentId: T:Backend.YieldPerformanceTable
+  id: YieldPerformanceTable
+  parent: Backend
+  children:
+  - Backend.YieldPerformanceTable.GetYield(Backend.FarmPlot)
+  langs:
+  - csharp
+  - vb
+  name: YieldPerformanceTable
+  nameWithType: YieldPerformanceTable
+  fullName: Backend.YieldPerformanceTable
+  type: Class
+  source:
+    id: YieldPerformanceTable
+    path: ''
+    startLine: 1774
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nA lookup table that dictates a plot&apos;s wheat yield depending on fertilizer/seed type and weather.\n"
+  example: []
+  syntax:
+    content: public static class YieldPerformanceTable
+    content.vb: Public Module YieldPerformanceTable
+  inheritance:
+  - System.Object
+- uid: Backend.YieldPerformanceTable.GetYield(Backend.FarmPlot)
+  commentId: M:Backend.YieldPerformanceTable.GetYield(Backend.FarmPlot)
+  id: GetYield(Backend.FarmPlot)
+  parent: Backend.YieldPerformanceTable
+  langs:
+  - csharp
+  - vb
+  name: GetYield(FarmPlot)
+  nameWithType: YieldPerformanceTable.GetYield(FarmPlot)
+  fullName: Backend.YieldPerformanceTable.GetYield(Backend.FarmPlot)
+  type: Method
+  source:
+    id: GetYield
+    path: ''
+    startLine: 1792
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nFind expected wheat yield for <code data-dev-comment-type=\"paramref\" class=\"paramref\">plot</code>.\n"
+  example: []
+  syntax:
+    content: public static int GetYield(FarmPlot plot)
+    parameters:
+    - id: plot
+      type: Backend.FarmPlot
+      description: The farm plot whose wheat to calculate.
+    return:
+      type: System.Int32
+      description: The expected wheat yield (before applying multiplier).
+    content.vb: Public Shared Function GetYield(plot As FarmPlot) As Integer
+  overload: Backend.YieldPerformanceTable.GetYield*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Backend.YieldPerformanceTable.GetYield*
+  commentId: Overload:Backend.YieldPerformanceTable.GetYield
+  name: GetYield
+  nameWithType: YieldPerformanceTable.GetYield
+  fullName: Backend.YieldPerformanceTable.GetYield
+- uid: Backend.FarmPlot
+  commentId: T:Backend.FarmPlot
+  parent: Backend
+  name: FarmPlot
+  nameWithType: FarmPlot
+  fullName: Backend.FarmPlot
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

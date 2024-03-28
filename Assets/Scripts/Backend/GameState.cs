@@ -7,15 +7,45 @@ using Random = System.Random;
  */
 namespace Backend
 {
+    /// <summary>
+    /// Represents global game state.
+    /// </summary>
     public static class GameState
     {
-        public const int StartMoney = 500;  // how much money the player starts with
+        /// <summary>
+        /// Starting money of player.
+        /// </summary>
+        public const int StartMoney = 500;
+
+        /// <summary>
+        /// Game year.
+        /// </summary>
         public static int s_Year;
+
+        /// <summary>
+        /// Game phase/season. From 1 to 3.
+        /// </summary>
         public static int s_Phase;
+
+        /// <summary>
+        /// Game weather index. From 1 (best) to 5 (worst).
+        /// </summary>
         public static int s_WeatherIndex;
+
+        /// <summary>
+        /// The player's household object.
+        /// </summary>
         public static Household s_Player;
-        public static Household[] s_Households;  // originally planned to have AI players but not enough time :(
-        public static PopupManager PopupManagerInstance { get; private set; }
+
+        /// <summary>
+        /// A list of all households in the game. We originally wanted to have AI players which is why this is here, but we didn't end up doing that.
+        /// </summary>
+        public static Household[] s_Households;
+
+        /// <summary>
+        /// Array of predefined households that the player can choose from. Learn from our mistakes and don't do this in your own projects,
+        /// load data from a JSON file or something instead.
+        /// </summary>
         public static Household[] s_PredefinedHouseholds = new Household[]
         {
             new Household(StartMoney, "Madhar", 3, 2, 3),
@@ -39,7 +69,10 @@ namespace Backend
         private static int _startingAcresOfLand = 0;
         private static bool _phase1TutorialShown = false;
 
-        // Initialize the game
+        /// <summary>
+        /// Initializes the game, setting year and phase to 0 (this happens before the main gameplay).
+        /// </summary>
+        /// <param name="Player">The household that the player chose.</param>
         public static void Initialize(Household Player)
         {
             // create a COPY of the player
@@ -61,10 +94,10 @@ namespace Backend
             _startingAcresOfLand = Player.Land.Plots.Count;
         }
 
-        // (Year 2+ only) Choose random village event and household event for each household
-        //Read WorkshopSheets/Fate Seeds and Tools Cards.pdf
-        //These can be implemented however you think makes sense; make sure it's scalable (easy to add new events), can affect GameState and other important variables, and Household events should be able to affect specific households
-        //Possible for there to be no village event, or for a household to have no event
+        /// <summary>
+        /// Advance to phase 1, the growing season. (Year 2+ only) Choose random village event and household event for each household, but there might not be one.
+        /// Handle starvation and losing condition if player wheat is in the negatives. Automatically loads phase 2 if you don't have any tubewells.
+        /// </summary>
         public static void AdvanceToPhaseOne()
         {
             // If player's wheat is < 0, remove the first children or adults that cannot be fed
@@ -161,12 +194,18 @@ namespace Backend
             }
         }
 
+        /// <summary>
+        /// Advance to phase 2, the harvest season. Simply sets the phase variable and switches scenes.
+        /// </summary>
         public static void AdvanceToPhaseTwo()
         {
             s_Phase = 2;
             SceneUtils.LoadScene("ManageFarm");  // reload
         }
 
+        /// <summary>
+        /// Advance to phase 3, the planting season. Any hired labour is removed.
+        /// </summary>
         public static void AdvanceToPhaseThree()
         {
             s_Phase = 3;
@@ -177,7 +216,7 @@ namespace Backend
             s_Player.RemoveLabour();
 
             if (s_Year == 1)
-                PopupManager.QueuePopup("Tutorial", "The Market is now open! You can buy or sell tools or make the best out of next year's harvest. You can also select a seed type and fertilizer and apply them to your farm plots.", "Okay");
+                PopupManager.QueuePopup("Tutorial", "The Market is now open! You can buy or sell tools or make the best out of next year's harvest. You can also apply HYC seeds and fertilizer to your farm plots.", "Okay");
 
             if (s_Player.Wheat < 0)
             {
@@ -187,7 +226,10 @@ namespace Backend
             SceneUtils.LoadScene("Market");
         }
 
-        // For the results screen to report your final results at end of game
+        /// <summary>
+        /// Helper method to return game data to be displayed in the results screen at the end.
+        /// </summary>
+        /// <returns>Game data used for results.</returns>
         public static Dictionary<string, int> ResultReport()
         {
             Dictionary<string, int> results = new Dictionary<string, int>();

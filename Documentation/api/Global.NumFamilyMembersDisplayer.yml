@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.NumFamilyMembersDisplayer
+  commentId: T:Global.NumFamilyMembersDisplayer
+  id: NumFamilyMembersDisplayer
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: NumFamilyMembersDisplayer
+  nameWithType: NumFamilyMembersDisplayer
+  fullName: NumFamilyMembersDisplayer
+  type: Class
+  source:
+    id: NumFamilyMembersDisplayer
+    path: ''
+    startLine: 2628
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class NumFamilyMembersDisplayer : MonoBehaviour'
+    content.vb: Public Class NumFamilyMembersDisplayer Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -6,12 +6,24 @@ using Random = UnityEngine.Random;
 
 namespace Backend
 {
+    /// <summary>
+    /// Base class for a family member.
+    /// </summary>
     public class FamilyMember
     {
+        /// <summary>
+        /// First name.
+        /// </summary>
         public string FirstName { get; protected set; }
+
+        /// <summary>
+        /// Last name.
+        /// </summary>
         public string LastName { get; protected set; }
 
-        // adapted from https://www.in.pampers.com/pregnancy/baby-names/article/50-punjabi-baby-names-of-2021
+        /// <summary>
+        /// Static array of Punjab first names. Adapted from <see href="https://www.in.pampers.com/pregnancy/baby-names/article/50-punjabi-baby-names-of-2021">here.</see>
+        /// </summary>
         public static string[] s_FirstNames = {
             "Aagya",
             "Aas",
@@ -111,6 +123,10 @@ namespace Backend
             "Palvinder"
         };
 
+        /// <summary>
+        /// Gets a random first name from s_FirstNames.
+        /// </summary>
+        /// <returns>A random first name.</returns>
         public static string GetRandomFirstName()
         {
             return s_FirstNames[Random.Range(0, s_FirstNames.Length)];

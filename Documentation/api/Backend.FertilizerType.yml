@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.FertilizerType
+  commentId: T:Backend.FertilizerType
+  id: FertilizerType
+  parent: Backend
+  children:
+  - Backend.FertilizerType.High
+  - Backend.FertilizerType.Low
+  - Backend.FertilizerType.None
+  langs:
+  - csharp
+  - vb
+  name: FertilizerType
+  nameWithType: FertilizerType
+  fullName: Backend.FertilizerType
+  type: Enum
+  source:
+    id: FertilizerType
+    path: ''
+    startLine: 829
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nType of fertilizer.\n"
+  example: []
+  syntax:
+    content: public enum FertilizerType
+    content.vb: Public Enum FertilizerType
+- uid: Backend.FertilizerType.None
+  commentId: F:Backend.FertilizerType.None
+  id: None
+  parent: Backend.FertilizerType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: FertilizerType.None
+  fullName: Backend.FertilizerType.None
+  type: Field
+  source:
+    id: None
+    path: ''
+    startLine: 834
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nNo fertilizer.\n"
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Backend.FertilizerType
+- uid: Backend.FertilizerType.Low
+  commentId: F:Backend.FertilizerType.Low
+  id: Low
+  parent: Backend.FertilizerType
+  langs:
+  - csharp
+  - vb
+  name: Low
+  nameWithType: FertilizerType.Low
+  fullName: Backend.FertilizerType.Low
+  type: Field
+  source:
+    id: Low
+    path: ''
+    startLine: 839
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nLow fertilizer.\n"
+  example: []
+  syntax:
+    content: Low = 1
+    return:
+      type: Backend.FertilizerType
+- uid: Backend.FertilizerType.High
+  commentId: F:Backend.FertilizerType.High
+  id: High
+  parent: Backend.FertilizerType
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: FertilizerType.High
+  fullName: Backend.FertilizerType.High
+  type: Field
+  source:
+    id: High
+    path: ''
+    startLine: 844
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nHigh fertilizer.\n"
+  example: []
+  syntax:
+    content: High = 2
+    return:
+      type: Backend.FertilizerType
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: Backend.FertilizerType
+  commentId: T:Backend.FertilizerType
+  parent: Backend
+  name: FertilizerType
+  nameWithType: FertilizerType
+  fullName: Backend.FertilizerType

@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.HouseholdAsset
+  commentId: T:Backend.HouseholdAsset
+  id: HouseholdAsset
+  parent: Backend
+  children:
+  - Backend.HouseholdAsset.Owner
+  - Backend.HouseholdAsset.SetOwner(Backend.Household)
+  langs:
+  - csharp
+  - vb
+  name: HouseholdAsset
+  nameWithType: HouseholdAsset
+  fullName: Backend.HouseholdAsset
+  type: Class
+  source:
+    id: HouseholdAsset
+    path: ''
+    startLine: 1389
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nSomething that a household can own.\n"
+  example: []
+  syntax:
+    content: public class HouseholdAsset
+    content.vb: Public Class HouseholdAsset
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Backend.Family
+  - Backend.Farmland
+  - Backend.FarmPlot
+  - Backend.Inventory
+- uid: Backend.HouseholdAsset.Owner
+  commentId: P:Backend.HouseholdAsset.Owner
+  id: Owner
+  parent: Backend.HouseholdAsset
+  langs:
+  - csharp
+  - vb
+  name: Owner
+  nameWithType: HouseholdAsset.Owner
+  fullName: Backend.HouseholdAsset.Owner
+  type: Property
+  source:
+    id: Owner
+    path: ''
+    startLine: 1394
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nOwner of the asset.\n"
+  example: []
+  syntax:
+    content: public Household Owner { get; }
+    parameters: []
+    return:
+      type: Backend.Household
+    content.vb: Public Property Owner As Household
+  overload: Backend.HouseholdAsset.Owner*
+- uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  commentId: M:Backend.HouseholdAsset.SetOwner(Backend.Household)
+  id: SetOwner(Backend.Household)
+  parent: Backend.HouseholdAsset
+  langs:
+  - csharp
+  - vb
+  name: SetOwner(Household)
+  nameWithType: HouseholdAsset.SetOwner(Household)
+  fullName: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  type: Method
+  source:
+    id: SetOwner
+    path: ''
+    startLine: 1400
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nSet the owner.\n"
+  example: []
+  syntax:
+    content: public virtual void SetOwner(Household owner)
+    parameters:
+    - id: owner
+      type: Backend.Household
+      description: Owner.
+    content.vb: Public Overridable Sub SetOwner(owner As Household)
+  overload: Backend.HouseholdAsset.SetOwner*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Backend.HouseholdAsset.Owner*
+  commentId: Overload:Backend.HouseholdAsset.Owner
+  name: Owner
+  nameWithType: HouseholdAsset.Owner
+  fullName: Backend.HouseholdAsset.Owner
+- uid: Backend.Household
+  commentId: T:Backend.Household
+  parent: Backend
+  name: Household
+  nameWithType: Household
+  fullName: Backend.Household
+- uid: Backend.HouseholdAsset.SetOwner*
+  commentId: Overload:Backend.HouseholdAsset.SetOwner
+  name: SetOwner
+  nameWithType: HouseholdAsset.SetOwner
+  fullName: Backend.HouseholdAsset.SetOwner

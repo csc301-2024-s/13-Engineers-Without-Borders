@@ -5,6 +5,9 @@ using System.Collections.Generic;
  */
 namespace Backend
 {
+    /// <summary>
+    /// A lookup table that dictates a plot's wheat yield depending on fertilizer/seed type and weather.
+    /// </summary>
     public static class YieldPerformanceTable
     {
         private static Dictionary<(int, int, int), int> _table = new Dictionary<(int, int, int), int>
@@ -18,7 +21,11 @@ namespace Backend
                   
             };
 
-        // Accepts seed type, fertilizer amount, and weather index as integers and outputs a integer for expected yield
+        /// <summary>
+        /// Find expected wheat yield for <paramref name="plot"/>.
+        /// </summary>
+        /// <param name="plot">The farm plot whose wheat to calculate.</param>
+        /// <returns>The expected wheat yield (before applying multiplier).</returns>
         public static int GetYield(FarmPlot plot)
         {   
             (int, int, int) key = (plot.GetWeatherEffect(), (int)plot.FertilizerType, (int)plot.SeedType);

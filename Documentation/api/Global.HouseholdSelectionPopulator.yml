@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.HouseholdSelectionPopulator
+  commentId: T:Global.HouseholdSelectionPopulator
+  id: HouseholdSelectionPopulator
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: HouseholdSelectionPopulator
+  nameWithType: HouseholdSelectionPopulator
+  fullName: HouseholdSelectionPopulator
+  type: Class
+  source:
+    id: HouseholdSelectionPopulator
+    path: ''
+    startLine: 2531
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class HouseholdSelectionPopulator : MonoBehaviour'
+    content.vb: Public Class HouseholdSelectionPopulator Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

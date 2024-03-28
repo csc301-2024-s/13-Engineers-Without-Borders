@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.HouseholdOption
+  commentId: T:Global.HouseholdOption
+  id: HouseholdOption
+  parent: Global
+  children:
+  - Global.HouseholdOption.Household
+  langs:
+  - csharp
+  - vb
+  name: HouseholdOption
+  nameWithType: HouseholdOption
+  fullName: HouseholdOption
+  type: Class
+  source:
+    id: HouseholdOption
+    path: ''
+    startLine: 2507
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class HouseholdOption : MonoBehaviour'
+    content.vb: Public Class HouseholdOption Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.HouseholdOption.Household
+  commentId: P:Global.HouseholdOption.Household
+  id: Household
+  parent: Global.HouseholdOption
+  langs:
+  - csharp
+  - vb
+  name: Household
+  nameWithType: HouseholdOption.Household
+  fullName: HouseholdOption.Household
+  type: Property
+  source:
+    id: Household
+    path: ''
+    startLine: 2509
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Household Household { get; set; }
+    parameters: []
+    return:
+      type: Global.Household
+    content.vb: Public Property Household As Household
+  overload: Global.HouseholdOption.Household*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.HouseholdOption.Household*
+  commentId: Overload:Global.HouseholdOption.Household
+  name: Household
+  nameWithType: HouseholdOption.Household
+  fullName: HouseholdOption.Household
+- uid: Global.Household
+  commentId: '!:Global.Household'
+  isExternal: true
+  name: Household
+  nameWithType: Household
+  fullName: Household

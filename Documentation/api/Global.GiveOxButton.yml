@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.GiveOxButton
+  commentId: T:Global.GiveOxButton
+  id: GiveOxButton
+  parent: Global
+  children:
+  - Global.GiveOxButton.Adult
+  langs:
+  - csharp
+  - vb
+  name: GiveOxButton
+  nameWithType: GiveOxButton
+  fullName: GiveOxButton
+  type: Class
+  source:
+    id: GiveOxButton
+    path: ''
+    startLine: 2445
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class GiveOxButton : MonoBehaviour'
+    content.vb: Public Class GiveOxButton Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.GiveOxButton.Adult
+  commentId: P:Global.GiveOxButton.Adult
+  id: Adult
+  parent: Global.GiveOxButton
+  langs:
+  - csharp
+  - vb
+  name: Adult
+  nameWithType: GiveOxButton.Adult
+  fullName: GiveOxButton.Adult
+  type: Property
+  source:
+    id: Adult
+    path: ''
+    startLine: 2447
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Adult Adult { get; set; }
+    parameters: []
+    return:
+      type: Global.Adult
+    content.vb: Public Property Adult As Adult
+  overload: Global.GiveOxButton.Adult*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GiveOxButton.Adult*
+  commentId: Overload:Global.GiveOxButton.Adult
+  name: Adult
+  nameWithType: GiveOxButton.Adult
+  fullName: GiveOxButton.Adult
+- uid: Global.Adult
+  commentId: '!:Global.Adult'
+  isExternal: true
+  name: Adult
+  nameWithType: Adult
+  fullName: Adult

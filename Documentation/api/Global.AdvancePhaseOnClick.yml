@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.AdvancePhaseOnClick
+  commentId: T:Global.AdvancePhaseOnClick
+  id: AdvancePhaseOnClick
+  parent: Global
+  children:
+  - Global.AdvancePhaseOnClick.OnClick
+  langs:
+  - csharp
+  - vb
+  name: AdvancePhaseOnClick
+  nameWithType: AdvancePhaseOnClick
+  fullName: AdvancePhaseOnClick
+  type: Class
+  source:
+    id: AdvancePhaseOnClick
+    path: ''
+    startLine: 1811
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class AdvancePhaseOnClick : MonoBehaviour'
+    content.vb: Public Class AdvancePhaseOnClick Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.AdvancePhaseOnClick.OnClick
+  commentId: M:Global.AdvancePhaseOnClick.OnClick
+  id: OnClick
+  parent: Global.AdvancePhaseOnClick
+  langs:
+  - csharp
+  - vb
+  name: OnClick()
+  nameWithType: AdvancePhaseOnClick.OnClick()
+  fullName: AdvancePhaseOnClick.OnClick()
+  type: Method
+  source:
+    id: OnClick
+    path: ''
+    startLine: 1825
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnClick()
+    content.vb: Public Sub OnClick()
+  overload: Global.AdvancePhaseOnClick.OnClick*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.AdvancePhaseOnClick.OnClick*
+  commentId: Overload:Global.AdvancePhaseOnClick.OnClick
+  name: OnClick
+  nameWithType: AdvancePhaseOnClick.OnClick
+  fullName: AdvancePhaseOnClick.OnClick

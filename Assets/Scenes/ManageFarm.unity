@@ -2411,8 +2411,8 @@ PrefabInstance:
     - target: {fileID: 6918567702051715795, guid: c5be3c1ceaa198746881d1e59a462e07, type: 3}
       propertyPath: description
       value: The Market is now open! You can buy or sell tools or make the best out
-        of next year's harvest. You can also select a seed type and fertilizer and
-        apply them to your farm plots.
+        of next year's harvest. You can also apply HYC seeds and fertilizer to your
+        farm plots. Regular seed is applied by default.
       objectReference: {fileID: 0}
     - target: {fileID: 7362158548265663268, guid: c5be3c1ceaa198746881d1e59a462e07, type: 3}
       propertyPath: m_Pivot.x

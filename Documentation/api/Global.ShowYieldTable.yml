@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ShowYieldTable
+  commentId: T:Global.ShowYieldTable
+  id: ShowYieldTable
+  parent: Global
+  children:
+  - Global.ShowYieldTable.closeYieldTableButton
+  - Global.ShowYieldTable.showYieldTableButton
+  - Global.ShowYieldTable.yieldTable
+  langs:
+  - csharp
+  - vb
+  name: ShowYieldTable
+  nameWithType: ShowYieldTable
+  fullName: ShowYieldTable
+  type: Class
+  source:
+    id: ShowYieldTable
+    path: ''
+    startLine: 2961
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ShowYieldTable : MonoBehaviour'
+    content.vb: Public Class ShowYieldTable Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.ShowYieldTable.yieldTable
+  commentId: F:Global.ShowYieldTable.yieldTable
+  id: yieldTable
+  parent: Global.ShowYieldTable
+  langs:
+  - csharp
+  - vb
+  name: yieldTable
+  nameWithType: ShowYieldTable.yieldTable
+  fullName: ShowYieldTable.yieldTable
+  type: Field
+  source:
+    id: yieldTable
+    path: ''
+    startLine: 2963
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image yieldTable
+    return:
+      type: Global.Image
+    content.vb: Public yieldTable As Image
+- uid: Global.ShowYieldTable.showYieldTableButton
+  commentId: F:Global.ShowYieldTable.showYieldTableButton
+  id: showYieldTableButton
+  parent: Global.ShowYieldTable
+  langs:
+  - csharp
+  - vb
+  name: showYieldTableButton
+  nameWithType: ShowYieldTable.showYieldTableButton
+  fullName: ShowYieldTable.showYieldTableButton
+  type: Field
+  source:
+    id: showYieldTableButton
+    path: ''
+    startLine: 2964
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Button showYieldTableButton
+    return:
+      type: Global.Button
+    content.vb: Public showYieldTableButton As Button
+- uid: Global.ShowYieldTable.closeYieldTableButton
+  commentId: F:Global.ShowYieldTable.closeYieldTableButton
+  id: closeYieldTableButton
+  parent: Global.ShowYieldTable
+  langs:
+  - csharp
+  - vb
+  name: closeYieldTableButton
+  nameWithType: ShowYieldTable.closeYieldTableButton
+  fullName: ShowYieldTable.closeYieldTableButton
+  type: Field
+  source:
+    id: closeYieldTableButton
+    path: ''
+    startLine: 2965
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Button closeYieldTableButton
+    return:
+      type: Global.Button
+    content.vb: Public closeYieldTableButton As Button
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: Global.Button
+  isExternal: true
+  name: Button
+  nameWithType: Button
+  fullName: Button

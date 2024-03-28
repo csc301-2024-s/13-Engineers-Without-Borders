@@ -51,21 +51,6 @@ namespace Backend
             return Children.Count * Child.Consumption + Adults.Count * Adult.Consumption;
         }
 
-        //Grow a child up if he or she reaches 12
-        public void IncrementAge()
-        {
-            for (var i = Children.Count - 1; i > -1; i--)
-            {
-                Children[i].IncrementAge();
-                if (Children[i].Age >= 12)
-                {
-                    Adult NewAdult = Children[i].ToAdult();
-                    Adults.Add(NewAdult);
-                    Children.Remove(Children[i]);
-                }
-            }
-        }
-
         // Count the amount of adults
         public int GetAdultAmount()
         {

@@ -1,0 +1,592 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.Family
+  commentId: T:Backend.Family
+  id: Family
+  parent: Backend
+  children:
+  - Backend.Family.#ctor(System.String,System.Int32,System.Int32)
+  - Backend.Family.Adults
+  - Backend.Family.Children
+  - Backend.Family.CreateAdult
+  - Backend.Family.CreateChild(System.Int32)
+  - Backend.Family.GetAdultAmount
+  - Backend.Family.GetChildrenAmount
+  - Backend.Family.GetHiredWorkerAmount
+  - Backend.Family.GetLabourPoints
+  - Backend.Family.GetTotalConsumption
+  - Backend.Family.HiredWorkers
+  - Backend.Family.Name
+  langs:
+  - csharp
+  - vb
+  name: Family
+  nameWithType: Family
+  fullName: Backend.Family
+  type: Class
+  source:
+    id: Family
+    path: ''
+    startLine: 498
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: 'public class Family : HouseholdAsset'
+    content.vb: Public Class Family Inherits HouseholdAsset
+  inheritance:
+  - System.Object
+  - Backend.HouseholdAsset
+  inheritedMembers:
+  - Backend.HouseholdAsset.Owner
+  - Backend.HouseholdAsset.SetOwner(Backend.Household)
+- uid: Backend.Family.Name
+  commentId: P:Backend.Family.Name
+  id: Name
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Family.Name
+  fullName: Backend.Family.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 500
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Backend.Family.Name*
+- uid: Backend.Family.Adults
+  commentId: P:Backend.Family.Adults
+  id: Adults
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: Adults
+  nameWithType: Family.Adults
+  fullName: Backend.Family.Adults
+  type: Property
+  source:
+    id: Adults
+    path: ''
+    startLine: 502
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public List<Adult> Adults { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Backend.Adult}
+    content.vb: Public ReadOnly Property Adults As List(Of Adult)
+  overload: Backend.Family.Adults*
+- uid: Backend.Family.Children
+  commentId: P:Backend.Family.Children
+  id: Children
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: Children
+  nameWithType: Family.Children
+  fullName: Backend.Family.Children
+  type: Property
+  source:
+    id: Children
+    path: ''
+    startLine: 503
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public List<Child> Children { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Backend.Child}
+    content.vb: Public ReadOnly Property Children As List(Of Child)
+  overload: Backend.Family.Children*
+- uid: Backend.Family.HiredWorkers
+  commentId: P:Backend.Family.HiredWorkers
+  id: HiredWorkers
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: HiredWorkers
+  nameWithType: Family.HiredWorkers
+  fullName: Backend.Family.HiredWorkers
+  type: Property
+  source:
+    id: HiredWorkers
+    path: ''
+    startLine: 504
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public List<Adult> HiredWorkers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Backend.Adult}
+    content.vb: Public ReadOnly Property HiredWorkers As List(Of Adult)
+  overload: Backend.Family.HiredWorkers*
+- uid: Backend.Family.#ctor(System.String,System.Int32,System.Int32)
+  commentId: M:Backend.Family.#ctor(System.String,System.Int32,System.Int32)
+  id: '#ctor(System.String,System.Int32,System.Int32)'
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: Family(string, int, int)
+  nameWithType: Family.Family(string, int, int)
+  fullName: Backend.Family.Family(string, int, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 507
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public Family(string FamilyName, int NumChildren, int numAdults)
+    parameters:
+    - id: FamilyName
+      type: System.String
+    - id: NumChildren
+      type: System.Int32
+    - id: numAdults
+      type: System.Int32
+    content.vb: Public Sub New(FamilyName As String, NumChildren As Integer, numAdults As Integer)
+  overload: Backend.Family.#ctor*
+  nameWithType.vb: Family.New(String, Integer, Integer)
+  fullName.vb: Backend.Family.New(String, Integer, Integer)
+  name.vb: New(String, Integer, Integer)
+- uid: Backend.Family.CreateChild(System.Int32)
+  commentId: M:Backend.Family.CreateChild(System.Int32)
+  id: CreateChild(System.Int32)
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: CreateChild(int)
+  nameWithType: Family.CreateChild(int)
+  fullName: Backend.Family.CreateChild(int)
+  type: Method
+  source:
+    id: CreateChild
+    path: ''
+    startLine: 522
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public void CreateChild(int age = -1)
+    parameters:
+    - id: age
+      type: System.Int32
+    content.vb: Public Sub CreateChild(age As Integer = -1)
+  overload: Backend.Family.CreateChild*
+  nameWithType.vb: Family.CreateChild(Integer)
+  fullName.vb: Backend.Family.CreateChild(Integer)
+  name.vb: CreateChild(Integer)
+- uid: Backend.Family.CreateAdult
+  commentId: M:Backend.Family.CreateAdult
+  id: CreateAdult
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: CreateAdult()
+  nameWithType: Family.CreateAdult()
+  fullName: Backend.Family.CreateAdult()
+  type: Method
+  source:
+    id: CreateAdult
+    path: ''
+    startLine: 529
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public void CreateAdult()
+    content.vb: Public Sub CreateAdult()
+  overload: Backend.Family.CreateAdult*
+- uid: Backend.Family.GetTotalConsumption
+  commentId: M:Backend.Family.GetTotalConsumption
+  id: GetTotalConsumption
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: GetTotalConsumption()
+  nameWithType: Family.GetTotalConsumption()
+  fullName: Backend.Family.GetTotalConsumption()
+  type: Method
+  source:
+    id: GetTotalConsumption
+    path: ''
+    startLine: 536
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public int GetTotalConsumption()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetTotalConsumption() As Integer
+  overload: Backend.Family.GetTotalConsumption*
+- uid: Backend.Family.GetAdultAmount
+  commentId: M:Backend.Family.GetAdultAmount
+  id: GetAdultAmount
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: GetAdultAmount()
+  nameWithType: Family.GetAdultAmount()
+  fullName: Backend.Family.GetAdultAmount()
+  type: Method
+  source:
+    id: GetAdultAmount
+    path: ''
+    startLine: 542
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public int GetAdultAmount()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetAdultAmount() As Integer
+  overload: Backend.Family.GetAdultAmount*
+- uid: Backend.Family.GetChildrenAmount
+  commentId: M:Backend.Family.GetChildrenAmount
+  id: GetChildrenAmount
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: GetChildrenAmount()
+  nameWithType: Family.GetChildrenAmount()
+  fullName: Backend.Family.GetChildrenAmount()
+  type: Method
+  source:
+    id: GetChildrenAmount
+    path: ''
+    startLine: 548
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public int GetChildrenAmount()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetChildrenAmount() As Integer
+  overload: Backend.Family.GetChildrenAmount*
+- uid: Backend.Family.GetHiredWorkerAmount
+  commentId: M:Backend.Family.GetHiredWorkerAmount
+  id: GetHiredWorkerAmount
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: GetHiredWorkerAmount()
+  nameWithType: Family.GetHiredWorkerAmount()
+  fullName: Backend.Family.GetHiredWorkerAmount()
+  type: Method
+  source:
+    id: GetHiredWorkerAmount
+    path: ''
+    startLine: 553
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public int GetHiredWorkerAmount()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetHiredWorkerAmount() As Integer
+  overload: Backend.Family.GetHiredWorkerAmount*
+- uid: Backend.Family.GetLabourPoints
+  commentId: M:Backend.Family.GetLabourPoints
+  id: GetLabourPoints
+  parent: Backend.Family
+  langs:
+  - csharp
+  - vb
+  name: GetLabourPoints()
+  nameWithType: Family.GetLabourPoints()
+  fullName: Backend.Family.GetLabourPoints()
+  type: Method
+  source:
+    id: GetLabourPoints
+    path: ''
+    startLine: 559
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  syntax:
+    content: public int GetLabourPoints()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetLabourPoints() As Integer
+  overload: Backend.Family.GetLabourPoints*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Backend.HouseholdAsset
+  commentId: T:Backend.HouseholdAsset
+  parent: Backend
+  name: HouseholdAsset
+  nameWithType: HouseholdAsset
+  fullName: Backend.HouseholdAsset
+- uid: Backend.HouseholdAsset.Owner
+  commentId: P:Backend.HouseholdAsset.Owner
+  parent: Backend.HouseholdAsset
+  name: Owner
+  nameWithType: HouseholdAsset.Owner
+  fullName: Backend.HouseholdAsset.Owner
+- uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  commentId: M:Backend.HouseholdAsset.SetOwner(Backend.Household)
+  parent: Backend.HouseholdAsset
+  name: SetOwner(Household)
+  nameWithType: HouseholdAsset.SetOwner(Household)
+  fullName: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  spec.csharp:
+  - uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+    name: SetOwner
+  - name: (
+  - uid: Backend.Household
+    name: Household
+  - name: )
+  spec.vb:
+  - uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+    name: SetOwner
+  - name: (
+  - uid: Backend.Household
+    name: Household
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Backend.Family.Name*
+  commentId: Overload:Backend.Family.Name
+  name: Name
+  nameWithType: Family.Name
+  fullName: Backend.Family.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Backend.Family.Adults*
+  commentId: Overload:Backend.Family.Adults
+  name: Adults
+  nameWithType: Family.Adults
+  fullName: Backend.Family.Adults
+- uid: System.Collections.Generic.List{Backend.Adult}
+  commentId: T:System.Collections.Generic.List{Backend.Adult}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Adult>
+  nameWithType: List<Adult>
+  fullName: System.Collections.Generic.List<Backend.Adult>
+  nameWithType.vb: List(Of Adult)
+  fullName.vb: System.Collections.Generic.List(Of Backend.Adult)
+  name.vb: List(Of Adult)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Backend.Adult
+    name: Adult
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Backend.Adult
+    name: Adult
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+- uid: Backend.Family.Children*
+  commentId: Overload:Backend.Family.Children
+  name: Children
+  nameWithType: Family.Children
+  fullName: Backend.Family.Children
+- uid: System.Collections.Generic.List{Backend.Child}
+  commentId: T:System.Collections.Generic.List{Backend.Child}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Child>
+  nameWithType: List<Child>
+  fullName: System.Collections.Generic.List<Backend.Child>
+  nameWithType.vb: List(Of Child)
+  fullName.vb: System.Collections.Generic.List(Of Backend.Child)
+  name.vb: List(Of Child)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Backend.Child
+    name: Child
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Backend.Child
+    name: Child
+  - name: )
+- uid: Backend.Family.HiredWorkers*
+  commentId: Overload:Backend.Family.HiredWorkers
+  name: HiredWorkers
+  nameWithType: Family.HiredWorkers
+  fullName: Backend.Family.HiredWorkers
+- uid: Backend.Family.#ctor*
+  commentId: Overload:Backend.Family.#ctor
+  name: Family
+  nameWithType: Family.Family
+  fullName: Backend.Family.Family
+  nameWithType.vb: Family.New
+  fullName.vb: Backend.Family.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Backend.Family.CreateChild*
+  commentId: Overload:Backend.Family.CreateChild
+  name: CreateChild
+  nameWithType: Family.CreateChild
+  fullName: Backend.Family.CreateChild
+- uid: Backend.Family.CreateAdult*
+  commentId: Overload:Backend.Family.CreateAdult
+  name: CreateAdult
+  nameWithType: Family.CreateAdult
+  fullName: Backend.Family.CreateAdult
+- uid: Backend.Family.GetTotalConsumption*
+  commentId: Overload:Backend.Family.GetTotalConsumption
+  name: GetTotalConsumption
+  nameWithType: Family.GetTotalConsumption
+  fullName: Backend.Family.GetTotalConsumption
+- uid: Backend.Family.GetAdultAmount*
+  commentId: Overload:Backend.Family.GetAdultAmount
+  name: GetAdultAmount
+  nameWithType: Family.GetAdultAmount
+  fullName: Backend.Family.GetAdultAmount
+- uid: Backend.Family.GetChildrenAmount*
+  commentId: Overload:Backend.Family.GetChildrenAmount
+  name: GetChildrenAmount
+  nameWithType: Family.GetChildrenAmount
+  fullName: Backend.Family.GetChildrenAmount
+- uid: Backend.Family.GetHiredWorkerAmount*
+  commentId: Overload:Backend.Family.GetHiredWorkerAmount
+  name: GetHiredWorkerAmount
+  nameWithType: Family.GetHiredWorkerAmount
+  fullName: Backend.Family.GetHiredWorkerAmount
+- uid: Backend.Family.GetLabourPoints*
+  commentId: Overload:Backend.Family.GetLabourPoints
+  name: GetLabourPoints
+  nameWithType: Family.GetLabourPoints
+  fullName: Backend.Family.GetLabourPoints

@@ -1,0 +1,365 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.FarmManager
+  commentId: T:Global.FarmManager
+  id: FarmManager
+  parent: Global
+  children:
+  - Global.FarmManager.ClearSelectedCells
+  - Global.FarmManager.HarvestLabour
+  - Global.FarmManager.HarvestSelectedCells
+  - Global.FarmManager.IrrigateSelectedCells
+  - Global.FarmManager.IrrigationLabour
+  - Global.FarmManager.LabourPoints
+  - Global.FarmManager.SelectedCells
+  - Global.FarmManager.SelectedTool
+  langs:
+  - csharp
+  - vb
+  name: FarmManager
+  nameWithType: FarmManager
+  fullName: FarmManager
+  type: Class
+  source:
+    id: FarmManager
+    path: ''
+    startLine: 2128
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class FarmManager : MonoBehaviour'
+    content.vb: Public Class FarmManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.FarmManager.SelectedTool
+  commentId: P:Global.FarmManager.SelectedTool
+  id: SelectedTool
+  parent: Global.FarmManager
+  langs:
+  - csharp
+  - vb
+  name: SelectedTool
+  nameWithType: FarmManager.SelectedTool
+  fullName: FarmManager.SelectedTool
+  type: Property
+  source:
+    id: SelectedTool
+    path: ''
+    startLine: 2130
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static string SelectedTool { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property SelectedTool As String
+  overload: Global.FarmManager.SelectedTool*
+- uid: Global.FarmManager.SelectedCells
+  commentId: F:Global.FarmManager.SelectedCells
+  id: SelectedCells
+  parent: Global.FarmManager
+  langs:
+  - csharp
+  - vb
+  name: SelectedCells
+  nameWithType: FarmManager.SelectedCells
+  fullName: FarmManager.SelectedCells
+  type: Field
+  source:
+    id: SelectedCells
+    path: ''
+    startLine: 2132
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static List<FarmPlotCell> SelectedCells
+    return:
+      type: System.Collections.Generic.List{FarmPlotCell}
+    content.vb: Public Shared SelectedCells As List(Of FarmPlotCell)
+- uid: Global.FarmManager.IrrigationLabour
+  commentId: F:Global.FarmManager.IrrigationLabour
+  id: IrrigationLabour
+  parent: Global.FarmManager
+  langs:
+  - csharp
+  - vb
+  name: IrrigationLabour
+  nameWithType: FarmManager.IrrigationLabour
+  fullName: FarmManager.IrrigationLabour
+  type: Field
+  source:
+    id: IrrigationLabour
+    path: ''
+    startLine: 2134
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public const int IrrigationLabour = 2
+    return:
+      type: System.Int32
+    content.vb: Public Const IrrigationLabour As Integer = 2
+- uid: Global.FarmManager.HarvestLabour
+  commentId: F:Global.FarmManager.HarvestLabour
+  id: HarvestLabour
+  parent: Global.FarmManager
+  langs:
+  - csharp
+  - vb
+  name: HarvestLabour
+  nameWithType: FarmManager.HarvestLabour
+  fullName: FarmManager.HarvestLabour
+  type: Field
+  source:
+    id: HarvestLabour
+    path: ''
+    startLine: 2135
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public const int HarvestLabour = 1
+    return:
+      type: System.Int32
+    content.vb: Public Const HarvestLabour As Integer = 1
+- uid: Global.FarmManager.LabourPoints
+  commentId: P:Global.FarmManager.LabourPoints
+  id: LabourPoints
+  parent: Global.FarmManager
+  langs:
+  - csharp
+  - vb
+  name: LabourPoints
+  nameWithType: FarmManager.LabourPoints
+  fullName: FarmManager.LabourPoints
+  type: Property
+  source:
+    id: LabourPoints
+    path: ''
+    startLine: 2137
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static int LabourPoints { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared Property LabourPoints As Integer
+  overload: Global.FarmManager.LabourPoints*
+- uid: Global.FarmManager.HarvestSelectedCells
+  commentId: M:Global.FarmManager.HarvestSelectedCells
+  id: HarvestSelectedCells
+  parent: Global.FarmManager
+  langs:
+  - csharp
+  - vb
+  name: HarvestSelectedCells()
+  nameWithType: FarmManager.HarvestSelectedCells()
+  fullName: FarmManager.HarvestSelectedCells()
+  type: Method
+  source:
+    id: HarvestSelectedCells
+    path: ''
+    startLine: 2150
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static void HarvestSelectedCells()
+    content.vb: Public Shared Sub HarvestSelectedCells()
+  overload: Global.FarmManager.HarvestSelectedCells*
+- uid: Global.FarmManager.IrrigateSelectedCells
+  commentId: M:Global.FarmManager.IrrigateSelectedCells
+  id: IrrigateSelectedCells
+  parent: Global.FarmManager
+  langs:
+  - csharp
+  - vb
+  name: IrrigateSelectedCells()
+  nameWithType: FarmManager.IrrigateSelectedCells()
+  fullName: FarmManager.IrrigateSelectedCells()
+  type: Method
+  source:
+    id: IrrigateSelectedCells
+    path: ''
+    startLine: 2180
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static void IrrigateSelectedCells()
+    content.vb: Public Shared Sub IrrigateSelectedCells()
+  overload: Global.FarmManager.IrrigateSelectedCells*
+- uid: Global.FarmManager.ClearSelectedCells
+  commentId: M:Global.FarmManager.ClearSelectedCells
+  id: ClearSelectedCells
+  parent: Global.FarmManager
+  langs:
+  - csharp
+  - vb
+  name: ClearSelectedCells()
+  nameWithType: FarmManager.ClearSelectedCells()
+  fullName: FarmManager.ClearSelectedCells()
+  type: Method
+  source:
+    id: ClearSelectedCells
+    path: ''
+    startLine: 2190
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static void ClearSelectedCells()
+    content.vb: Public Shared Sub ClearSelectedCells()
+  overload: Global.FarmManager.ClearSelectedCells*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.FarmManager.SelectedTool*
+  commentId: Overload:Global.FarmManager.SelectedTool
+  name: SelectedTool
+  nameWithType: FarmManager.SelectedTool
+  fullName: FarmManager.SelectedTool
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.List{FarmPlotCell}
+  commentId: T:System.Collections.Generic.List{FarmPlotCell}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FarmPlotCell>
+  nameWithType: List<FarmPlotCell>
+  fullName: System.Collections.Generic.List<FarmPlotCell>
+  nameWithType.vb: List(Of FarmPlotCell)
+  fullName.vb: System.Collections.Generic.List(Of FarmPlotCell)
+  name.vb: List(Of FarmPlotCell)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.FarmPlotCell
+    name: FarmPlotCell
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.FarmPlotCell
+    name: FarmPlotCell
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.FarmManager.LabourPoints*
+  commentId: Overload:Global.FarmManager.LabourPoints
+  name: LabourPoints
+  nameWithType: FarmManager.LabourPoints
+  fullName: FarmManager.LabourPoints
+- uid: Global.FarmManager.HarvestSelectedCells*
+  commentId: Overload:Global.FarmManager.HarvestSelectedCells
+  name: HarvestSelectedCells
+  nameWithType: FarmManager.HarvestSelectedCells
+  fullName: FarmManager.HarvestSelectedCells
+- uid: Global.FarmManager.IrrigateSelectedCells*
+  commentId: Overload:Global.FarmManager.IrrigateSelectedCells
+  name: IrrigateSelectedCells
+  nameWithType: FarmManager.IrrigateSelectedCells
+  fullName: FarmManager.IrrigateSelectedCells
+- uid: Global.FarmManager.ClearSelectedCells*
+  commentId: Overload:Global.FarmManager.ClearSelectedCells
+  name: ClearSelectedCells
+  nameWithType: FarmManager.ClearSelectedCells
+  fullName: FarmManager.ClearSelectedCells

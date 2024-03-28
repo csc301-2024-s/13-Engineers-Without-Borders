@@ -75,3 +75,11 @@ crashlytics-build.properties
 
 # Ignore config files
 .gitconfig
+
+# Github workflows
+.github/
+
+# docfx stuff
+_site/
+.cache/
+cache/

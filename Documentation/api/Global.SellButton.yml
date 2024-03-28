@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.SellButton
+  commentId: T:Global.SellButton
+  id: SellButton
+  parent: Global
+  children:
+  - Global.SellButton.OnClick
+  langs:
+  - csharp
+  - vb
+  name: SellButton
+  nameWithType: SellButton
+  fullName: SellButton
+  type: Class
+  source:
+    id: SellButton
+    path: ''
+    startLine: 2867
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class SellButton : MonoBehaviour'
+    content.vb: Public Class SellButton Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.SellButton.OnClick
+  commentId: M:Global.SellButton.OnClick
+  id: OnClick
+  parent: Global.SellButton
+  langs:
+  - csharp
+  - vb
+  name: OnClick()
+  nameWithType: SellButton.OnClick()
+  fullName: SellButton.OnClick()
+  type: Method
+  source:
+    id: OnClick
+    path: ''
+    startLine: 2890
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnClick()
+    content.vb: Public Sub OnClick()
+  overload: Global.SellButton.OnClick*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.SellButton.OnClick*
+  commentId: Overload:Global.SellButton.OnClick
+  name: OnClick
+  nameWithType: SellButton.OnClick
+  fullName: SellButton.OnClick

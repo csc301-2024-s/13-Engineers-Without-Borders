@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ShowFamilyMembers
+  commentId: T:Global.ShowFamilyMembers
+  id: ShowFamilyMembers
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ShowFamilyMembers
+  nameWithType: ShowFamilyMembers
+  fullName: ShowFamilyMembers
+  type: Class
+  source:
+    id: ShowFamilyMembers
+    path: ''
+    startLine: 2901
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ShowFamilyMembers : MonoBehaviour'
+    content.vb: Public Class ShowFamilyMembers Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

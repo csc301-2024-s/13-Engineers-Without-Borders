@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ShowPopupOnClick
+  commentId: T:Global.ShowPopupOnClick
+  id: ShowPopupOnClick
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ShowPopupOnClick
+  nameWithType: ShowPopupOnClick
+  fullName: ShowPopupOnClick
+  type: Class
+  source:
+    id: ShowPopupOnClick
+    path: ''
+    startLine: 2925
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ShowPopupOnClick : MonoBehaviour'
+    content.vb: Public Class ShowPopupOnClick Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

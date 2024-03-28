@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ToggleIfHasProduct
+  commentId: T:Global.ToggleIfHasProduct
+  id: ToggleIfHasProduct
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ToggleIfHasProduct
+  nameWithType: ToggleIfHasProduct
+  fullName: ToggleIfHasProduct
+  type: Class
+  source:
+    id: ToggleIfHasProduct
+    path: ''
+    startLine: 3028
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ToggleIfHasProduct : MonoBehaviour'
+    content.vb: Public Class ToggleIfHasProduct Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

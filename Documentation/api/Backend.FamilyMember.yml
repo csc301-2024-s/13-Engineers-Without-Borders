@@ -1,0 +1,208 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.FamilyMember
+  commentId: T:Backend.FamilyMember
+  id: FamilyMember
+  parent: Backend
+  children:
+  - Backend.FamilyMember.FirstName
+  - Backend.FamilyMember.GetRandomFirstName
+  - Backend.FamilyMember.LastName
+  - Backend.FamilyMember.s_FirstNames
+  langs:
+  - csharp
+  - vb
+  name: FamilyMember
+  nameWithType: FamilyMember
+  fullName: Backend.FamilyMember
+  type: Class
+  source:
+    id: FamilyMember
+    path: ''
+    startLine: 579
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nBase class for a family member.\n"
+  example: []
+  syntax:
+    content: public class FamilyMember
+    content.vb: Public Class FamilyMember
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Backend.Adult
+  - Backend.Child
+- uid: Backend.FamilyMember.FirstName
+  commentId: P:Backend.FamilyMember.FirstName
+  id: FirstName
+  parent: Backend.FamilyMember
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: FamilyMember.FirstName
+  fullName: Backend.FamilyMember.FirstName
+  type: Property
+  source:
+    id: FirstName
+    path: ''
+    startLine: 584
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nFirst name.\n"
+  example: []
+  syntax:
+    content: public string FirstName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: Backend.FamilyMember.FirstName*
+- uid: Backend.FamilyMember.LastName
+  commentId: P:Backend.FamilyMember.LastName
+  id: LastName
+  parent: Backend.FamilyMember
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: FamilyMember.LastName
+  fullName: Backend.FamilyMember.LastName
+  type: Property
+  source:
+    id: LastName
+    path: ''
+    startLine: 589
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nLast name.\n"
+  example: []
+  syntax:
+    content: public string LastName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: Backend.FamilyMember.LastName*
+- uid: Backend.FamilyMember.s_FirstNames
+  commentId: F:Backend.FamilyMember.s_FirstNames
+  id: s_FirstNames
+  parent: Backend.FamilyMember
+  langs:
+  - csharp
+  - vb
+  name: s_FirstNames
+  nameWithType: FamilyMember.s_FirstNames
+  fullName: Backend.FamilyMember.s_FirstNames
+  type: Field
+  source:
+    id: s_FirstNames
+    path: ''
+    startLine: 594
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nStatic array of Punjab first names. Adapted from <a href=\"https://www.in.pampers.com/pregnancy/baby-names/article/50-punjabi-baby-names-of-2021\">here.</a>\n"
+  example: []
+  syntax:
+    content: public static string[] s_FirstNames
+    return:
+      type: System.String[]
+    content.vb: Public Shared s_FirstNames As String()
+- uid: Backend.FamilyMember.GetRandomFirstName
+  commentId: M:Backend.FamilyMember.GetRandomFirstName
+  id: GetRandomFirstName
+  parent: Backend.FamilyMember
+  langs:
+  - csharp
+  - vb
+  name: GetRandomFirstName()
+  nameWithType: FamilyMember.GetRandomFirstName()
+  fullName: Backend.FamilyMember.GetRandomFirstName()
+  type: Method
+  source:
+    id: GetRandomFirstName
+    path: ''
+    startLine: 697
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nGets a random first name from s_FirstNames.\n"
+  example: []
+  syntax:
+    content: public static string GetRandomFirstName()
+    return:
+      type: System.String
+      description: A random first name.
+    content.vb: Public Shared Function GetRandomFirstName() As String
+  overload: Backend.FamilyMember.GetRandomFirstName*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Backend.FamilyMember.FirstName*
+  commentId: Overload:Backend.FamilyMember.FirstName
+  name: FirstName
+  nameWithType: FamilyMember.FirstName
+  fullName: Backend.FamilyMember.FirstName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Backend.FamilyMember.LastName*
+  commentId: Overload:Backend.FamilyMember.LastName
+  name: LastName
+  nameWithType: FamilyMember.LastName
+  fullName: Backend.FamilyMember.LastName
+- uid: System.String[]
+  isExternal: true
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Backend.FamilyMember.GetRandomFirstName*
+  commentId: Overload:Backend.FamilyMember.GetRandomFirstName
+  name: GetRandomFirstName
+  nameWithType: FamilyMember.GetRandomFirstName
+  fullName: Backend.FamilyMember.GetRandomFirstName

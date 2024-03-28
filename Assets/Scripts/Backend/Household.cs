@@ -5,15 +5,44 @@
 
 namespace Backend
 {
+    /// <summary>
+    /// A household/player in the game.
+    /// </summary>
     public class Household
     {
+        /// <summary>
+        /// This household's land.
+        /// </summary>
         public Farmland Land { get; }
+
+        /// <summary>
+        /// This household's money.
+        /// </summary>
         public int Money { get; set; }
+
+        /// <summary>
+        /// This household's family.
+        /// </summary>
         public Family Family { get; }
+
+        /// <summary>
+        /// This household's inventory of items.
+        /// </summary>
         public Inventory Inventory { get; }
+
+        /// <summary>
+        /// This household's wheat.
+        /// </summary>
         public int Wheat { get; set; }
 
-        //Constructor for this class
+        /// <summary>
+        /// Create a household with the specified parameters.
+        /// </summary>
+        /// <param name="startMoney">Starting money.</param>
+        /// <param name="familyName">Family name. Every family member has this as their last name.</param>
+        /// <param name="numChildren">Number of children in family.</param>
+        /// <param name="numAdults">Number of adults in family.</param>
+        /// <param name="numPlots">Number of plots in farmland.</param>
         public Household(int startMoney, string familyName, int numChildren, int numAdults, int numPlots)
         {
             Money = startMoney;
@@ -27,33 +56,18 @@ namespace Backend
             Land.SetOwner(this);
         }
 
-        /*
-         * Calculates the net wheat yield of the household after consumption and updates the wheat value accordingly
-         * Note that the wheat value can be negative, which will indicate starvation in phase 3
-         */
-        public void CalculateRemainingYield()
-        {
-            int totalYield = Land.GetTotalYield();
-            int totalConsumption = Family.GetTotalConsumption();
-            Wheat = totalYield - totalConsumption;
-
-            // TODO: eventually need to factor out consumption so we can display it to the user
-        }
-
-        // If the farmland is harvestable, calculate net wheat yield and set canBeHarvested to false;
-        public void HarvestCrops()
-        {
-            CalculateRemainingYield();
-        }
-
-        // Hire an adult worker to the family for one year
+        /// <summary>
+        /// Creates an adult named "Hired Worker", to be removed from the household after a year.
+        /// </summary>
         public void HireLabour()
         {
             Adult adult = new Adult("Hired", "Worker");
             Family.HiredWorkers.Add(adult);
         }
 
-        // Remove all hired workers from the family
+        /// <summary>
+        /// Remove all hired labour from this family.
+        /// </summary>
         public void RemoveLabour()
         {
             foreach (Adult worker in Family.HiredWorkers) 

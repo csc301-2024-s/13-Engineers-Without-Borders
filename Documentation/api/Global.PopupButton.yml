@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PopupButton
+  commentId: T:Global.PopupButton
+  id: PopupButton
+  parent: Global
+  children:
+  - Global.PopupButton.OnButtonClick(ClickEvent)
+  langs:
+  - csharp
+  - vb
+  name: PopupButton
+  nameWithType: PopupButton
+  fullName: PopupButton
+  type: Class
+  source:
+    id: PopupButton
+    path: ''
+    startLine: 233
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PopupButton : MonoBehaviour'
+    content.vb: Public Class PopupButton Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.PopupButton.OnButtonClick(ClickEvent)
+  commentId: M:Global.PopupButton.OnButtonClick(ClickEvent)
+  id: OnButtonClick(ClickEvent)
+  parent: Global.PopupButton
+  langs:
+  - csharp
+  - vb
+  name: OnButtonClick(ClickEvent)
+  nameWithType: PopupButton.OnButtonClick(ClickEvent)
+  fullName: PopupButton.OnButtonClick(ClickEvent)
+  type: Method
+  source:
+    id: OnButtonClick
+    path: ''
+    startLine: 243
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnButtonClick(ClickEvent evt)
+    parameters:
+    - id: evt
+      type: Global.ClickEvent
+    content.vb: Public Sub OnButtonClick(evt As ClickEvent)
+  overload: Global.PopupButton.OnButtonClick*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.PopupButton.OnButtonClick*
+  commentId: Overload:Global.PopupButton.OnButtonClick
+  name: OnButtonClick
+  nameWithType: PopupButton.OnButtonClick
+  fullName: PopupButton.OnButtonClick
+- uid: Global.ClickEvent
+  commentId: '!:Global.ClickEvent'
+  isExternal: true
+  name: ClickEvent
+  nameWithType: ClickEvent
+  fullName: ClickEvent

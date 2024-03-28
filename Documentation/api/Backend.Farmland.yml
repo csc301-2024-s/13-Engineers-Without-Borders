@@ -1,0 +1,481 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.Farmland
+  commentId: T:Backend.Farmland
+  id: Farmland
+  parent: Backend
+  children:
+  - Backend.Farmland.#ctor(System.Int32)
+  - Backend.Farmland.AddPlot
+  - Backend.Farmland.ClearPlots
+  - Backend.Farmland.GetTotalYield
+  - Backend.Farmland.MaxPlots
+  - Backend.Farmland.Plots
+  - Backend.Farmland.ResetIrrigation
+  - Backend.Farmland.SetOwner(Backend.Household)
+  - Backend.Farmland.SetYieldMultiplier(System.Single)
+  langs:
+  - csharp
+  - vb
+  name: Farmland
+  nameWithType: Farmland
+  fullName: Backend.Farmland
+  type: Class
+  source:
+    id: Farmland
+    path: ''
+    startLine: 713
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nA player&apos;s farmland.\n"
+  example: []
+  syntax:
+    content: 'public class Farmland : HouseholdAsset'
+    content.vb: Public Class Farmland Inherits HouseholdAsset
+  inheritance:
+  - System.Object
+  - Backend.HouseholdAsset
+  inheritedMembers:
+  - Backend.HouseholdAsset.Owner
+- uid: Backend.Farmland.MaxPlots
+  commentId: F:Backend.Farmland.MaxPlots
+  id: MaxPlots
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: MaxPlots
+  nameWithType: Farmland.MaxPlots
+  fullName: Backend.Farmland.MaxPlots
+  type: Field
+  source:
+    id: MaxPlots
+    path: ''
+    startLine: 718
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nThe maximum number of plots a player can have.\n"
+  example: []
+  syntax:
+    content: public const int MaxPlots = 16
+    return:
+      type: System.Int32
+    content.vb: Public Const MaxPlots As Integer = 16
+- uid: Backend.Farmland.Plots
+  commentId: F:Backend.Farmland.Plots
+  id: Plots
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: Plots
+  nameWithType: Farmland.Plots
+  fullName: Backend.Farmland.Plots
+  type: Field
+  source:
+    id: Plots
+    path: ''
+    startLine: 723
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nThe list of farm plots.\n"
+  example: []
+  syntax:
+    content: public List<FarmPlot> Plots
+    return:
+      type: System.Collections.Generic.List{Backend.FarmPlot}
+    content.vb: Public Plots As List(Of FarmPlot)
+- uid: Backend.Farmland.#ctor(System.Int32)
+  commentId: M:Backend.Farmland.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: Farmland(int)
+  nameWithType: Farmland.Farmland(int)
+  fullName: Backend.Farmland.Farmland(int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 729
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nInitializes a farmland with <code data-dev-comment-type=\"paramref\" class=\"paramref\">numPlots</code> plots.\n"
+  example: []
+  syntax:
+    content: public Farmland(int numPlots)
+    parameters:
+    - id: numPlots
+      type: System.Int32
+      description: Number of farm plots.
+    content.vb: Public Sub New(numPlots As Integer)
+  overload: Backend.Farmland.#ctor*
+  nameWithType.vb: Farmland.New(Integer)
+  fullName.vb: Backend.Farmland.New(Integer)
+  name.vb: New(Integer)
+- uid: Backend.Farmland.SetOwner(Backend.Household)
+  commentId: M:Backend.Farmland.SetOwner(Backend.Household)
+  id: SetOwner(Backend.Household)
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: SetOwner(Household)
+  nameWithType: Farmland.SetOwner(Household)
+  fullName: Backend.Farmland.SetOwner(Backend.Household)
+  type: Method
+  source:
+    id: SetOwner
+    path: ''
+    startLine: 743
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nSet the owner of this land and its plots.\n"
+  example: []
+  syntax:
+    content: public override void SetOwner(Household owner)
+    parameters:
+    - id: owner
+      type: Backend.Household
+      description: The owner.
+    content.vb: Public Overrides Sub SetOwner(owner As Household)
+  overridden: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  overload: Backend.Farmland.SetOwner*
+- uid: Backend.Farmland.GetTotalYield
+  commentId: M:Backend.Farmland.GetTotalYield
+  id: GetTotalYield
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: GetTotalYield()
+  nameWithType: Farmland.GetTotalYield()
+  fullName: Backend.Farmland.GetTotalYield()
+  type: Method
+  source:
+    id: GetTotalYield
+    path: ''
+    startLine: 756
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nGets the total wheat yield of this land.\n"
+  example: []
+  syntax:
+    content: public int GetTotalYield()
+    return:
+      type: System.Int32
+      description: Total wheat yield.
+    content.vb: Public Function GetTotalYield() As Integer
+  overload: Backend.Farmland.GetTotalYield*
+- uid: Backend.Farmland.AddPlot
+  commentId: M:Backend.Farmland.AddPlot
+  id: AddPlot
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: AddPlot()
+  nameWithType: Farmland.AddPlot()
+  fullName: Backend.Farmland.AddPlot()
+  type: Method
+  source:
+    id: AddPlot
+    path: ''
+    startLine: 772
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nAdds a farm plot to this land.\n"
+  example: []
+  syntax:
+    content: public void AddPlot()
+    content.vb: Public Sub AddPlot()
+  overload: Backend.Farmland.AddPlot*
+- uid: Backend.Farmland.ResetIrrigation
+  commentId: M:Backend.Farmland.ResetIrrigation
+  id: ResetIrrigation
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: ResetIrrigation()
+  nameWithType: Farmland.ResetIrrigation()
+  fullName: Backend.Farmland.ResetIrrigation()
+  type: Method
+  source:
+    id: ResetIrrigation
+    path: ''
+    startLine: 787
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nReset irrigation status for every plot.\n"
+  example: []
+  syntax:
+    content: public void ResetIrrigation()
+    content.vb: Public Sub ResetIrrigation()
+  overload: Backend.Farmland.ResetIrrigation*
+- uid: Backend.Farmland.ClearPlots
+  commentId: M:Backend.Farmland.ClearPlots
+  id: ClearPlots
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: ClearPlots()
+  nameWithType: Farmland.ClearPlots()
+  fullName: Backend.Farmland.ClearPlots()
+  type: Method
+  source:
+    id: ClearPlots
+    path: ''
+    startLine: 801
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nClear seed and fertilizer type for all plots.\n"
+  example: []
+  syntax:
+    content: public void ClearPlots()
+    content.vb: Public Sub ClearPlots()
+  overload: Backend.Farmland.ClearPlots*
+- uid: Backend.Farmland.SetYieldMultiplier(System.Single)
+  commentId: M:Backend.Farmland.SetYieldMultiplier(System.Single)
+  id: SetYieldMultiplier(System.Single)
+  parent: Backend.Farmland
+  langs:
+  - csharp
+  - vb
+  name: SetYieldMultiplier(float)
+  nameWithType: Farmland.SetYieldMultiplier(float)
+  fullName: Backend.Farmland.SetYieldMultiplier(float)
+  type: Method
+  source:
+    id: SetYieldMultiplier
+    path: ''
+    startLine: 813
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nSet yield multiplier of all plots.\n"
+  example: []
+  syntax:
+    content: public void SetYieldMultiplier(float val)
+    parameters:
+    - id: val
+      type: System.Single
+      description: The multiplier.
+    content.vb: Public Sub SetYieldMultiplier(val As Single)
+  overload: Backend.Farmland.SetYieldMultiplier*
+  nameWithType.vb: Farmland.SetYieldMultiplier(Single)
+  fullName.vb: Backend.Farmland.SetYieldMultiplier(Single)
+  name.vb: SetYieldMultiplier(Single)
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Backend.HouseholdAsset
+  commentId: T:Backend.HouseholdAsset
+  parent: Backend
+  name: HouseholdAsset
+  nameWithType: HouseholdAsset
+  fullName: Backend.HouseholdAsset
+- uid: Backend.HouseholdAsset.Owner
+  commentId: P:Backend.HouseholdAsset.Owner
+  parent: Backend.HouseholdAsset
+  name: Owner
+  nameWithType: HouseholdAsset.Owner
+  fullName: Backend.HouseholdAsset.Owner
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{Backend.FarmPlot}
+  commentId: T:System.Collections.Generic.List{Backend.FarmPlot}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FarmPlot>
+  nameWithType: List<FarmPlot>
+  fullName: System.Collections.Generic.List<Backend.FarmPlot>
+  nameWithType.vb: List(Of FarmPlot)
+  fullName.vb: System.Collections.Generic.List(Of Backend.FarmPlot)
+  name.vb: List(Of FarmPlot)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Backend.FarmPlot
+    name: FarmPlot
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Backend.FarmPlot
+    name: FarmPlot
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+- uid: Backend.Farmland.#ctor*
+  commentId: Overload:Backend.Farmland.#ctor
+  name: Farmland
+  nameWithType: Farmland.Farmland
+  fullName: Backend.Farmland.Farmland
+  nameWithType.vb: Farmland.New
+  fullName.vb: Backend.Farmland.New
+  name.vb: New
+- uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  commentId: M:Backend.HouseholdAsset.SetOwner(Backend.Household)
+  parent: Backend.HouseholdAsset
+  name: SetOwner(Household)
+  nameWithType: HouseholdAsset.SetOwner(Household)
+  fullName: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  spec.csharp:
+  - uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+    name: SetOwner
+  - name: (
+  - uid: Backend.Household
+    name: Household
+  - name: )
+  spec.vb:
+  - uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+    name: SetOwner
+  - name: (
+  - uid: Backend.Household
+    name: Household
+  - name: )
+- uid: Backend.Farmland.SetOwner*
+  commentId: Overload:Backend.Farmland.SetOwner
+  name: SetOwner
+  nameWithType: Farmland.SetOwner
+  fullName: Backend.Farmland.SetOwner
+- uid: Backend.Household
+  commentId: T:Backend.Household
+  parent: Backend
+  name: Household
+  nameWithType: Household
+  fullName: Backend.Household
+- uid: Backend.Farmland.GetTotalYield*
+  commentId: Overload:Backend.Farmland.GetTotalYield
+  name: GetTotalYield
+  nameWithType: Farmland.GetTotalYield
+  fullName: Backend.Farmland.GetTotalYield
+- uid: Backend.Farmland.AddPlot*
+  commentId: Overload:Backend.Farmland.AddPlot
+  name: AddPlot
+  nameWithType: Farmland.AddPlot
+  fullName: Backend.Farmland.AddPlot
+- uid: Backend.Farmland.ResetIrrigation*
+  commentId: Overload:Backend.Farmland.ResetIrrigation
+  name: ResetIrrigation
+  nameWithType: Farmland.ResetIrrigation
+  fullName: Backend.Farmland.ResetIrrigation
+- uid: Backend.Farmland.ClearPlots*
+  commentId: Overload:Backend.Farmland.ClearPlots
+  name: ClearPlots
+  nameWithType: Farmland.ClearPlots
+  fullName: Backend.Farmland.ClearPlots
+- uid: Backend.Farmland.SetYieldMultiplier*
+  commentId: Overload:Backend.Farmland.SetYieldMultiplier
+  name: SetYieldMultiplier
+  nameWithType: Farmland.SetYieldMultiplier
+  fullName: Backend.Farmland.SetYieldMultiplier
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

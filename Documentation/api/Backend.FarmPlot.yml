@@ -1,0 +1,399 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.FarmPlot
+  commentId: T:Backend.FarmPlot
+  id: FarmPlot
+  parent: Backend
+  children:
+  - Backend.FarmPlot.#ctor(Backend.SeedType,Backend.FertilizerType)
+  - Backend.FarmPlot.ClearPlot
+  - Backend.FarmPlot.FertilizerType
+  - Backend.FarmPlot.GetWeatherEffect
+  - Backend.FarmPlot.GetYield
+  - Backend.FarmPlot.Irrigated
+  - Backend.FarmPlot.SeedType
+  - Backend.FarmPlot.YieldMultiplier
+  langs:
+  - csharp
+  - vb
+  name: FarmPlot
+  nameWithType: FarmPlot
+  fullName: Backend.FarmPlot
+  type: Class
+  source:
+    id: FarmPlot
+    path: ''
+    startLine: 868
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nA plot of land.\n"
+  example: []
+  syntax:
+    content: 'public class FarmPlot : HouseholdAsset'
+    content.vb: Public Class FarmPlot Inherits HouseholdAsset
+  inheritance:
+  - System.Object
+  - Backend.HouseholdAsset
+  inheritedMembers:
+  - Backend.HouseholdAsset.Owner
+  - Backend.HouseholdAsset.SetOwner(Backend.Household)
+- uid: Backend.FarmPlot.SeedType
+  commentId: P:Backend.FarmPlot.SeedType
+  id: SeedType
+  parent: Backend.FarmPlot
+  langs:
+  - csharp
+  - vb
+  name: SeedType
+  nameWithType: FarmPlot.SeedType
+  fullName: Backend.FarmPlot.SeedType
+  type: Property
+  source:
+    id: SeedType
+    path: ''
+    startLine: 873
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nWhat type of seed is planted currently.\n"
+  example: []
+  syntax:
+    content: public SeedType SeedType { get; set; }
+    parameters: []
+    return:
+      type: Backend.SeedType
+    content.vb: Public Property SeedType As SeedType
+  overload: Backend.FarmPlot.SeedType*
+- uid: Backend.FarmPlot.FertilizerType
+  commentId: P:Backend.FarmPlot.FertilizerType
+  id: FertilizerType
+  parent: Backend.FarmPlot
+  langs:
+  - csharp
+  - vb
+  name: FertilizerType
+  nameWithType: FarmPlot.FertilizerType
+  fullName: Backend.FarmPlot.FertilizerType
+  type: Property
+  source:
+    id: FertilizerType
+    path: ''
+    startLine: 878
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nWhat type of fertilizer is currently on the land.\n"
+  example: []
+  syntax:
+    content: public FertilizerType FertilizerType { get; set; }
+    parameters: []
+    return:
+      type: Backend.FertilizerType
+    content.vb: Public Property FertilizerType As FertilizerType
+  overload: Backend.FarmPlot.FertilizerType*
+- uid: Backend.FarmPlot.YieldMultiplier
+  commentId: P:Backend.FarmPlot.YieldMultiplier
+  id: YieldMultiplier
+  parent: Backend.FarmPlot
+  langs:
+  - csharp
+  - vb
+  name: YieldMultiplier
+  nameWithType: FarmPlot.YieldMultiplier
+  fullName: Backend.FarmPlot.YieldMultiplier
+  type: Property
+  source:
+    id: YieldMultiplier
+    path: ''
+    startLine: 883
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nA value that the yield of this plot is multiplied by.\n"
+  example: []
+  syntax:
+    content: public float YieldMultiplier { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property YieldMultiplier As Single
+  overload: Backend.FarmPlot.YieldMultiplier*
+- uid: Backend.FarmPlot.Irrigated
+  commentId: P:Backend.FarmPlot.Irrigated
+  id: Irrigated
+  parent: Backend.FarmPlot
+  langs:
+  - csharp
+  - vb
+  name: Irrigated
+  nameWithType: FarmPlot.Irrigated
+  fullName: Backend.FarmPlot.Irrigated
+  type: Property
+  source:
+    id: Irrigated
+    path: ''
+    startLine: 888
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nWhether the plot is irrigated.\n"
+  example: []
+  syntax:
+    content: public bool Irrigated { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Irrigated As Boolean
+  overload: Backend.FarmPlot.Irrigated*
+- uid: Backend.FarmPlot.#ctor(Backend.SeedType,Backend.FertilizerType)
+  commentId: M:Backend.FarmPlot.#ctor(Backend.SeedType,Backend.FertilizerType)
+  id: '#ctor(Backend.SeedType,Backend.FertilizerType)'
+  parent: Backend.FarmPlot
+  langs:
+  - csharp
+  - vb
+  name: FarmPlot(SeedType, FertilizerType)
+  nameWithType: FarmPlot.FarmPlot(SeedType, FertilizerType)
+  fullName: Backend.FarmPlot.FarmPlot(Backend.SeedType, Backend.FertilizerType)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 895
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nCreate a new farm plot with <code data-dev-comment-type=\"paramref\" class=\"paramref\">seedType</code> seed type and <code data-dev-comment-type=\"paramref\" class=\"paramref\">fertilizerType</code> fertilizer type.\n"
+  example: []
+  syntax:
+    content: public FarmPlot(SeedType seedType, FertilizerType fertilizerType)
+    parameters:
+    - id: seedType
+      type: Backend.SeedType
+      description: Seed type.
+    - id: fertilizerType
+      type: Backend.FertilizerType
+      description: Fertilizer type.
+    content.vb: Public Sub New(seedType As SeedType, fertilizerType As FertilizerType)
+  overload: Backend.FarmPlot.#ctor*
+  nameWithType.vb: FarmPlot.New(SeedType, FertilizerType)
+  fullName.vb: Backend.FarmPlot.New(Backend.SeedType, Backend.FertilizerType)
+  name.vb: New(SeedType, FertilizerType)
+- uid: Backend.FarmPlot.GetWeatherEffect
+  commentId: M:Backend.FarmPlot.GetWeatherEffect
+  id: GetWeatherEffect
+  parent: Backend.FarmPlot
+  langs:
+  - csharp
+  - vb
+  name: GetWeatherEffect()
+  nameWithType: FarmPlot.GetWeatherEffect()
+  fullName: Backend.FarmPlot.GetWeatherEffect()
+  type: Method
+  source:
+    id: GetWeatherEffect
+    path: ''
+    startLine: 905
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nReturns game&apos;s weather index or 1 (the best weather) if irrigated.\n"
+  example: []
+  syntax:
+    content: public int GetWeatherEffect()
+    return:
+      type: System.Int32
+      description: Game&apos;s weather index or 1 (the best weather) if irrigated.
+    content.vb: Public Function GetWeatherEffect() As Integer
+  overload: Backend.FarmPlot.GetWeatherEffect*
+- uid: Backend.FarmPlot.GetYield
+  commentId: M:Backend.FarmPlot.GetYield
+  id: GetYield
+  parent: Backend.FarmPlot
+  langs:
+  - csharp
+  - vb
+  name: GetYield()
+  nameWithType: FarmPlot.GetYield()
+  fullName: Backend.FarmPlot.GetYield()
+  type: Method
+  source:
+    id: GetYield
+    path: ''
+    startLine: 914
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nReturns the yield of this plot multiplied by the yield multiplier.\n"
+  example: []
+  syntax:
+    content: public int GetYield()
+    return:
+      type: System.Int32
+      description: Plot&apos;s wheat yield.
+    content.vb: Public Function GetYield() As Integer
+  overload: Backend.FarmPlot.GetYield*
+- uid: Backend.FarmPlot.ClearPlot
+  commentId: M:Backend.FarmPlot.ClearPlot
+  id: ClearPlot
+  parent: Backend.FarmPlot
+  langs:
+  - csharp
+  - vb
+  name: ClearPlot()
+  nameWithType: FarmPlot.ClearPlot()
+  fullName: Backend.FarmPlot.ClearPlot()
+  type: Method
+  source:
+    id: ClearPlot
+    path: ''
+    startLine: 922
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nSets seed type to regular and fertilizer to none.\n"
+  example: []
+  syntax:
+    content: public void ClearPlot()
+    content.vb: Public Sub ClearPlot()
+  overload: Backend.FarmPlot.ClearPlot*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Backend.HouseholdAsset
+  commentId: T:Backend.HouseholdAsset
+  parent: Backend
+  name: HouseholdAsset
+  nameWithType: HouseholdAsset
+  fullName: Backend.HouseholdAsset
+- uid: Backend.HouseholdAsset.Owner
+  commentId: P:Backend.HouseholdAsset.Owner
+  parent: Backend.HouseholdAsset
+  name: Owner
+  nameWithType: HouseholdAsset.Owner
+  fullName: Backend.HouseholdAsset.Owner
+- uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  commentId: M:Backend.HouseholdAsset.SetOwner(Backend.Household)
+  parent: Backend.HouseholdAsset
+  name: SetOwner(Household)
+  nameWithType: HouseholdAsset.SetOwner(Household)
+  fullName: Backend.HouseholdAsset.SetOwner(Backend.Household)
+  spec.csharp:
+  - uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+    name: SetOwner
+  - name: (
+  - uid: Backend.Household
+    name: Household
+  - name: )
+  spec.vb:
+  - uid: Backend.HouseholdAsset.SetOwner(Backend.Household)
+    name: SetOwner
+  - name: (
+  - uid: Backend.Household
+    name: Household
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Backend.FarmPlot.SeedType*
+  commentId: Overload:Backend.FarmPlot.SeedType
+  name: SeedType
+  nameWithType: FarmPlot.SeedType
+  fullName: Backend.FarmPlot.SeedType
+- uid: Backend.SeedType
+  commentId: T:Backend.SeedType
+  parent: Backend
+  name: SeedType
+  nameWithType: SeedType
+  fullName: Backend.SeedType
+- uid: Backend.FarmPlot.FertilizerType*
+  commentId: Overload:Backend.FarmPlot.FertilizerType
+  name: FertilizerType
+  nameWithType: FarmPlot.FertilizerType
+  fullName: Backend.FarmPlot.FertilizerType
+- uid: Backend.FertilizerType
+  commentId: T:Backend.FertilizerType
+  parent: Backend
+  name: FertilizerType
+  nameWithType: FertilizerType
+  fullName: Backend.FertilizerType
+- uid: Backend.FarmPlot.YieldMultiplier*
+  commentId: Overload:Backend.FarmPlot.YieldMultiplier
+  name: YieldMultiplier
+  nameWithType: FarmPlot.YieldMultiplier
+  fullName: Backend.FarmPlot.YieldMultiplier
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Backend.FarmPlot.Irrigated*
+  commentId: Overload:Backend.FarmPlot.Irrigated
+  name: Irrigated
+  nameWithType: FarmPlot.Irrigated
+  fullName: Backend.FarmPlot.Irrigated
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Backend.FarmPlot.#ctor*
+  commentId: Overload:Backend.FarmPlot.#ctor
+  name: FarmPlot
+  nameWithType: FarmPlot.FarmPlot
+  fullName: Backend.FarmPlot.FarmPlot
+  nameWithType.vb: FarmPlot.New
+  fullName.vb: Backend.FarmPlot.New
+  name.vb: New
+- uid: Backend.FarmPlot.GetWeatherEffect*
+  commentId: Overload:Backend.FarmPlot.GetWeatherEffect
+  name: GetWeatherEffect
+  nameWithType: FarmPlot.GetWeatherEffect
+  fullName: Backend.FarmPlot.GetWeatherEffect
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Backend.FarmPlot.GetYield*
+  commentId: Overload:Backend.FarmPlot.GetYield
+  name: GetYield
+  nameWithType: FarmPlot.GetYield
+  fullName: Backend.FarmPlot.GetYield
+- uid: Backend.FarmPlot.ClearPlot*
+  commentId: Overload:Backend.FarmPlot.ClearPlot
+  name: ClearPlot
+  nameWithType: FarmPlot.ClearPlot
+  fullName: Backend.FarmPlot.ClearPlot

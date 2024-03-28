@@ -5,12 +5,25 @@ using System.Collections.Generic;
  */
 namespace Backend
 {
+    /// <summary>
+    /// A player's farmland.
+    /// </summary>
     public class Farmland : HouseholdAsset
     {
+        /// <summary>
+        /// The maximum number of plots a player can have.
+        /// </summary>
         public const int MaxPlots = 16;
+
+        /// <summary>
+        /// The list of farm plots.
+        /// </summary>
         public List<FarmPlot> Plots;
 
-        // Initializes empty list to store FarmPlot objects 
+        /// <summary>
+        /// Initializes a farmland with <paramref name="numPlots"/> plots.
+        /// </summary>
+        /// <param name="numPlots">Number of farm plots.</param>
         public Farmland(int numPlots)
         {
             Plots = new List<FarmPlot>();
@@ -21,7 +34,10 @@ namespace Backend
             }
         }
 
-        // Set owner of this farm land and all plots
+        /// <summary>
+        /// Set the owner of this land and its plots.
+        /// </summary>
+        /// <param name="owner">The owner.</param>
         public override void SetOwner(Household owner)
         {
             base.SetOwner(owner);
@@ -31,7 +47,10 @@ namespace Backend
             }
         }
 
-        // Gets the combined yield of every plot currently on this farmland
+        /// <summary>
+        /// Gets the total wheat yield of this land.
+        /// </summary>
+        /// <returns>Total wheat yield.</returns>
         public int GetTotalYield()
         {
             int totalYield = 0;
@@ -45,7 +64,9 @@ namespace Backend
 
         }
 
-        // Add a plot to this land
+        /// <summary>
+        /// Adds a farm plot to this land.
+        /// </summary>
         public void AddPlot()
         {
             if (Plots.Count >= MaxPlots)
@@ -58,7 +79,9 @@ namespace Backend
             Plots.Add(newPlot);
         }
 
-        // Resets irrigation status for every plot
+        /// <summary>
+        /// Reset irrigation status for every plot.
+        /// </summary>
         public void ResetIrrigation()
         {
             foreach (FarmPlot plot in Plots)
@@ -70,6 +93,9 @@ namespace Backend
             }
         }
 
+        /// <summary>
+        /// Clear seed and fertilizer type for all plots.
+        /// </summary>
         public void ClearPlots()
         {
             foreach (FarmPlot plot in Plots)
@@ -78,7 +104,10 @@ namespace Backend
             }
         }
 
-        // Set yield multiplier of all the plots in this land
+        /// <summary>
+        /// Set yield multiplier of all plots.
+        /// </summary>
+        /// <param name="val">The multiplier.</param>
         public void SetYieldMultiplier(float val)
         {
             foreach (FarmPlot plot in Plots)

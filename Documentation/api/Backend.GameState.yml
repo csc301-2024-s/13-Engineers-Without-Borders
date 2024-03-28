@@ -1,0 +1,524 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.GameState
+  commentId: T:Backend.GameState
+  id: GameState
+  parent: Backend
+  children:
+  - Backend.GameState.AdvanceToPhaseOne
+  - Backend.GameState.AdvanceToPhaseThree
+  - Backend.GameState.AdvanceToPhaseTwo
+  - Backend.GameState.Initialize(Backend.Household)
+  - Backend.GameState.ResultReport
+  - Backend.GameState.s_Households
+  - Backend.GameState.s_Phase
+  - Backend.GameState.s_Player
+  - Backend.GameState.s_PredefinedHouseholds
+  - Backend.GameState.s_WeatherIndex
+  - Backend.GameState.s_Year
+  - Backend.GameState.StartMoney
+  langs:
+  - csharp
+  - vb
+  name: GameState
+  nameWithType: GameState
+  fullName: Backend.GameState
+  type: Class
+  source:
+    id: GameState
+    path: ''
+    startLine: 1013
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nRepresents global game state.\n"
+  example: []
+  syntax:
+    content: public static class GameState
+    content.vb: Public Module GameState
+  inheritance:
+  - System.Object
+- uid: Backend.GameState.StartMoney
+  commentId: F:Backend.GameState.StartMoney
+  id: StartMoney
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: StartMoney
+  nameWithType: GameState.StartMoney
+  fullName: Backend.GameState.StartMoney
+  type: Field
+  source:
+    id: StartMoney
+    path: ''
+    startLine: 1018
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nStarting money of player.\n"
+  example: []
+  syntax:
+    content: public const int StartMoney = 500
+    return:
+      type: System.Int32
+    content.vb: Public Const StartMoney As Integer = 500
+- uid: Backend.GameState.s_Year
+  commentId: F:Backend.GameState.s_Year
+  id: s_Year
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: s_Year
+  nameWithType: GameState.s_Year
+  fullName: Backend.GameState.s_Year
+  type: Field
+  source:
+    id: s_Year
+    path: ''
+    startLine: 1023
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nGame year.\n"
+  example: []
+  syntax:
+    content: public static int s_Year
+    return:
+      type: System.Int32
+    content.vb: Public Shared s_Year As Integer
+- uid: Backend.GameState.s_Phase
+  commentId: F:Backend.GameState.s_Phase
+  id: s_Phase
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: s_Phase
+  nameWithType: GameState.s_Phase
+  fullName: Backend.GameState.s_Phase
+  type: Field
+  source:
+    id: s_Phase
+    path: ''
+    startLine: 1028
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nGame phase/season. From 1 to 3.\n"
+  example: []
+  syntax:
+    content: public static int s_Phase
+    return:
+      type: System.Int32
+    content.vb: Public Shared s_Phase As Integer
+- uid: Backend.GameState.s_WeatherIndex
+  commentId: F:Backend.GameState.s_WeatherIndex
+  id: s_WeatherIndex
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: s_WeatherIndex
+  nameWithType: GameState.s_WeatherIndex
+  fullName: Backend.GameState.s_WeatherIndex
+  type: Field
+  source:
+    id: s_WeatherIndex
+    path: ''
+    startLine: 1033
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nGame weather index. From 1 (best) to 5 (worst).\n"
+  example: []
+  syntax:
+    content: public static int s_WeatherIndex
+    return:
+      type: System.Int32
+    content.vb: Public Shared s_WeatherIndex As Integer
+- uid: Backend.GameState.s_Player
+  commentId: F:Backend.GameState.s_Player
+  id: s_Player
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: s_Player
+  nameWithType: GameState.s_Player
+  fullName: Backend.GameState.s_Player
+  type: Field
+  source:
+    id: s_Player
+    path: ''
+    startLine: 1038
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nThe player&apos;s household object.\n"
+  example: []
+  syntax:
+    content: public static Household s_Player
+    return:
+      type: Backend.Household
+    content.vb: Public Shared s_Player As Household
+- uid: Backend.GameState.s_Households
+  commentId: F:Backend.GameState.s_Households
+  id: s_Households
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: s_Households
+  nameWithType: GameState.s_Households
+  fullName: Backend.GameState.s_Households
+  type: Field
+  source:
+    id: s_Households
+    path: ''
+    startLine: 1043
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nA list of all households in the game. We originally wanted to have AI players which is why this is here, but we didn&apos;t end up doing that.\n"
+  example: []
+  syntax:
+    content: public static Household[] s_Households
+    return:
+      type: Backend.Household[]
+    content.vb: Public Shared s_Households As Household()
+- uid: Backend.GameState.s_PredefinedHouseholds
+  commentId: F:Backend.GameState.s_PredefinedHouseholds
+  id: s_PredefinedHouseholds
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: s_PredefinedHouseholds
+  nameWithType: GameState.s_PredefinedHouseholds
+  fullName: Backend.GameState.s_PredefinedHouseholds
+  type: Field
+  source:
+    id: s_PredefinedHouseholds
+    path: ''
+    startLine: 1049
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nArray of predefined households that the player can choose from. Learn from our mistakes and don&apos;t do this in your own projects,\nload data from a JSON file or something instead.\n"
+  example: []
+  syntax:
+    content: public static Household[] s_PredefinedHouseholds
+    return:
+      type: Backend.Household[]
+    content.vb: Public Shared s_PredefinedHouseholds As Household()
+- uid: Backend.GameState.Initialize(Backend.Household)
+  commentId: M:Backend.GameState.Initialize(Backend.Household)
+  id: Initialize(Backend.Household)
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Household)
+  nameWithType: GameState.Initialize(Household)
+  fullName: Backend.GameState.Initialize(Backend.Household)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 1076
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nInitializes the game, setting year and phase to 0 (this happens before the main gameplay).\n"
+  example: []
+  syntax:
+    content: public static void Initialize(Household Player)
+    parameters:
+    - id: Player
+      type: Backend.Household
+      description: The household that the player chose.
+    content.vb: Public Shared Sub Initialize(Player As Household)
+  overload: Backend.GameState.Initialize*
+- uid: Backend.GameState.AdvanceToPhaseOne
+  commentId: M:Backend.GameState.AdvanceToPhaseOne
+  id: AdvanceToPhaseOne
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: AdvanceToPhaseOne()
+  nameWithType: GameState.AdvanceToPhaseOne()
+  fullName: Backend.GameState.AdvanceToPhaseOne()
+  type: Method
+  source:
+    id: AdvanceToPhaseOne
+    path: ''
+    startLine: 1101
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nAdvance to phase 1, the growing season. (Year 2+ only) Choose random village event and household event for each household, but there might not be one.\nHandle starvation and losing condition if player wheat is in the negatives. Automatically loads phase 2 if you don&apos;t have any tubewells.\n"
+  example: []
+  syntax:
+    content: public static void AdvanceToPhaseOne()
+    content.vb: Public Shared Sub AdvanceToPhaseOne()
+  overload: Backend.GameState.AdvanceToPhaseOne*
+- uid: Backend.GameState.AdvanceToPhaseTwo
+  commentId: M:Backend.GameState.AdvanceToPhaseTwo
+  id: AdvanceToPhaseTwo
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: AdvanceToPhaseTwo()
+  nameWithType: GameState.AdvanceToPhaseTwo()
+  fullName: Backend.GameState.AdvanceToPhaseTwo()
+  type: Method
+  source:
+    id: AdvanceToPhaseTwo
+    path: ''
+    startLine: 1200
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nAdvance to phase 2, the harvest season. Simply sets the phase variable and switches scenes.\n"
+  example: []
+  syntax:
+    content: public static void AdvanceToPhaseTwo()
+    content.vb: Public Shared Sub AdvanceToPhaseTwo()
+  overload: Backend.GameState.AdvanceToPhaseTwo*
+- uid: Backend.GameState.AdvanceToPhaseThree
+  commentId: M:Backend.GameState.AdvanceToPhaseThree
+  id: AdvanceToPhaseThree
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: AdvanceToPhaseThree()
+  nameWithType: GameState.AdvanceToPhaseThree()
+  fullName: Backend.GameState.AdvanceToPhaseThree()
+  type: Method
+  source:
+    id: AdvanceToPhaseThree
+    path: ''
+    startLine: 1209
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nAdvance to phase 3, the planting season. Any hired labour is removed.\n"
+  example: []
+  syntax:
+    content: public static void AdvanceToPhaseThree()
+    content.vb: Public Shared Sub AdvanceToPhaseThree()
+  overload: Backend.GameState.AdvanceToPhaseThree*
+- uid: Backend.GameState.ResultReport
+  commentId: M:Backend.GameState.ResultReport
+  id: ResultReport
+  parent: Backend.GameState
+  langs:
+  - csharp
+  - vb
+  name: ResultReport()
+  nameWithType: GameState.ResultReport()
+  fullName: Backend.GameState.ResultReport()
+  type: Method
+  source:
+    id: ResultReport
+    path: ''
+    startLine: 1233
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nHelper method to return game data to be displayed in the results screen at the end.\n"
+  example: []
+  syntax:
+    content: public static Dictionary<string, int> ResultReport()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+      description: Game data used for results.
+    content.vb: Public Shared Function ResultReport() As Dictionary(Of String, Integer)
+  overload: Backend.GameState.ResultReport*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Backend.Household
+  commentId: T:Backend.Household
+  parent: Backend
+  name: Household
+  nameWithType: Household
+  fullName: Backend.Household
+- uid: Backend.Household[]
+  isExternal: true
+  name: Household[]
+  nameWithType: Household[]
+  fullName: Backend.Household[]
+  nameWithType.vb: Household()
+  fullName.vb: Backend.Household()
+  name.vb: Household()
+  spec.csharp:
+  - uid: Backend.Household
+    name: Household
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Backend.Household
+    name: Household
+  - name: (
+  - name: )
+- uid: Backend.GameState.Initialize*
+  commentId: Overload:Backend.GameState.Initialize
+  name: Initialize
+  nameWithType: GameState.Initialize
+  fullName: Backend.GameState.Initialize
+- uid: Backend.GameState.AdvanceToPhaseOne*
+  commentId: Overload:Backend.GameState.AdvanceToPhaseOne
+  name: AdvanceToPhaseOne
+  nameWithType: GameState.AdvanceToPhaseOne
+  fullName: Backend.GameState.AdvanceToPhaseOne
+- uid: Backend.GameState.AdvanceToPhaseTwo*
+  commentId: Overload:Backend.GameState.AdvanceToPhaseTwo
+  name: AdvanceToPhaseTwo
+  nameWithType: GameState.AdvanceToPhaseTwo
+  fullName: Backend.GameState.AdvanceToPhaseTwo
+- uid: Backend.GameState.AdvanceToPhaseThree*
+  commentId: Overload:Backend.GameState.AdvanceToPhaseThree
+  name: AdvanceToPhaseThree
+  nameWithType: GameState.AdvanceToPhaseThree
+  fullName: Backend.GameState.AdvanceToPhaseThree
+- uid: Backend.GameState.ResultReport*
+  commentId: Overload:Backend.GameState.ResultReport
+  name: ResultReport
+  nameWithType: GameState.ResultReport
+  fullName: Backend.GameState.ResultReport
+- uid: System.Collections.Generic.Dictionary{System.String,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<string, int>
+  nameWithType: Dictionary<string, int>
+  fullName: System.Collections.Generic.Dictionary<string, int>
+  nameWithType.vb: Dictionary(Of String, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Integer)
+  name.vb: Dictionary(Of String, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true

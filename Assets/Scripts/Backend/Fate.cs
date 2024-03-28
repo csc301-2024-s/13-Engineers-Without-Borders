@@ -6,10 +6,16 @@ using UnityEngine;
 
 namespace Backend
 {
+    /// <summary>
+    /// Handles random village and family events.
+    /// </summary>
     public static class Fate
     {
         private static System.Random _random = new();
 
+        /// <summary>
+        /// Called every year (2+) to handle family and village events.
+        /// </summary>
         public static void TriggerYearlyEvents()
         {
             DetermineFamilyEvent(GameState.s_Player);

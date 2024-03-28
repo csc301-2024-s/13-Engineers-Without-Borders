@@ -1,0 +1,365 @@
+### YamlMime:ManagedReference
+items:
+- uid: Backend.Household
+  commentId: T:Backend.Household
+  id: Household
+  parent: Backend
+  children:
+  - Backend.Household.#ctor(System.Int32,System.String,System.Int32,System.Int32,System.Int32)
+  - Backend.Household.Family
+  - Backend.Household.HireLabour
+  - Backend.Household.Inventory
+  - Backend.Household.Land
+  - Backend.Household.Money
+  - Backend.Household.RemoveLabour
+  - Backend.Household.Wheat
+  langs:
+  - csharp
+  - vb
+  name: Household
+  nameWithType: Household
+  fullName: Backend.Household
+  type: Class
+  source:
+    id: Household
+    path: ''
+    startLine: 1308
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nA household/player in the game.\n"
+  example: []
+  syntax:
+    content: public class Household
+    content.vb: Public Class Household
+  inheritance:
+  - System.Object
+- uid: Backend.Household.Land
+  commentId: P:Backend.Household.Land
+  id: Land
+  parent: Backend.Household
+  langs:
+  - csharp
+  - vb
+  name: Land
+  nameWithType: Household.Land
+  fullName: Backend.Household.Land
+  type: Property
+  source:
+    id: Land
+    path: ''
+    startLine: 1313
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nThis household&apos;s land.\n"
+  example: []
+  syntax:
+    content: public Farmland Land { get; }
+    parameters: []
+    return:
+      type: Backend.Farmland
+    content.vb: Public ReadOnly Property Land As Farmland
+  overload: Backend.Household.Land*
+- uid: Backend.Household.Money
+  commentId: P:Backend.Household.Money
+  id: Money
+  parent: Backend.Household
+  langs:
+  - csharp
+  - vb
+  name: Money
+  nameWithType: Household.Money
+  fullName: Backend.Household.Money
+  type: Property
+  source:
+    id: Money
+    path: ''
+    startLine: 1318
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nThis household&apos;s money.\n"
+  example: []
+  syntax:
+    content: public int Money { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Money As Integer
+  overload: Backend.Household.Money*
+- uid: Backend.Household.Family
+  commentId: P:Backend.Household.Family
+  id: Family
+  parent: Backend.Household
+  langs:
+  - csharp
+  - vb
+  name: Family
+  nameWithType: Household.Family
+  fullName: Backend.Household.Family
+  type: Property
+  source:
+    id: Family
+    path: ''
+    startLine: 1323
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nThis household&apos;s family.\n"
+  example: []
+  syntax:
+    content: public Family Family { get; }
+    parameters: []
+    return:
+      type: Backend.Family
+    content.vb: Public ReadOnly Property Family As Family
+  overload: Backend.Household.Family*
+- uid: Backend.Household.Inventory
+  commentId: P:Backend.Household.Inventory
+  id: Inventory
+  parent: Backend.Household
+  langs:
+  - csharp
+  - vb
+  name: Inventory
+  nameWithType: Household.Inventory
+  fullName: Backend.Household.Inventory
+  type: Property
+  source:
+    id: Inventory
+    path: ''
+    startLine: 1328
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nThis household&apos;s inventory of items.\n"
+  example: []
+  syntax:
+    content: public Inventory Inventory { get; }
+    parameters: []
+    return:
+      type: Backend.Inventory
+    content.vb: Public ReadOnly Property Inventory As Inventory
+  overload: Backend.Household.Inventory*
+- uid: Backend.Household.Wheat
+  commentId: P:Backend.Household.Wheat
+  id: Wheat
+  parent: Backend.Household
+  langs:
+  - csharp
+  - vb
+  name: Wheat
+  nameWithType: Household.Wheat
+  fullName: Backend.Household.Wheat
+  type: Property
+  source:
+    id: Wheat
+    path: ''
+    startLine: 1333
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nThis household&apos;s wheat.\n"
+  example: []
+  syntax:
+    content: public int Wheat { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Wheat As Integer
+  overload: Backend.Household.Wheat*
+- uid: Backend.Household.#ctor(System.Int32,System.String,System.Int32,System.Int32,System.Int32)
+  commentId: M:Backend.Household.#ctor(System.Int32,System.String,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.String,System.Int32,System.Int32,System.Int32)'
+  parent: Backend.Household
+  langs:
+  - csharp
+  - vb
+  name: Household(int, string, int, int, int)
+  nameWithType: Household.Household(int, string, int, int, int)
+  fullName: Backend.Household.Household(int, string, int, int, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1343
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nCreate a household with the specified parameters.\n"
+  example: []
+  syntax:
+    content: public Household(int startMoney, string familyName, int numChildren, int numAdults, int numPlots)
+    parameters:
+    - id: startMoney
+      type: System.Int32
+      description: Starting money.
+    - id: familyName
+      type: System.String
+      description: Family name. Every family member has this as their last name.
+    - id: numChildren
+      type: System.Int32
+      description: Number of children in family.
+    - id: numAdults
+      type: System.Int32
+      description: Number of adults in family.
+    - id: numPlots
+      type: System.Int32
+      description: Number of plots in farmland.
+    content.vb: Public Sub New(startMoney As Integer, familyName As String, numChildren As Integer, numAdults As Integer, numPlots As Integer)
+  overload: Backend.Household.#ctor*
+  nameWithType.vb: Household.New(Integer, String, Integer, Integer, Integer)
+  fullName.vb: Backend.Household.New(Integer, String, Integer, Integer, Integer)
+  name.vb: New(Integer, String, Integer, Integer, Integer)
+- uid: Backend.Household.HireLabour
+  commentId: M:Backend.Household.HireLabour
+  id: HireLabour
+  parent: Backend.Household
+  langs:
+  - csharp
+  - vb
+  name: HireLabour()
+  nameWithType: Household.HireLabour()
+  fullName: Backend.Household.HireLabour()
+  type: Method
+  source:
+    id: HireLabour
+    path: ''
+    startLine: 1359
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nCreates an adult named &quot;Hired Worker&quot;, to be removed from the household after a year.\n"
+  example: []
+  syntax:
+    content: public void HireLabour()
+    content.vb: Public Sub HireLabour()
+  overload: Backend.Household.HireLabour*
+- uid: Backend.Household.RemoveLabour
+  commentId: M:Backend.Household.RemoveLabour
+  id: RemoveLabour
+  parent: Backend.Household
+  langs:
+  - csharp
+  - vb
+  name: RemoveLabour()
+  nameWithType: Household.RemoveLabour()
+  fullName: Backend.Household.RemoveLabour()
+  type: Method
+  source:
+    id: RemoveLabour
+    path: ''
+    startLine: 1368
+  assemblies:
+  - cs.temp.dll
+  namespace: Backend
+  summary: "\nRemove all hired labour from this family.\n"
+  example: []
+  syntax:
+    content: public void RemoveLabour()
+    content.vb: Public Sub RemoveLabour()
+  overload: Backend.Household.RemoveLabour*
+references:
+- uid: Backend
+  commentId: N:Backend
+  name: Backend
+  nameWithType: Backend
+  fullName: Backend
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Backend.Household.Land*
+  commentId: Overload:Backend.Household.Land
+  name: Land
+  nameWithType: Household.Land
+  fullName: Backend.Household.Land
+- uid: Backend.Farmland
+  commentId: T:Backend.Farmland
+  parent: Backend
+  name: Farmland
+  nameWithType: Farmland
+  fullName: Backend.Farmland
+- uid: Backend.Household.Money*
+  commentId: Overload:Backend.Household.Money
+  name: Money
+  nameWithType: Household.Money
+  fullName: Backend.Household.Money
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Backend.Household.Family*
+  commentId: Overload:Backend.Household.Family
+  name: Family
+  nameWithType: Household.Family
+  fullName: Backend.Household.Family
+- uid: Backend.Family
+  commentId: T:Backend.Family
+  parent: Backend
+  name: Family
+  nameWithType: Family
+  fullName: Backend.Family
+- uid: Backend.Household.Inventory*
+  commentId: Overload:Backend.Household.Inventory
+  name: Inventory
+  nameWithType: Household.Inventory
+  fullName: Backend.Household.Inventory
+- uid: Backend.Inventory
+  commentId: T:Backend.Inventory
+  parent: Backend
+  name: Inventory
+  nameWithType: Inventory
+  fullName: Backend.Inventory
+- uid: Backend.Household.Wheat*
+  commentId: Overload:Backend.Household.Wheat
+  name: Wheat
+  nameWithType: Household.Wheat
+  fullName: Backend.Household.Wheat
+- uid: Backend.Household.#ctor*
+  commentId: Overload:Backend.Household.#ctor
+  name: Household
+  nameWithType: Household.Household
+  fullName: Backend.Household.Household
+  nameWithType.vb: Household.New
+  fullName.vb: Backend.Household.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Backend.Household.HireLabour*
+  commentId: Overload:Backend.Household.HireLabour
+  name: HireLabour
+  nameWithType: Household.HireLabour
+  fullName: Backend.Household.HireLabour
+- uid: Backend.Household.RemoveLabour*
+  commentId: Overload:Backend.Household.RemoveLabour
+  name: RemoveLabour
+  nameWithType: Household.RemoveLabour
+  fullName: Backend.Household.RemoveLabour

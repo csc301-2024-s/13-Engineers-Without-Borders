@@ -5,17 +5,25 @@ using UnityEngine;
 // This class represents a household's inventory of items in storage.
 namespace Backend
 {
+    /// <summary>
+    /// A household's inventory. Can store items.
+    /// </summary>
     public class Inventory : HouseholdAsset
     {
         private Dictionary<string, int> _items;
 
-        // Create a new empty inventory
+        /// <summary>
+        /// Creates an empty inventory.
+        /// </summary>
         public Inventory()
         {
             _items = new();
         }
 
-        // Adds <newItem> to the inventory. If it already exists, increment its count.
+        /// <summary>
+        /// Adds <paramref name="newItem"/> to the inventory. If it already exists, increment its count.
+        /// </summary>
+        /// <param name="newItem">The item to add.</param>
         public void AddItem(string newItem)
         {
             if (_items.ContainsKey(newItem))
@@ -27,8 +35,11 @@ namespace Backend
             _items.Add(newItem, 1);
         }
 
-        // Removes a <item> from the inventory. If it exists, decrement its count. If its count becomes 0, remove the key entry.
-        // Log an error if the item doesn't exist.
+        /// <summary>
+        /// Removes one <paramref name="item"/> from the inventory. If it exists, decrement its count. If its count becomes 0, remove the key entry.
+        /// If it doesn't exist, log a message in the Unity console.
+        /// </summary>
+        /// <param name="item">The item to remove.</param>
         public void RemoveItem(string item)
         {
             if (_items.ContainsKey(item))
@@ -45,8 +56,11 @@ namespace Backend
             Debug.Log("Trying to remove item that doesn't exist in inventory: " + item);
         }
 
-        // Gets the count of a certain item in the inventory
-        // Return 0 if it doesn't exist
+        /// <summary>
+        /// Gets the count of <paramref name="item"/> in the inventory.
+        /// </summary>
+        /// <param name="item">Item to count.</param>
+        /// <returns>Count of item in inventory, 0 if none.</returns>
         public int GetAmount(string item)
         {
             if (_items.ContainsKey(item))
@@ -57,7 +71,11 @@ namespace Backend
             return 0;
         }
 
-        // Sees if <item> is in the inventory
+        /// <summary>
+        /// Check if <paramref name="item"/> is in the inventory.
+        /// </summary>
+        /// <param name="item">The item to look for.</param>
+        /// <returns>Whether the item is in the inventory.</returns>
         public bool Contains(string item) {
             return _items.ContainsKey(item);
         }

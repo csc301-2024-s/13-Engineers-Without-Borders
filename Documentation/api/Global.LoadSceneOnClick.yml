@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.LoadSceneOnClick
+  commentId: T:Global.LoadSceneOnClick
+  id: LoadSceneOnClick
+  parent: Global
+  children:
+  - Global.LoadSceneOnClick.OnClick
+  langs:
+  - csharp
+  - vb
+  name: LoadSceneOnClick
+  nameWithType: LoadSceneOnClick
+  fullName: LoadSceneOnClick
+  type: Class
+  source:
+    id: LoadSceneOnClick
+    path: ''
+    startLine: 2586
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class LoadSceneOnClick : MonoBehaviour'
+    content.vb: Public Class LoadSceneOnClick Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.LoadSceneOnClick.OnClick
+  commentId: M:Global.LoadSceneOnClick.OnClick
+  id: OnClick
+  parent: Global.LoadSceneOnClick
+  langs:
+  - csharp
+  - vb
+  name: OnClick()
+  nameWithType: LoadSceneOnClick.OnClick()
+  fullName: LoadSceneOnClick.OnClick()
+  type: Method
+  source:
+    id: OnClick
+    path: ''
+    startLine: 2599
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnClick()
+    content.vb: Public Sub OnClick()
+  overload: Global.LoadSceneOnClick.OnClick*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.LoadSceneOnClick.OnClick*
+  commentId: Overload:Global.LoadSceneOnClick.OnClick
+  name: OnClick
+  nameWithType: LoadSceneOnClick.OnClick
+  fullName: LoadSceneOnClick.OnClick

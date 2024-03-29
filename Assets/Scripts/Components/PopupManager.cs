@@ -76,8 +76,15 @@ public class PopupManager : MonoBehaviour
         ShowNextPopup();
     }
 
+    /// <summary>
+    /// Enqueue a new popup to be shown once the current queue is exhausted.
+    /// If <paramref name="immediate"/>, attempt to show the popup immediately. Otherwise the queued popup will show up on the next scene load.
+    /// </summary>
+    /// <param name="title">Title of popup.</param>
+    /// <param name="description">Description of popup.</param>
+    /// <param name="closeText">Close button text of popup.</param>
+    /// <param name="immediate">If prompt should be shown immediately.</param>
     // Enqueue a new popup to be shown once the current queue is exhausted
-    // <immediate> is in case we want to queue a popup in the middle of a scene and not loading another scene right after
     public static void QueuePopup(string title, string description, string closeText, bool immediate = false)
     {
         _queue.Enqueue(new Popup(title, description, closeText));

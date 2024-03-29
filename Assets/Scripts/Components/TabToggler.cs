@@ -3,7 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Authors: Kevin, Andy
-// Turn a button into a toggle for another UI element
+/// <summary>
+/// Unused.
+/// </summary>
 public class TabToggler : MonoBehaviour
 {
     [SerializeField] GameObject tab;

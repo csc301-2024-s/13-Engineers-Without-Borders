@@ -2,7 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Original Author: Andy Wang
-// Upon click, show a popup containing text
+/// <summary>
+/// Make a button component show a popup on click given various serialized fields customizing the popup.
+/// </summary>
 public class ShowPopupOnClick : MonoBehaviour
 {
     [SerializeField] string title;

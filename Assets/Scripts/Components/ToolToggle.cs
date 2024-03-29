@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Original Author: Andy Wang
-// For selecting a tool with which to click on farm cells
+/// <summary>
+/// A toggle for selecting which tool to use during Phase 3.
+/// </summary>
 public class ToolToggle : MonoBehaviour
 {
     [SerializeField] string toolName;

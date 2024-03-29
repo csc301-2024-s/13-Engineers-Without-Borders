@@ -3,6 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // author: Jacqueline Zhu
+/// <summary>
+/// Makes a text component show a summary of your family members.
+/// </summary>
 public class ShowFamilyMembers : MonoBehaviour
 {
 

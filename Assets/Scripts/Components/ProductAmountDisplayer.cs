@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Displays how many of a certain product you have in your inventory
+/// <summary>
+/// Makes a text component display how many of a given product you have in your inventory based on a format string.
+/// </summary>
 public class ProductAmountDisplayer : MonoBehaviour
 {
     [SerializeField] string productName;

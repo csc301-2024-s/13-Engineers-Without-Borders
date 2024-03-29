@@ -3,7 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Original Author: Andy Wang
-// Enable/disable a toggle based on if you have some of an inventory item
+/// <summary>
+/// Enable or disable a Toggle component depending on if you have a given product in your inventory.
+/// </summary>
 public class ToggleIfHasProduct : MonoBehaviour
 {
     [SerializeField] string productName;

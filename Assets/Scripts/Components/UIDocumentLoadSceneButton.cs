@@ -3,8 +3,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 // Original Author: Andy Wang
-// Put this on a UIDocument with buttons in it
-// This script makes it so all the buttons with class "load-scene-button" load a scene upon click
+/// <summary>
+/// Put this on a UIDocument with buttons in it.
+/// This script makes it so all the buttons with class "load-scene-button" load a scene upon click.
+/// </summary>
 public class UIDocumentLoadSceneButton : MonoBehaviour
 {
     private UIDocument _uiDocument;

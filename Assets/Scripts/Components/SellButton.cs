@@ -2,6 +2,9 @@ using Backend;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Make a button component sell a product from your inventory and gives you money.
+/// </summary>
 public class SellButton : MonoBehaviour
 {
     [SerializeField] int num;
@@ -25,6 +28,9 @@ public class SellButton : MonoBehaviour
             _btn.interactable = GameState.s_Player.Inventory.GetAmount(productName) > 0;
     }
 
+    /// <summary>
+    /// Click handler.
+    /// </summary>
     public void OnClick()
     {
         Market.Sell(GameState.s_Player, num, productName);

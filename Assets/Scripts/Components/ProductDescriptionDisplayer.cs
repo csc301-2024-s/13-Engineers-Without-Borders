@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Display a product's description as it is registered in the shop
+/// <summary>
+/// Make a text component dislay the description of a given product in the market.
+/// </summary>
 public class ProductDescriptionDisplayer : MonoBehaviour
 {
     [SerializeField] string productName;

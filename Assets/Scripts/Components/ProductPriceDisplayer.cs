@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Display a product's price as it is registered in the shop
+/// <summary>
+/// Make a text component display the price of a product in the market given a format string.
+/// </summary>
 public class ProductPriceDisplayer : MonoBehaviour
 {
     [SerializeField] string productName;

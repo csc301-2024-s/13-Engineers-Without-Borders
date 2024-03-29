@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Display the player's cash in a formatted string
+/// <summary>
+/// Make a text component display your money with a formatted string.
+/// </summary>
 public class PlayerMoneyDisplayer : MonoBehaviour
 {
     [SerializeField] string formatString;

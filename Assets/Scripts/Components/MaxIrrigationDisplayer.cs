@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Show how the max amount of plots you can irrigate based on your number of tubewells
+/// <summary>
+/// Make a text component show how many farm plots you can irrigate depending on your owned number of tubewells.
+/// </summary>
 public class MaxIrrigationDisplayer : MonoBehaviour
 {
     [SerializeField] string formatString;

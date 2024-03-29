@@ -1,10 +1,10 @@
 using Backend;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
 
 // Original Author: Andy Wang
-// Generate grid of farm plot cells
+/// <summary>
+/// Generate grid of farm plot cells in the farm management scene.
+/// </summary>
 public class FarmPlotCellPopulator : MonoBehaviour
 {
     [SerializeField] GameObject farmPlotCellPrefab;  // the button to instantiate

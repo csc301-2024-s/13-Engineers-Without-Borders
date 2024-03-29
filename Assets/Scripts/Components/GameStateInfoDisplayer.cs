@@ -3,8 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Display year, phase, weather
-// Mostly a placeholder class
+/// <summary>
+/// Put on a text component to display year, phase, and weather of game.
+/// </summary>
 public class GameStateInfoDisplayer : MonoBehaviour
 {
     [SerializeField] string formatString;

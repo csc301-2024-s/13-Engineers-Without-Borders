@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Populate the household selection screen with premade Households
+/// <summary>
+/// Populate the household selection screen with premade Households.
+/// </summary>
 public class HouseholdSelectionPopulator : MonoBehaviour
 {
     [SerializeField] GameObject householdOptionPrefab;

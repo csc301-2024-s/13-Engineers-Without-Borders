@@ -63,7 +63,7 @@
             }
         ],
         "sitemap": {
-            "baseUrl": "https://csc301-2024-s.github.io/13-Engineers-Without-Borders",
+            "baseUrl": "https://csc301-2024-s.github.io/13-Engineers-Without-Borders/",
             "changefreq": "weekly",
             "fileOptions": {
                 "api/*": {

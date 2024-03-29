@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Displays how many of a certain product you have in your inventory
+/// <summary>
+/// Makes a text label show how many adults or children you have in your family given a format string.
+/// </summary>
 public class NumFamilyMembersDisplayer : MonoBehaviour
 {
     [SerializeField] string formatString;

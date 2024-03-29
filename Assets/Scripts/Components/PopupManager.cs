@@ -4,16 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Author: Andy Wang
-// A class with a static function to show popups
-// This is in Backend becase Fate needs to be able to reference it, and it can only do that if it's in the same folder
-// because of the assembly definition
+/// <summary>
+/// Helper class to show popups during the simulation.
+/// </summary>
 public class PopupManager : MonoBehaviour
 {
+    /// <summary>
+    /// Describes a popup.
+    /// </summary>
     struct Popup {
+        /// <summary>
+        /// The title.
+        /// </summary>
+        /// <value>Title.</value>
         public string Title { get; private set; }
+
+        /// <summary>
+        /// The description.
+        /// </summary>
+        /// <value>Description.</value>
         public string Description { get; private set; }
+
+        /// <summary>
+        /// The text on the button to close it.
+        /// </summary>
+        /// <value>Close button text.</value>
         public string CloseText { get; private set; }
 
+        /// <summary>
+        /// Creates a popup with the given fields.
+        /// </summary>
+        /// <param name="title">Title.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="closeText">Close button text.</param>
         public Popup(string title, string description, string closeText)
         {
             Title = title;

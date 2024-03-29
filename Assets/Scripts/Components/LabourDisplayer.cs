@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Author: Hoa Nguyen
-// Display the number of hired workers in the family
+/// <summary>
+/// Display the number of hired workers in the family
+/// </summary>
 public class LabourDisplayer : MonoBehaviour
 {
     [SerializeField] string formatString;

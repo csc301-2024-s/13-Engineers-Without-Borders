@@ -2,10 +2,15 @@ using Backend;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Original Author: Andy Wang & TODO: FILL IN YOUR NAME HERE
-// Code for a household selection button, so when you click on this you select your household
+// Original Author: Andy Wang
+/// <summary>
+/// A household selection button, click it to choose the household you play as.
+/// </summary>
 public class HouseholdOption : MonoBehaviour
 {
+    /// <summary>
+    /// The household that the player will play as.
+    /// </summary>
     public Household Household { get; set; }
     private Button _btn;
 

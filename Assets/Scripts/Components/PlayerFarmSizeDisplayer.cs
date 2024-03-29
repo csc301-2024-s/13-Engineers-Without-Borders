@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Display a product's price as it is registered in the shop
+/// <summary>
+/// Makes a text component show how many farm plots you own.
+/// </summary>
 public class PlayerFarmSizeDisplayer : MonoBehaviour
 {
     private TextMeshProUGUI _text;

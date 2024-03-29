@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Original Author: Andy Wang
-// Button to give an adult an ox, disabled if you have no ox/adult already has an ox
+/// <summary>
+/// Button to give an adult an ox, disabled if you have no ox/adult already has an ox.
+/// </summary>
 public class GiveOxButton : MonoBehaviour
 {
     public Adult Adult { get; set; }

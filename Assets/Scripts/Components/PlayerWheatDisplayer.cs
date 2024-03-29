@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 
 // Original Author: Andy Wang
-// Display the player's wheat in a formatted string
+/// <summary>
+/// Display the player's wheat in a formatted string.
+/// </summary>
 public class PlayerWheatDisplayer : MonoBehaviour
 {
     [SerializeField] string formatString;

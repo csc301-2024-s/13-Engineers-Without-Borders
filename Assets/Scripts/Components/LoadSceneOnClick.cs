@@ -2,7 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Original Author: Andy Wang
-// Used to make a button load a scene on click
+/// <summary>
+/// Makes a Button component load a scene on click, the scene is specified by a serialized field.
+/// </summary>
 public class LoadSceneOnClick : MonoBehaviour
 {
     [SerializeField] string sceneName;  // this field is for dependency injection to be possible
@@ -16,6 +18,9 @@ public class LoadSceneOnClick : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Click handler.
+    /// </summary>
     public void OnClick() {
         SceneUtils.LoadScene(sceneName);
     }

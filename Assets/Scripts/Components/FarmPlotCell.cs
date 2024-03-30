@@ -36,6 +36,11 @@ public class FarmPlotCell : MonoBehaviour
         _highImage = gameObject.transform.Find("High").gameObject;
         _irrigatedOverlay = gameObject.transform.Find("Irrigated").gameObject;
         _image = GetComponent<Image>();
+
+        _hycImage.SetActive(false);
+        _lowImage.SetActive(false);
+        _highImage.SetActive(false);
+        _irrigatedOverlay.SetActive(false);
     }
 
     // Update this cell visually based on the attributes of the assigned farm plot
@@ -80,22 +85,26 @@ public class FarmPlotCell : MonoBehaviour
     /// </summary>
     public void RefreshStatus()
     {
-        _hycImage.SetActive(Plot.SeedType == SeedType.HYC);
+        // in phase two, only show wheat icon + irrigation overlay
+        if (GameState.s_Phase != 2)
+        {
+            _hycImage.SetActive(Plot.SeedType == SeedType.HYC);
 
-        if (Plot.FertilizerType == FertilizerType.Low)
-        {
-            _lowImage.SetActive(true);
-            _highImage.SetActive(false);
-        }
-        else if (Plot.FertilizerType == FertilizerType.High)
-        {
-            _lowImage.SetActive(false);
-            _highImage.SetActive(true);
-        }
-        else
-        {
-            _lowImage.SetActive(false);
-            _highImage.SetActive(false);
+            if (Plot.FertilizerType == FertilizerType.Low)
+            {
+                _lowImage.SetActive(true);
+                _highImage.SetActive(false);
+            }
+            else if (Plot.FertilizerType == FertilizerType.High)
+            {
+                _lowImage.SetActive(false);
+                _highImage.SetActive(true);
+            }
+            else
+            {
+                _lowImage.SetActive(false);
+                _highImage.SetActive(false);
+            }
         }
 
         _irrigatedOverlay.SetActive(Plot.Irrigated);

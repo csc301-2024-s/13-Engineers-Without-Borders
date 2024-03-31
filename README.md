@@ -114,8 +114,4 @@ As for comments, every class and method should be documented. Classes should hav
 **Always use `//` for comments**, and use `///` for XML comments. Public variables/methods should be documented with XML comments so they'll appear on our auto-generated documentation. (Bonus points if your IDE automatically creates a template for you when you type `///`.)
 ​
 ## Licenses 
-"You can upload the code to GitHub or other similar publicly available domains."
-
-This is the Intellectual Property Confidentiality Agreement our partner agreed to.
-
-As for code usage, please do not fork this project or reuse it until the term ends.
+We went with the MIT license as that is what our partners went with for their previous project, Water for the World.

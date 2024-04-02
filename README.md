@@ -38,10 +38,9 @@ Add this to your local git config file:
 
 On Windows at least, the path to the tool is `C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/UnityYAMLMerge.exe`
 
-Then, just open up the project in Unity, like any other normal Unity project. The project is optimized for a 9:20 viewport ratio, so be sure to set that as your
-viewport's ratio when testing.
+After you've properly configured your git config file, you can launch Unity Hub and open the project folder. This should bring up the entire project in the Unity editor. Be sure to set your viewport's ratio to 9:20 before doing any testing, as that's what the project is optimized for. 
 
-It is recommended to edit scripts by clicking on them in the Unity editor, as that will give you the appropriate intellisense (assuming you've set that up correctly; https://code.visualstudio.com/docs/other/unity ).
+Note that the Unity editor is used to create applications using the Unity Engine and is not an IDE. Changes to the scripts themselves will have to be made through any text editor of your choosing. It is recommended that you edit them by clicking on them in the Unity editor, as that will give you the appropriate intellisense (assuming you've set that up correctly; https://code.visualstudio.com/docs/other/unity ).
 
 UML diagrams can be viewed in the browser, and edited using Violet UML Editor (https://sourceforge.net/projects/violet/).
  

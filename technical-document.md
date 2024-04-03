@@ -45,3 +45,8 @@ This class contains a lot of the simulation logic, including initialization and 
 - AdvanceToPhaseOne: Advances the simulation state to phase 1, the growing season. The losing condition (starvation) is handled here, which is when all your adults die. In years 2+ it chooses a random event to happen. This phase is skipped in year 1/if you don't have a tubewell.
 - AdvanceToPhaseTwo: Advances the simulation state to phase 2, the harvest season. Admittedly there isn't much logic here, the majority of the gameplay logic is done in `Components/FarmManager.cs`
 - AdvanceToPhaseThree: Advances the simulation state to phase 3, the planting season. Clears your farm plot and removes any hired labour you may have purchased the previous year (they only last for a year). Much of the actual purchasing is done in the Market scene and the components it uses.
+
+## Simulation Flowchart
+Here is a flowchart that, at a high level, shows how everything works together.
+![simulation flowchar](DocumentImages/sim-flowchart.png)
+This can also be found in `deliverables/D5/sim-flowchart.state.violet.html`

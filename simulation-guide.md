@@ -22,7 +22,9 @@ When you click, you will be brought to the farm management screen - in the upper
 
 ### Household Screen
 When you click the lower left button you will be taken to a screen where you can view your adults, children, inventory, and land (which takes you back to the farm management screen). 
-By clicking on the Family button, you will have the option to view the adults and children in your household. In the adults section it lists all your adults (and hired labour, which last for one year), and there are buttons for you to assign oxen to them (if you have any). In the children section it lists all your children, as well as how many years until they become adults.
+By clicking on the Family button, you will have the option to view the adults and children in your household. In the adults section it lists all your adults (and hired labour, which last for one year), and there are buttons for you to assign oxen to them (if you have any). In the children section it lists all your children, as well as how many years until they become adults. In this screen there is also the option to rechoose your starting household, restarting the simulation.
+
+![household screen](DocumentImages/household-screen.png)
 
 ![image](https://github.com/csc301-2024-s/13-Engineers-Without-Borders/assets/54192376/b16c6c37-0d11-41fd-9bb4-56b4b6ecb28a)
 

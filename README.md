@@ -22,7 +22,7 @@ Final project is an iOS/Android app, so you'll either need an emulator or a phon
 
 If you're a contributor, you can read the [technical document](technical-document.md) to learn more about the specifics behind the project, and view our [code documentation](https://csc301-2024-s.github.io/13-Engineers-Without-Borders/api/Global.html). The scrollbar on the left side is a little janky, so here's the link to the [Backend](https://csc301-2024-s.github.io/13-Engineers-Without-Borders/api/Backend.html) namespace documentation.
 
-You can view/download our demo [here](deliverables/D4/demo-video.mp4).
+You can view our video demo [here](https://youtu.be/Pe1FRIJ4auQ).
  
 ## Development requirements
 We are using the Unity Engine, LTS version 2022.3.18f1. Your local git branch should be configured to use Unity YAML merge.

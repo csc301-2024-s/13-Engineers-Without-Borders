@@ -68,6 +68,8 @@ public class FarmManager : MonoBehaviour
         // 7th year is the last one in the game, go to results after last harvest
         if (GameState.s_Year == 7)
         {
+            // Sell the remaining wheat for extra final score
+            Market.Sell(GameState.s_Player, GameState.s_Player.Wheat, "Wheat");
             PopupManager.QueuePopup("Game Over", "You survived for 7 years! That's the end of the simulation.", "Hooray!");
             SceneUtils.LoadScene("Results");
         } else 

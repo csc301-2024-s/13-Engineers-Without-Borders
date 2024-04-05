@@ -1,0 +1,5 @@
+The final biweekly meeting with EWB, around 9:00-9:20pm
+- Showed our progress in D5 (the build is essentially finished aside from minor text alignment issues)
+- Gave EWB link to executable download
+- We will coordinate with them via email on how to upload it to mobile stores, also I told them
+  to expect a send-off email tomorrow

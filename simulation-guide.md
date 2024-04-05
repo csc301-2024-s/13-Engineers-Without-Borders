@@ -56,7 +56,7 @@ The yield amount of each plot of land depends on what type of seed and fertilize
 ### Phase 3
 In this phase you start in the market. Here you can buy items and sell wheat (by the tens or by the hundreds. Wheat sell price is the same as the buy price). Their descriptions as shown in the market should be explanatory enough. In the top right corner you should see your money and wheat.
 
-![image](https://github.com/csc301-2024-s/13-Engineers-Without-Borders/assets/54192376/c6faa921-1960-44a5-8cf5-b192bd66dba3)
+![market](https://github.com/csc301-2024-s/13-Engineers-Without-Borders/assets/46545759/afa2a764-980c-4f08-ae75-924b06a2f2d7)
 
 
 Some items have purchase limits:

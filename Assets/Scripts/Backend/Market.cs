@@ -146,6 +146,8 @@ namespace Backend
         /// <param name="product">The product to sell.</param>
         public static void Sell(Household seller, int quantity, string product)
         {
+            if (quantity < 0) return;  // do not sell anything if quantity is negative
+
             int toSell;
 
             if (product == "Wheat")

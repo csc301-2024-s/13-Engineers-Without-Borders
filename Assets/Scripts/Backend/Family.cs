@@ -54,12 +54,12 @@ namespace Backend
 
         /// <summary>
         ///  Add a new child to the family.
-        /// If <paramref name="age"/> is -1, then generate random age between 0 and 13 (exclusive).
+        /// If <paramref name="age"/> is -1, then generate random age between 0 and 12 (exclusive).
         /// </summary>
         /// <param name="age">Age.</param>
         public void CreateChild(int age = -1)
         {
-            age = age == -1 ? Random.Range(0, 13) : age;
+            age = age == -1 ? Random.Range(0, 12) : age;
             Child child = new Child(FamilyMember.GetRandomFirstName(), Name, age);
             Children.Add(child);
         }

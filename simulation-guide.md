@@ -1,6 +1,6 @@
 ## Simulation Guide
 
-When you open the app, you'll be greeted with the home screen. You'll have the option to skip the simulation, or continue on with the educational stuff.
+When you open the app, you'll be greeted with the home screen. You'll have the option to skip to the simulation, or continue on with the educational stuff.
 
 ![image](https://github.com/csc301-2024-s/13-Engineers-Without-Borders/assets/54192376/ac8ed3cd-b3b5-4640-8765-74285487da81)
 
@@ -15,7 +15,7 @@ Eventually you will reach the simulation. There will be a screen where you can s
 ![image](https://github.com/csc301-2024-s/13-Engineers-Without-Borders/assets/54192376/a71e4e7f-077d-4a5f-830b-f9c17832ac5c)
 
 
-When you click, you will be brought to the farm management screen - in the upper left corner you can see the current weather index, year, and phase. In the lower left corner there is a button that will display information about your household. In the lower middle there is a button to progress to the next phase. In the lower right corner there is a button to take you to the market, which should only be visible during phase 3. In the upper right corner of phases 1 and 2, you can see your total "labour value." Every adult by default contributes two labour points, but contributes four if they are assigned an ox. Near the top right is an information button which you can press to read about how to play the current phase.
+When you select a household, you will be brought to the farm management screen - in the upper left corner you can see the current weather index (1 best, 5 worst), year, and phase. In the lower left corner there is a button that will display information about your household. In the lower middle there is a button to progress to the next phase. In the lower right corner there is a button to take you to the market, which should only be visible during phase 3. In the upper right corner of phases 1 and 2, you can see your total "labour value." Every adult by default contributes two labour points, but contributes four if they are assigned an ox. Near the top right is an information button which you can press to read about how to play the current phase.
 
 ![image](https://github.com/csc301-2024-s/13-Engineers-Without-Borders/assets/54192376/0b774cc0-eeaa-484f-9851-df3e26bee485)
 

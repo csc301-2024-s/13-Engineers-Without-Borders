@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Random = System.Random;
+
+using Debug = UnityEngine.Debug;
 
 /*
  * This class represents the States of the game
@@ -75,7 +78,7 @@ namespace Backend
         /// <param name="Player">The household that the player chose.</param>
         public static void Initialize(Household Player)
         {
-            // create a COPY of the player
+            // create a COPY of the player household
             // We kind of messed up by making the predefined households an array of objects
             // because objects are passed by reference
             // so starvation would mutate the player object
@@ -86,7 +89,7 @@ namespace Backend
             s_Phase = 0;
             Random rand = new Random();
             s_WeatherIndex = rand.Next(1, 6);
-            s_Households = new Household[] { Player };
+            s_Households = new Household[] { s_Player };
             _phase1TutorialShown = false;
 
             Market.Initialize();
@@ -145,8 +148,6 @@ namespace Backend
             s_Year++;
             s_Phase = 1;
 
-            SceneUtils.LoadScene("ManageFarm");
-
             Market.UpdateWheatPrice();
             Market.ActivateProduct("HYC Seed");  // in case it was deactivated last year
             Market.SetPriceMultiplier("Ox", 1);  // in case it was halved last year
@@ -165,7 +166,7 @@ namespace Backend
                     {
                         Child child = fam.Children[i];
                         child.IncrementAge();
-                        if (child.Age <= 12)
+                        if (child.Age < 12)
                         {
                             continue;
                         }
@@ -173,6 +174,7 @@ namespace Backend
                         fam.Children.Remove(child);
                         Adult newAdult = child.ToAdult();
                         fam.Adults.Add(newAdult);
+                        PopupManager.QueuePopup("Notice", $"Your child, {child.FirstName} became an adult!", "Okay");
                     }
                 }
             }
@@ -181,17 +183,21 @@ namespace Backend
             {
                 PopupManager.QueuePopup("Tutorial", "Welcome to the simulation! Tap on each plot to select it, then press the harvest button below to advance. Each plot costs one labour point to harvest. If you don't have enough labour to harvest all of your land, your remaining crops will be left on the field to rot.", "Okay");
                 AdvanceToPhaseTwo();
+                return;
             }
             else if (!s_Player.Inventory.Contains("Tubewell"))
             {
                 PopupManager.QueuePopup("Notice", $"Growing Season skipped due to lack of tubewell.", "Okay");
                 AdvanceToPhaseTwo();
+                return;
             }
             else if (!_phase1TutorialShown)
             {
                 _phase1TutorialShown = true;  // show the tutorial promp the first year you get a tubewell
                 PopupManager.QueuePopup("Tutorial", "It's Growing Season! Since you have a tubewell, you can irrigate your crops to make sure they yield the most wheat as possible! Each plot costs two labour points to irrigate.", "Okay");
             }
+
+            SceneUtils.LoadScene("ManageFarm");
         }
 
         /// <summary>

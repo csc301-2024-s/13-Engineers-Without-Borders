@@ -75,7 +75,7 @@ public class FamilyMemberPopulator : MonoBehaviour
         else  // child
         {
             giveOx.gameObject.SetActive(false);
-            age.text = $"Turns adult in: {13 - ((Child)fam).Age} years";
+            age.text = $"Turns adult in: {12 - ((Child)fam).Age} years";
             sprite.sprite = childSprite;
         }
     }

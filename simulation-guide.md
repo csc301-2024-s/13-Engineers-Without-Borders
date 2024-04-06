@@ -66,14 +66,12 @@ Some items have purchase limits:
 
 At the bottom of the market screen is a button that takes you back to the farm management screen. 
 
-This time with three extra toggles at the bottom for planting. Yes, phase 3 is the planting phase. If you toggle the HYC Seed option, you can select plots of land to plant HYC seeds on them. It's a similar deal for the low/high fertilizer options.
+This time there are three extra toggles at the bottom for planting. Yes, phase 3 is the planting phase. If you toggle the HYC Seed option, you can select plots of land to plant HYC seeds on them. It's a similar deal for the low/high fertilizer options. By default, plots have regular seed and no fertilizer.
 
 ![image](https://github.com/csc301-2024-s/13-Engineers-Without-Borders/assets/54192376/81ef5ee6-4937-4483-a178-a00abf44ff43)
 
 
 To remove HYC seed or fertilizer from a plot of land, simply select it with the proper toggle enabled.
-
-Plots by default have regular seed.
 
 After the simulation (normally after the harvest on the 7th year unless when all your family starve to death), there will be a results screen to show your final score. This is followed by some self reflection questions to see how much you've learned.
 

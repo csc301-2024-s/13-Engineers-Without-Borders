@@ -49,4 +49,4 @@ This class contains a lot of the simulation logic, including initialization and 
 ## Simulation Flowchart
 Here is a flowchart that, at a high level, shows how everything works together.
 ![simulation flowchar](DocumentImages/sim-flowchart.png)
-This can also be found in `deliverables/D5/sim-flowchart.state.violet.html`
+This can also be found in `deliverables/D5/sim-flowchart.state.violet.html`.

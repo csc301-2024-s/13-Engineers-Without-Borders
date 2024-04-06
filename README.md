@@ -17,7 +17,7 @@ It is a mobile game where you play as a farmer in 1960s Punjab trying to grow as
 - Includes reflection questions of what you learned after the simulation
 ​
 ## Instructions
-Final project is an iOS/Android app, so you'll either need an emulator or a phone. We are currently working with EWB to make an account to upload the build to. For now, use the Windows executable found in `D5/Windows` (you need to download the entire folder). For users, check out the [simulation guide](simulation-guide.md) to understand how the application works.
+Final project is an iOS/Android app, so you'll either need an emulator or a phone. We are currently working with EWB to make an account to upload the build to. For now, use the Windows executable found in `deliverables/D5/Windows` (you need to download the entire folder). For users, check out the [simulation guide](simulation-guide.md) to understand how the application works.
 
 If you're a contributor, you can read the [technical document](technical-document.md) to learn more about the specifics behind the project, and view our [code documentation](https://csc301-2024-s.github.io/13-Engineers-Without-Borders/api/Global.html). The scrollbar on the left side is a little janky, so here's the link to the [Backend](https://csc301-2024-s.github.io/13-Engineers-Without-Borders/api/Backend.html) namespace documentation.
 
